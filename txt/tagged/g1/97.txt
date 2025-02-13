@@ -1,0 +1,9 @@
+Ang|DTC Pasko|NNP sa|CCT aming|PRSP_CCP barangay|NNC ang|DTC isa|PRI sa|CCT pinakahihintay|JJCS_JJD ng|CCB lahat|PRI !|PMQ
+Makikita|VBTF mo|PRS sa|CCT bawat|PRI mamamayan|NNC ang|DTC galak|NNC at|CCA pananabik|NNC sa|CCT nasabing|VBTS_CCP pagdiriwang|NNC !|PMS
+Ilang|PRQ_CCP araw|NNC pa|RBI bago|RBW ang|DTC Pasko|NNP ay|LM abala|RBD na|CCP ang|DTC Barangay|NNP Palanit|NNP sa|CCT pagsalubong|NNC sa|CCT Pasko|NNP !|PMQ
+Halos|JJD lahat|PRI ng|CCB mga|DTCP tao|NNC ay|LM tulong|NNC -|PMS tulong|NNC na|CCP sa|CCT pagsasabit|VBW ng|CCB mga|DTCP parol|NNC sa|CCT mga|DTCP poste|NNC !|PMS
+Bawat|PRI tahanan|NNC ay|LM may|VBH kanya-kanyang|PRSP_CCP pailaw|NNC at|CCA may|VBH Christmas|NNP Tree|NNP na|CCP nakahandang|VBTS_CCP pailawan|NNC sa|CCT pagsapit|VBW ng|CCB Pasko|NNP !|PMS
+Pagsapit|VBW ng|CCB alas|FW dose|FW ng|CCB gabi|RBW ng|CCB araw|NNC ng|CCB Pasko|NNP na|CCP itinuturing|VBTR pagsalubong|NNC sa|CCT pagkabuhay|NNC ng|CCB Panginoon|NNP ang|DTC bawat|PRI pamilya|NNC ay|LM nagsasalo-salo|VBTR ng|CCB kanilang|PRSP_CCP Noche|NNP Buena|NNP !|PMS
+Nagaganap|VBTR din|RBI dito|PRL ang|DTC pagpapalitan|NNC ng|CCB regalo|NNC na|CCP siyang|PRS_CCP simbolo|NNC ng|CCB kanilang|PRSP_CCP pagmamahalan|NNC sa|CCT isa|PRI '|PMS t|NNCA isa|PRI !|PMQ
+Pagsapit|VBW nang|RBW umaga|RBW ng|CCB Kapaskuhan|NNP ika-25|JJN ng|CCB Disyembre|NNP ay|LM maraming|PRI_CCP bata|NNC ang|DTC nakabihis|VBTS na|RBI at|CCA handa|JJD nang|RBD pumunta|VBAF sa|CCT kanilang|PRSP_CCP mga|DTCP ninong|NNC at|CCA ninang|NNC upang|CCB tanggapin|VBOF ang|DTC kanilang|PRSP_CCP mga|DTCP aginaldo|NNC na|CCP maaring|RBM pera|NNC o|CCT kaya|CCR ay|LM bagay|NNC !|PMS
+Sa|CCT simpleng|JJD_CCP pagdiriwang|NNC na|CCP ito|PRO naipadadama|VBTS ng|CCB bawat|PRI kasapi|NNC ng|CCB pamilya|NNC ang|DTC kanilang|PRSP_CCP pagmamahal|NNC at|CCA pagbibigay|NNC sa|CCT bawat|PRI isa|PRI na|CCP siyang|PRS_CCP nagsisilbing|VBTR_CCP diwa|NNC ng|CCB Kapaskuhan|NNP !|PMS

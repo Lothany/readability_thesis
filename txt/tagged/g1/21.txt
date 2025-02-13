@@ -1,0 +1,113 @@
+May|VBH isang|PRI_CCP tribong|NNC_CCP nagngagalang|VBTR_CCP Bolig|NNP !|PMS
+Ang|DTC tribong|NNC_CCP ito|PRO noon|RBW paman|NNC ay|LM palipat-lipat|JJD na|RBI ng|CCB lugar|NNC at|CCA kung|RBK saan|RBQ na|CCP nakakarating|VBTR_CCP hanggang|RBW sa|CCT napadpad|VBTS sila|PRP sa|CCT lugar|NNC na|CCP sobrang|JJCS_CCP init|NNC at|CCA mala-desyerto|JJD ang|DTC bayan|NNC ng|CCB Uga|NNP !|PMS
+Walang|VBN_CCP masyadong|JJCS_CCP tumatagal|VBTR_VBAF sa|CCT lugar|NNC na|CCP ito|PRO dahil|CCR nga|RBI sa|CCT sobrang|JJCS_CCP lakas|NNC ng|CCB sikat|JJD ng|CCB araw|NNC at|CCA hindi|RBF dinadaanan|VBTR ng|CCB ulan|NNC !|PMS
+Wala|VBN rin|RBI masyadong|JJCS_CCP pinagkukunan|VBTR_VBRF ng|CCB tubig|NNC !|PMS
+Ngunit|CCT ang|DTC Tribong|NNP_CCP Bolig|NNP ay|LM napagod|VBTS na|CCP sa|CCT kakalakad|JJD at|CCA paghahanap|VBW ng|CCB matitirahan|NNC kaya|CCR pinili|VBOF na|RBI lang|RBI muna|RBI nilang|PRP_CCP manatili|VBW sa|CCT lugar|NNC na|CCP ito|PRO !|PMQ
+Ang|DTC tribong|NNC_CCP ito|PRO ay|LM may|VBH kasamang|CCB_CCP mga|DTCP bata|NNC at|CCA isa|PRI na|CCP dito|PRL si|DTP ay|LM si|DTP Imbok|NNP !|PMS
+Si|DTP Imbok|NNP ay|LM isang|PRI_CCP mabait|JJD at|CCA masayahing|JJD_CCP bata|NNC kaya|CCR naman|RBI ay|LM sya|PRS gustong-gusto|RBD ng|CCB kanyang|PRSP_CCP mga|DTCP katribo|NNC !|PMS
+Maliban|CCT dito|PRL siya|PRS rin|RBI ay|LM isang|PRI_CCP mataba|JJD ang|DTC mapagbiro|VBW kaya|CCR sya|PRS ay|LM nagbibigay|VBTR ng|CCB ngiti|NNC sa|CCT kanyang|PRSP_CCP mga|DTCP kasama|CCB !|PMQ
+Magandang|JJD_CCP umaga|RBW ginang|NNC Mirasol|NNP !|PMS
+bati|VBS ni|DTP Imbok|NNP !|PMS
+Oyy|FW magandang|JJD_CCP umaga|RBW Imbok|NNP !|PMS
+Tugon|NNC ni|DTP Aling|PRQ_CCP Mirasol|NNP Mas|JJCC lalo|JJCC po|RBS kayong|PRO_CCP gumaganda|VBTR_VBAF ngayon|RBW !|PMQ
+Palabirong|NNC_CCP sabi|VBS ni|DTP Imbok|NNP !|PMS
+Di|RBF naman|RBI !|PMQ
+Ikaw|RBW talaga|RBT Imbok|NNP napaka|JJCS palabiro|JJD mo|PRS talaga|RBT !|PMQ
+Kinikilig|VBTR na|CCP tugon|NNC ni|DTP Aling|PRQ_CCP Mirasol|NNP !|PMS
+Sunod|JJD ay|LM dumaan|VBAF naman|RBI si|DTP Imbok|NNP kay|DTP Mang|NNP Bergo|NNP !|PMS
+Magandang|JJD_CCP umaga|RBW Mang|NNP Bergo|NNP !|PMS
+Magandang|JJD_CCP umaga|RBW din|RBI sa|CCT iyo|PRSP Imbok|NNP !|PMS
+Ang|DTC bango|NNC naman|RBI po|RBS niyang|PRS_CCP niluluto|VBTR nyo|NNC sigurado|RBT ako|PRS masarap|JJD yan|PRO !|PMQ
+Ang|DTC sabi|VBS ni|DTP Imbok|NNP !|PMS
+Hmmnn|NNP !|PMS
+Hindi|RBF mo|PRS pa|RBI nga|RBI natitikman|VBTS !|PMQ
+Pero|CCT dahil|CCR mabait|JJD ka|PRS at|CCA pinapatawa|VBTR mo|PRS ako|PRS sige|FW bibigyan|VBTF kita|NNC !|PMS
+Sabi|VBS ni|DTP Mang|NNP Bergo|NNP !|PMS
+Wow|FW !|PMS
+Maraming|PRI_CCP Salamat|RBS po|RBS !|PMQ
+Masayang|JJD_CCP sabi|VBS ni|DTP Imbok|NNP !|PMS
+Unang|JJN_CCP pananatili|NNC ng|CCB mga|DTCP Tribong|NNP_CCP Bolig|NNP sa|CCT Uga|NNP ay|LM maayos|JJD pa|RBI dahil|CCR meron|VBH silang|PRP_CCP imbak|NNC na|CCP tubig|NNC kung|CCR kayat|JJD naman|RBI hindi|RBF sila|PRP gaanong|PRC_CCP nahihirapan|VBTR !|PMQ
+Ngunit|CCT di|RBF nagtagal|VBTS ay|LM unti-unti|RBD nang|RBD nauubos|VBTR ang|DTC kanilang|PRSP_CCP tubig|NNC at|CCA maliban|CCT pa|RBI dito|PRL mas|JJCC sobrang|JJCS_CCP umiinit|JJD ang|DTC lugar|NNC kaya|CCR naman|RBI ay|LM nagsisimula|VBTR na|CCP nilang|PRP_CCP maranasan|VBW ang|DTC hirap|NNC !|PMS
+Naku|NNP !|PMS
+Wala|VBN nang|RBW tubig|NNC !|PMS
+Pano|JJD na|CCP itong|PRO_CCP nilututo|VBOF ko|PRS Ayyy|NNP Ano|PRQ ba|RBI yan|PRO !|PMQ
+Wla|NNC nang|RBW tubig|NNC na|CCP natira|VBTS !|PMQ
+Di|RBF pa|RBI ako|PRS tapos|RBW maligo|VBW !|PMQ
+Uhaw-uhaw|JJD na|CCP ako|PRS ngunit|CCT walang|VBN_CCP tubig|NNC na|CCP maiinom|VBW !|PMQ
+Nagrereklamo|VBTS na|CCP ang|DTC mga|DTCP tao|NNC dahil|CCR sa|CCT kakulangan|NNC ng|CCB tubig|NNC at|CCA nagsisimula|VBTR na|CCP silang|PRP_CCP manghina|VBW dahil|CCR hindi|RBF sila|PRP nakakainom|VBTR ng|CCB tubig|NNC !|PMS
+Dahil|CCR dito|PRL ay|LM nalungkot|VBTS si|DTP Imbok|NNP sa|CCT kung|RBK ano|RBQ ang|DTC kanilang|PRSP_CCP nararanasan|VBTR at|CCA kanyang|PRSP_CCP nakikita|VBTR !|PMQ
+Gustong-gusto|VBTS niya|PRS tulungan|VBTF_VBOF ang|DTC mga|DTCP katribo|NNC ngunit|CCT wla|NNC syang|CCT magawa|VBW !|PMQ
+Naghanap|VBTS ng|CCB paraan|NNC si|DTP Imbok|NNP !|PMS
+Pumunta|VBAF sya|PRS kung|RBK saan-saang|RBQ parte|NNC ng|CCB Uga|NNP para|CCT maghanap|VBW ng|CCB pinanggagalingan|VBTR ng|CCB tubig|NNC !|PMS
+Sa|CCT tagal|NNC nyang|PRS_CCP paghahanap|VBW ay|LM napagod|VBTS sya|PRS at|CCA tuyong-tuyong|RBF_JJD_CCP !|PMS
+Humanap|VBAF siya|PRS nang|RBW masisilungan|VBW !|PMQ
+Meron|VBH siyang|PRS_CCP nakitang|VBTS_CCP punong|JJD_CCP kahoy|NNC at|CCA doon|PRL muna|RBI sumilong|VBAF !|PMQ
+Nang|RBW nainitan|VBTS ito|PRO at|CCA gustong|VBS_CCP magpahangin|VBW ay|LM umakyat|VBAF ito|PRO sa|CCT tuktog|NNC ng|CCB puno|NNC !|PMS
+Nagpahinga|VBTS ito|PRO at|CCA tiningnan|VBOF ang|DTC lawak|NNC ng|CCB lugar|NNC !|PMS
+Sa|CCT kanyang|PRSP_CCP pagtitingin|NNC ay|LM may|VBH naaninag|VBTS siyang|PRS_CCP parang|CCT kumikinang|JJD sa|CCT malayo|JJD !|PMS
+Bumaba|VBAF si|DTP Imbok|NNP at|CCA nagmadaling|RBD_CCP tumakbo|VBAF papunta|VBW sa|CCT kung|RBK saan|RBQ niya|PRS nakita|VBTS iyong|PRSP_CCP kumikinang-kinang|VBTS_CCP !|PMQ
+Nang|RBW narating|VBTS na|CCP ito|PRO ni|DTP Imbok|NNP ay|LM nabighani|VBTS sya|PRS sa|CCT kanyang|PRSP_CCP mga|DTCP nakita|VBTS !|PMQ
+Nakakita|VBTS siya|PRS ng|CCB kung|CCR anu-anong|NNC_CCP mga|DTCP bagay|NNC !|PMS
+Mga|DTCP bagay|NNC na|CCP sa|CCT loob|NNC nga|RBI bahay|NNC lamang|RBI nakikita|VBTR !|PMQ
+Plato|NNP kutsara|NNC salamin|NNC at|CCA kung|RBK anu-ano|RBQ pa|RBI na|CCP kumikinang|VBTR_VBAF !|PMQ
+Ang|DTC tanging|JJD_CCP hindi|RBF lamang|RBI kumikinang|VBTR_VBAF dito|PRL ay|LM isang|PRI_CCP bagay|NNC at|CCA yun|PRO ay|LM ang|DTC Tabo|NNP !|PMS
+Nilapitan|VBTS ito|PRO ni|DTP Imbok|NNP !|PMS
+Nang|RBW ito|PRO '|PMS y|FW kanyang|PRSP_CCP hinawakan|VBOF ay|LM biglang|RBD_CCP lumabas|VBAF ang|DTC tubig|NNC didto|NNC hanggang|RBW sa|CCT mapuno|VBW !|PMQ
+Dahil|CCR uhaw-uhaw|JJD na|CCP si|DTP Imbok|NNP kumuha|VBAF sa|CCT ng|CCB tubig|NNC dito|PRL at|CCA uninom|FW !|PMS
+Ang|DTC nakabibigla|VBTS ay|LM muling|RBW_CCP na|CCP namang|RBI_CCP umagas|VBAF ang|DTC tubig|NNC dito|PRL at|CCA napuno|VBTS ang|DTC tabo|JJD !|PMS
+Tuwang-tuwa|RBD siya|PRS sa|CCT kanyang|PRSP_CCP nakita|VBTS at|CCA nahanap|VBTS !|PMS
+Naisip|VBTS niya|PRS na|CCP ito|PRO ang|DTC solusyon|NNC sa|CCT kanilang|PRSP_CCP problema|NNC na|CCP kawalan|NNC ng|CCB tubig|NNC !|PMS
+Nagmadali|VBTS siyang|PRS_CCP umuwi|VBAF upang|CCB ibalita|VBTF_VBOF ito|PRO sa|CCT kanyang|PRSP_CCP mga|DTCP katribo|NNC !|PMS
+Tumakbo|VBAF siyang|PRS_CCP tuwang-tuwa|JJD habang|RBW bitbit|JJD ang|DTC tabo|JJD na|CCP hindi|RBF nauubusan|VBTR ng|CCB tubig|NNC !|PMS
+Malapit|JJD nang|RBW makarating|VBW si|DTP Imbok|NNP sa|CCT kaniyang|PRSP_CCP mga|DTCP katribo|NNC !|PMS
+Malayo|JJD pa|RBI lang|RBI siya|PRS ay|LM natanaw|VBTS na|CCP sya|PRS ng|CCB kanyang|PRSP_CCP mga|DTCP kasama|CCB !|PMQ
+Si|DTP imbok|NNP ba|RBI yun|PRO !|PMQ
+Parang|CCT si|DTP Imbok|NNP nga|RBI !|PMQ
+Ba|NNC '|PMS t|NNCA parang|CCT nagmamadali|VBTR ata|NNC sya|PRS !|PMQ
+Nagtatakang|VBTS_CCP tanong|NNC ng|CCB kanyang|PRSP_CCP mga|DTCP kasama|CCB !|PMQ
+Mga|DTCP kasama|CCB mga|DTCP kasama|CCB sigaw|NNC ni|DTP Imbok|NNP habang|RBW kumakaway|VBTR_VBAF !|PMQ
+Halos|JJD lahat|PRI na|CCP ng|CCB mga|DTCP katribo|NNC ang|DTC nakapansin|VBTS sa|CCT kanya|PRSP at|CCA inaantay|VBTR nga|RBI nila|PRP ang|DTC pagdating|NNC ni|DTP Imbok|NNP !|PMS
+Nang|RBW si|DTP Imbok|NNP ay|LM nakarating|VBTS na|CCP masaya|JJD at|CCA agad-agad|RBD niyang|PRS_CCP ibinahagi|VBTS sa|CCT mga|DTCP kasama|CCB ang|DTC kanyang|PRSP_CCP nahanap|VBTS !|PMQ
+Mga|DTCP kasama|CCB meron|VBH akong|PRS_CCP magandang|JJD_CCP balita|NNC sa|CCT inyo|PRSP !|PMQ
+Malulutas|VBTF na|RBI ang|DTC ating|PRSP_CCP suliranin|NNC !|PMS
+Masayang|RBD_CCP sinabi|VBTS ni|DTP Imbok|NNP !|PMS
+Masaya|NNP ang|DTC mga|DTCP kasama|CCB niya|PRS sa|CCT narinig|VBTS pero|CCT nagtataka|VBTR kung|CCR papano|RBQ malulutas|VBTF ni|DTP Imbok|NNP kanilang|PRSP_CCP problema|NNC !|PMS
+Magandang|JJD_CCP balita|NNC iyan|PRO Imbok|NNP !|PMS
+Pero|CCT papano|RBQ !|PMQ
+sabi|VBS ng|CCB isa|PRI niyang|PRS_CCP kasama|CCB !|PMQ
+Baka|NNC naman|RBI binibiro|VBTR mo|PRS na|CCP naman|RBI kami|PRP !|PMQ
+kasunod|JJD na|CCP sinabi|VBTS na|CCP isa|PRI pa|RBI niyang|PRS_CCP kasama|CCB !|PMQ
+Itong|PRO_CCP tabo|JJD !|PMS
+Itinaas|VBOF ni|DTP Imbok|NNP ang|DTC tabo|JJD at|CCA ipinakita|VBTS sa|CCT mga|DTCP katribo|NNC !|PMS
+Tumawa|VBAF ang|DTC kanyang|PRSP_CCP mga|DTCP katribo|NNC at|CCA hindi|RBF sya|PRS pinaniwalaan|VBTR !|PMQ
+HAHAHA!HAHAHAH!HAHAAH|CDB Tawang-tawa|NNP ang|DTC kanyang|PRSP_CCP mga|DTCP kasama|CCB !|PMQ
+Ito|PRO talagang|RBT_CCP si|DTP Imbok|NNP palaging|RBW_CCP nagbibiro|VBTS !|PMQ
+Sabi|VBS ng|CCB kanyang|PRSP_CCP mga|DTCP kasama|CCB !|PMQ
+Hindi|RBF po|RBS ako|PRS nagbibiro|VBTR !|PMQ
+Ipinakita|VBTS ni|DTP Imbok|NNP kung|RBK paano|RBQ ang|DTC pagpapadaloy|NNC ng|CCB tubig|NNC sa|CCT tabo|NNC !|PMS
+Kumuha|VBAF sya|PRS ng|CCB isang|PRI_CCP timba|NNC at|CCA ibinuhos|VBOF ang|DTC tubig|NNC na|CCP laman|NNC ng|CCB tabo|NNC !|PMS
+Nagpatuloy|VBTS ang|DTC pagdaloy|NNC ang|DTC tubig|NNC mula|RBL sa|CCT tabo|JJD at|CCA hindi|RBF tumitigil|VBTR_VBAF !|PMQ
+Nabigla|VBTS ang|DTC mga|DTCP kasama|CCB ni|DTP Imbok|NNP sa|CCT Nakita|VBTS at|CCA napagtanto|VBTS nilang|PRP_CCP totoo|RBT nga|RBI ang|DTC sinsabi|VBTS ni|DTP Imbok|NNP !|PMS
+Hala|NNP !|PMS
+Totoo|RBT nga|RBI !|PMQ
+Namamanhang|VBTR sabi|VBS ng|CCB kanyang|PRSP_CCP mga|DTCP kasama|CCB !|PMQ
+Sa|CCT wakas|RBW ay|LM may|VBH solusyon|NNC narin|CCB tayo|PRP sa|CCT ating|PRSP_CCP problema|NNC !|PMS
+Salamat|RBS Imbok|NNP !|PMS
+Dahil|CCR dito|PRL ay|LM may|VBH tubig|NNC na|CCP tayo|PRP at|CCA di|RBF na|RBI tayo|PRP mahihirapan|VBTF pa|RBI !|PMQ
+Tuwang-tuwa|VBTR ang|DTC Tribong|NNP_CCP Bolig|NNP dahil|CCR sa|CCT Tabong|NNP_CCP nahanap|VBTS ni|DTP Imbok|NNP !|PMS
+Hindi|RBF na|RBI sila|PRP mahihirapan|VBTF pa|RBI !|PMQ
+Nasolusyan|VBTR nga|RBI ang|DTC problema|NNC ng|CCB Tribong|NNP_CCP Uga|NNP sa|CCT kawalan|NNC ng|CCB tubig|NNC !|PMS
+Nakakapagligo|VBTR na|CCP sila|PRP araw-araw|RBW !|PMQ
+Nakapaglalaba|VBTS ng|CCB damit|NNC !|PMS
+Nakakainom|VBTR nga|RBI maraming|PRI_CCP tubig|NNC !|PMS
+Si|DTP imbok|FW naman|RBI ay|LM nasiyahan|VBTS sa|CCT kanyang|PRSP_CCP ginawa|VBOF !|PMQ
+Hindi|RBF na|CCP nya|PRS nakitang|VBTS_CCP nahihirapan|VBTR pa|RBI ang|DTC ang|DTC kanyang|PRSP_CCP mga|DTCP katribo|NNC !|PMS
+Nagpatuloy|VBTS ang|DTC kabutihan|NNC ng|CCB kanyang|PRSP_CCP puso|NNC !|PMS
+Hindi|RBF niya|PRS ipinagdadamot|VBTR kung|RBK sino|RBQ man|RBI ang|DTC nangangailangan|VBTR nito|PRO !|PMQ
+Buong|PRI_CCP puso|NNC syang|RBW_CCP nagbibigay|VBTR !|PMQ
+Ang|DTC tribong|NNC_CCP Bolig|NNP ay|LM naghanap|VBTS ng|CCB permanenting|FW kinalalagyan|VBTR ng|CCB tabo|JJD kaya|CCR naman|RBI ay|LM gumawa|VBAF sila|PRP ng|CCB isang|PRI_CCP malaking|JJD_CCP balon|NNC sa|CCT gitna|JJD ng|CCB kanilang|PRSP_CCP tinitirahan|VBTR nang|RBW sa|CCT ganun|PRC ay|LM madali|RBD na|CCP lamang|RBI para|CCT sa|CCT kanila|PRSP ang|DTC pagkuha|NNC ng|CCB tubig|NNC !|PMS
+Kung|CCR meron|VBH mang|RBI_CCP mga|DTCP dayo|NNC na|CCP dumadaan|VBTR_VBAF sa|CCT lugar|NNC na|CCP ito|PRO ay|LM nagbabahagi|VBTR sila|PRP ng|CCB tubig|NNC ng|CCB walang|VBN_CCP bayad|NNC !|PMS
+Simula|RBW noon|RBW ay|LM hindi|RBF na|RBI umalis|VBAF pa|RBI ang|DTC Tribong|NNP_CCP bolig|NNC sa|CCT lugar|NNC na|CCP ito|PRO !|PMQ
+Ang|DTC mala-desyertong|JJD_CCP lugar|NNC ng|CCB Uga|NNP ay|LM isa|PRI na|CCP sa|CCT lugar|NNC na|CCP pinanangalinagn|VBTR ng|CCB tubig|NNC !|PMS
+Ito|PRO ay|LM napalilibutan|VBTS na|CCP ng|CCB mga|DTCP anyong|NNC_CCP tubig|NNC at|CCA mula|RBW dito|PRL ay|LM umaagos|VBTR_VBAF ang|DTC tubig|NNC papunta|VBW sa|CCT ibang|PRI_CCP biyan|NNC !|PMS
+Naging|VBTS kilala|JJD narin|VBTS ang|DTC Bayang|NNP_CCP Uga|NNP na|CCP mayaman|JJD sa|CCT tubig|NNC !|PMS

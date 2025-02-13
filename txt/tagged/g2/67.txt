@@ -1,0 +1,19 @@
+Sa|CCT isang|PRI_CCP abalang|JJD_CCP pamayanan|NNC kung|RBK saan|RBQ lahat|PRI ng|CCB tao|NNC ay|LM nagmamadali|VBTR na|CCP animo|NNC '|PMS y|FW hinahabol|VBTR ng|CCB kabayo|NNC !|PMS
+Dito|PRL na|RBI rin|RBI namulat|VBTS ang|DTC kaisipan|NNC ni|DTP Sabel|NNP at|CCA lumaki|VBAF sa|CCT piling|JJD_CCP ng|CCB kanyang|PRSP_CCP Lola|NNP mula|RBW nang|RBW nawala|VBTS ang|DTC kanyang|PRSP_CCP mga|DTCP magulang|NNC !|PMS
+Sa|CCT pagluluto|NNC ng|CCB mga|DTCP kakanin|NNC ang|DTC kanilang|PRSP_CCP pangunahing|JJD_CCP hanapbuhay|NNC !|PMS
+Ito|PRO ang|DTC pinagkukunan|VBTR_VBRF nila|PRP ng|CCB kanilang|PRSP_CCP pambili|JJD ng|CCB pagkain|NNC damit|NNC at|CCA ibang|PRI_CCP pansariling|JJD_CCP pangangailangan|NNC !|PMS
+Kaya|CCR masigasig|JJD na|CCP tumutulong|VBTR_VBAF si|DTP Sabel|NNP sa|CCT paglalako|NNC ng|CCB mga|DTCP kakanin|NNC !|PMS
+Lagi|RBW itong|PRO_CCP nagmamadaling|VBTS_CCP umuuwi|VBTR_VBAF mula|RBL sa|CCT eskwela|NNC !|PMS
+Maliban|CCT sa|CCT masarap|JJD ang|DTC kanilang|PRSP_CCP panindang|JJD_CCP kakanin|NNC magalang|JJD mabilis|RBD magkwenta|VBW at|CCA masayahing|JJD_CCP bata|NNC si|DTP Sabel|NNP kaya|CCR kinagigiliwan|VBOF siya|PRS ng|CCB mga|DTCP mamimili|NNC !|PMS
+Nang|RBW nagkapandemya|VBTS mahigpit|JJCC na|CCP ipinagbabawal|VBTR ang|DTC paglabas|NNC ng|CCB bahay|NNC lalo|JJCC na|RBI sa|CCT mga|DTCP matatanda|NNC at|CCA ang|DTC mga|DTCP bata|NNC !|PMS
+Sila|PRP kasi|CCR ang|DTC madaling|RBD_CCP mahawaan|VBW ng|CCB virus|FW !|PMS
+Nalungkot|VBTS si|DTP Sabel|NNP dahil|CCR nawalan|VBTS sila|PRP ng|CCB mapagkakitaan|VBW !|PMQ
+Ipinagdarasal|VBTR nila|PRP na|CCP sana|VBS maging|VBW maayos|JJD na|CCP ang|DTC lahat|PRI !|PMQ
+Umaasa|VBTR_VBAF na|RBI lamang|RBI sila|PRP sa|CCT tulong|NNC na|CCP iniabot|VBTS ng|CCB kanilang|PRSP_CCP mga|DTCP kapitbahay|NNC at|CCA ayuda|NNC ng|CCB pamahalaan|NNC !|PMS
+Habang|RBW sinasagutan|VBTR ni|DTP Sabel|NNP ang|DTC kanyang|PRSP_CCP modyul|FW tungkol|RBR sa|CCT iba|PRI '|PMS t|NNCA ibang|PRI_CCP hugis|NNC !|PMS
+Naisipan|VBTS niyang|PRS_CCP gumawa|VBAF ng|CCB bandana|NNC na|CCP may|VBH iba|PRI '|PMS t|NNCA ibang|PRI_CCP hugis|NNC !|PMS
+Laking|JJD_CCP gulat|NNC ng|CCB kanyang|PRSP_CCP Lola|NNP sa|CCT mga|DTCP desinyong|NNC_CCP kanyang|PRSP_CCP nagawa|VBTS !|PMQ
+Masaya|NNP nilang|PRP_CCP pinagtutulungan|VBRF ang|DTC paggawa|NNC ng|CCB bandanang|JJD_CCP hugis|NNC tatsulok|NNC parisukat|NNC at|CCA parihaba|NNC !|PMS
+Pinaghusayan|VBRF nila|PRP Sabel|NNP ang|DTC paggawa|NNC ng|CCB mga|DTCP bandana|NNC lalo|JJCC '|PMS t|NNCA marami|PRI na|RBI rin|RBI ang|DTC tumatangkilik|VBTR_VBAF sa|CCT kanilang|PRSP_CCP mga|DTCP produkto|NNC !|PMS
+Abot|JJD langit|NNC ang|DTC pasasalamat|RBS ng|CCB maglola|VBAF nagsira|VBTS man|RBI ang|DTC pintuan|NNC subalit|CCT may|VBH mga|DTCP binatana|FW namang|RBI_CCP bumukas|VBAF para|CCT sa|CCT kanila|PRSP !|PMQ
+Sa|CCT taong|NNC_CCP masipag|JJD at|CCA mapamaraan|VBW walang|VBN_CCP imposible|JJD !|PMS

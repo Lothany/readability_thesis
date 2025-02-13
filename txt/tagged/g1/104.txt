@@ -1,0 +1,13 @@
+Si|DTP Pedro|NNP ay|LM pitong|JJN_CCP taong|NNC_CCP gulang|NNC !|PMS
+Siya|PRS ay|LM punong-puno|JJD ng|CCB pangarap|NNC ngunit|CCT sila|PRP ay|LM mahirap|JJD lamang|RBI !|PMQ
+Ang|DTC kanyang|PRSP_CCP ina|NNC ay|LM mananahi|NNC at|CCA ang|DTC kanyang|PRSP_CCP ama|NNC ay|LM may|VBH kapansanan|NNC !|PMS
+May|VBH mga|DTCP pagkakataon|NNC na|CCP hindi|RBF siya|PRS pumapasok|VBTR_VBAF sa|CCT paaralan|NNC !|PMS
+Iniisip|VBTS na|RBI lamang|RBI niya|PRS kung|RBK paano|RBQ makatatapos|VBW ng|CCB pag-aaral|NNC !|PMS
+Naisip|VBTS ni|DTP Pedro|NNP na|CCP pumunta|VBAF sa|CCT ibang|PRI_CCP bayan|NNC para|CCT maghanap|VBW ng|CCB trabaho|NNC !|PMS
+At|CCA doon|PRL ay|LM nakahanap|VBTS naman|RBI siya|PRS sa|CCT palengke|NNC !|PMS
+Araw-araw|RBW siyang|PRS_CCP gumigising|VBTR_VBAF nang|RBW maaga|JJD !|PMS
+Bago|RBW pa|RBI mag-alas|VBW siyete|NNC ng|CCB umaga|RBW ay|LM nakahanda|VBTS na|CCP siyang|PRS_CCP pumasok|VBAF sa|CCT paaralan|NNC !|PMS
+Sa|CCT uwian|NNC naman|RBI ay|LM balik|NNC trabaho|NNC siya|PRS !|PMQ
+Sa|CCT kanyang|PRSP_CCP pag-uwi|NNC galling|VBTR_VBOF trabaho|NNC palagi|RBW siyang|PRS_CCP may|VBH dalang|JJD_CCP ulam|NNC at|CCA gamot|NNC para|CCT sa|CCT kanyang|PRSP_CCP ama|NNC !|PMS
+Nakatapos|VBTS nang|RBW pag-aaral|VBW si|DTP Pedro|NNP at|CCA siya|PRS ay|LM kasalukuyang|RBW_CCP manager|FW ng|CCB isang|PRI_CCP malaking|JJD_CCP kumpanya|NNC !|PMS
+Naging|VBTS inspirasyon|NNC si|DTP Pedro|NNP sa|CCT mga|DTCP kabataan|NNC ngayon|RBW !|PMQ

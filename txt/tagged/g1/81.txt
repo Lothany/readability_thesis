@@ -1,0 +1,4 @@
+Sabado|NNP ng|CCB umaga|RBW pumunta|VBAF si|DTP nanay|NNC sa|CCT palengke|NNC !|PMS
+Bumili|VBTS_VBAF siya|PRS ng|CCB isang|PRI_CCP maliit|JJD na|CCP kaldero|NNC !|PMS
+Araw-araw|RBW ginagamit|VBTR ito|PRO sa|CCT pagluluto|NNC ng|CCB ulam|NNC at|CCA iba|PRI pang|RBI_CCP pagkain|NNC !|PMS
+Habang|RBW nagluluto|VBTR parang|CCT ngumingiti|VBTR at|CCA sumasayaw|VBTR ito|PRO lalo|JJCC pag|CCR kumukulo|VBTR_VBAF na|CCP ang|DTC niluluto|VBTR nitong|PRO_CCP pagkain!Masarap|VBW din|RBI ang|DTC lasa|NNC ng|CCB pagkain|NNC kapag|CCR ginamit|VBOF ito|PRO ni|DTP nanay|NNC sa|CCT pagluluto|NNC !|PMS

@@ -1,0 +1,11 @@
+Putak|NNP !|PMS
+Putak|NNP !|PMS
+Putak|NNP !|PMS
+Sabi|VBS ni|DTP Mulak|NNP Alagang|NNP_CCP manok|NNC na|CCP sa|CCT umaga|RBW '|PMS y|FW Itlog|NNC ang|DTC dulot|JJD !|PMS
+Putak|NNP !|PMS
+Putak|NNP !|PMS
+Putak|NNP !|PMS
+Pangalawang|JJN_CCP araw|NNC ng|CCB pangingitlog|NNC ni|DTP Mulak|NNP At|CCA tila|RBM siya|PRS ay|LM galak|JJD na|CCP galak|NNC Putak|NNP !|PMS
+Putak|NNP !|PMS
+Putak|NNP !|PMS
+Mga|DTCP kaibigan|NNC hayan|NNC na|CCP ang|DTC aking|PRSP_CCP itlog|NNC Kainin|NNP ninyo|PRP at|CCA nang|RBW kayo|PRP ay|LM maging|VBW malusog|JJD !|PMS

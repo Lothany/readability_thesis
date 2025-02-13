@@ -1,0 +1,7 @@
+Ako|PRS si|DTP Juan|NNP sampung|JJN_CCP -LRB-|NNP 10|CDB -RRB-|NNPA taong|NNC_CCP gulang|NNC at|CCA ulilang|JJN_CCP lubos|JJCS !|PMQ
+Ipinanganak|VBTS na|CCP mahirap|JJD lamang|RBI subalit|CCT sa|CCT kabila|CCT ng|CCB kahirapan|NNC ay|LM pinalaki|VBTS ako|PRS ng|CCB aking|PRSP_CCP mga|DTCP magulang|NNC na|CCP responsable|JJD at|CCA may|VBH takot|NNC sa|CCT Diyos|NNP !|PMQ
+Sa|CCT murang|JJD_CCP edad|NNC ay|LM natuto|VBTS na|CCP ako|PRS ng|CCB mga|DTCP gawaing|NNC_CCP bahay|NNC at|CCA maghanap|VBAF buhay|NNC para|CCT may|VBH makain|VBW sa|CCT araw-araw|RBW !|PMQ
+Paggising|VBW sa|CCT umaga|RBW ay|LM agad|RBD akong|PRS_CCP nagdarasal|VBTR at|CCA nililigpit|VBTR ko|PRS ang|DTC aking|PRSP_CCP hinigaan|VBOF !|PMQ
+Matapos|VBW kong|PRS_CCP magligpit|VBW ay|LM nagluluto|VBTR na|CCP ako|PRS ng|CCB aking|PRSP_CCP almusal|NNC pati|CCA na|RBI rin|RBI ng|CCB baon|NNC ko|PRS sa|CCT pangangalakal|NNC !|PMS
+Bago|RBW ako|PRS umalis|VBAF ng|CCB bahay|NNC ay|LM kumakain|VBTR_VBAF muna|RBI ako|PRS saka|CCA dumeretso|VBTR_VBAF sa|CCT lugar|NNC kung|RBK saan|RBQ maraming|PRI_CCP basura|NNC na|CCP ang|DTC puwede|RBT kong|PRS_CCP pagkakitaan|VBW !|PMQ
+Subalit|CCT ngayong|RBW_CCP araw|NNC ay|LM kaunti|PRI lamang|RBI ang|DTC aking|PRSP_CCP nakalakal|VBTS kaya|CCR nagpasya|VBTS akong|PRS_CCP umuwi|VBAF na|CCP lamang|RBI at|CCA bumalik|VBAF kinabukasan|RBW !|PMQ

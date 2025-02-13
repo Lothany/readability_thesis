@@ -1,0 +1,12 @@
+Ako|PRS po|RBS si|DTP Lito|NNP !|PMS
+Anim|JJN na|CCP taong|NNC_CCP gulang|NNC !|PMS
+Nakatira|VBTS po|RBS ako|PRS sa|CCT Barangay|NNP Ifugao|NNP Village|NNP !|PMS
+Tatlo|CDB po|RBS kaming|PRP_CCP magkakapatid|NNC !|PMS
+Ang|DTC nanay|NNC ko|PRS po|RBS ay|LM si|DTP Nanay|NNP Anabel|NNP !|PMS
+Ang|DTC tatay|NNC ko|PRS po|RBS ay|LM si|DTP Tatay|NNP Mateo|NNP !|PMS
+Ako|PRS naman|RBI po|RBS si|DTP Lita|NNP !|PMS
+Anim|JJN na|CCP taong|NNC_CCP gulang|NNC !|PMS
+Nakatira|VBTS po|RBS ako|PRS sa|CCT Macate|NNP Diffun|NNP Quirino|NNP !|PMS
+Dalawa|JJN po|RBS kaming|PRP_CCP magkapatid|NNC !|PMS
+Ang|DTC nanay|NNC ko|PRS po|RBS ay|LM si|DTP Nanay|NNP Lara|NNP !|PMS
+Ang|DTC tatay|NNC ko|PRS po|RBS ay|LM si|DTP Tatay|NNP Eric|NNP !|PMS

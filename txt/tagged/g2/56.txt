@@ -1,0 +1,69 @@
+Sa|CCT isang|PRI_CCP tahimik|JJD na|CCP lalawigan|NNC ng|CCB San|NNP Juan|NNP nakatira|VBTS ang|DTC isang|PRI_CCP mag-anak|NNC !|PMS
+Sila|PRP ay|LM may|VBH dalawang|JJN_CCP anak|NNC na|CCP sina|DTPP Marina|NNP at|CCA Malik|NNP !|PMS
+Sa|CCT kanilang|PRSP_CCP lugar|NNC kilala|JJD ang|DTC mag-anak|NNC sapagkat|CCR taglay|JJD ng|CCB mga|DTCP ito|PRO ang|DTC kabutihang-loob|NNC !|PMS
+Maaliwalas|RBD mahangin|JJD at|CCA mapayapa|RBD ang|DTC lugar|NNC ng|CCB San|NNP Juan|NNP na|CCP kung|RBK saan|RBQ naaabot|VBTR tanaw|RBD ang|DTC malawak|JJD na|CCP karagatan|NNC mula|RBW sa|CCT kanilang|PRSP_CCP tahanan|NNC !|PMS
+Si|DTP Mang|NNP Morgan|NNP na|CCP ama|NNC nina|DTPP Marina|NNP at|CCA Malik|NNP ay|LM isang|PRI_CCP mangingisda|NNC !|PMS
+Umaga|RBW at|CCA gabi|RBW pumapalaot|VBTR_VBAF sa|CCT karagatan|NNC ang|DTC kanilang|PRSP_CCP ama|NNC upang|CCB maghuli|VBW ng|CCB Isda|NNP at|CCA maibenta|VBW sa|CCT pamilihan|NNC !|PMS
+Si|DTP Aling|PRQ_CCP Marley|NNP naman|RBI na|CCP ina|NNC nina|DTPP Marina|NNP at|CCA Malik|NNP ay|LM naglalako|VBTR mula|RBL Lunes|NNP hanggang|RBW Biyernes|NNP ng|CCB fish|FW crackers|FW pabahay-bahay|FW !|PMS
+Gabi|RBW na|CCP kung|CCR umuwi|VBAF ang|DTC mag-asawa|NNC !|PMS
+Si|DTP Marina|NNP ay|LM matandang|JJD_CCP anak|NNC nina|DTPP Mang|NNP Morgan|NNP at|CCA Aling|PRQ_CCP Marley|NNP !|PMS
+Sampung|JJN_CCP taon|NNC ang|DTC tanda|NNC ni|DTP Marina|NNP sa|CCT kanyang|PRSP_CCP nakababatang|JJD_CCP kapatid|NNC na|CCP lalake|NNC na|CCP si|DTP Malik|NNP !|PMS
+Masayahin|VBTF at|CCA mahilig|JJD maglaro|VBAF si|DTP Malik|NNP sa|CCT kanyang|PRSP_CCP ate|FW !|PMS
+Tuwing|RBW nahihirapan|VBTR ito|PRO sa|CCT mga|DTCP aralin|VBOF agad|RBD itong|PRO_CCP humihingi|VBTR_VBAF ng|CCB tulong|NNC kay|DTP Marina|NNP !|PMS
+Araw-araw|RBW tinuturuan|VBTR ni|DTP Marina|NNP si|DTP Malik|NNP ng|CCB mga|DTCP gawaing|NNC_CCP pambahay|JJD tulad|JJC ng|CCB pagwawalis|NNC paglalampaso|NNC paghuhugas|NNC at|CCA iba|PRI pa|RBI !|PMQ
+Pinapayuhan|VBTR din|RBI ni|DTP Marina|NNP si|DTP Malik|NNP nang|RBW wastong|JJD_CCP pag-uugali|NNC at|CCA pagsisikap|NNC na|CCP makapagtapos|VBW ng|CCB pag-aaral|NNC !|PMS
+Ganoon|PRC na|RBI lamang|RBI ang|DTC pagmamahal|NNC ni|DTP Marina|NNP sa|CCT kanyang|PRSP_CCP nakababatang|JJD_CCP kapatid|NNC kaya|CCR tuwang-tuwa|JJD ang|DTC kanilang|PRSP_CCP magulang|NNC !|PMS
+Mababait|JJD ang|DTC mga|DTCP anak|NNC nina|DTPP Mang|NNP Morgan|NNP at|CCA Aling|PRQ_CCP Marley|NNP !|PMS
+Tuwing|RBW umuuwi|VBTR_VBAF sila|PRP sa|CCT tahanan|NNC napapangiti|VBTR na|CCP lamang|RBI ang|DTC mag-asawa|NNC dahil|CCR sinasalubong|VBTR sila|PRP nang|RBD yakap|RBD at|CCA halik|NNC ng|CCB dalawa|JJN nilang|PRP_CCP anak|NNC !|PMS
+Nakahanda|VBTS na|RBI ang|DTC hapag-kainan|NNC na|CCP kanilang|PRSP_CCP pagsasalohan|VBW !|PMQ
+Malaki|JJD ang|DTC pasasalamat|RBS ng|CCB mag-asawa|NNC sa|CCT Maykapal|NNP sa|CCT kabila|CCT ng|CCB kalagayan|NNC nila|PRP sa|CCT buhay|NNC ay|LM lumaki|VBAF ang|DTC kanilang|PRSP_CCP anak|NNC na|CCP may|VBH magandang-asal|JJD !|PMS
+Nakikita|VBTR ng|CCB mag-asawa|NNC ang|DTC paghihirap|NNC at|CCA pagtitiya|NNC ng|CCB mga|DTCP ito|PRO sa|CCT kani-kanilang|PRSP_CCP pag-aaral|NNC !|PMS
+Tuwing|RBW Sabado|NNP naman|RBI tulong-tulong|JJN_CCP sina|DTPP Marina|NNP at|CCA Malik|NNP sa|CCT mga|DTCP gawaing|NNC_CCP bahay|NNC habang|RBW wala|VBN ang|DTC kanilang|PRSP_CCP ama|NNC at|CCA ina!Kailanman|VBTS hindi|RBF kinaligtaan|VBTR ng|CCB mag-anak|NNC ang|DTC pagdalo|NNC ng|CCB misa|NNC sa|CCT simbahan|NNC tuwing|RBW Linggo|NNP upang|CCB magpasalamat|VBW sa|CCT Diyos|NNP !|PMQ
+Isang|PRI_CCP araw|NNC nang|RBW matapos|VBW ng|CCB misang|NNC_CCP dinaluhan|VBOF ng|CCB mag-anak|NNC nagyaya|VBTS ang|DTC ama|NNC na|CCP maligo|VBW sa|CCT dagat|NNC !|PMS
+Masayang-masaya|JJD sina|DTPP Marina|NNP at|CCA Malik|NNP !|PMS
+Sabik|RBD na|CCP sabik|JJD ang|DTC mga|DTCP ito|PRO dahil|CCR Linggo|NNP lamang|RBI nakakasama|VBTR at|CCA nakakapagkuwentuhan|VBTR nang|RBD matagal|RBD ang|DTC kanilang|PRSP_CCP magulang|NNC !|PMS
+Inihanda|VBTS ni|DTP Marina|NNP at|CCA Malik|NNP ang|DTC mga|DTCP kagamitan|NNC tulad|JJC ng|CCB salbabida|NNC goggles|NNC at|CCA kasuotang|NNC_CCP pandagat|JJD !|PMS
+Habang|RBW ang|DTC ina|NNC naman|RBI ay|LM naghanda|VBTS ng|CCB mga|DTCP babauning|JJD_CCP pagkain|NNC !|PMS
+Nang|RBW makarating|VBW sa|CCT dagat|NNC agad|RBW na|CCP inihaw|VBTS ni|DTP Mang|NNP Marlon|NNP ang|DTC mga|DTCP isda|NNC at|CCA nag-ayos|VBTS naman|RBI ng|CCB mesa|NNC si|DTP Aling|PRQ_CCP Marley|NNP para|CCT sa|CCT mga|DTCP dalang|NNC_CCP iba|PRI pang|RBI_CCP gamit|VBS !|PMQ
+Nagpaalam|VBTS sina|DTPP Marina|NNP at|CCA Malik|NNP sa|CCT Ina|NNP na|CCP maglaro|VBAF sa|CCT dalampasigan|NNC !|PMS
+Pinayagan|VBTS ito|PRO ni|DTP Aling|PRQ_CCP Marley|NNP at|CCA sinabihang|VBTS_CCP huwag|RBF munang|RBW_CCP lumapit|VBAF sa|CCT dagat|NNC hangga|RBW '|PMS t|NNCA wala|VBN sila|PRP !|PMQ
+Patakbong|RBD_CCP hinawakan|VBOF ni|DTP Marina|NNP ang|DTC kaliwang|JJD_CCP kamay|NNC ni|DTP Malik|NNP dala-dala|JJD ang|DTC salbadida|NNC !|PMS
+Sa|CCT dalampasigan|NNC naghahabulan|VBTR sina|DTPP Marina|NNP at|CCA Malik|NNP gumawa|VBAF ng|CCB sand|FW castle|FW at|CCA nang|RBW matanaw|VBW ang|DTC alon|NNC ng|CCB dagat|NNC lumapit|VBAF ang|DTC mga|DTCP ito|PRO at|CCA naligo|VBTS !|PMS
+Sakay|NNC sa|CCT salbabida|NNC si|DTP Malik|NNP habang|RBW tulak-tulak|JJD ito|PRO ni|DTP Marina|NNP !|PMS
+Nang|RBW mapalingon|VBW si|DTP Marina|NNP sa|CCT malaking|JJD_CCP kahoy|NNC na|CCP lumulutang|VBTR_VBAF papunta|RBL sa|CCT salbabida|NNC ni|DTP Malik|NNP hinarang|VBTS niya|PRS ito|PRO ngunit|CCT biglang|RBD_CCP lumakas|VBAF ang|DTC alon|NNC at|CCA nabitawan|VBTS ang|DTC salbabida|NNC !|PMS
+Tumilapon|VBAF si|DTP Marina|NNP at|CCA nadala|VBTS ang|DTC salbabida|NNC nang|RBW malakas|JJD na|CCP alon|NNC habang|RBW sakay|NNC nito|PRO si|DTP Malik|NNP !|PMS
+Ilang|PRQ_CCP saglit|RBW lamang|RBI nagising|VBTS sa|CCT kamalayan|NNC si|DTP Marina|NNP at|CCA agad|RBW hinanap|VBTS nito|PRO ang|DTC nakababatang|JJD_CCP kapatid|NNC subalit|CCT hindi|RBF niya|PRS ito|PRO makita|VBW !|PMQ
+Sumigaw|VBAF na|CCP umiiyak|VBTR_VBAF si|DTP Marina|NNP Malik|NNP !|PMS
+Malik|NNP !|PMS
+Malik|NNP !|PMS
+Tumakbo|VBAF ang|DTC mga|DTCP magulang|NNC papunta|RBL kay|DTP Marina|NNP at|CCA hinanap|VBTS nila|PRP ito|PRO ngunit|CCT hindi|RBF pa|RBI rin|RBI ito|PRO makita|VBW !|PMQ
+Kinabukasan|RBW binalikan|VBOF ni|DTP Marina|NNP ang|DTC karagatan|NNC sa|CCT pag-asang|NNC_CCP makikita|VBTF pa|RBI ang|DTC nakakabatang|JJD_CCP kapatid|NNC !|PMS
+Nalulungkot|VBTR ang|DTC mga|DTCP magulang|NNC ni|DTP Marina|NNP sa|CCT tuwing|RBW nakikita|VBTR ang|DTC anak|NNC nilang|PRP_CCP babae|NNC !|PMS
+Pinayuhan|VBTS ng|CCB magulang|NNC si|DTP Marina|NNP subalit|CCT nanindigan|VBTS si|DTP Marina|NNP na|CCP buhay|NNC pa|RBI ang|DTC kanyang|PRSP_CCP kapatid|NNC !|PMS
+Isang|PRI_CCP gabi|RBW pumunta|VBAF si|DTP Marina|NNP sa|CCT karagatan|NNC at|CCA umupo|VBAF sa|CCT malaking|JJD_CCP bato|NNC !|PMS
+Tinatanaw|VBTR nito|PRO ang|DTC malawak|JJD ng|CCB karagatan|NNC nang|CCB may|VBH bigla|JJD siyang|PRS_CCP marinig|VBW na|CCP malalim|JJD na|CCP boses|NNC iw|NNCA !|PMQ
+iw|NNCA !|PMS
+iw|NNCA !!|PMS
+Nilapitan|VBTS niya|PRS ito|PRO at|CCA nanlaki|VBTS ang|DTC mga|DTCP mata|NNC sa|CCT nakita|VBTS !|PMQ
+Naipit|VBTS ang|DTC buntot|NNC ng|CCB malaking|JJD_CCP isda|NNC sa|CCT malaking|JJD_CCP bato|NNC !|PMS
+Nanginginig|VBTR at|CCA takot-takot|VBTR si|DTP Marina|NNP habang|RBW hinihila|VBTR ang|DTC malaking|JJD_CCP bato|NNC upang|CCB matulungan|VBW ang|DTC malaking|JJD_CCP isda|NNC !|PMS
+Nang|RBW makawala|VBW ito|PRO tiningnan|VBOF ng|CCB malaking|JJD_CCP isda|NNC si|DTP Marina|NNP na|CCP may|VBH kalungkutan|NNC ang|DTC mukha|NNC !|PMS
+Biglang|RBD_CCP nagsalita|VBTS ang|DTC malaking|JJD_CCP isda|NNC at|CCA nagtanong|VBTS kung|RBK bakit|RBQ siya|PRS nalulungkot|VBTR !|PMQ
+Sinabi|VBTS ni|DTP Marina|NNP ang|DTC nangyari|VBTS sa|CCT kanyang|PRSP_CCP kapatid|NNC na|CCP si|DTP Malik|NNP !|PMS
+Agad|RBD pinasakay|VBOF si|DTP Marina|NNP sa|CCT likod|NNC ng|CCB malaking|JJD_CCP isda|NNC at|CCA iniikot|VBTR sa|CCT karagatan|NNC !|PMS
+Lumangoy|VBAF sila|PRP pailalim|RBL ng|CCB karagatan|NNC at|CCA nadaanan|VBTS ang|DTC matandang|JJD_CCP kamag-anak|NNC ni|DTP Isda|NNP na|CCP si|DTP Sashimi|NNP at|CCA nagtanong|VBTS kung|CCR may|VBH nakita|VBTS siyang|PRS_CCP batang|JJD_CCP lalake!Lumingon|NNP -|PMS lingon|NNC ito|PRO bilang|CCT tanda|NNC na|CCP walang|VBN_CCP itong|PRO_CCP nakita|VBTS !|PMQ
+Patuloy|JJD pa|RBI rin|RBI ang|DTC kanilang|PRSP_CCP paghahanap|NNC hanggang|RBW matanaw|VBW ni|DTP Marina|NNP ang|DTC bakawan|NNC sa|CCT kabilang|JJD_CCP dulo|NNC ng|CCB dalampasigan|NNC !|PMS
+Agad|RBD na|CCP ibinaba|VBTS ng|CCB malaking|JJD_CCP isda|NNC si|DTP Marina|NNP sa|CCT mga|DTCP puno|NNC ng|CCB bakawan|NNC at|CCA doon|PRL nakita|VBTS ang|DTC nakababatang|JJD_CCP kapatid|NNC na|CCP nakaupo|VBTS sa|CCT malalaking|JJD_CCP ugat|NNC nito|PRO !|PMQ
+Nandilat|VBTS ang|DTC mga|DTCP mata|NNC ni|DTP Malik|NNP nang|RBW makita|VBW ang|DTC nakakatandang|JJD_CCP kapatid|NNC !|PMS
+Patakbong|RBD_CCP umiiyak|VBTR_VBAF ito|PRO patungo|RBL kay|DTP Marina|NNP !|PMS
+Ate|NNC !|PMS
+Ate|NNC !|PMS
+Ate|NNC !|PMS
+tawag|VBS ni|DTP Malik|NNP !|PMS
+Masayang-masaya|JJD sina|DTPP Mang|NNP Morgan|NNP at|CCA Aling|PRQ_CCP Marley|NNP nang|RBW makita|VBW ang|DTC mga|DTCP anak|NNC papasok|VBTF sa|CCT kanilang|PRSP_CCP tahanan|NNC !|PMS
+Pinayuhan|VBTS ang|DTC mga|DTCP ito|PRO na|CCP anuman|PRI ang|DTC gagawin|VBTF magpapaalam|VBTF sa|CCT kanila|PRSP upang|CCB hindi|RBF mapahamak|VBW !|PMQ
+Tuwing|RBW takip-silim|RBD_CCP nagpapaalam|VBTR ang|DTC magkapatid|NNC na|CCP pupunta|VBTF sa|CCT bakawan|NNC upang|CCB makipagkita|VBW sa|CCT malaking|JJD_CCP isda|NNC !|PMS
+Doon|PRL hinahaplos|VBTR ni|DTP Marina|NNP ang|DTC malaking|JJD_CCP isda|NNC sa|CCT ulo|NNC at|CCA binibigyan|VBTR naman|RBI ng|CCB pagkain|NNC ito|PRO ni|DTP Malik|NNP !|PMS
+Inalagaan|VBTS din|RBI ni|DTP Marina|NNP ang|DTC mga|DTCP puno|NNC sa|CCT bakawan|NNC bilang|CCT tanda|NNC ng|CCB pagliligtas|NNC sa|CCT kanyang|PRSP_CCP kapatid|NNC !|PMS
+Di-kalaunan|RBF_RBW naging|VBTS matalik|JJD na|CCP magkaibigan|NNC sina|DTPP malaking|JJD_CCP Isda|NNP at|CCA ang|DTC magkapatid|NNC !|PMS
+Pinangalanan|VBOF nila|PRP itong|PRO_CCP si|DTP Tuna|FW dahil|CCR sa|CCT madilim|JJD at|CCA pilak|NNC nitong|PRO_CCP kulay|NNC !|PMS

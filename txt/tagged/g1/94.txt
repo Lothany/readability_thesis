@@ -1,0 +1,7 @@
+Bilis|NNC !|PMS
+Isarado|VBTS mo|PRS ang|DTC bintana|NNC Andrew|NNP !|PMS
+Pinapasok|VBTR na|CCP tayo|PRP ng|CCB malakas|JJD na|CCP hangin|NNC at|CCA ulan|NNC !|PMS
+Basa|JJD na|CCP ang|DTC aparador|NNC !|PMS
+sigaw|NNC ni|DTP Aling|PRQ_CCP Lagring|NNP !|PMS
+Tumakbo|VBAF si|DTP Andrew|NNP upang|CCB takpan|VBOF ito|PRO ng|CCB sako|NNC subalit|CCT nawalan|VBTS ito|PRO ng|CCB saysay|NNC nang|CCB sa|CCT kaniyang|PRSP_CCP pagtingala|NNC maliwanag|JJD na|CCP kalangitan|NNC ang|DTC kaniyang|PRSP_CCP nakita|VBTS !|PMQ
+Tinuklap|VBTS ni|DTP Rolly|NNP ang|DTC bubong|NNC ng|CCB kanilang|PRSP_CCP munting|JJD_CCP tahanan|NNC dahil|CCR sa|CCT napakalakas|JJCS_JJD na|CCP hanging|NNC_CCP dala|JJD nito|PRO !|PMQ

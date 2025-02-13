@@ -1,0 +1,35 @@
+May|VBH isang|PRI_CCP batang|JJD_CCP lalaki|NNC na|CCP ang|DTC pa|RBI -LSB-|NNPA 1|CDB -RSB-|NNPA ngalan|NNC ay|LM Raya|NNP !|PMS
+Siya|PRS ay|LM nakatira|VBTS sa|CCT Barangay|NNP Malaya|NNP !|PMS
+Si|DTP Raya|NNP ay|LM isa|PRI sa|CCT limang|JJN_CCP anak|NNC nila|PRP Mang|NNP Roma|NNP at|CCA Aling|PRQ_CCP Rita|NNP !|PMS
+Si|DTP Raya|NNP ay|LM isang|PRI_CCP mabait|JJD at|CCA masunuring|JJD_CCP bata|NNC !|PMS
+-LSB-|NNPA 2|CDB -RSB-|NNPA Isang|PRI_CCP araw|NNC pumunta|VBAF ang|DTC mag-anak|NNC sa|CCT isang|PRI_CCP malaking|JJD_CCP tindahan|NNC !|PMS
+Punung-puno|JJD ito|PRO ng|CCB iba|PRI '|PMS t|NNCA ibang|PRI_CCP makukulay|JJD na|CCP laruan|NNC at|CCA magagandang|JJD_CCP damit|NNC !|PMS
+-LSB-|NNPA 3|CDB -RSB-|NNPA Mayroon|VBH -LSB-|NNPA 4|CDB -RSB-|NNPA ding|RBI_CCP masasarap|JJD na|CCP mga|DTCP pagkain|NNC at|CCA mababangong|JJD_CCP -LSB-|NNP 5|CDB -RSB-|NNPA pabango|NNC !|PMS
+Ngunit|CCT isa|PRI lamang|RBI ang|DTC nakapukaw|VBTS sa|CCT atensiyon|NNC ni|DTP Raya|NNP !|PMS
+Ito|PRO ang|DTC isang|PRI_CCP maliit|JJD na|CCP laruang|NNC_CCP kotse|NNC na|CCP kulay|NNC pula|JJD !|PMS
+Dali-dali|RBW namang|RBI_CCP pinapili|VBTS nila|PRP Mang|NNP Roma|NNP at|CCA Aling|PRQ_CCP Rita|NNP ang|DTC kanilang|PRSP_CCP mga|DTCP anak|NNC !|PMS
+Nagsitakbuhan|VBTS naman|RBI ang|DTC mga|DTCP ito|PRO at|CCA kinuha|VBOF ang|DTC kanilang|PRSP_CCP mga|DTCP gustong|VBS_CCP bilhin|VBOF !|PMQ
+Nang|RBW sila|PRP ay|LM magbabayad|VBTR_VBAF na|CCP hindi|RBF inaasahang|VBTR_CCP nawala|VBTS ang|DTC pitaka|NNC ni|DTP Aling|PRQ_CCP Rita|NNP na|CCP naglalaman|VBTR ng|CCB pera|NNC nilang|PRP_CCP mag-asawa|NNC !|PMS
+Kaagad|RBD namang|RBI_CCP inilabas|VBOF ni|DTP Mang|NNP Roma|NNP ang|DTC kanyang|PRSP_CCP pera|NNC sa|CCT bulsa|NNC ngunit|CCT malungkot|JJD nitong|PRO_CCP sinabi|VBTS na|CCP hindi|RBF kasya|JJD ang|DTC pera|NNC niya|PRS na|CCP pambayad|JJD sa|CCT binili|VBOF nilang|PRP_CCP magkakapatid|NNC !|PMS
+-LSB-|NNPA 6|CDB -RSB-|NNPA Nag-alitan|NNP ang|DTC magkakapatid|NNC kung|CCR kanino|PRQ ang|DTC dapat|VBS bilhin|VBOF !|PMQ
+Kahit|CCT malungkot|JJD si|DTP Raya|NNP ay|LM nagboluntaryo|VBTS itong|PRO_CCP sa|CCT susunod|VBTF na|CCP lamang|RBI bilhin|VBOF ang|DTC nagustuhang|VBTR_CCP laruan|NNC !|PMS
+Agad|RBW namang|RBI_CCP nagpasalamat|VBTS ang|DTC mag-asawa|NNC sa|CCT kanilang|PRSP_CCP mabait|JJD na|CCP anak|NNC sa|CCT ginawang|VBOF_CCP pagpaparaya|NNC nito|PRO sa|CCT mga|DTCP kapatid|NNC !|PMS
+Kontento|NNC na|CCP tinitingnan|VBTR ni|DTP Raya|NNP ang|DTC kanyang|PRSP_CCP mga|DTCP kapatid|NNC habang|RBW niyayakap|VBTR ng|CCB mga|DTCP ito|PRO ang|DTC kanilang|PRSP_CCP mga|DTCP bagong|JJD_CCP laruan|NNC !|PMS
+-LSB-|NNPA 7|CDB -RSB-|NNPA Palabas|NNP na|CCP sila|PRP ng|CCB tindahan|NNC nang|RBD biglang|RBD_CCP lumapit|VBAF ang|DTC guwardiya|NNC at|CCA bitbit|NNC ang|DTC pitaka|NNC ni|DTP Aling|PRQ_CCP Rita|NNP !|PMS
+-LSB-|NNPA 8|CDB -RSB-|NNPA Nalimutan|NNP daw|RBI itong|PRO_CCP dalhin|VBOF ni|DTP Aling|PRQ_CCP Rita|NNP noong|RBW_CCP siya|PRS ay|LM namimili|VBTR ng|CCB gulay|NNC sa|CCT kabilang|CCB tindahan|NNC !|PMS
+Agad|RBW naman|RBI nilang|PRP_CCP binili|VBOF ang|DTC laruang|NNC_CCP kotse|NNC na|CCP pula|JJD na|CCP gusto|VBS ni|DTP Raya|NNP !|PMS
+Masayang|RBD_CCP umuwi|VBAF ang|DTC mag-anak|NNC lalong-lalo|JJCC na|RBI si|DTP Raya|NNP habang|RBW yakap-yakap|JJD ang|DTC nabiling|VBTS_CCP laruan|NNC !|PMS
+palitan|VBOF ng|CCB baybay|NNC !|PMS
+pangalan|NNC Paunlarin|NNP ang|DTC panimula|NNC !|PMS
+Maaaring|RBM magsimula|VBW sa|CCT paglalarawan|NNC sa|CCT magandang|JJD_CCP katangian|NNC ni|DTP Raya|NNP bago|RBW ang|DTC kaligirang|NNC_CCP pampamilya|JJD !|PMS
+Maaring|RBM pag-isahin|NNC ang|DTC diwa|NNC ng|CCB mga|DTCP pangungusap|NNC na|CCP ito|PRO upang|CCB maging|VBW isang|PRI_CCP pangungusap|NNC lamang|RBI !|PMQ
+kolokyal|JJD na|CCP salita|NNC !|PMS
+gawing|VBOF_CCP promal|FW -|PMS Mayroon|VBH tanggalin|VBOF at|CCA isingit|VBOF ang|DTC pantukoy|JJD na|CCP mga|DTCP !|PMQ
+Pakiayos|VBW ang|DTC paglahad|NNC ng|CCB pangyayari|NNC !|PMS
+Gawin|VBOF itong|PRO_CCP kapana-panabik|NNC !|PMS
+Ayusin|VBOF ang|DTC banghay|NNC ng|CCB pandiwa|NNC !|PMS
+Higit|JJCC na|CCP palutangin|VBOF ang|DTC diwa|NNC ng|CCB pagpaparaya|NNC sa|CCT ginawa|VBOF ni|DTP Raya|NNP !|PMS
+Pagandahin|VBW pa|RBI lalo|JJCC ang|DTC paglahad|NNC ng|CCB mga|DTCP pangyayari|NNC !|PMS
+Simulan|VBOF agad|RBW sa|CCT pandiwa|NNC !|PMS
+Maaring|RBM ganito|PRC :|PMS Palabas|NNP na|CCP sila|PRP ng|CCB tindahan|NNC nang|RBD biglang|RBD_CCP lumapit|VBAF ang|DTC guwardiya|NNC at|CCA bitbit|NNC ang|DTC pitaka|NNC ni|DTP Aling|PRQ_CCP Rita|NNP !|PMS
+Sikaping|VBOF_CCP pagandahin|RBD pa|RBI ang|DTC buong|PRI_CCP talata|NNC para|CCT mas|JJCC malinaw|JJD ang|DTC kakintalan|NNC bago|RBW ang|DTC wakas|RBW !|PMQ

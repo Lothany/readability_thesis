@@ -1,0 +1,13 @@
+Tuwing|RBW Pebrero|NNP ipinagdiriwang|VBTS ang|DTC pista|NNC ng|CCB mga|DTCP bulaklak|NNC sa|CCT Lungsod|NNP Baguio|NNP !|PMS
+Kilala|JJD rin|RBI ito|PRO sa|CCT tawag|NNC na|CCP Pista|NNP ng|CCB Panagbenga|NNP !|PMS
+Ang|DTC Panagbenga|NNP ay|LM salitang|NNC_CCP galing|RBL sa|CCT Cordillera|NNP na|CCP ang|DTC kahulugan|NNC ay|LM panahon|NNC ng|CCB pamumukadkad|NNC ng|CCB mga|DTCP bulaklak|NNC !|PMS
+Binibigyang|VBTR_CCP halaga|NNC sa|CCT pistang|NNC_CCP ito|PRO ang|DTC magagandang|JJD_CCP bulaklak|NNC kung|RBK saan|RBQ kilala|JJD ang|DTC lungsod|NNC na|CCP ito|PRO !|PMQ
+Nagsimula|VBTS ang|DTC pagdiriwang|NNC ng|CCB Panagbenga|NNP noong|RBW_CCP 1995|CDB !|PMS
+Isinagawa|VBTS ang|DTC pistang|NNC_CCP ito|PRO para|CCT muling|RBW_CCP maibangon|VBW ang|DTC Lungsod|NNP Baguio|NNP mula|RBL sa|CCT sinapit|VBTS nito|PRO dulot|JJD nang|RBW malagim|JJD na|CCP lindol|NNC noong|RBW_CCP 1990|CDB !|PMS
+Maraming|PRI_CCP gawain|NNC ang|DTC makikita|VBTF sa|CCT pagdiriwang|NNC ng|CCB Panagbenga|NNP !|PMS
+Ang|DTC pinakasikat|JJCS_JJD at|CCA inaabangang|VBTR_CCP gawain|NNC tuwing|RBW pista|NNC ng|CCB bulaklak|NNC ay|LM ang|DTC parada|NNC !|PMS
+Kasama|CCB sa|CCT paradang|NNC_CCP ito|PRO ang|DTC sayawan|NNC sa|CCT kalsada|NNC at|CCA pagtugtog|NNC ng|CCB mga|DTCP banda|NNC !|PMS
+Pinakabida|JJCS_JJD sa|CCT parada|NNC ang|DTC mga|DTCP higanteng|JJD_CCP karosa|NNC na|CCP puno|NNC ng|CCB mga|DTCP magaganda|JJD at|CCA mababangong|JJD_CCP bulaklak|NNC !|PMS
+Sa|CCT paggawa|NNC ng|CCB karosang|NNC_CCP ito|PRO ipinakikita|VBTR ng|CCB mga|DTCP Pilipino|NNP ang|DTC kanilang|PRSP_CCP pagiging|VBTR malikhain|JJD at|CCA pagiging|VBTR matulungin|RBD !|PMQ
+Ipinaparada|VBTR ang|DTC mga|DTCP ito|PRO sa|CCT malalaking|JJD_CCP kalsada|NNC ng|CCB lungsod|NNC !|PMS
+Maraming|PRI_CCP mga|DTCP taong|NNC_CCP galing|RBL pa|RBI sa|CCT iba|PRI '|PMS t|NNCA ibang|PRI_CCP bahagi|NNC ng|CCB Pilipinas|NNP ang|DTC dumadayo|VBTR_VBAF sa|CCT Baguio|NNP upang|CCB mapanood|VBW ito|PRO !|PMQ

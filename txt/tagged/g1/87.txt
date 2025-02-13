@@ -1,0 +1,16 @@
+Isang|PRI_CCP maulan|JJD na|CCP umaga|RBW nang|RBW dumungaw|VBAF sa|CCT bintana|NNC si|DTP Botsie|NNP !|PMS
+Maghanda|VBAF na|CCP kayo|PRP isuot|VBOF niyo|PRP na|CCP ang|DTC inyong|PRSP_CCP mga|DTCP kapote|NNC at|CCA bota|NNC wika|NNC ni|DTP Nanay|NNP Bing|NNP !|PMS
+Agad|RBD na|CCP sumunod|VBAF si|DTP Betsie|NNP at|CCA isinuot|VBTS niya|PRS ang|DTC kaniyang|PRSP_CCP lilang|NNC_CCP bota|NNC at|CCA kapote|NNC !|PMS
+Oops|NNP Oops|NNP Oops|NNP !|PMS
+Lampas|JJD tuhod|NNC na|CCP ang|DTC tubigbaha|NNC !|PMS
+Basang-basa|JJD na|CCP ang|DTC medyas|NNC at|CCA sapatos|NNC ko|PRS sambit|VBOF ni|DTP Botsie|NNP !|PMS
+Hindi|RBF ka|PRS kasi|CCR nag-iingat|VBTR sa|CCT paglakad|NNC wika|NNC ni|DTP Betsie|NNP !|PMS
+Ipinagpatuloy|VBTS nila|PRP ang|DTC kanilang|PRSP_CCP paglalakad|NNC patungo|RBL sa|CCT kalapit|JJD na|CCP barangay|NNC sa|CCT bahay|NNC ni|DTP Tita|NNP Betty|NNP !|PMS
+Narating|VBTS nila|PRP ang|DTC bahay|NNC ni|DTP Tita|NNP Betty|NNP !|PMS
+Nang|RBW di|RBF kalaunan|RBW sumakit|VBAF ang|DTC kaniyang|PRSP_CCP tiyan|NNC at|CCA nakaramdam|VBTS ng|CCB pagsusuka|NNC !|PMS
+Isinugod|VBTS siya|PRS ng|CCB kaniyang|PRSP_CCP Tita|NNP Betty|NNP sa|CCT kalapit|JJD na|CCP Rural|NNP Health|NNP Unit|NNP !|PMS
+Pagkalipas|VBW ng|CCB dalawang|JJN_CCP araw|NNC maayos|JJD na|CCP ang|DTC kalagayan|NNC ni|DTP Botsie|NNP !|PMS
+Masaya|NNP na|CCP siyang|PRS_CCP muli|RBW !|PMQ
+Naglalaro|VBTR sila|PRP ng|CCB kaniyang|PRSP_CCP kakambal|JJD na|CCP si|DTP Betsie|NNP nang|RBW marinig|VBW nila|PRP ang|DTC kanilang|PRSP_CCP Nanay|NNP Bing|NNP !|PMS
+Pumasok|VBAF na|CCP kayo|PRP at|CCA matindi|JJD na|CCP ang|DTC sikat|JJD ng|CCB araw|NNC hindi|RBF mabuti|JJD ang|DTC naidudulot|VBTR ng|CCB matinding|JJD_CCP sikat|NNC ng|CCB araw|NNC !|PMS
+Agad|RBD na|CCP sumunod|VBAF sa|CCT utos|NNC ng|CCB nanay|NNC ang|DTC magkapatid|NNC at|CCA masayang|JJD_CCP pinagsaluhan|VBTR_VBRF ang|DTC inihandang|JJD_CCP kakanin|NNC at|CCA mga|DTCP prutas|NNC ng|CCB kanilang|PRSP_CCP Nanay|NNP Bing|NNP !|PMS

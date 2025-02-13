@@ -1,0 +1,81 @@
+Si|DTP Isay|NNP pitong|JJN_CCP taong|NNC_CCP gulang|NNC na|CCP batang|JJD_CCP babae|NNC ay|LM isang|PRI_CCP mag-aaral|NNC sa|CCT unang|JJN_CCP baiting|NNC ng|CCB paaralang|NNC_CCP elementaryang|NNC_CCP sentral|JJD ng|CCB Pedro|NNP Acharon|NNP Sr|NNP !|PMS
+sa|CCT lungsod|NNC ng|CCB Heneral|NNP Santos|NNP !|PMS
+Maaga|JJD pa|RBI siyang|PRS_CCP nagigising|VBTR_CCP para|CCT ihanda|VBOF ang|DTC kanyang|PRSP_CCP sarili|NNC para|CCT sa|CCT pagpasok|NNC sa|CCT paaralan|NNC !|PMS
+Matapos|VBW niyang|PRS_CCP iligpit|VBOF ang|DTC kanyang|PRSP_CCP higaan|NNC ay|LM kaagad|RBD siyang|PRS_CCP siyang|PRS_CCP naligo|VBTS !|PMQ
+Kasunod|JJD nito|PRO ay|LM nagbihis|VBTS na|CCP siya|PRS ng|CCB kaniyang|PRSP_CCP uniporme|NNC at|CCA pumunta|VBAF na|RBI sa|CCT kusina|NNC upang|CCB kumain|VBAF ng|CCB agahan|NNC !|PMS
+Habang|RBW siya|PRS ay|LM kumakain|VBTR_VBAF biglang|RBD_CCP nagsalita|VBTS ang|DTC kaniyang|PRSP_CCP nanay|NNC !|PMS
+Isay|VBOF pagkatapos|RBW mong|PRS_CCP maligo|VBW ay|LM dapat|VBS suklayin|VBOF mo|PRS ang|DTC iyong|PRSP_CCP buhok|NNC para|CCT hindi|RBF ito|PRO magbuhol-buhol|VBW at|CCA maging|VBW maayos|JJD tingnan|VBOF !|PMQ
+Hindi|RBF pala|NNC nagsuklay|VBTR ng|CCB buhok|NNC si|DTP Isay|NNP kaya|CCR napagsabihan|VBTS ito|PRO ng|CCB kanyang|PRSP_CCP nanay|NNC !|PMS
+Eh|NNPA ayaw|VBS ko|PRS po|RBS !|PMQ
+Ayaw|RBF ko|PRS ko|PRS pong|PRO_CCP magsuklay|VBAF ng|CCB buhok|NNC nanay|NNC sagot|NNC ni|DTP Isay|NNP sa|CCT nanay|NNC niya|PRS !|PMQ
+Bakit|PRQ baa|NNC yaw|NNCA mong|PRS_CCP magsuklay|VBW ng|CCB buhok|NNC anak|NNC !|PMS
+Ayaw|RBF mo|PRS ba|RBI na|CCP maging|VBW maayos|JJD tingnan|VBOF ang|DTC buhok|NNC mo|PRS !|PMQ
+nagtatakang|VBTR tanong|NNC ng|CCB nanay|NNC ni|DTP Isay|NNP !|PMS
+Kasi|CCR po|RBS magugulo|VBTF_VBAF lang|RBI din|RBI naman|RBI po|RBS ang|DTC buhok|NNC ko|PRS mamaya|RBW pagdating|VBW ko|PRS sa|CCT paaralan|NNC dahil|CCR sa|CCT hangin|NNC habang|RBW nakasakay|VBTS ako|PRS ng|CCB traysikel|FW sagot|NNC naman|RBI ni|DTP Isay|NNP !|PMS
+Ganiyan|CCB talaga|RBT iyan|PRO anak|NNC kaya|CCR dapat|VBS palagi|RBW kang|PRS_CCP magdadala|VBTF_VBAF ng|CCB suklay|NNC para|CCT kapag|CCR nagulo|VBTS na|CCP naman|RBI ang|DTC buhok|NNC mo|PRS may|VBH magagamit|VBTF ka|PRS para|CCT ayusin|VBOF ito|PRO ulit|RBW matiyagang|RBD_CCP sagot|NNC ng|CCB nanay|NNC ni|DTP Isay|NNP habang|RBW sinusuklayan|VBTR ang|DTC mahabang|JJD_CCP buhok|NNC ni|DTP Isay|NNP !|PMS
+Nang|RBW matapos|VBW ng|CCB kumain|VBAF si|DTP Isay|NNP ay|LM nagsipilyo|VBTS na|CCP siya|PRS ng|CCB kaniyang|PRSP_CCP ngipin|NNC habang|RBW hinahanda|VBTR naman|RBI ng|CCB kanyang|PRSP_CCP nanay|NNC ang|DTC kaniyang|PRSP_CCP baon|NNC para|CCT sa|CCT paaralan|NNC !|PMS
+Hindi|RBF kinalimutan|VBTR ng|CCB kanyang|PRSP_CCP nanay|NNC na|CCP ilagay|VBOF sa|CCT bag|NNC ang|DTC suklay|NNC ni|DTP Isay|NNP !|PMS
+Bago|RBW umalis|VBAF ay|LM nagmano|VBTS at|CCA humalik|VBAF muna|RBI sa|CCT kanyang|PRSP_CCP nanay|NNC si|DTP Isay|NNP !|PMS
+Nay|VBTS alis|NNC na|CCP po|RBS ako|PRS sabi|VBS ni|DTP Isay|NNP !|PMS
+Mag-ingat|VBW ka|PRS anak|NNC hintayin|VBOF moa|VBS ko|PRS mamaya|RBW sa|CCT skwelahan|NNC niyo|PRP at|CCA susunduin|VBTF kita|NNC pauwi|CCT sagot|NNC naman|RBI ng|CCB nanay|NNC ni|DTP Isay|NNP !|PMS
+Opo|PRS nanay|NNC !|PMS
+Babay|RBD po|RBS !|PMQ
+pahabol|JJD na|CCP sabi|VBS ni|DTP Isay|NNP bago|RBW siya|PRS sumakay|VBAF ng|CCB traysikel|FW papunta|VBW sa|CCT kanilang|PRSP_CCP paaralan|NNC !|PMS
+Habang|RBW nasa|RBL byahe|NNC masayang-masaya|JJD si|DTP Isay|NNP habang|RBW nararamdaman|VBTR ang|DTC salubong|NNC ng|CCB hangin|NNC dahil|CCR na|RBI din|RBI sa|CCT banayad|JJD na|CCP takbo|NNC ng|CCB kaniyang|PRSP_CCP sinasakyang|VBTS_CCP traysikel|FW !|PMS
+Dahil|CCR dito|PRL nagulo|VBTS ang|DTC buhok|NNC ni|DTP Isay|NNP !|PMS
+Pagdating|VBW niya|PRS sa|CCT kanilang|PRSP_CCP paaralan|NNC ay|LM Nakita|VBTS niya|PRS ang|DTC kaniyang|PRSP_CCP kaklase|JJD na|CCP kambal|NNC na|CCP sina|DTPP Nino|NNP at|CCA Nina|NNP !|PMS
+Magandang|JJD_CCP umaga|RBW sa|CCT inyong|PRSP_CCP dalawa|JJN Nino|NNP at|CCA Nina|NNP !|PMS
+masayang|JJD_CCP bati|NNC ni|DTP Isay|NNP !|PMS
+Magandang|JJD_CCP umaga|RBW din|RBI saiyo|CCR Isay|NNP !|PMS
+halos|JJD magkasabay|VBW naman|RBI na|CCP tugon|NNC ng|CCB kambal|NNC na|CCP kapatid|NNC !|PMS
+Habang|RBW sila|PRP ay|LM naglalakad|VBTR papunta|VBW sa|CCT kanilang|PRSP_CCP silid-aralan|NNC ay|LM napansin|VBTS ni|DTP Nina|NNP na|CCP medyo|JJCC magulo|JJD ang|DTC buhok|NNC ni|DTP Isay|NNP !|PMS
+Isay|VBOF kailangan|VBS mo|PRS yata|RBM na|CCP suklayan|NNC ang|DTC buhok|NNC mo|PRS nagulo|VBTS siguro|RBM iyan|PRO kanina|RBW habang|RBW papunta|VBW ka|PRS dito|PRL sa|CCT paaralan|NNC sabi|VBS ni|DTP Nina|NNP !|PMS
+Hindi|RBF na|CCP ayaw|RBF kong|PRS_CCP sinusuklayan|VBTR ang|DTC buhok|NNC ko|PRS kasi|CCR magugulo|JJD rin|RBI naman|RBI iyan|PRO mamaya|RBW balewalang|JJD_CCP sagot|NNC ni|DTP Isay|NNP !|PMS
+Maya-maya|RBW ay|LM biglang|RBD_CCP tumunog|VBAF ang|DTC bell|FW hudyat|NNC na|CCP magsisimula|VBTF na|RBI ang|DTC klase|NNC !|PMS
+Sakto|JJD naming|PRP_CCP pagdating|VBW ng|CCB tatlong|JJN_CCP mag-aaral|NNC sa|CCT kanilang|PRSP_CCP silid-aralan|NNC !|PMS
+Matapos|VBW ang|DTC kanilang|PRSP_CCP klase|NNC sa|CCT umaga|RBW ay|LM naghanda|VBTS na|CCP sila|PRP para|CCT kumain|VBAF ng|CCB kanilang|PRSP_CCP pananghalian|NNC !|PMS
+Bago|RBW sila|PRP nagsimulang|VBTS_CCP kumain|VBAF ay|LM naghugas|VBTS muna|RBI sila|PRP na|CCP kanilang|PRSP_CCP mga|DTCP kamay|NNC !|PMS
+Habang|RBW kumakain|VBTR_VBAF sila|PRP napansin|VBTS ni|DTP Nino|NNP ang|DTC nagkabuhol-buhol|VBTS na|CCP buhok|NNC ni|DTP Isay|NNP !|PMS
+Isay|NNC yung|PRO_CCP buhok|NNC mo|PRS nagkabuhol-buhol|VBTS na|CCP sabi|VBS ni|DTP Nino|NNP !|PMS
+Hayaan|VBOF mo|PRS na|CCP Nino|NNP !|PMS
+Pagsusuklayan|VBW ko|PRS yan|PRO ngayon|RBW magugulo|JJD rin|RBI naman|RBI yan|PRO mamaya|RBW sagot|NNC ni|DTP Isay|NNP habang|RBW hawak-hawak|JJD ang|DTC kanyang|PRSP_CCP kurbiyertos|NNC !|PMS
+Pagkapos|VBW nilang|PRP_CCP kumain|VBAF ay|LM nagsipilyo|VBTS sila|PRP ng|CCB kanilang|PRSP_CCP mga|DTCP ngipin|NNC !|PMS
+Dahil|CCR katatapos|VBW lang|RBI nilang|PRP_CCP kumain|VBAF maya-maya|RBW ay|LM nakaramdam|VBTS na|RBI ng|CCB antok|NNC si|DTP Isay|NNP kaya|CCR siya|PRS ay|LM natulog|VBTS !|PMQ
+Habang|RBW mahimbing|JJD na|CCP natutulog|VBTR si|DTP Isay|NNP bigla|RBD niyang|PRS_CCP napanaginipan|VBTS ang|DTC isang|PRI_CCP suklay|NNC !|PMS
+Nagtaka|VBTS siya|PRS kung|RBK bakit|RBQ tila|RBM umiiyak|VBTR_VBAF yata|RBM ito|PRO !|PMQ
+Nang|RBW laiptan|VBOF niya|PRS ito|PRO laking|JJD_CCP gulat|NNC niya|PRS ng|CCB makita|VBW niyang|PRS_CCP suklay|NNC niya|PRS pala|NNC ito|PRO !|PMQ
+Suklay|CCB bakit|PRQ ka|PRS umiiyak|VBTR_VBAF !|PMQ
+nagtatakang|VBTR tanong|NNC ni|DTP Isay|NNP !|PMS
+Huhuhu|NNP !|PMS
+Ayaw|RBF ko|PRS kasing|JJCC mangyari|VBW saiyo|NNC ang|DTC nangyari|VBTS sa|CCT kaibigan|NNC ng|CCB kapwa|PRI ko|PRS suklay|FW umiiyak|VBTR_VBAF na|CCP tugon|NNC ng|CCB suklay|NNC ni|DTP Isay|NNP !|PMS
+Bakit|PRQ !|PMS
+Ano|PRQ ba|RBI ang|DTC nangyari|VBTS sa|CCT kaniya|PRSP !|PMQ
+nag-aalalang|VBTR tanong|NNC ni|DTP Isay|NNP sa|CCT kaniyang|PRSP_CCP suklay|FW !|PMS
+Halika|JJD tingnan|VBOF mo|PRS dito|PRL sa|CCT mahiwagang|JJD_CCP salamin|NNC kung|RBK anong|RBQ_CCP nangyari|VBTS sa|CCT kanya|PRSP anyaya|NNC ng|CCB suklay|NNC kay|DTP Isay|NNP !|PMS
+Nang|RBW makalapit|VBW sila|PRP sa|CCT mahiwagang|JJD_CCP salamin|NNC ay|LM gulat|JJD na|CCP gulat|NNC si|DTP Isay|NNP sa|CCT nakita|VBTS niya|PRS !|PMQ
+May|VBH isang|PRI_CCP batang|JJD_CCP babae|NNC na|CCP kasing-edad|JJCC niya|PRS na|CCP buhol-buhol|JJD din|RBI ang|DTC buhok|NNC !|PMS
+Sa|CCT sobrang|JJCS_CCP gulo|NNC ng|CCB buhok|NNC nito|PRO ay|LM pinamahayan|VBTS na|CCP ito|PRO ng|CCB mga|DTCP ipis|NNC at|CCA daga|NNC !|PMS
+Ew|NNP !|PMS
+Nakakadiri|VBTR !|PMS
+Suklay|CCB bakit|PRQ ganiyan|VBOF ang|DTC nangyari|VBTS sa|CCT buhok|NNC niya|PRS !|PMQ
+halos|JJD di|RBF makapaniwalang|VBW_CCP tanong|NNC ni|DTP Isay|NNP sa|CCT kanyang|PRSP_CCP suklay|NNC !|PMS
+Hindi|RBF kasi|CCR siya|PRS nagsusuklay|VBTR ng|CCB buhok|NNC kaya|CCR ganiyan|VBOF ang|DTC nangyari|VBTS sa|CCT kanya|PRSP !|PMQ
+Ang|DTC buhok|NNC niya|PRS any|FW nagging|VBTR_CCP tirahan|NNC na|CCP ng|CCB mga|DTCP ipis|NNC at|CCA daga|NNC umiiyak|VBTR_VBAF pa|RBI rin|RBI na|CCP sagot|NNC ng|CCB suklay|NNC !|PMS
+Habang|RBW pinagmamasdan|VBTR_VBRF ni|DTP Isay|NNP ang|DTC mahiwagang|JJD_CCP salamin|NNC ay|LM nagtaka|VBTS siya|PRS kung|RBK bakit|RBQ parang|CCT unti-unting|RBD_CCP lumalapit|VBTR_VBAF sa|CCT kanya|PRSP ang|DTC mga|DTCP ipis|NNC at|CCA daga|NNC !|PMS
+Hihihi|RBF may|VBH isang|PRI_CCP bata|NNC na|CCP naman|RBI ang|DTC ayaw|RBF magsuklay|VBAF ng|CCB buhok|NNC niya|PRS !|PMQ
+Mayroon|VBH na|CCP naman|RBI tayong|PRP_CCP bagong|JJD_CCP buhok|NNC na|CCP matitirhan|VBW !|PMQ
+sabik|RBD na|CCP sabik|JJD na|CCP sigaw|NNC ng|CCB mga|DTCP ipis|NNC at|CCA daga|NNC !|PMS
+Takbo|NNC Isay|NNP takbo|NNC !|PMS
+Gusto|VBS na|RBI ring|RBI_CCP tumira|VBAF ng|CCB mga|DTCP ipis|NNC at|CCA daga|NNC sa|CCT buhok|NNC mo|PRS dahil|CCR hindi|RBF ka|PRS nagsusuklay|VBTR !|PMQ
+pasigaw|RBD na|CCP sabi|VBS ng|CCB suklay|NNC ni|DTP Isay|NNP !|PMS
+Sa|CCT sobrang|JJCS_CCP takot|NNC ni|DTP Isay|NNP ay|LM hindi|RBF siya|PRS nakatakbo|VBTS at|CCA napasigaw|VBTS na|RBI lamang|RBI sa|CCT takot|NNC !|PMS
+Ahh|NNP !|PMS
+Huwag|RBF kayong|JJD_CCP lumapit|VBAF sa|CCT akin|PRSP !|PMQ
+Huwag|RBF kayong|JJD_CCP tumira|VBAF sa|CCT buhok|NNC ko|PRS huwaaaag|VBOF !|PMQ
+Nagising|VBTS si|DTP Isay|NNP mula|RBL sa|CCT kaniyang|PRSP_CCP katakot-takot|JJD na|CCP panaginip|NNC !|PMS
+Dali-dali|RBD niyang|PRS_CCP kuniha|NNC ang|DTC kaniyang|PRSP_CCP suklay|NNC at|CCA agad-agad|RBD na|CCP sinuklayan|VBTR_VBOF ang|DTC kaniyang|PRSP_CCP buhok|NNC !|PMS
+Nagtaka|VBTS sina|DTPP Nino|NNP at|CCA Nina|NNP kung|RBK bakit|RBQ biglang|RBD_CCP nagsuklay|VBTS si|DTP Isay|NNP kahit|CCT ayaw|RBF na|CCP ayaw|RBF naman|RBI nitong|PRO_CCP magsuklay|VBW ng|CCB buhok|NNC !|PMS
+Isay|VBOF sabi|VBS mo|PRS ayaw|RBF mong|PRS_CCP magsuklay|VBW ng|CCB buhok|NNC !|PMS
+tanong|NNC ni|DTP Nino|NNP !|PMS
+Ayaw|RBF ko|PRS kasing|JJC pamahayan|NNC ng|CCB mga|DTCP ipis|NNC at|CCA daga|NNC ang|DTC buhok|NNC ko|PRS kaya|CCR simula|RBW ngayon|RBW magsusuklay|VBW na|CCP ako|PRS ng|CCB buhok|NNC ko|PRS sagot|NNC ni|DTP Isay|NNP habang|RBW dahan|JJD dahan|RBD niyang|PRS_CCP sinusuklayan|VBTS_VBOF ang|DTC kaniyang|PRSP_CCP buhok|NNC gamit|VBS ang|DTC suklay|NNC niya|PRS !|PMQ
+Nagtataka|VBTR man|RBI sa|CCT sagot|NNC ni|DTP Isay|NNP ay|LM binalewala|VBTS na|RBI lang|RBI nila|PRP ito|PRO dahil|CCR masaya|JJD silang|PRP_CCP makita|VBW si|DTP Isay|NNP na|CCP nagsusuklay|VBTR na|CCP ng|CCB buhok|NNC !|PMS

@@ -1,0 +1,17 @@
+Si|DTP Mila|NNP ay|LM isang|PRI_CCP bagong-lipat|JJD na|CCP mag-aaral|NNC sa|CCT Unang|NNP_CCP Baitang|NNP_CCP sa|CCT Paaralang|NNP_CCP Sentral|NNP ng|CCB Kanlurang|NNP_CCP Diffun|NNP !|PMS
+Ang|DTC kaniyang|PRSP_CCP pamilya|NNC ay|LM tubong|NNC Isabela|NNP ngunit|CCT sa|CCT kasalukuyan|RBW ay|LM dito|PRL na|CCP sa|CCT Diffun|NNP ang|DTC hanapbuhay|NNC ng|CCB kaniyang|PRSP_CCP mga|DTCP magulang|NNC !|PMS
+Isang|PRI_CCP hapon|RBW pagkagaling|VBW sa|CCT paaralan|NNC galak|JJD na|CCP galak|NNC si|DTP Mila|NNP na|CCP humarap|VBAF sa|CCT kaniyang|PRSP_CCP mga|DTCP magulang|NNC !|PMS
+Bakit|PRQ ang|DTC ganda|NNC ng|CCB ngiti|NNC mo|PRS Mila|NNP !|PMS
+tanong|NNC ng|CCB kaniyang|PRSP_CCP Tatay|NNP !|PMS
+Sobrang|JJCS_CCP saya|VBS ko|PRS po|RBS ngayon|RBW sa|CCT aking|PRSP_CCP bagong|JJD_CCP paaralan|NNC !|PMS
+wika|NNC ni|DTP Mila|NNP !|PMS
+Bakit|PRQ mo|PRS naman|RBI nasabi|VBTS iyan|PRO !|PMQ
+tanong|NNC ng|CCB kaniyang|PRSP_CCP Nanay|NNP !|PMS
+Marami|PRI kaming|PRP_CCP ginawa|VBOF sa|CCT paaralan|NNC kasama|CCB ang|DTC aming|PRSP_CCP mabait|JJD na|CCP guro|NNC !|PMS
+Mababait|JJD ang|DTC aking|PRSP_CCP mga|DTCP kaklase|NNC kaya|CCR madali|JJD akong|PRS_CCP nakiisa|VBTS sa|CCT mga|DTCP gawain|NNC !|PMS
+May|VBH ilan|PRQ na|CCP rin|RBI akong|PRS_CCP kaibigan|NNC !|PMS
+Masaya|NNP ang|DTC unang|JJN_CCP araw|NNC ko|PRS sa|CCT aking|PRSP_CCP bagong|JJD_CCP paaralan|NNC !|PMS
+Mabuti|JJD naman|RBI kung|CCR ganoon|PRC anak|NNC !|PMS
+Magpakabait|VBTF ka|PRS lagi|RBW !|PMQ
+Mag-aral|VBW ka|PRS nang|RBW Mabuti|NNP wika|NNC ng|CCB Tatay|NNP !|PMS
+Opo|PRS Tatay|NNP Nanay|NNP mag-aaral|NNC po|RBS ako|PRS nang|RBW mabuti|RBD dahil|CCR pangarap|NNC kong|PRS_CCP maging|VBW isang|PRI_CCP guro|NNC wika|NNC ni|DTP Mila|NNP !|PMS

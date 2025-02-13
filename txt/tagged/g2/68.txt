@@ -1,0 +1,34 @@
+Sa|CCT isang|PRI_CCP maliit|JJD na|CCP purok|NNC ng|CCB Lungsod|NNP ng|CCB Heneral|NNP Santos|NNP !|PMS
+Doon|PRL naninirahan|VBTR ang|DTC pamilya|NNC ni|DTP Mang|NNP Lito|NNP at|CCA Aling|PRQ_CCP Belen|NNP kasama|CCB ang|DTC kanilang|PRSP_CCP tatlong|JJN_CCP anak|NNC na|CCP sina|DTPP Jomar|NNP Jolina|NNP at|CCA Joshua|NNP !|PMS
+Sila|PRP ay|LM masaya|JJD at|CCA kuntento|NNC sa|CCT kanilang|PRSP_CCP kaaya-aya|JJD at|CCA simpleng|JJD_CCP buhay|NNC !|PMS
+Sa|CCT umaga|RBW si|DTP Mang|NNP Lito|NNP ay|LM nagtatrabaho|VBTR bilang|CCT isang|PRI_CCP magsasaka|NNC habang|RBW si|DTP Aling|PRQ_CCP Belen|NNP naman|RBI ay|LM nagluluto|VBTR ng|CCB mga|DTCP masarap|JJD na|CCP pagkain|NNC para|CCT sa|CCT kanilang|PRSP_CCP pamilya|NNC !|PMS
+Sa|CCT hirap|NNC ng|CCB buhay|NNC hinarap|VBTS_VBOF nila|PRP ito|PRO ng|CCB may|VBH tuwa|NNC !|PMS
+Si|DTP Jomar|NNP ay|LM nasa|RBL kolehiyo|NNC na|CCP kumukuha|VBTR_VBAF ng|CCB kursong|NNC_CCP Engineering|NNP gustong-gusto|RBD ni|DTP Jomar|NNP na|CCP ipaayos|VBOF ang|DTC kanilang|PRSP_CCP bahay|NNC na|CCP siya|PRS mismo|RBT ang|DTC gagawa|VBTF !|PMQ
+Si|DTP Jolina|NNP naman|RBI ay|LM nasa|RBL Senior|NNP High|NNP School|NNP at|CCA pangarap|NNC niya|PRS maging|VBW guro|NNC !|PMS
+Nakikita|VBTR kasi|CCR niya|PRS sa|CCT mga|DTCP panahon|NNC ngayon|RBW na|CCP maraming|PRI_CCP kabataan|NNC ang|DTC hindi|RBF marunong|JJD magbasa|VBAF alam|VBS niya|PRS na|CCP hindi|RBF madali|JJD ang|DTC magiging|VBTF guro|NNC marami|PRI muna|RBI syang|NNC_CCP pagdadaanan|NNC sa|CCT buhay|NNC bago|RBW marating|VBW ang|DTC tagumpay|NNC !|PMS
+At|CCA si|DTP Joshua|NNP ay|LM nasa|RBL Grade|NNP 6|CDB at|CCA napabilang|VBTS rin|RBI sa|CCT may|VBH mataas|JJD na|CCP marka|NNC !|PMS
+Pangarap|JJD na|CCP tila|RBM mahirap|JJD ngunit|CCT gusto|VBS nilang|PRP_CCP magkakapatid|NNC na|CCP makapagtapos|VBW ng|CCB pag-aaral|NNC at|CCA makatulong|VBW sa|CCT kanilang|PRSP_CCP mga|DTCP magulang|NNC na|CCP makaahon|VBW sa|CCT kahirapan|NNC !|PMS
+Sa|CCT kanilang|PRSP_CCP tahanan|NNC mahalaga|JJD sa|CCT kanila|PRSP ang|DTC pagkakaroon|NNC ng|CCB pamilyang|NNC_CCP malapit|JJD sa|CCT isa|PRI '|PMS t|NNCA isa|PRI !|PMQ
+Tuwing|RBW gabi|RBW sabay|RBD sabay|RBD silang|PRP_CCP kumain|VBAF at|CCA nagkukwentuhan|VBTR tungkol|RBR sa|CCT kanilang|PRSP_CCP mga|DTCP naging|VBTS araw|NNC at|CCA nagbabahagi|VBTR ng|CCB kanilang|PRSP_CCP mga|DTCP pangarap|NNC !|PMS
+Napakalapit|JJCS_JJD ng|CCB samahan|NNC ng|CCB kanilang|PRSP_CCP pamilya|NNC at|CCA walang|VBN_CCP halong|NNC_CCP pag-aalinlangan|VBW sa|CCT pagtitiwala|NNC sa|CCT isa|PRI '|PMS t|NNCA isa|PRI !|PMQ
+Yan|PRS nga|RBI ang|DTC pamilya|NNC nila|PRP !|PMS
+Sa|CCT bawat|PRI pagsubok|NNC na|CCP kanilang|PRSP_CCP nararanasan|VBTR laging|RBD_CCP nariyan|VBTS ang|DTC bawat|PRI isa|PRI upang|CCB magbigay|VBAF ng|CCB suporta|NNC at|CCA tulong|NNC !|PMS
+Isang|PRI_CCP araw|NNC may|VBH di|RBF inaasahang|VBTR_CCP pangyayari|NNC !|PMS
+Si|DTP Mang|NNP Lito|NNP ay|LM naaksidente|VBTS habang|RBW nagtatrabaho|VBTR sa|CCT bukid|NNC !|PMS
+Nang|RBW malaman|VBW ito|PRO ng|CCB kanyang|PRSP_CCP pamilya|NNC agad|RBW silang|PRP_CCP pumunta|VBAF sa|CCT hospital|FW at|CCA tumulong|VBAF sa|CCT pagpapagamot|NNC sa|CCT kanya|PRSP at|CCA nagkaisa|VBTS upang|CCB mapagtagumpayan|VBW ang|DTC mga|DTCP gastusin|NNC !|PMS
+Pansamantalang|JJD_CCP si|DTP Jomar|NNP muna|RBI ang|DTC nag-aasikaso|VBTR sa|CCT kanilang|PRSP_CCP bukirin|NNC si|DTP Jolina|NNP naman|RBI ay|LM tumulong|VBAF sa|CCT pagbabantay|NNC ng|CCB kanyang|PRSP_CCP tatay|NNC sa|CCT hospital|FW at|CCA minsan|RBW naman|RBI ay|LM naglalako|VBTR ng|CCB kakanin|NNC na|CCP iniluto|VBTS ng|CCB nanay|NNC !|PMS
+Si|DTP Joshua|NNP naman|RBI ang|DTC nag|PRSP_CCP asikaso|NNC sa|CCT bahay|NNC !|PMS
+Sabay-sabay|RBD nilang|PRP_CCP hinarap|VBTS_VBOF ang|DTC problema|NNC ng|CCB pamilya|NNC !|PMS !|PMQ
+Dahil|CCR sa|CCT nangyaring|VBTS_CCP ito|PRO naging|VBTS mas|JJCC malapit|JJD pa|RBI sila|PRP sa|CCT isa|PRI '|PMS t|NNCA isa|PRI !|PMQ
+Lalo|JJCC pa|RBI nilang|PRP_CCP naintindihan|VBTR kung|RBK gaano|RBQ kahalaga|JJD ang|DTC bawat|PRI isa|PRI sa|CCT pamilya|NNC at|CCA ang|DTC pagkakaroon|NNC ng|CCB malusog|JJD na|CCP pangangatawan|NNC !|PMS
+Pagkalipas|VBW ng|CCB ilang|PRQ_CCP linggo|NNC nakabangon|RBD na|CCP si|DTP Mang|NNP Lito|NNP at|CCA nakabalik|VBTS na|RBI sa|CCT kanyang|PRSP_CCP trabaho|NNC !|PMS
+Masaya|NNP ang|DTC kanyang|PRSP_CCP pamilya|NNC na|CCP muli|RBW siyang|PRS_CCP nakapagtrabaho|VBTS at|CCA nakakatulong|VBTR sa|CCT kanilang|PRSP_CCP mga|DTCP gastusin|NNC !|PMS
+Dumating|VBAF naman|RBI ang|DTC panahon|NNC ng|CCB pagtatapos|NNC ni|DTP Jomar|NNP sa|CCT kanyang|PRSP_CCP kolehiyo|NNC !|PMS
+Hindi|RBF gaanong|PRC_CCP mayaman|JJD ang|DTC kanilang|PRSP_CCP pamilya|NNC kaya|CCR naisip|VBTS niya|PRS na|CCP mag-apply|VBW bilang|CCT call|FW center|FW agent|FW upang|CCB makapagtrabaho|VBW at|CCA makapagbigay|VBW ng|CCB tulong|NNC sa|CCT kanilang|PRSP_CCP gastusin|NNC at|CCA pag|CCR ipunan|VBOF ang|DTC gastusin|NNC sa|CCT board|FW exam|FW !|PMS
+Malungkot|JJD man|RBI para|CCT sa|CCT kanya|PRSP ang|DTC hindi|RBF niya|PRS magamit|VBW pansamantala|JJD ang|DTC kanyang|PRSP_CCP pinag-aralan|VBRF masaya|JJD naman|RBI siya|PRS dahil|CCR nakakatulong|VBTR siya|PRS sa|CCT kanyang|PRSP_CCP pamilya|NNC !|PMS
+Tumugon|VBAF din|RBI si|DTP Jolina|NNP sa|CCT panawagan|NNC ng|CCB kanyang|PRSP_CCP magulang|NNC na|CCP magtuloy-tuloy|VBW sa|CCT pag-aaral|NNC dahil|CCR ito|PRO ang|DTC magiging|VBTF sandata|NNC niya|PRS sa|CCT kanyang|PRSP_CCP kinabukasan|NNC at|CCA mas|JJCC higit|JJCC pang|RBI_CCP makatulong|VBW sa|CCT pamilya|NNC at|CCA sa|CCT sarili|NNC mismo!Si|NNP Joshua|NNP naman|RBI na|CCP bunso|NNC ay|LM pinaghusayan|VBRF din|RBI ang|DTC pag-aaral|NNC at|CCA hindi|RBF nawawala|VBTR sa|CCT nangungunang|VBTR_CCP sampung|JJN_CCP bata|NNC sa|CCT buong|PRI_CCP klase|NNC !|PMS
+Napakaproud|VBTS ng|CCB kanilang|PRSP_CCP mga|DTCP magulang|NNC sa|CCT mga|DTCP anak|NNC nila|PRP !|PMS
+Hindi|RBF lang|RBI sila|PRP nakakapag-aral|VBTR nakakatulong|VBTR pa|RBI sila|PRP sa|CCT kanilang|PRSP_CCP pamilya|NNC !|PMS
+Buong|PRI_CCP pusong|NNC_CCP nagpapasalamat|VBTR sa|CCT Panginoon|NNP si|DTP Mang|NNP Lito|NNP sa|CCT pabibigay|NNC sa|CCT kanila|PRSP ng|CCB mga|DTCP mababait|JJD at|CCA nasunurin|VBTS na|CCP anak|NNC !|PMS
+Ang|DTC buhay|NNC nga|RBI naman|RBI kung|CCR walang|VBN_CCP pagtutulungan|NNC mahirap|JJD harapin|VBOF ang|DTC pagsubok|NNC na|CCP dinaanan|VBTR !|PMQ
+Sambit|VBTS ni|DTP Mang|NNP Lito|NNP sa|CCT sarili|NNC !|PMS

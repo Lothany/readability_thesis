@@ -1,0 +1,8 @@
+Si|DTP Bebeth|NNP ay|LM nakatira|VBTS sa|CCT isang|PRI_CCP maliit|JJD na|CCP kubo|NNC sa|CCT isang|PRI_CCP nayon|NNC !|PMS
+Araw-araw|RBW ay|LM ginagawa|VBTR niya|PRS ang|DTC mga|DTCP gawaing|NNC_CCP bahay|NNC nang|RBW masinop|RBD !|PMQ
+Tahimik|RBD niyang|PRS_CCP nilalabhan|VBTR ang|DTC mga|DTCP damit|NNC maayos|JJD na|CCP niluluto|VBTR ang|DTC mga|DTCP pagkain|NNC at|CCA mabilis|RBD niyang|PRS_CCP nililinis|VBTR ang|DTC kanilang|PRSP_CCP bahay|NNC !|PMS
+Kaya|CCR palagi|RBW siyang|PRS_CCP pinupuri|VBTR sa|CCT kanilang|PRSP_CCP lugar|NNC dahil|CCR sa|CCT kaniyang|PRSP_CCP kasipagan|NNC !|PMS
+Libangan|NNC na|CCP niya|PRS ang|DTC maglaro|VBAF sa|CCT mayabong|JJD na|CCP puno|NNC !|PMS
+Tuwing|RBW hapon|RBW kasama|CCB niya|PRS ang|DTC kaniyang|PRSP_CCP masipag|JJD na|CCP nanay|NNC na|CCP pumupunta|VBTR_VBAF sa|CCT kapilya|NNC at|CCA taimtim|JJD na|CCP nagdarasal|VBTR para|CCT maligtas|VBW sa|CCT sakit|NNC na|CCP Covid-19|NNP !|PMS
+Lumalakad|VBTR_VBAF nang|RBW paluhod|RBD si|DTP Bebeth|NNP tuwing|RBW sila|PRP '|PMS y|FW nagdarasal|VBTR sa|CCT kapilya|NNC !|PMS
+Masayang-masaya|JJD siya|PRS tuwing|RBW papauwi|VBTF na|CCP sila|PRP ng|CCB kaniyang|PRSP_CCP nanay|NNC galing|RBL sa|CCT kapilya|NNC !|PMS

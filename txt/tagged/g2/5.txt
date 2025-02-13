@@ -1,0 +1,31 @@
+Sa|CCT isang|PRI_CCP maliit|JJD na|CCP nayon|NNC ng|CCB Timog|NNP Cotabato|NNP may|VBH nakatirang|VBTS_CCP napakagandang|JJCS_JJD_CCP babae|NNC mabait|JJD maka|VBW Diyos|NNP maka|VBW kalikasan|NNC at|CCA isa|PRI ring|RBI_CCP mapagmahal|JJD sa|CCT kanyang|PRSP_CCP kapatid|NNC !|PMS
+Hinahangaan|VBTR siya|PRS ng|CCB mga|DTCP tao|NNC at|CCA natutuwa|VBTS sila|PRP sa|CCT kaniya|PRSP !|PMQ
+Siya|PRS si|DTP Ana|NNP Garcia|NNP !|PMS
+Nagtatanim|VBTR sila|PRP ng|CCB gulay|NNC sa|CCT kanilang|PRSP_CCP sakahan|NNC at|CCA itinitinda|VBTS sa|CCT palengke|NNC !|PMS
+Paminsan-minsan|RBW ay|LM tumutulong|VBTR_VBAF siya|PRS sa|CCT kanilang|PRSP_CCP taniman|NNC !|PMS
+Tuwing|RBW linggo|NNC ay|LM nagsisimba|VBTR ang|DTC mag-anak|NNC !|PMS
+Nagdadala|VBTR din|RBI siya|PRS ng|CCB bulaklak|NNC para|CCT iaalay|VBOF sa|CCT Panginoon|NNP !|PMQ
+Nagpapasalamat|VBTR ang|DTC buong|PRI_CCP mag-anak|NNC sa|CCT Panginoon|NNP sa|CCT biyayang|NNC_CCP natatanggap|VBTR sa|CCT araw-araw|RBW !|PMQ
+Laking|JJD_CCP tuwa|NNC naman|RBI ng|CCB mga|DTCP magulang|NNC ni|DTP Ana|NNP sa|CCT kanilang|PRSP_CCP magkakapatid|NNC dahil|CCR lumaki|VBAF silang|PRP_CCP mabait|JJD matulungin|JJD at|CCA mapagmahal|JJD na|CCP anak|NNC !|PMS
+Isang|PRI_CCP araw|NNC may|VBH nakita|VBTS siyang|PRS_CCP matandang|JJD_CCP babae|NNC na|CCP matagal|JJD ng|CCB nakatayo|VBTS sa|CCT gilid|JJD ng|CCB kalsada|NNC na|CCP gustong|VBS_CCP tatawid|VBTF ngunit|CCT takot|JJD ito|PRO dahil|CCR sa|CCT maraming|PRI_CCP sasakyan|NNC na|CCP dumadaan|VBTR_VBAF !|PMQ
+Agad|RBD itong|PRO_CCP tinulungan|VBTS ni|DTP Ana|NNP upang|CCB makatawid|VBW ito|PRO nang|RBW maayos|JJD !|PMS
+Sobrang|JJCS_CCP nagpasalamat|VBTS ang|DTC matanda|NNC kay|DTP Ana|NNP dahil|CCR sa|CCT kanyang|PRSP_CCP ipinakitang|VBTS_CCP kabutihang|JJD_CCP loob|NNC sa|CCT kanya|PRSP !|PMQ
+Napakasarap|JJCS_JJD palang|NNC_CCP tumulong|VBAF sa|CCT kapwa|PRI tao|NNC natin|PRP lalo|JJCC na|RBI kapag|CCR bukal|NNC sa|CCT ating|PRSP_CCP loob|NNC at|CCA pusowika|NNC ni|DTP Ana|NNP !|PMS
+Dahil|CCR sa|CCT araw-araw|RBW na|CCP tumutulong|VBTR_VBAF si|DTP Ana|NNP sa|CCT pagtitinda|NNC sa|CCT palengke|NNC ay|LM halos|JJD makalimutan|VBW na|RBI niya|PRS ang|DTC kaarawan|NNC ng|CCB kanyang|PRSP_CCP kapatid|NNC !|PMS
+Nangako|VBTS pa|RBI naman|RBI siyang|PRS_CCP magregalo|VBAF ng|CCB keyk|NNC mula|RBL sa|CCT perang|NNC_CCP kanyang|PRSP_CCP iniipon|VBTS_VBOF !|PMQ
+Tatlong|JJN_CCP araw|NNC na|CCP lamang|RBI kaarawan|NNC na|CCP nang|RBD kanyang|PRSP_CCP kapatid|NNC na|CCP si|DTP Arnel|NNP !|PMS
+Nag-iipon|VBTR siya|PRS ng|CCB sapat|JJD na|CCP halaga|NNC upang|CCB magkaroon|VBW ng|CCB pambili|JJD ng|CCB keyk|NNC !|PMS
+Sumapit|VBAF na|RBI ang|DTC kaarawan|NNC ng|CCB kanyang|PRSP_CCP kapatid|NNC ngunit|CCT di|RBF pa|RBI sapat|JJD ang|DTC kayang|PRSP_CCP naipong|VBTS_CCP pera|NNC !|PMS
+Niyaya|VBTS pa|RBI rin|RBI niya|PRS ito|PRO upang|CCB bumili|VBAF ng|CCB keyk|NNC !|PMS
+Pumili|VBAF ka|PRS ng|CCB gusto|VBS mong|PRS_CCP keyk|JJD ang|DTC kanyang|PRSP_CCP utos|NNC sa|CCT kapatid!Opo|NNP ate|FW ang|DTC masayang|JJD_CCP sagot|NNC ni|DTP Arnel|NNP !|PMS
+Noong|RBW_CCP nakapili|VBTS na|RBI siya|PRS ng|CCB kanyang|PRSP_CCP gusto|VBS ay|LM tinitigan|VBTR ni|DTP Ana|NNP ang|DTC halaga|NNC ng|CCB keyk|NNC sabay|RBD tingin|NNC sa|CCT kanyang|PRSP_CCP pitaka|NNC na|CCP nag-aalala|VBTR !|PMQ
+Napansin|VBTS ni|DTP Arnel|NNP na|CCP malungkot|JJD ang|DTC kanyang|PRSP_CCP ate|NNC kaya|CCR iba|PRI na|RBI lamang|RBI ang|DTC kanyang|PRSP_CCP pinili|VBOF !|PMQ
+Isang|PRI_CCP matanda|JJD ang|DTC lumapit|VBAF sa|CCT kanila|PRSP at|CCA sinabi|VBTS kunin|VBOF niyo|PRP nayan|VBTS at|CCA ako|PRS na|CCP ang|DTC bahala|NNC sa|CCT bayad|NNC Laking|RBW pasasalamat|RBS ni|DTP Ana|NNP sa|CCT matanda|JJD Huwag|RBF kang|PRS_CCP magpasalamat|VBW hija|FW datapwa|FW '|PMS t|NNCA ako|PRS ang|DTC dapat|VBS magpasasalamat|RBS sayo|PRSP dahil|CCR tinulungan|VBOF mo|PRS ako|PRS sa|CCT pagtawid|NNC sa|CCT daanan|NNC nang|CCB maayos|JJD at|CCA ligtas|JJD wika|NNC ng|CCB matanda|JJD !|PMS
+Masayang|RBD_CCP umuwi|VBAF ang|DTC magkapatid|NNC !|PMS
+Nagpasalamat|VBTS sila|PRP sa|CCT Panginoon|NNP dahil|CCR may|VBH isang|PRI_CCP taong|NNC_CCP naging|VBTS dahilan|NNC na|CCP mapasaya|VBW ang|DTC kapatid|NNC na|CCP si|DTP Arnel|NNP sa|CCT kanyang|PRSP_CCP kaarawan|NNC !|PMS
+Pagdating|VBW ng|CCB magkapatid|NNC sa|CCT bahayhindi|NNC nila|PRP alam|VBS na|CCP nagluto|VBTS pala|NNC ang|DTC nanay|NNC ng|CCB pansit|JJD at|CCA adobong|JJD_CCP manok|NNC kaya|CCR mas|JJCC lalong|JJCC_CCP sumaya|VBAF ang|DTC kapatid|NNC ni|DTP Ana|NNP !|PMS
+Hindi|RBF rin|RBI inaasahan|VBTR ng|CCB nanay|NNC at|CCA tatay|NNC nila|PRP na|CCP may|VBH nabiling|VBTS_CCP keyk|NNC si|DTP Ana|NNP para|CCT sa|CCT kapatid|NNC nito|PRO !|PMQ
+Mangiyak-ngiyak|JJD sa|CCT tuwa|NNC ang|DTC mga|DTCP magulang|NNC ni|DTP Ana|NNP dahil|CCR sa|CCT murang|JJD_CCP edad|NNC nito|PRO inisip|VBTS niya|PRS ang|DTC kasiyahan|NNC ng|CCB kanyang|PRSP_CCP kapatid|NNC na|CCP si|DTP Arnel|NNP !|PMS
+Masaya|NNP nilang|PRP_CCP ipinagdiriwang|VBTR ang|DTC kaarawan|NNC ni|DTP Arnel|NNP !|PMS
+Ang|DTC sarap|NNC sarap|NNC ng|CCB keyk!Wika|NNP ni|DTP Arnel|NNP !|PMS
+Sabay-sabay|RBD nilang|PRP_CCP pinagsaluhan|VBTR_VBRF ang|DTC mga|DTCP pagkaing|NNC_CCP nakahain|VBTS sa|CCT mesa|NNC at|CCA buong|PRI_CCP pusong|NNC_CCP nagpasalamat|VBTS sa|CCT Poong|NNP_CCP Maykapal|NNP sa|CCT kabutihang|NNC_CCP ipinagkaloob|VBTS sa|CCT kanila|PRSP !|PMQ

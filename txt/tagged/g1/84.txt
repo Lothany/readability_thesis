@@ -1,0 +1,10 @@
+Lola|NNC masaya|JJD kami|PRP at|CCA nakadalaw|VBTS kang|PRS_CCP muli|RBW dito|PRL sa|CCT amin|PRSP masiglang|JJD_CCP sabi|VBS ni|DTP Eloy|NNP !|PMS
+Oo|RBT mga|DTCP apo|NNC !|PMS
+Heto|RBF may|VBH ibibigay|VBTF ako|PRS sa|CCT inyo|PRSP !|PMQ
+Itanim|VBOF ninyo|PRP para|CCT may|VBH maani|JJD kayo|PRP pagdating|VBW ng|CCB araw|NNC !|PMS
+Tandaan|VBOF lamang|RBI dapat|VBS araw-araw|RBW itong|PRO_CCP madiligan|VBW at|CCA alisan|VBW ng|CCB damo|NNC sa|CCT lugar|NNC nila|PRP upang|CCB mabilis|RBD itong|PRO_CCP tumubo|VBAF ang|DTC sabi|VBS ni|DTP Lola|NNP !|PMS
+Opo|PRS sagot|NNC ni|DTP Kiroy|NNP !|PMS
+Itinanim|VBTS ng|CCB makapatid|VBW ang|DTC ibinigay|VBTS ni|DTP Lola|NNP at|CCA sinunod|VBOF ang|DTC mga|DTCP bilin|NNC niya|PRS !|PMQ
+Matiyaga|JJD nilang|PRP_CCP inalagaan|VBTS ang|DTC mga|DTCP ito|PRO hanggang|RBW sa|CCT tumubo|VBAF lumaki|VBAF at|CCA namunga|VBTS !|PMS
+Meron|VBH na|CCP silang|PRP_CCP gulay|NNC na|CCP nagbibigay|VBTR ng|CCB tibay|NNC at|CCA lakas|NNC ng|CCB kanilang|PRSP_CCP katawan|NNC !|PMS
+Nagpapasalamat|VBTR sila|PRP kay|DTP Lola|NNP sa|CCT pagmamahal|NNC at|CCA pagmamalasakit|NNC nito|PRO sa|CCT kanila|PRSP !|PMQ

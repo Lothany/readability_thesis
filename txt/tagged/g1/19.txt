@@ -1,0 +1,114 @@
+Si|DTP Maya|NNP ay|LM pangalawa|JJN sa|CCT tatlong|JJN_CCP magkakapatid|NNC !|PMS
+Nakatira|VBTS sila|PRP sa|CCT abang|JJD_CCP tahanan|NNC ng|CCB Barangay|NNP San|NNP Isidro|NNP lungsod|NNC ng|CCB Heneral|NNP Santos|NNP !|PMS
+Mapagmahal|JJD ang|DTC kanyang|PRSP_CCP mga|DTCP magulang|NNC na|CCP sina|DTPP Mang|NNP Mando|NNP at|CCA Aling|PRQ_CCP Memay|NNP !|PMS
+Mahilig|JJD maglaro|VBAF si|DTP Maya|NNP sa|CCT kanyang|PRSP_CCP manika|NNC na|CCP bigay|NNC ng|CCB kanyang|PRSP_CCP Ante|NNP Anna|NNP !|PMS
+Araw|NNP ng|CCB Sabado|NNP naglalaro|VBTR ang|DTC magkakapatid|NNC Kuya|NNP Miguel|NNP maglalaro|VBTF tayo|PRP ng|CCB manika|NNC ko|PRS tawag|NNC ni|DTP Maya|NNP sa|CCT kanyang|PRSP_CCP nakatatandang|JJD_CCP kapatid|NNC !|PMS
+BogBogBog|VBTR Sandali|RBW lamang|RBI naglalaro|VBTR pa|RBI kami|PRP ni|DTP Marco|NNP ng|CCB basketball|FW tugon|NNC naman|RBI ng|CCB kanyang|PRSP_CCP Kuya|NNP Miguel|NNP !|PMS
+Si|DTP Marco|NNP ay|LM ang|DTC kanilang|PRSP_CCP nakababatang|JJD_CCP kapatid|NNC !|PMS
+Mag-isa|JJD na|CCP lamang|RBI naglaro|VBTS si|DTP Maya|NNP sa|CCT kanyang|PRSP_CCP manika|NNC na|CCP pinangalanan|VBTS niyang|PRS_CCP Meya|NNP !|PMS
+Mmmmm!mmmmm|VBTR tulog|NNC na!tulog|VBTS na|RBI !|PMQ
+Meya|PRS kong|PRS_CCP mahal|JJD !|PMS
+Awit|NNC ni|DTP Maya|NNP habang|RBW inuugoy|VBTR ang|DTC kanyang|PRSP_CCP manika|NNC !|PMS
+Inilapag|VBTS niya|PRS ito|PRO sa|CCT loob|NNC ng|CCB kahon|NNC bilang|CCT kama|NNC ng|CCB kanyang|PRSP_CCP manika|NNC !|PMS
+Pumunta|VBAF si|DTP Maya|NNP sa|CCT kusina|NNC upang|CCB uminom|VBAF ng|CCB tubig|NNC !|PMS
+Nakita|VBTS niya|PRS sa|CCT labas|NNC ang|DTC dalawa|JJN niyang|PRS_CCP kapatid|NNC na|CCP naglalaro|VBTR ng|CCB bola|NNC !|PMS
+Kuya|NNC Miguel|NNP ipasa|VBOF mo|PRS rin|RBI sa|CCT akin|PRSP ang|DTC bola|NNC nakangiting|RBD_CCP sigaw|NNC ni|DTP Maya|NNP !|PMS
+Eto|PRO saluin|VBTF mo|PRS ang|DTC bola|NNC Maya|NNP !|PMS
+Tugon|NNC ni|DTP Kuya|NNP Miguel|NNP !|PMS
+Wow|FW ang|DTC galing|RBL mo|PRS Ate|NNP Maya|NNP nasalo|CDB mo|PRS papuri|NNC ni|DTP Marco|NNP sa|CCT kanyang|PRSP_CCP ate|FW !|PMS
+Lumabas|VBAF sila|PRP sa|CCT kanilang|PRSP_CCP bahay|NNC upang|CCB maglaro|VBAF pa|RBI ng|CCB habol-habolan|FW !|PMS
+Dumating|VBAF ang|DTC kanyang|PRSP_CCP Nanay|NNP Memay|NNP mula|RBL sa|CCT palengke|NNC !|PMS
+Mano|CCT po|RBS Inay|PRO_CCP patakbong|JJD_CCP lumapit|VBAF ang|DTC magkakapatid|NNC !|PMS
+Maaari|VBS po|RBS bang|RBM maglaro|VBAF pa|RBI kami|PRP sa|CCT labas|JJD Inay|NNP !|PMS
+Paalam|VBW ni|DTP Kuya|NNP Miguel|NNP kay|DTP Aling|PRQ_CCP Memay|NNP !|PMS
+O|NNPA sige|FW mga|DTCP anak|NNC basta|CCT maging|VBW maingat|JJD at|CCA huwag|RBF mag-aaway|VBAF paalala|NNC ni|DTP Aling|PRQ_CCP Memay|NNP !|PMS
+Huli|RBW ka|PRS Marco|NNP !|PMS
+Ako|PRS naman|RBI habulin|VBOF mo|PRS Marco|NNP tugon|NNC ni|DTP Maya|NNP !|PMS
+Mag-iingat|VBTF kayo|PRP baka|RBM madapa|VBW kayo|PRP paalala|NNC ng|CCB kanilang|PRSP_CCP Kuya|NNP Miguel|NNP !|PMS
+Sa|CCT kusina|NNC inaayos|VBTR ni|DTP Aling|PRQ_CCP Memay|NNP ang|DTC kanyang|PRSP_CCP pinamili|VBTS !|PMQ
+Meron|VBH siyang|PRS_CCP mga|DTCP prutas|NNC ;|PMSC mangga|NNC at|CCA mansanas|NNC !|PMS
+Gulay|NNC at|CCA manok|NNC !|PMS
+Nagligpit|VBTS siya|PRS ng|CCB mga|DTCP kalat|JJD sa|CCT loob|NNC ng|CCB sala|NNC itinabi|VBOF ang|DTC kahon|NNC at|CCA ipinasok|VBTS sa|CCT bodega|NNC !|PMS
+Matapos|VBW magluto|VBW tinawag|VBOF na|CCP niya|PRS ang|DTC kanyang|PRSP_CCP mga|DTCP anak|NNC upang|CCB kumain|VBAF ng|CCB meryenda|NNC !|PMS
+Nandito|VBTS na|CCP po|RBS kami|PRP Inay|NNP bungad|NNC ni|DTP Maya|NNP !|PMS
+Binigyan|VBOF sila|PRP ng|CCB tinapay|NNC at|CCA juice|NNC ni|DTP Aling|PRQ_CCP Memay|NNP !|PMS
+Salamat|RBS po|RBS Inay|NNP nabusog|VBTS po|RBS kami|PRP !|PMQ
+Sabay|JJD sabi|VBS nina|DTPP Kuya|NNP Miguel|NNP Maya|NNP at|CCA Marco|NNP !|PMS
+Kinabukasan|RBW !|PMS
+Magandang|JJD_CCP umaga|RBW Maya|NNP masayang|JJD_CCP bati|NNC ng|CCB kanyang|PRSP_CCP manika|NNC !|PMS
+Magandang|JJD_CCP umaga|RBW naman|RBI Meya|NNP tugon|NNC ni|DTP Maya|NNP sa|CCT kanyang|PRSP_CCP Manika|NNP !|PMS
+Halika|JJD maglaro|VBAF tayo|PRP ng|CCB tagu-taguan|NNC sambit|NNC ni|DTP Meya|NNP Manika|NNP !|PMS
+Isa|PRI dalawa|JJN tatlo|JJN magtago|VBAF kana|JJD !|PMS
+Hinanap|VBOF ni|DTP Maya|NNP si|DTP Meya|NNP Manika|NNP sumilip|VBAF sya|PRS sa|CCT ilalim|JJD ng|CCB kama|NNC Huli|NNP ka|PRS !|PMQ
+ngunit|CCT walang|VBN_CCP Meya|NNP !|PMS
+Pumunta|VBAF naman|RBI siya|PRS sa|CCT kanang|JJD_CCP parte|NNC ng|CCB kanilang|PRSP_CCP bahay|NNC ang|DTC sala|NNC tahimik|JJD at|CCA wala|VBN parin|NNC si|DTP Meya|NNP !|PMS
+Aaaaahhh|NNP !|PMS
+alam|VBS ko|PRS na|CCP tinungo|VBOF ni|DTP Maya|NNP ang|DTC silid|NNC nila|PRP !|PMS
+Dahan-dahan|JJD niyang|PRS_CCP binuksan|VBOF ang|DTC pinto|NNC !|PMS
+Meya|NNP Meya|NNP nasaan|JJD ka|PRS !|PMQ
+Mahuhuli|VBTF na|CCP kita|NNC !|PMS
+Malumanay|JJD na|CCP sambit|NNC ni|DTP Maya|NNP !|PMS
+Subalit|CCT wala|VBN paring|NNC_CCP Meya|NNP Manika|NNP !|PMS
+Naku|NNP !|PMS
+Saan|PRQ kaya|CCR siya|PRS nagtago|VBTS !|PMQ
+Lumabas|VBAF ito|PRO ng|CCB bahay|NNC tiningnan|VBOF sa|CCT likod|NNC ng|CCB kanilang|PRSP_CCP bahay|NNC sa|CCT ilalim|JJD ng|CCB mga|DTCP tanim|NNC gayon|PRC paman|JJD wala|VBN paring|NNC_CCP Meya|NNP Manika|NNP !|PMS
+Nagsimula|VBTS na|CCP siyang|PRS_CCP mag-alala|VBW !|PMQ
+Nasaan|VBTS kana|NNC Meya|NNP !|PMS
+Lumabas|VBAF kana|NNC !|PMS
+Paiyak|RBD na|CCP sambit|VBTF ni|DTP Maya|NNP !|PMS
+Inay|RBR Itay|NNP nawawala|VBTR po|RBS si|DTP Meya|NNP !|PMS
+Paanong|JJCN_CCP nawala|VBTS !|PMQ
+Tanong|NNC ni|DTP Mang|NNP Mando|NNP !|PMS
+Naglalaro|VBTR lang|RBI po|RBS kami|PRP ng|CCB tagu-taguan|NNC kanina|RBW ko|PRS pa|RBI po|RBS siya|PRS hinahanap|VBTR pero|CCT hindi|RBF ko|PRS siya|PRS mahanap|VBW !|PMQ
+Malungkot|JJD na|CCP sagot|NNC ni|DTP Maya|NNP !|PMS
+Huhuhuhu|VBTR tulungan|VBTF_VBOF po|RBS ninyo|PRP ako|PRS hanapin|VBOF natin|PRP si|DTP Meya|NNP !|PMS
+Iyak|NNC nang|RBW iyak|NNC si|DTP Maya|NNP !|PMS
+Lumapit|VBAF na|RBI rin|RBI ang|DTC kanyang|PRSP_CCP Kuya|NNP Miguel|NNP at|CCA bunsong|JJD_CCP kapatid|NNC na|CCP si|DTP Marco|NNP !|PMS
+Huwag|RBF ka|PRS nang|RBW umiyak|VBAF Maya|NNP tutulungan|VBTF ka|PRS naming|PRP_CCP !|PMQ
+Nagmungkahi|VBTS ang|DTC kanyang|PRSP_CCP Inay|NNP na|CCP si|DTP Aling|PRQ_CCP Memay|NNP na|CCP mag|VBW imprinta|NNC sila|PRP ng|CCB larawan|NNC ni|DTP Meya|NNP Manika|NNP ipaskil|VBOF sa|CCT labas|NNC ng|CCB kanilang|PRSP_CCP bahay|NNC at|CCA sa|CCT kanilang|PRSP_CCP plasa|NNC !|PMS
+Heto|RBD na|CCP ang|DTC larawan|NNC ni|DTP Meya|NNP idikit|VBOF natin|PRP sa|CCT labas|NNC !|PMS
+Ang|DTC wika|NNC ni|DTP Aling|PRQ_CCP Memay|NNP !|PMS
+Subalit|CCT hindi|RBF pa|RBI rin|RBI nila|PRP nahanap|VBTS si|DTP Memay|NNP !|PMS
+Iyak|NNC nang|RBW iyak|NNC parin|NNC si|DTP Maya|NNP !|PMS
+Maya|NNP Maya|NNP gumising|VBAF ka|PRS nananaginip|VBTR ka|PRS !|PMQ
+Bakit|PRQ kaba|NNC umiiyak|VBTR_VBAF !|PMQ
+Inay|VBS nawawala|VBTR po|RBS si|DTP Meya|NNP !|PMS
+Ang|DTC malungkot|JJD na|CCP sagot|NNC ni|DTP Maya|NNP !|PMS
+Saan|PRQ mo|PRS ba|RBI iniwan|VBOF ang|DTC iyong|PRSP_CCP manika|NNC !|PMS
+Tanong|NNC naman|RBI ni|DTP Aling|PRQ_CCP Nena|NNP !|PMS
+Hindi|RBF ko|PRS po|RBS alam|VBS Inay|NNP !|PMS
+Dali-daling|RBD_CCP bumangon|VBAF si|DTP Maya|NNP !|PMS
+Lumabas|VBAF ng|CCB kanyang|PRSP_CCP silid|NNC at|CCA hinanap|VBTS si|DTP Maya|NNP !|PMS
+Pumunta|VBAF siya|PRS sa|CCT sala|NNC sa|CCT kusina|NNC sa|CCT banyo|NNC at|CCA sa|CCT bahaging|NNC_CCP likuran|JJD ng|CCB kanilang|PRSP_CCP bahay|NNC !|PMS
+Subalit|CCT wala|VBN talaga|RBT si|DTP Meya|NNP Manika|NNP !|PMS
+Isipin|VBOF mo|PRS nang|RBW mabuti|RBD Maya|NNP saan|PRQ ka|PRS huling|JJD_CCP naglaro|VBTS ng|CCB iyong|PRSP_CCP manika|NNC !|PMS
+Tanong|NNC muli|RBW ni|DTP Aling|PRQ_CCP Memay|NNP !|PMS
+Kahapon|PRI po|RBS dito|PRL sa|CCT loob|NNC ng|CCB bahay|NNC !|PMS
+Miguel|NNP Marco|NNP hali|FW nga|RBI kayo|PRP tawag|NNC ni|DTP Aling|PRQ_CCP Memay|NNP sa|CCT dalawang|JJN_CCP magkakapatid|NNC !|PMS
+Lumapit|VBAF kaagad|RBD sila|PRP at|CCA nagtanong|VBTS !|PMS
+Bakit|PRQ po|RBS Inay|NNP !|PMS
+Nakita|VBTS niyo|PRP ba|RBI ang|DTC manika|NNC ni|DTP Maya|NNP !|PMS
+Hindi|RBF po|RBS magalang|JJD na|CCP sagot|NNC ni|DTP Kuya|NNP Miguel|NNP !|PMS
+Ikaw|NNP Marco|NNP !|PMS
+Tanong|NNC naman|RBI ni|DTP Aling|PRQ_CCP Memay|NNP kay|DTP Marco|NNP !|PMS
+Hindi|RBF rin|RBI po|RBS Inay|NNP !|PMS
+Isipin|VBOF mo|PRS nang|RBW mabuti|RBD Maya|NNP saan|PRQ mo|PRS inilagay|VBOF ang|DTC iyong|PRSP_CCP manika|NNC !|PMS
+Kahapon|PRI po|RBS pinapatulog|VBTR ko|PRS po|RBS siya|PRS ah|NNCA naaalala|VBTR ko|PRS na|CCP po|RBS pinasok|VBOF ko|PRS siya|PRS sa|CCT isang|PRI_CCP karton|NNC na|CCP ginawa|VBOF kong|PRS_CCP kama|NNC niya|PRS !|PMQ
+Dito|PRL ko|PRS po|RBS sa|CCT sahig|NNC nilapag|VBTS kahapon|JJD !|PMS
+Maligsing|JJD_CCP tugon|NNC ni|DTP Maya|NNP sa|CCT kanyang|PRSP_CCP Inay|NNP !|PMS
+Dali-daling|RBD_CCP tumalikod|VBAF si|DTP Aling|PRQ_CCP Memay|NNP at|CCA nagtungo|VBTS sa|CCT bodega|NNC !|PMS
+Ito|PRO ba|RBI na|CCP kahon|NNC Maya|NNP !|PMS
+Tanong|NNC ni|DTP Maya|NNP !|PMS
+Upo|NNP Inay|NNP yan|PRO nga|RBI po|RBS !|PMQ
+Sabik|JJD na|CCP sagot|NNC ni|DTP Maya|NNP !|PMS
+Heto|RBD buksan|VBOF mo|PRS wika|NNC ng|CCB kanyang|PRSP_CCP inay|FW !|PMS
+Nang|RBW buksan|VBOF ni|DTP Maya|NNP nagningning|VBTS ang|DTC kanyang|PRSP_CCP mga|DTCP mata|NNC nang|RBW makita|VBW sa|CCT loob|NNC ng|CCB kahon|NNC si|DTP Meya|NNP Manika|NNP !|PMS
+Maraming-maraming|PRI_CCP salamat|RBS po|RBS Inay|NNP !|PMS
+Niyakap|VBTS nang|RBD mahigpit|JJD ni|DTP Maya|NNP si|DTP Meya|NNP Manika|NNP !|PMS
+Masayang-masaya|JJD din|RBI ang|DTC kanyang|PRSP_CCP mga|DTCP kapatid|NNC !|PMS
+Pinaalalahanan|VBTS ni|DTP Aling|PRQ_CCP Memay|NNP ang|DTC kanyang|PRSP_CCP mga|DTCP anak|NNC na|CCP Kapag|CCR kayo|PRP ay|LM maglalaro|VBTF siguraduhing|RBD_CCP iligpit|VBOF sa|CCT tamang|JJD_CCP lalagyan|NNC ang|DTC inyong|PRSP_CCP mga|DTCP laruan|NNC !|PMS
+Pahalagahan|VBOF ninyo|PRP ang|DTC ano|PRQ mang|RBI_CCP bagay|NNC na|CCP nasa|RBL inyo|PRSP wika|NNC ng|CCB kanilang|PRSP_CCP Inay|NNP !|PMS
+Opo|NNP Inay|NNP patawad|JJD po|RBS nakalimutan|VBTR kong|PRS_CCP iligpit|VBOF ang|DTC aking|PRSP_CCP manika|NNC malumanay|JJD na|CCP sagot|NNC ni|DTP Maya|NNP !|PMS
+Opo|NNP Inay|NNP !|PMS
+sagot|NNC din|RBI ni|DTP Kuya|NNP Miguel|NNP at|CCA Marco|NNP !|PMS
+Hinalikan|VBOF at|CCA niyaakap|VBOF muli|RBW Maya|NNP si|DTP Meya|NNP Manika|NNP !|PMS

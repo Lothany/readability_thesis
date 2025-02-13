@@ -1,0 +1,145 @@
+Sa|CCT isang|PRI_CCP magandang|JJD_CCP siyudad|NNC ng|CCB Heneral|NNP Santos|NNP may|VBH isang|PRI_CCP batang|JJD_CCP nag-aaral|VBTR sa|CCT mababang|JJD_CCP paaralan|NNC ng|CCB Calumpang|NNP_CCP siya|PRS ay|LM si|DTP Manuela|NNP mabait|JJD at|CCA pautal-utal|JJD kung|CCR magsasalita|VBTF kung|CCR kayat|JJD lagi|RBD itong|PRO_CCP tinutukso|VBTR ng|CCB kanyang|PRSP_CCP mga|DTCP kalase|NNC !|PMS
+Isang|PRI_CCP umaga|RBW -LSB-|NNPA 1|CDB -RSB-|NNPA sa|CCT loob|NNC ng|CCB klasrum|NNC habang|RBW ito|PRO ay|LM naka-upo|VBTS lumapit|VBAF ang|DTC kanyang|PRSP_CCP kaklase|NNC na|CCP si|DTP Anna|NNP sabay|RBD tapik|RBD sa|CCT kanyang|PRSP_CCP balikat|NNC napangiwi|VBTS sa|CCT sakit|NNC si|DTP Manuela|NNP dahil|CCR malakas|JJD ang|DTC pagkakatapik|NNC nito|PRO !|PMQ
+Anna|NNP may|VBH problema|NNC ba|RBI !|PMQ
+tanong|NNC ni|DTP Manuela|NNP !|PMS
+Nasaan|VBTS na|CCP yung|PRO_CCP pinapagawa|VBTR ko|PRS sayong|PRO_CCP takdang-aralin|VBOF -LSB-|NNPA 2|CDB -RSB-|NNPA sa|CCT MAPEH|NNPA !|PMS
+Ha|NNP !|PMS
+ah|FW eh|FW !|PMS
+pasensya|NNC na|CCP naiwan|VBTS ko|PRS kasi|CCR sa|CCT traysikel|FW ang|DTC mga|DTCP gamit|VBS kong|PRS_CCP pang|RBI_CCP drowing|FW -LSB-|NNP 3|CDB -RSB-|NNPA pwede|RBT bang|RBI_CCP bukas|JJD nalang|VBTS !|PMQ
+Sige|RBT Manuela|RBD bukas|RBD ko|PRS nalang|VBTS_CCP kukunin|VBTF_VBOF ang|DTC pinapagawa|VBTR ko|PRS sayo|PRSP sabay|RBD talikod|RBD nito|PRO !|PMQ
+Ganoon|PRC na|RBI lang|RBI -LSB-|NNPA 4|CDB -RSB-|NNPA lagi|RBW ang|DTC nararanasan|VBTR ni|DTP Manuela|NNP sa|CCT kanyang|PRSP_CCP mga|DTCP kaklase|NNC -LSB-|NNPA 5|CDB -RSB-|NNPA kung|RBK hindi|RBF mabulyawan|VBTF palagi|RBW itong|PRO_CCP nakakarinig|VBTR ng|CCB kung|CCR anu-anong|NNC_CCP salita|NNC mula|RBL sa|CCT mga|DTCP kaklase|NNC nito|PRO !|PMQ
+Sa|CCT isang|PRI_CCP banda|NNC meron|VBH naman|RBI itong|PRO_CCP kaibigan|NNC na|CCP malapit|JJD sa|CCT kanya|PRSP -LSB-|NNPA 6|CDB -RSB-|NNPA si|DTP Carlito|NNP na|CCP lagi|JJD rin|RBI -LSB-|NNPA 7|CDB -RSB-|NNPA g|NNCA kumakampi|VBTR_VBAF sa|CCT kanya|PRSP -LSB-|NNPA 8|CDB -RSB-|NNPA !|PMS
+Nakita|VBTS nga|RBI ni|DTP Carlito|NNP si|DTP Manuela|NNP na|CCP malungkot|JJD kaya|CCR pinuntahan|VBOF niya|PRS ito|PRO !|PMQ
+Oy|FW !|PMS
+Manuela|VBTF bakit|PRQ ka|PRS ba|RBI nandito|VBTS sa|CCT likud|NNC ng|CCB klasrum|NNC natin|PRP !|PMS
+bati|NNC nito|PRO !|PMQ
+Ikaw|NNP -LSB-|NNP 9|CDB -RSB-|NNPA pala|NNC iyan|PRO Carlito|NNP !|PMS
+Eh|FW nagpapahangin|VBTR lang|RBI ako|PRS ang|DTC sabi|VBS nito|PRO !|PMQ
+Nagpapahangin|VBTR o|CCT umiiwas|VBTR_VBAF ka|PRS na|CCP naman|RBI sa|CCT grupo|NNC nila|PRP Anna|NNP !|PMS
+ang|DTC sagot|NNC ni|DTP Carlito|NNP !|PMS
+Huwag|RBF nga|RBI natin|PRP silang|PRP_CCP pag-usapan|VBW !|PMQ
+Halika|JJD pagsaluhan|NNC natin|PRP itong|PRO_CCP baon|NNC kong|PRS_CCP kamote|NNC masarap|JJD ito|PRO !|PMQ
+Kinahapunan|VBTR habang|RBW naglilinis|VBTR si|DTP Manuela|NNP may|VBH nakita|VBTS itong|PRO_CCP bagay|NNC na|CCP naka|RBD balot|NNC sa|CCT supot|FW !|PMS
+Hala|NNP !|PMS
+ano|PRQ kaya|CCR ito|PRO !|PMQ
+Bakit|PRQ may|VBH supot|NNC sa|CCT upuan|NNC ko|PRS !|PMQ
+Pagkabukas|VBW nito|PRO nabigla|VBTS siya|PRS at|CCA ito|PRO pala|NNC ay|LM krayola|NNC pero|CCT kakaiba|JJD ito|PRO sabi|VBS niya|PRS !|PMQ
+Habang|RBW hawak|NNC niya|PRS ang|DTC krayola|NNC bigla|CCT namang|RBI_CCP dumating|VBAF si|DTP Anna|NNP kasama|CCB ang|DTC kanyang|PRSP_CCP mga|DTCP kaibigan|NNC !|PMS
+Manuela|VBTF_VBAF sabi|VBS mo|PRS wala|VBN kang|PRS_CCP gamit|VBS pang|RBI_CCP drowing|FW eh|FW ano|PRQ pala|NNC yang|PRO hawak|JJD mo|PRS !|PMQ
+tanong|NNC nito|PRO na|CCP siyang|PRS_CCP ikinabigla|VBTS ni|DTP Manuela|NNP !|PMS
+Ha|NNP !|PMS
+Eh|NNP di|RBF naman|RBI sa|CCT akin|PRSP ito|PRO !|PMQ
+Palusot|VBTF ka|PRS pa|RBI bukas|JJD ha|NNCA !|PMQ
+yung|PRO pinapagawa|VBTR ko|PRS sayo|PRSP !|PMQ
+Lingid|JJD sa|CCT kaalaman|NNC ni|DTP Anna|NNP narinig|VBTS pala|NNC ito|PRO ni|DTP Carlito|NNP at|CCA pinagsabihan|VBRF niya|PRS ito|PRO !|PMQ
+Ano|PRQ ka|PRS ba|RBI Anna|NNP !|PMS
+Ano|PRQ na|CCP naman|RBI yang|PRO ginagawa|VBTR_VBOF mo|PRS kay|DTP Manuela|NNP !|PMS
+Itigil|VBOF muna|RBI yan|PRO kapag|RBK hindi|RBF ka|PRS tumigil|VBAF isusumbong|VBTF kita|NNC kay|DTP titser|NNP Shiela|NNP !|PMS
+Sa|CCT narinig|VBTS na|CCP mga|DTCP salita|NNC mula|RBL kay|DTP Carlito|NNP bigla|RBD itong|PRO_CCP umalis|VBAF kasama|CCB ang|DTC kanyang|PRSP_CCP mga|DTCP kaibigan|NNC !|PMS
+Salamat|RBS Carlito|NNP sa|CCT pagtatanggol|NNC mo|PRS sa|CCT akin|PRSP !|PMQ
+Wala|VBN iyon|PRO Manuela|NNP basta|CCT andito|CDB lang|RBI ako|PRS !|PMQ
+Salamat|RBS !|PMS
+O|NNPA sige|FW mauna|FW na|CCP ako|PRS sa|CCT iyo|PRSP magkikita|VBTF nalang|VBTS_CCP tayo|PRP bukas|JJD !|PMS
+Kinabukasan|RBW sa|CCT loob|NNC ng|CCB klasrum|NNC nagtaka|VBTS si|DTP Manuela|NNP ni|DTP wala|VBN man|RBI lang|RBI naghanap|VBTS sa|CCT nakita|VBTS nyang|PRS_CCP krayola|NNC !|PMS
+Nang|RBW dumating|VBAF na|CCP ang|DTC kanilang|PRSP_CCP guro|NNC !|PMS
+Magandang|JJD_CCP umaga|RBW mga|DTCP bata|NNC !|PMS
+Magandang|JJD_CCP umaga|RBW po|RBS titser|FW Shiela|NNP sabay-sabay|RBD na|CCP bati|JJD ng|CCB mga|DTCP mag-aaral|NNC !|PMS
+Ngayong|RBW_CCP araw|NNC magkakaroon|VBTF tayo|PRP ng|CCB eliminasyon|NNC sa|CCT poster|FW making|VBW contest|FW para|CCT sa|CCT ating|PRSP_CCP nalalapit|VBTR na|CCP selebrasyon|NNC ng|CCB Linggo|NNP ng|CCB Wika|NNP na|CCP may|VBH temang|NNC_CCP `|PMS Filipino|NNP at|CCA mga|DTCP Katutubong|NNP_CCP Wika|NNP :|PMS Kasangkapan|NNP sa|CCT Pagtuklas|NNP at|CCA Paglikha|NNC !|PMS '|PMS
+Sino|PRQ sa|CCT inyo|PRSP ang|DTC gustong|VBS_CCP sumali|VBAF !|PMQ
+Tanong|NNC ni|DTP Bb|NNP !|PMS
+Shiela|NNP Bombita|NNP !|PMS
+Tumaas|VBAF ng|CCB kamay|NNC si|DTP Manuela|NNP ako|PRS po|RBS titser|FW !|PMS
+Nagsitawanan|VBTS ang|DTC lahat|PRI lalung-lalo|JJCC na|RBI si|DTP Anna|NNP !|PMS
+Ha|VBS ha|NNCA ha|NNCA !|PMQ
+Ano|PRQ !|PMS
+sasali|VBTF ka|PRS Manuela|NNP !|PMS
+Huwag|RBF na|RBI !|PMQ
+matatalo|VBTF ka|PRS lang|RBI sabi|VBS nito|PRO sa|CCT kanya|PRSP !|PMQ
+Biglang|RBD_CCP nagsalita|VBTS ang|DTC kanilang|PRSP_CCP guro|NNC !|PMS
+Mga|DTCP bata|NNC huwag|RBF niyong|PRO_CCP pagsalitaan|NNC ng|CCB ganyan|NNC si|DTP Manuela|NNP hindi|RBF niyo|PRP pa|RBI lubos|JJCS nakita|VBTS ang|DTC kanyang|PRSP_CCP kakayahan|NNC !|PMS
+Tama|RBT !|PMS
+Titser|FW magaling|JJD si|DTP Manuela|NNP !|PMS
+sabat|NNC naman|RBI ni|DTP Carlito|NNP na|CCP halatang|JJD_CCP pinapagaan|VBTR nito|PRO ang|DTC kalooban|NNC ng|CCB kaibigan|NNC !|PMS
+Tama|RBT iyan|PRO Carlito|NNP !|PMS
+Oh|FW !|PMS
+ano|PRQ Manuela|NNP sasali|VBTF ka|PRS ba|RBI !|PMQ
+Opo|NNP Bb|NNP !|PMS
+Bombita|CCU sagot|NNC naman|RBI ni|DTP Manuela|NNP !|PMS
+Sa|CCT narinig|VBTS na|CCP sambit|NNC ni|DTP Manuela|NNP !|PMS
+Makikitang|RBD_CCP nagngingitngit|VBTR sa|CCT galit|NNC si|DTP Anna|NNP at|CCA mga|DTCP kaibigan|NNC nito|PRO na|CCP halatang|JJD_CCP di|RBF sang-ayon|NNC sa|CCT gustong|VBS_CCP pagsali|NNC ni|DTP Manuela|NNP sa|CCT kompetisyon|NNC !|PMS
+Sige|RBT Manuela|NNP ihanda|VBOF ang|DTC iyong|PRSP_CCP mga|DTCP gamit|NNC at|CCA bukas|JJD na|CCP bukas|JJD din|RBI magkakaroon|VBTF tayo|PRP ng|CCB eliminasyon|NNC at|CCA ikaw|PRS ang|DTC magiging|VBTF kalahok|NNC ng|CCB ating|PRSP_CCP klase|NNC !|PMS
+Salamat|RBS po|RBS Bb|NNP !|PMS
+Bombita|NNP nakangiting|VBTS sabi|VBS ni|DTP Manuela|NNP !|PMS
+Kayang|RBD_CCP kaya|CCR mo|PRS yan|PRO Manuela|NNP alam|VBS ko|PRS ikaw|PRS ang|DTC mananalo|VBTF sa|CCT kompetisyon|NNC sabi|VBS naman|RBI ni|DTP Carlito|NNP !|PMS
+Kinabukasan|RBW nakahanda|VBTS na|CCP si|DTP Manuela|NNP para|CCT sa|CCT eliminasyon|NNC !|PMS
+Handa|JJD ka|PRS na|CCP ba|RBI Manuela|NNP !|PMS
+tanong|NNC ni|DTP Bb|NNP !|PMS
+Bombita|NNP !|PMS
+Opo|PRS titser|FW !|PMS
+Sambit|CCT nito|PRO !|PMQ
+Nang|RBW biglang|RBD_CCP pumasok|VBAF si|DTP Anna|NNP !|PMS
+titser|FW puwede|RBT po|RBS ba|RBI akong|PRS_CCP sumali|VBAF !|PMQ
+Talaga|JJD ba|RBI Anna|NNP !|PMS
+Opo|NNP !|PMS
+sasali|VBTF po|RBS ako|PRS !|PMQ
+Sige|RBT isasali|VBTS kita|NNC pero|CCT sa|CCT kabilang|CCB seksyon|NNC kita|NNC ilalagay|VBTF dahil|CCR wala|VBN silang|PRP_CCP kalahok|NNC okey|NNC lang|RBI ba|RBI sa|CCT '|PMS yo|NNCA !|PMQ
+Okey|NNP lang|RBI po|RBS sagot|NNC ni|DTP Anna|NNP !|PMS
+Gusto|VBS kong|PRS_CCP ako|PRS ang|DTC mananalo|VBTF at|CCA hindi|RBF ang|DTC Manuelang|NNP_CCP iyan|PRO !|PMQ
+Sa|CCT araw|NNC ng|CCB kompetisyon|NNC kanya-kanyang|PRSP_CCP puwesto|NNC ang|DTC mga|DTCP mag-aaral|NNC upang|CCB saksihan|VBOF ang|DTC kaganapan|NNC ng|CCB nasabing|VBTS_CCP patimpalak|NNC !|PMS
+Manuela|VBTF gudlak|NNC sa|CCT '|PMS yo|NNC galingan|RBL mo|PRS ha|NNCA !|PMQ
+Salamat|RBS sayo|PRSP Carlito|NNP !|PMS
+Nang|RBW marinig|VBW ni|DTP Anna|NNP ay|LM biglang|RBD_CCP itong|PRO_CCP nagsabi!Ako|VBTS ang|DTC mananalo|VBTF sa|CCT patimpalak|NNC na|CCP '|PMS to|FW Manuela|NNP hindi|RBF ikaw|PRS !|PMQ
+Tumingin|VBAF lamang|RBI si|DTP Manuela|NNP kay|DTP Anna|NNP !|PMS
+Bago|RBW nagsimula|VBTS ang|DTC kompetisyon|NNC may|VBH napansin|VBTS si|DTP Manuela|NNP nawawala|VBTR na|CCP naman|RBI ang|DTC kanyang|PRSP_CCP mga|DTCP gamit|NNC !|PMS
+Nalungkot|VBTS ito|PRO at|CCA natanong|VBTS ang|DTC sarili|NNC sino|PRQ naman|RBI ang|DTC kumuha|VBAF ng|CCB mga|DTCP gamit|VBS ko|PRS !|PMQ
+Matapos|VBW ko|PRS kaya|CCR ito|PRO na|CCP kulang|JJD ang|DTC gamit|VBS !|PMQ
+Nang|RBW biglang|RBD_CCP may|VBH narinig|VBTS ito|PRO mula|RBL sa|CCT kaniyang|PRSP_CCP bag|FW Manuela|NNP ako|PRS ito|PRO si|DTP Kraya|NNP ang|DTC napulot|VBTS mong|PRS_CCP krayola|NNC !|PMS
+Nabigla|VBTS si|DTP Manuela|NNP sa|CCT narinig|VBTS !|PMQ
+Ha|NNP !|PMS
+Krayola|NNP !|PMS
+nagsasalita|VBTR ka|PRS !|PMQ
+Oo|RBT ako|PRS nga|RBI si|DTP Kraya|NNP !|PMS
+Huwag|RBF kang|PRS_CCP maingay|JJD baka|RBM marinig|VBW ka|PRS nila|PRP !|PMQ
+Hindi|RBF nila|PRP ako|PRS nakikita|VBTR ikaw|PRS lang|RBI ang|DTC nakakita|VBTS sa|CCT akin|PRSP !|PMQ
+Ano|PRQ !|PMS
+Oo|RBT ang|DTC ka|PRS klase|NNC mong|PRS_CCP si|DTP Anna|NNP ang|DTC nagnakaw|VBTS ng|CCB gamit|VBS mo|PRS !|PMQ
+Ha|NNP !|PMS
+Si|DTP Anna|NNP !|PMS
+Oo|RBT huwag|RBF kang|PRS_CCP mag-alala|VBW alam|VBS ko|PRS ikaw|PRS ang|DTC mananalo|VBTF sa|CCT kompetisyon|NNC kaya|CCR galingan|VBOF mo|PRS !|PMQ
+Salamat|RBS Kraya|NNP !|PMS
+At|CCA nagsimula|VBTS na|CCP nga|RBI ang|DTC kompetisyon|NNC !|PMS
+Abalang-abala|VBTR ang|DTC lahat|PRI ng|CCB kalahok|NNC sa|CCT kanilang|PRSP_CCP ginagawa|VBTR !|PMQ
+Habang|RBW si|DTP Anna|NNP ay|LM nagtataka|VBTR ito|PRO kay|DTP Manuela|NNP dahil|CCR tuloy|JJD lang|RBI ito|PRO sa|CCT kanyang|PRSP_CCP ginagawa|NNC kahit|CCT alam|VBS niya|PRS sa|CCT sarili|NNC kung|RBK ano|RBQ ang|DTC ginawa|VBOF nito|PRO sa|CCT mga|DTCP gamit|NNC ni|DTP Manuela|NNP !|PMS
+Makaraan|VBW ang|DTC ilang|PRQ_CCP oras|NNC natapos|VBTS na|CCP ang|DTC kompetisyon|NNC at|CCA masayang|JJD_CCP masaya|JJD ang|DTC lahat|PRI lalong-lalo|JJCC na|RBI ang|DTC klase|NNC ni|DTP Bb|NNP !|PMS
+Bombita|NNP dahil|CCR natapos|VBTS ni|DTP Manuela|NNP ang|DTC kanyang|PRSP_CCP gawain|NNC sa|CCT tamang|JJD_CCP oras|NNC !|PMS
+Binabati|VBTS kita|NNC Manuela|NNP ang|DTC ganda|NNC ng|CCB gawa|VBS mo|PRS tinapos|VBOF mo|PRS sa|CCT tamang|JJD_CCP oras|NNC at|CCA akmang-akma|JJD pa|RBI sa|CCT tema|NNC !|PMS
+Salamat|RBS po|RBS Bb|NNP !|PMS
+Bombita|NNP !|PMS
+Dumating|VBAF ang|DTC resulta|NNC ng|CCB kompetisyon|NNC !|PMS
+At|CCA ang|DTC nagwagi|VBTS sa|CCT unang|JJN_CCP pwesto|NNC sa|CCT kompetisyong|NNC_CCP Poster|NNP Making|NNP ay|LM si!Manuela|NNP Dimaculangan|NNP !|PMS
+Yeheyyyy|NNP !|PMS
+panalo|NNC si|DTP Manuela|NNP sigaw|NNC ni|DTP Carlito|NNP !|PMS
+Masayang|RBD_CCP masaya|JJD si|DTP Manuela|NNP sa|CCT pagka|NNC panalo|NNC nito|PRO sa|CCT patimpalak|NNC !|PMS
+Ganon|NNP din|RBI ang|DTC nararamdam|VBTR ng|CCB kaibigang|NNC_CCP si|DTP Carlito|NNP !|PMS
+Binabati|VBTS kita|NNC Manuela|NNP salamat|RBS Carlito|NNP isa|PRI ka|PRS sa|CCT nagbigay|VBTS lakas|NNC loob|JJD sa|CCT akin|PRSP Wala|VBN yon|PRO masaya|JJD ako|PRS sa|CCT tagumpay|NNC mo|PRS Manuela|NNP ang|DTC sabi|VBS ni|DTP Carlito|NNP !|PMS
+Sa|CCT kabila|CCT ng|CCB kasiyahan|NNC nila|PRP Manuela|NNP at|CCA Carlito|NNP ay|LM yon|PRO din|RBI ang|DTC lungkot|NNC na|CCP makikita|VBTF sa|CCT mukha|NNC ni|DTP Anna|NNP !|PMS
+Di|RBF matanggap|VBW nito|PRO ang|DTC pagkatalo|NNC !|PMS
+Lumapit|VBAF si|DTP Manuela|NNP kay|DTP Anna|NNP at|CCA sinabing|VBOF_CCP binabati|VBTR kita|NNC Anna|NNP dahil|CCR naipakita|VBTS mo|PRS ang|DTC iyong|PRSP_CCP galing|RBL at|CCA kakayahan|NNC !|PMS
+Ang|DTC yabang|NNC naman|RBI nito|PRO !|PMQ
+magtutuos|VBW pa|RBI tayo|PRP Manuela|NNP sabay|RBD alis|RBD pagkasabi|VBW nito|PRO !|PMQ
+Hindi|RBF matanggap|VBW ni|DTP Anna|NNP ang|DTC pagka|NNC panalo|NNC ni|DTP Manuela|NNP !|PMS
+Kinabukasan|RBW inanunsyo|VBTS ni|DTP Bb|NNP !|PMS
+Bombita|VBTS sa|CCT klase|NNC ang|DTC resulta|NNC ng|CCB kompetisyon|NNC !|PMS
+Mga|DTCP bata|NNC kahapon|JJD isinagawa|VBTS ang|DTC patimpalak|NNC para|CCT sa|CCT poster|FW making|VBW !|PMQ
+Sa|CCT mga|DTCP lumiban|VBAF kahapon|NNC at|CCA di|RBF pa|RBI alam|VBS ang|DTC resulta|NNC !|PMS
+Nagwagi|VBTS sa|CCT ikatlong|JJN_CCP puwesto|NNC si|DTP Anna|NNP Montemayor|NNP at|CCA si|DTP Manuela|NNP Dimaculangan|NNP ang|DTC nakakuha|VBTS ng|CCB unang|JJN_CCP puwesto|NNC !|PMS
+Kapwa|JJD sila|PRP magagaling|JJD ngunit|CCT naipakita|VBTS ni|DTP Manuela|NNP ang|DTC kanyang|PRSP_CCP husay|NNC at|CCA kakayahan|NNC sa|CCT pagguhit|NNC !|PMS
+Binabati|VBTR_VBOF namin|PRP kayo|PRP Manuela|NNP at|CCA Anna|NNP ang|DTC sabay|JJD bati|NNC ng|CCB mga|DTCP kamag-aral|NNC !|PMS
+At|CCA biglang|RBD_CCP lumapit|VBAF si|DTP Anna|NNP kay|DTP Manuela|NNP Binabati|NNP kita|NNC Manuela|NNP at|CCA akoy|NNC humihingi|VBTR_VBAF ng|CCB tawad|NNC sa|CCT mga|DTCP nagawa|VBTS ko|PRS !|PMQ
+Nagkamali|VBTS ako|PRS sa|CCT pagkakilala|NNC sayo|PRSP sabay|RBD yakap|NNC nito|PRO kay|DTP Manuela|NNP !|PMS
+Salamat|RBS Anna|NNP !|PMS
+Sa|CCT huling|JJD_CCP tagpo|NNC sa|CCT loob|NNC ng|CCB klasrum|NNC ay|LM nagyakapan|VBTR sina|DTPP Manuela|NNP at|CCA Anna|NNP at|CCA masayang-masaya|JJD ang|DTC lahat|PRI sa|CCT mga|DTCP tagpong|NNC_CCP iyon|PRO !|PMQ
+Lagyan|VBOF ng|CCB kuwit|NNC pagkatapos|VBW ng|CCB salitang|NNC_CCP umaga|RBW !|PMQ
+tama|RBT :|PMS takdang-aralin|FW nagpapahiwatig|VBTR ng|CCB bullying|FW !|PMS
+paki|NNC rephrase|NNC ng|CCB mga|DTCP direct|FW na|CCP usapan|NNC !|PMS
+ihiwalay|VBOF ang|DTC salita|NNC lagyan|VBOF ng|CCB kuwit|NNC lagyan|VBOF ng|CCB kuwit|NNC ring|RBI_CCP pakitama|NNC capitalize|NNC

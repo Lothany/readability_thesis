@@ -1,0 +1,18 @@
+Lyndon|NNP :|PMS Yehey|NNP !|PMS
+May|VBH koryente|NNC na|CCP sa|CCT wakas|RBW mapapakinggan|VBTF ko|PRS na|CCP sa|CCT radyo|NNC ang|DTC modyul|NNC para|CCT sa|CCT linggong|NNC_CCP ito|PRO !|PMQ
+Subalit|CCT lahat|PRI na|CCP kaya|CCR meron|VBH !|PMQ
+Roxanne|NNP :|PMS Oo|RBT nga|RBI !|PMQ
+Hindi|RBF pa|RBI raw|RBI tayo|PRP maaaring|RBM mag-face|VBAF to|FW face|FW at|CCA papasok|VBTF sa|CCT iskul|NNC !|PMS
+Nakaka-miss|VBTR na|RBI rin|RBI talaga|RBT !|PMQ
+Lyndon|NNP :|PMS Oo|RBT nga|RBI !|PMQ
+Sabi|VBS ni|DTP Nanay|NNP dahil|CCR bumalik|VBAF na|CCP ang|DTC koryente|NNC pagkatapos|VBW ng|CCB tatlong|JJN_CCP bagyong|NNC_CCP Quinta|NNP Rolly|NNP at|CCA Ulysses|NNP tuloy|JJD na|CCP ulit|NNC ang|DTC online|FW classes|FW natin|PRP !|PMQ
+Maaari|VBS din|RBI daw|RBI tayong|PRP_CCP makinig|VBW ng|CCB leksiyon|NNC sa|CCT radyo|NNC at|CCA TV|NNPA !|PMS
+Roxanne|NNP :|PMS Kung|CCR gayon|PRC kailangan|VBS talagang|RBT_CCP may|VBH koryente|NNC sa|CCT bahay|NNC para|CCT makapakinig|VBW ng|CCB radyo|NNC at|CCA makapanood|VBW sa|CCT TV|NNPA maliban|CCT sa|CCT cellphone|FW !|PMS
+Lyndon|NNP :|PMS Pero|CCT kung|CCR wala|VBN nito|PRO mas|JJCC mainam|JJD pa|RBI rin|RBI ang|DTC ibibigay|VBTF na|CCP mga|DTCP modyul|NNC ni|DTP Ma'am|NNP Tere|NNP !|PMS
+Basta|CCT '|PMS t|NNCA alam|VBS lang|RBI kung|RBK kailan|RBQ kukunin|VBTF_VBOF at|CCA ibabalik|VBTF ng|CCB ating|PRSP_CCP mga|DTCP magulang|NNC ang|DTC natapos|VBTS nating|PRP_CCP modyul|FW !|PMS
+Roxanne|NNP :|PMS Tama|RBT !|PMQ
+Kailangang|VBS_CCP sumunod|VBAF sa|CCT nais|VBS ng|CCB gobyerno|NNC bilang|CCT pagiingat|NNC sa|CCT kalusugan|NNC natin|PRP !|PMS
+Kaya|CCR hindi|RBF muna|RBI natin|PRP makikita|VBTF ang|DTC ating|PRSP_CCP mga|DTCP guro|NNC kasi|CCR sila|PRP rin|RBI ay|LM pinag-iingat|VBRF din|RBI !|PMQ
+Lyndon|NNP :|PMS Oo|RBT nga|RBI ito|PRO ay|LM dahil|CCR sa|CCT Covid|NNP 19|CDB !|PMS
+Kailangan|VBS talaga|RBT natin|PRP ang|DTC pag-iingat|VBW !|PMQ
+Roxanne|NNP :|PMS Kailangan|VBS nating|PRP_CCP manatili|VBW sa|CCT ating|PRSP_CCP bahay|NNC upang|CCB sakit|NNC ay|LM maiwasan|VBW !|PMQ

@@ -1,0 +1,24 @@
+Quinta|NNP :|PMS Narinig|VBTS ko|PRS sa|CCT balita|NNC na|CCP talagang|RBT_CCP malakas|JJD ang|DTC paparating|VBTF na|CCP bagyo|NNC sa|CCT atin|PRSP ngayong|RBW_CCP gabi|RBW !|PMQ
+Sadyang|RBD_CCP maigting|VBW na|CCP paghahanda|NNC ang|DTC ginagawa|VBTR ng|CCB karamihan|PRI sa|CCT aming|PRSP_CCP lugar|NNC !|PMS
+Rolly|FW :|PMS Oo|RBT nga|RBI !|PMQ
+Sobrang|JJCS_CCP nakatatakot|JJD pa|RBI naman|RBI kapag|CCR may|VBH bagyo|NNC !|PMS
+Narinig|VBTS mo|PRS ba|RBI ang|DTC malalakas|JJD na|CCP pagpukpok|NNC ng|CCB martilyo|NNC kanina|RBW !|PMQ
+Sa|CCT bahay|NNC namin|PRP iyon|PRO !|PMQ
+Talagang|RBT_CCP mabilis|JJD kumilos|VBAF si|DTP tatay|NNC !|PMS
+Sinigurado|VBTS kasi|CCR ni|DTP tatay|NNC na|CCP hindi|RBF kami|PRP matatanggalan|VBTF ng|CCB bubong|NNC !|PMS
+Siony|NNP :|PMS Kami|PRP rin|RBI ay|LM naging|VBTS abala|NNC !|PMS
+Maingat|RBD naming|PRP_CCP isinilid|VBOF ang|DTC aming|PRSP_CCP gamit|VBS sa|CCT plastik|JJD at|CCA sa|CCT mga|DTCP malalaking|JJD_CCP megabox|FW upang|CCB kahit|CCT mapasok|VBW kami|PRP ng|CCB ulan|NNC o|CCT baha|NNC ay|LM walang|VBN_CCP mababasa|VBTF !|PMQ
+Ulysses|NNP :|PMS Tama|RBT !|PMQ
+Iyan|PRS rin|RBI ang|DTC aming|PRSP_CCP ginawa|VBTS sa|CCT bahay|NNC at|CCA bukod|CCT pa|RBI riyan|RBI nag-imbak|VBTS kami|PRP ng|CCB maraming|PRI_CCP pagkain|NNC tulad|JJC ng|CCB de-lata|NNC bigas|NNC at|CCA noodles|FW !|PMS
+Nagcharge|VBTS na|RBI rin|RBI kami|PRP ng|CCB aming|PRSP_CCP mga|DTCP cellphone|FW at|CCA flashlight|FW upang|CCB may|VBH magamit|VBW kaming|PRP_CCP pailaw|NNC kapag|CCR madilim|JJD tiyak|RBT na|CCP mawawalan|VBTF ng|CCB kuryente|NNC !|PMS
+Quinta|NNP :|PMS Mabuti|NNP naman|RBI !|PMQ
+O|NNPA Ulysses|NNP tinatawag|VBTR ka|PRS nang|RBW nanay|NNC mo|PRS !|PMQ
+Ulysses|NNP :|PMS Ah|RBJ Opo|PRS paalam|RBD na|CCP muna|RBI !|PMQ
+Kailangan|VBS naming|PRP_CCP magmadali|VBW para|CCT mag-evacuate|VBW hindi|RBF gaanong|PRC_CCP matibay|JJD ang|DTC bahay|NNC namin|PRP gaya|JJC ng|CCB mga|DTCP bahay|NNC ninyo|PRP !|PMS
+Mas|JJCC mainam|JJD na|CCP lumipat|VBAF kami|PRP bago|RBW dumating|VBAF ang|DTC bagyo|NNC kasi|CCR mahirap|JJD kapag|CCR malakas|JJD na|CCP ang|DTC ulan|NNC at|CCA hangin|NNC !|PMS
+Rolly|NNP :|PMS Oh|NNP siya|PRS sige|FW !|PMS
+Babalik|VBTF na|RBI rin|RBI kami|PRP sa|CCT aming|PRSP_CCP mga|DTCP bahay|NNC tiyak|RBT na|CCP hinahanap|VBTR na|CCP kami|PRP ng|CCB aming|PRSP_CCP mga|DTCP magulang|NNC !|PMS
+Makulimlim|JJD na|CCP ang|DTC kalangitan|NNC at|CCA medyo|JJCC lumalakas|VBTR_VBAF na|CCP rin|RBI ang|DTC hangin|NNC !|PMS
+Siony|NNP :|PMS Sige|NNP paalam|FW !|PMS
+Mag-ingat|VBW tayong|PRP_CCP lahat|PRI !|PMQ
+Taimtim|RBD tayong|PRP_CCP manalangin|VBW upang|CCB humina|VBAF ang|DTC bagyo|NNC !|PMS

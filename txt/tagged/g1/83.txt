@@ -1,0 +1,17 @@
+Yehey|NNP !|PMS
+Linggo|NNP na|CCP naman|RBI ang|DTC sigaw|NNC ni|DTP Rico|NNP !|PMS
+Tuwing|RBW Linggo|NNP pagkatapos|VBW ng|CCB misa|NNC ay|LM namamasyal|VBTR ang|DTC buong|PRI_CCP pamilya|NNC !|PMS
+At|CCA sa|CCT araw|NNC na|CCP iyon|PRO sa|CCT parke|NNC sila|PRP mamamasyal|JJD !|PMS
+Sa|CCT parke|NNC masayang-masaya|JJD si|DTP Mila|NNP !|PMS
+Maraming|PRI_CCP bulaklak|NNC at|CCA iba|PRI pang|RBI_CCP pananim|NNC !|PMS
+Malawak|JJD ang|DTC palaruan|NNC !|PMS
+Maraming|PRI_CCP tao|NNC sa|CCT parke|NNC !|PMS
+Nanay|NNC Tatay|NNC maaari|VBS po|RBS ba|RBI akong|PRS_CCP pumaroon|VBAF !|PMQ
+sabay|RBD turo|NNC sa|CCT palaruan|NNC !|PMS
+Sige|RBT anak|NNC basta|CCT mag-ingat|VBW ka|PRS at|CCA huwag|RBF kang|PRS_CCP lalayo|RBD tugon|NNC ni|DTP tatay|NNC !|PMS
+Sa|CCT kaniyang|PRSP_CCP paglalakad|NNC may|VBH mga|DTCP nakita|VBTS siyang|PRS_CCP nakapaskil|VBTS !|PMQ
+Pagbalik|VBW ni|DTP Mila|NNP sa|CCT kaniyang|PRSP_CCP nanay|NNC at|CCA tatay|NNC Nanay|NNP ano|PRQ po|RBS ba|RBI ang|DTC babala|NNC at|CCA paalala|NNC !|PMS
+Anak|NNC ang|DTC mga|DTCP babala|NNC ay|LM mensahe|NNC na|CCP dapat|VBS nating|PRP_CCP sundin|VBOF o|CCT gawin|VBOF para|CCT makaiwas|VBW tayo|PRP sa|CCT disgrasiya|NNC ang|DTC sagot|NNC ni|DTP nanay|NNC !|PMS
+Ang|DTC paalala|NNC naman|RBI ay|LM mensaheng|NNC_CCP dapat|VBS nating|PRP_CCP gawin|VBOF at|CCA sundin|VBOF para|CCT mapanatili|VBW natin|PRP ang|DTC kaayusan|NNC at|CCA kalinisan|NNC ng|CCB ating|PRSP_CCP kapaligiran|NNC ang|DTC sagot|NNC ni|DTP tatay|NNC !|PMS
+Ah|RBJ sige|PRS po|RBS nanay|NNC at|CCA tatay|NNC susundin|VBTF ko|PRS po|RBS lahat|PRI ng|CCB babala|NNC at|CCA paalala|NNC na|CCP makikita|VBTF ko|PRS rito|PRL !|PMQ
+At|CCA naglaro|VBTS muli|RBW si|DTP Mila|NNP !|PMS

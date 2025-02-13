@@ -1,0 +1,13 @@
+Ang|DTC Puerto|NNP Princesa|NNP Subterranean|NNP River|NNP National|NNP Park|NNP -LRB-|NNP PPSRNP|NNP -RRB-|NNP ay|LM makikita|VBTF sa|CCT Palawan|NNP !|PMQ
+Ito|PRO ay|LM matatagpuan|VBTF sa|CCT hilagang|JJD_CCP kanlurang|JJD_CCP bahagi|NNC ng|CCB Puerto|NNP Princesa|NNP !|PMS
+Ipinapakita|VBTR sa|CCT tanyag|JJD na|CCP pook|NNC na|CCP ito|PRO ang|DTC mga|DTCP higanteng|JJD_CCP limestone|FW na|CCP nasa|RBL kuwebang|JJD_CCP pinalolooban|VBTR ng|CCB ilog|NNC !|PMS
+Iba|PRI '|PMS t|NNCA ibang|PRI_CCP kamangha-manghang|JJD_CCP hugis|NNC ang|DTC nabuo|VBTS mula|RBL sa|CCT limestone|FW sa|CCT loob|NNC ng|CCB kuweba|NNC !|PMS
+Ang|DTC ilog|NNC ay|LM tinatayang|VBTR_CCP 8|CDB !|PMS
+2|CDB kilometro|NNC ang|DTC haba|NNC at|CCA ito|PRO ay|LM tumutuloy|VBTR_VBAF sa|CCT dagat|NNC !|PMS
+Ang|DTC kagandahan|NNC nito|PRO ang|DTC dahilan|NNC kung|RBK bakit|RBQ nakilala|VBTS ang|DTC Puerto|NNP Princesa|NNP Underground|NNP River|NNP bilang|CCT isa|PRI sa|CCT Pitong|JJN_CCP New|NNP Wonders|NNP of|FW Nature|NNP !|PMS
+Makikita|VBTF sa|CCT paligid|JJD ng|CCB ilog|NNC ang|DTC kabundukan|NNC at|CCA kagubatan|NNC !|PMS
+Ang|DTC makapal|JJD na|CCP kagubatan|NNC ang|DTC nagsisilbing|VBTR_CCP tahanan|NNC ng|CCB ilang|PRQ_CCP hayop|NNC na|CCP pambihira|JJD at|CCA endangered|FW !|PMS
+Sa|CCT baybayin|NNC naman|RBI nito|PRO makikita|VBTF ang|DTC halamang|NNC_CCP bakawan|NNC at|CCA mga|DTCP coral|FW reefs|FW !|PMS
+Mula|RBW nang|RBW maitalaga|VBW ang|DTC Puerto|NNP Princesa|NNP Underground|NNP River|NNP bilang|CCT isa|PRI sa|CCT Pitong|JJN_CCP New|NNP Wonders|NNP of|FW Nature|NNP dumami|VBAF na|CCP ang|DTC mga|DTCP taong|NNC_CCP gustong|VBS_CCP makita|VBW ito|PRO maging|VBW Pilipino|NNP man|RBI o|CCT dayuhan|NNC !|PMS
+Maliban|CCT sa|CCT pagsakay|NNC sa|CCT bangka|NNC upang|CCB makita|VBW ang|DTC limestone|FW sa|CCT loob|NNC ng|CCB kuweba|NNC marami|PRI pang|RBI_CCP maaring|RBM gawin|VBOF dito|PRL na|CCP ikasasaya|VBTF ng|CCB mga|DTCP turista|NNC !|PMS
+Kinagigiliwan|VBTR ng|CCB mga|DTCP bisita|NNC rito|PRL ang|DTC jungle|FW trekking|FW wildlife|FW watching|FW mangrove|FW forest|FW tour|FW at|CCA paglangoy|NNC sa|CCT tabing|NNC_CCP dagat|NNC na|CCP puti|JJD ang|DTC buhangin|NNC !|PMS

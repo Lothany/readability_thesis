@@ -38,7 +38,7 @@ def capitalize(text):
 
     return " ".join(new_text)
 
-def tag_lex(word):
+def tag_word(word):
     stanford_dir = "stanford-postagger-full-2020-11-17/"
     stanford_copy = "stanford-postagger-full-2020-11-17/hold-input.txt"
     with open(stanford_copy, "w") as file:
@@ -77,7 +77,7 @@ def test():
     #         print(tag_lex(word))
     
     for word in normalized.split():
-            print(tag_lex(word))
+            print(tag_word(word))
     
     # tagged = tag_pos(normalized)
     # print(tagged)

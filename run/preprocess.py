@@ -18,22 +18,31 @@ def normalize(text):
     text = text.replace("…","#")
     
     # Add $ symbol for end of full sentence
-    text = text.replace("..", "$")
-    text = text.replace(".", "$").replace("?", "$").replace("!", "$")
+    text = text.replace("..", " $")
+    text = text.replace(".", " $").replace("?", " $").replace("!", " $")
     
     # Remove extra spaces and indents
     text = re.sub(r"\s+", " ", text).strip()
-    
+    text = capitalize(text)
     return text
 
-def tag_pos(text):
-    # Copy text inside stanford directory
-    stanford_copy = "../stanford-postagger-full-2020-11-17/hold-input.txt"
+def capitalize(text):
+    words = text.split()
+    new_text = []
+
+    for word in words:
+        if word not in ("$", "#"):
+            if tag_lex(word) != "NNP":
+                word = word.lower()
+        new_text.append(word)
+
+    return " ".join(new_text)
+
+def tag_lex(word):
+    stanford_dir = "stanford-postagger-full-2020-11-17/"
+    stanford_copy = "stanford-postagger-full-2020-11-17/hold-input.txt"
     with open(stanford_copy, "w") as file:
-        file.write(text)
-        
-    stanford_dir = "../stanford-postagger-full-2020-11-17/"
-    stanford_output = "hold_tagged.txt"
+        file.write(word)
     
     # Execute shell command to run filipino tagger
     cmd = [
@@ -45,26 +54,36 @@ def tag_pos(text):
         ]
     
     # Save output to temporary text file in run/
-    with open(stanford_output, "w") as output_file:
-            subprocess.run(cmd, stdout=output_file, stderr=subprocess.PIPE, text=True, cwd=stanford_dir)
-            
-    tagged_text = open_file(stanford_output)
-    return tagged_text
+    result = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, cwd=stanford_dir)
+    output = result.stdout
+    tag = output.split("|", 1)[1].strip()  # Get part after "|" and remove extra spaces
+    return tag
 
 def test():
-    # gtest = "../txt/utf/gtest/19.txt"
+    # gtest = "txt/utf/gtest/19.txt"
     # text = open_file(gtest)
     
-    text = "Ako si Ivy, si Judith ang aking ina."
+    text = "Ako si Ivy# si Judith ang aking ina$"
     
     normalized = normalize(text)
-    # print(normalized)
+    print(normalized)
+    
+    # for word in normalized.split():
+    #     if word == "$":
+    #         print ("$")
+    #     elif word == "#":
+    #         print ("#")
+    #     else:
+    #         print(tag_lex(word))
+    
+    for word in normalized.split():
+            print(tag_lex(word))
     
     # tagged = tag_pos(normalized)
     # print(tagged)
     
-    tag_pos(normalized)
-    tagged = open_file("hold_tagged.txt")
-    print(tagged)
+    # tag_pos(normalized)
+    # tagged = open_file("hold_tagged.txt")
+    # print(tagged)
     
 test()

@@ -10,7 +10,7 @@ def open_file(file_path):
             content = file.read()
     return content
 
-# Creates new file for normalized text files inside "txt/normalized/grade_level"
+# Creates new file directory for processed text files
 def make_file(text, file_path, txt_type):
     grade = os.path.basename(os.path.dirname(file_path))
     file_name = os.path.basename(file_path)
@@ -42,7 +42,11 @@ def clean_tag(file_path):
         else:
             processed_words.append(word)
 
-    return " ".join(processed_words)
+    cleaned_text =  " ".join(processed_words)
+    new_path = make_file(cleaned_text, file_path,"cleaned")
+    
+
+    return new_path
     
 
 def normalize(file_path):

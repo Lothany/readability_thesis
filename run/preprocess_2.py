@@ -97,14 +97,16 @@ def tag(file_path):
     return tagged_path
  
 def test():
-    file = "txt/utf/gtest/19.txt"
-    grade = os.path.basename(os.path.dirname(file))
+    file = "txt/utf/gtest/short.txt"
+    print("Preprocessing: ", file, "\n")
     
     normalized = normalize(file)
+    print(" Normalizationg completed")
+    
     tagged = tag(normalized)
+    print(" POS tagging completed")
+    
     cleaned = clean_tag(tagged)
+    print(" Lowercasing of non-proper nouns completed")
     
-    print(cleaned)
-    
-        
-test()
+    print(f"\nFinal file: ", cleaned)

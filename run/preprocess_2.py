@@ -101,13 +101,18 @@ def hash_word(word: str) -> str:
     return int(hashlib.sha256(word.encode()).hexdigest(), 16)
 
 
+import csv
+
 def lex_dict(embedding):
+    dictionary_path = "corpus/lex_dictionary.csv"
+    for word in embedding.keys():
+        if word not in ("$", "#"):
+            with open(dictionary_path, "a", newline="", encoding="utf-8") as dictionary:
+                
+                print(word, " - ", hash_word(word))
     
-    print("hewwo")
-    
-    for item in embedding.items():
-        print(item, "\n")
-    # for each word in table - get hash value
+    # (oks) for each word in table - get hash value
+    # open csv file as dictionary
     # check if hash exists in dictionary
     # if not exist - add value to dictionary and get lex details: POS, if_foreign
     
@@ -119,19 +124,11 @@ def test():
     print("Preprocessing: ", file, "\n")
     
     normalized = normalize(file)
-    print(" Normalizationg completed")
-    
-    tagged = tag(normalized)
-    print(" POS tagging completed")
-    
+    tagged = tag(normalized)    
     cleaned = clean_tag(tagged)
-    print(" Lowercasing of non-proper nouns completed")
-    
     embedding = embed(cleaned)
-    for item in embedding.items():
-        print(item, "\n")
-
-    print(len(embedding.items()))
+    
+    lex_dict(embedding)
     
     # print(f"\nFinal file: ", cleaned)
     

@@ -101,18 +101,20 @@ def hash_word(word: str) -> str:
     return int(hashlib.sha256(word.encode()).hexdigest(), 16)
 
 
-def lex_dict(table):
+def lex_dict(embedding):
     
     print("hewwo")
+    
+    for item in embedding.items():
+        print(item, "\n")
     # for each word in table - get hash value
     # check if hash exists in dictionary
     # if not exist - add value to dictionary and get lex details: POS, if_foreign
     
-    
-    
-    
+
+from hashmap2 import embed
  
-def test2():
+def test():
     file = "txt/utf/gtest/short.txt"
     print("Preprocessing: ", file, "\n")
     
@@ -125,8 +127,15 @@ def test2():
     cleaned = clean_tag(tagged)
     print(" Lowercasing of non-proper nouns completed")
     
-    print(f"\nFinal file: ", cleaned)
+    embedding = embed(cleaned)
+    for item in embedding.items():
+        print(item, "\n")
+
+    print(len(embedding.items()))
     
-def test():
+    # print(f"\nFinal file: ", cleaned)
+    
+
+def test2():
     word = "ako"
     print("Hash of the word:", hash_word(word))

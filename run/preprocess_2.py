@@ -3,6 +3,7 @@ import re
 import string
 import subprocess
 import shutil
+import hashlib
 
 def open_file(file_path):
     if file_path.endswith(".txt"):
@@ -95,8 +96,23 @@ def tag(file_path):
         subprocess.run(cmd, stdout=output_file_path, stderr=subprocess.PIPE, text=True, cwd=stanford_dir)
     
     return tagged_path
+
+def hash_word(word: str) -> str:
+    return int(hashlib.sha256(word.encode()).hexdigest(), 16)
+
+
+def lex_dict(table):
+    
+    print("hewwo")
+    # for each word in table - get hash value
+    # check if hash exists in dictionary
+    # if not exist - add value to dictionary and get lex details: POS, if_foreign
+    
+    
+    
+    
  
-def test():
+def test2():
     file = "txt/utf/gtest/short.txt"
     print("Preprocessing: ", file, "\n")
     
@@ -110,3 +126,7 @@ def test():
     print(" Lowercasing of non-proper nouns completed")
     
     print(f"\nFinal file: ", cleaned)
+    
+def test():
+    word = "ako"
+    print("Hash of the word:", hash_word(word))

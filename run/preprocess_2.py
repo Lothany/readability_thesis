@@ -103,13 +103,48 @@ def hash_word(word: str) -> str:
 
 import csv
 
+# def lexeme(tag):
+    
+
+def tag_word(word):
+    stanford_dir = "stanford-postagger-full-2020-11-17/"
+    stanford_copy = "stanford-postagger-full-2020-11-17/hold-input.txt"
+    with open(stanford_copy, "w") as file:
+        file.write(word)
+    
+    # Execute shell command to run filipino tagger
+    cmd = [
+            "java", "-mx300m",
+            "-classpath", "stanford-postagger.jar",
+            "edu.stanford.nlp.tagger.maxent.MaxentTagger",
+            "-model", "models/filipino-left5words-owlqn2-distsim-pref6-inf2.tagger",
+            "-textFile", "hold-input.txt"
+        ]
+    
+    # Save output to temporary text file in run/
+    result = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, cwd=stanford_dir)
+    output = result.stdout
+    tag = output.split("|", 1)[1].strip()  # Get part after "|" and remove extra spaces
+    return tag
+    
+    
+    
 def lex_dict(embedding):
-    dictionary_path = "corpus/lex_dictionary.csv"
+    dictionary_path = "tables/lex_dictionary.csv"
     for word in embedding.keys():
+        # print(word, " - ", hash_word(word))
         if word not in ("$", "#"):
+            hash = hash_word(word)
+            lexeme = tag_word(word)
+            new_word = {"Hash": hash, "Lex_pos": lexeme}
+            
             with open(dictionary_path, "a", newline="", encoding="utf-8") as dictionary:
-                
-                print(word, " - ", hash_word(word))
+                fieldnames = ["Hash", "Lex_pos", "Lex_foreign", "Trad_char", "Trad_syll", "Trad_poly"]
+                writer = csv.DictWriter(dictionary, fieldnames=fieldnames)
+                writer.writerow(new_word)
+    
+    print("Hashed")
+
     
     # (oks) for each word in table - get hash value
     # open csv file as dictionary

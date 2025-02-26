@@ -36,7 +36,3 @@ def embed(file_path):
                 count += 1
 
     return embedding
-    # for item in embedding.items():
-    #     print(item, "\n")
-
-    # print(len(embedding.items()))

@@ -35,7 +35,7 @@ def clean_tag(file_path):
             if tag == "NNP":
                 processed_words.append(f"{text}|{tag}")
             
-            # Remove tags for end of sentence or fragment markers
+            # Remove tags for end of sentence/fragment markers
             elif text in ("$", "#"):
                 processed_words.append(text)
             else:
@@ -101,9 +101,21 @@ def hash_word(word: str) -> str:
     return int(hashlib.sha256(word.encode()).hexdigest(), 16)
 
 
+# Making LEXICAL Dictionary ------------------------------------------------------------
+from hashmap2 import embed
 import csv
 
-# def lexeme(tag):
+def lexeme(tag):
+    if "NN" in tag:
+        return "noun"
+    elif "VB" in tag:
+        return "verb"
+    elif "JJ" in tag:
+        return "adj"
+    elif "RB" in tag:
+        return "adv"
+    else:
+        return "other"
     
 
 def tag_word(word):
@@ -125,21 +137,19 @@ def tag_word(word):
     result = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, cwd=stanford_dir)
     output = result.stdout
     tag = output.split("|", 1)[1].strip()  # Get part after "|" and remove extra spaces
-    return tag
-    
+    lex_tag = lexeme(tag)
+    return lex_tag
     
     
 def lex_dict(embedding):
-    dictionary_path = "tables/lex_dictionary.csv"
+    dictionary_path = "tables/dictionary.csv"
     for word in embedding.keys():
-        # print(word, " - ", hash_word(word))
         if word not in ("$", "#"):
-            hash = hash_word(word)
             lexeme = tag_word(word)
-            new_word = {"Hash": hash, "Lex_pos": lexeme}
+            new_word = {"Word": word, "Lex_pos": lexeme}
             
             with open(dictionary_path, "a", newline="", encoding="utf-8") as dictionary:
-                fieldnames = ["Hash", "Lex_pos", "Lex_foreign", "Trad_char", "Trad_syll", "Trad_poly"]
+                fieldnames = ["Word", "Lex_pos", "Lex_foreign", "Trad_char", "Trad_syll", "Trad_poly"]
                 writer = csv.DictWriter(dictionary, fieldnames=fieldnames)
                 writer.writerow(new_word)
     
@@ -147,12 +157,13 @@ def lex_dict(embedding):
 
     
     # (oks) for each word in table - get hash value
-    # open csv file as dictionary
+    # (oks) open csv file as dictionary
     # check if hash exists in dictionary
+        # takes a long time! will have to make a list of all hashes in the csv file
     # if not exist - add value to dictionary and get lex details: POS, if_foreign
     
 
-from hashmap2 import embed
+
  
 def test():
     file = "txt/utf/gtest/short.txt"

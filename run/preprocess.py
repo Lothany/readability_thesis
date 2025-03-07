@@ -102,7 +102,7 @@ def hash_word(word: str) -> str:
 
 
 # Making LEXICAL Dictionary ------------------------------------------------------------
-from hashmap import embed
+from word_embedding import WordEmbedding
 import csv
 
 def lexeme(tag):
@@ -179,9 +179,9 @@ def test():
     normalized = normalize(file)
     tagged = tag(normalized)    
     cleaned = clean_tag(tagged)
-    embedding = embed(cleaned)
-    
-    lex_dict(embedding)
+    embedding = WordEmbedding(cleaned)
+    print(embedding)
+    # lex_dict(embedding)
     
     # print(f"\nFinal file: ", cleaned)
     

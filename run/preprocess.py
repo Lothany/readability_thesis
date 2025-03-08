@@ -163,15 +163,22 @@ def lex_dict(embedding):
     print("Hashed")
 
     
-def stride(file_path):
+def stride(file_path, n):    
     text = open_file(file_path)
-    words = text.split()
-    stride_len = 2
+    all_words = text.split()
 
-    n_gram = [words[i:i + stride_len] for i in range(0, len(words), stride_len)]
+    words = [word for word in all_words if word not in {"$", "#"}]
+    n_gram = [words[i:i + n] for i in range(0, len(words) - n + 1)]
 
     return n_gram
- 
+
+def features(n_gram):
+    for stride_index, chunk in enumerate(n_gram):
+        print(f"{stride_index}: {chunk}")
+        # Get lexical properties (chunk, stride_index)
+        # Get traditional properties (chunk, stride_index)
+    
+
 def test():
     file = "txt/utf/gtest/short.txt"
     print("Preprocessing: ", file, "\n")
@@ -187,5 +194,5 @@ def test():
     
 
 def test2():
-    grams = stride("txt/normalized/gtest/short.txt")
-    print(grams)
+    grams = stride("txt/normalized/gtest/short.txt", 3)
+    features(grams)

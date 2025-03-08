@@ -33,17 +33,18 @@ def clean_tag(file_path):
         if match:
             text, tag = match.groups()
             if tag == "NNP":
-                processed_words.append(f"{text}|{tag}")
+                processed_words.append(f"{text}")
             
             # Remove tags for end of sentence/fragment markers
             elif text in ("$", "#"):
                 processed_words.append(text)
             else:
-                processed_words.append(f"{text.lower()}|{tag}")
+                processed_words.append(f"{text.lower()}")
         else:
             processed_words.append(word)
 
     cleaned_text =  " ".join(processed_words)
+    print(cleaned_text)
     new_path = make_file(cleaned_text, file_path,"cleaned")
     
 
@@ -163,20 +164,7 @@ def lex_dict(embedding):
     print("Hashed")
 
     
-def stride(file_path, n):    
-    text = open_file(file_path)
-    all_words = text.split()
 
-    words = [word for word in all_words if word not in {"$", "#"}]
-    n_gram = [words[i:i + n] for i in range(0, len(words) - n + 1)]
-
-    return n_gram
-
-def features(n_gram):
-    for stride_index, chunk in enumerate(n_gram):
-        print(f"{stride_index}: {chunk}")
-        # Get lexical properties (chunk, stride_index)
-        # Get traditional properties (chunk, stride_index)
     
 
 def test():
@@ -186,13 +174,9 @@ def test():
     normalized = normalize(file)
     tagged = tag(normalized)    
     cleaned = clean_tag(tagged)
-    embedding = embed(cleaned)
+    print(f"Path: {cleaned}")
+    # embedding = embed(cleaned)
     
-    lex_dict(embedding)
+    # lex_dict(embedding)
     
     # print(f"\nFinal file: ", cleaned)
-    
-
-def test2():
-    grams = stride("txt/normalized/gtest/short.txt", 3)
-    features(grams)

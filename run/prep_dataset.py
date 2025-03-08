@@ -44,7 +44,7 @@ class DatasetEntry:
 def stride_n(file_path, n):    
     text = open_file(file_path)
     all_words = text.split()
-
+    
     words = [word for word in all_words if word not in {"$", "#"}]
     n_gram = [words[i:i + n] for i in range(0, len(words) - n + 1)]
 
@@ -52,14 +52,17 @@ def stride_n(file_path, n):
 
 def features(n_gram, n):
     for stride_index, chunk in enumerate(n_gram):
-        # print(chunk)
         entry = DatasetEntry(chunk, n, stride_index)
         print(f"{entry.stride_len} | {entry.stride_index} | {entry.chunk} | {entry.noun_tr}")
         
         # Get traditional properties (chunk, stride_index)
         
 def main():
-    n_gram, n = stride_n("txt/cleaned/gtest/short.txt", 3)
-    features(n_gram, n)
+    text = "txt/cleaned/gtest/short.txt"
+    
+    n_values = {2, 3, 5}
+    for n in n_values:
+        n_gram, n = stride_n(text, n)
+        features(n_gram, n)
     
 main()

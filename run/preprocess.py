@@ -57,7 +57,7 @@ def normalize(file_path):
     text = text.replace("“", "").replace("”", "").replace(",", "")
     
     # Add # symbol for end of sentence fragment
-    text = text.replace("…","#")
+    text = text.replace("…"," #")
     
     # Add $ symbol for end of full sentence
     text = text.replace("..", " $")
@@ -163,14 +163,14 @@ def lex_dict(embedding):
     print("Hashed")
 
     
-    # (oks) for each word in table - get hash value
-    # (oks) open csv file as dictionary
-    # check if hash exists in dictionary
-        # takes a long time! will have to make a list of all hashes in the csv file
-    # if not exist - add value to dictionary and get lex details: POS, if_foreign
-    
+def stride(file_path):
+    text = open_file(file_path)
+    words = text.split()
+    stride_len = 2
 
+    n_gram = [words[i:i + stride_len] for i in range(0, len(words), stride_len)]
 
+    return n_gram
  
 def test():
     file = "txt/utf/gtest/short.txt"
@@ -187,5 +187,5 @@ def test():
     
 
 def test2():
-    word = "ako"
-    print("Hash of the word:", hash_word(word))
+    grams = stride("txt/normalized/gtest/short.txt")
+    print(grams)

@@ -2,3 +2,4 @@ this_env/
 encode_utf.ipynb
 pos_tagger.ipynb
 .DS_Store
+__pycache__/

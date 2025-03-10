@@ -14,7 +14,7 @@ class DatasetEntry:
         self.noun_tr, self.verb_tr = self.__lexical_var()
         # self.type_tr = None
         self.lex_density = self.__lexical_density()
-        # self.lex_foreign = None
+        self.lex_foreign = self.__foreign()
         
         # self.sent_len = None
         # self.word_len = None
@@ -63,6 +63,21 @@ class DatasetEntry:
         lex_density = float(f"{lex_density:.4g}")
         
         return lex_density
+    
+    def __foreign(self):
+        foreign_count = 0
+        for word in self.chunk:
+            if word in self.dictionary:
+                foreign = self.dictionary[word]["lex_foreign"]
+                if foreign:
+                    foreign_count = foreign_count + 1
+            else:
+                print(f"Warning: '{word}' not found in dictionary. Skipping.")
+        
+        foreign_density = foreign_count / self.stride_len
+        foreign_density = float(f"{foreign_density:.4g}")
+        
+        return foreign_density
             
 def stride_n(file_path):    
     file = Path(file_path)
@@ -82,7 +97,7 @@ def stride_n(file_path):
 def features(n_gram, n, text_num, grade_lvl):
     for stride_index, chunk in enumerate(n_gram):
         entry = DatasetEntry(chunk, n, stride_index, text_num, grade_lvl)
-        print(f"{entry.text_num} | {entry.grade_lvl} | {entry.stride_len} | {entry.stride_index} | {entry.chunk} | {entry.noun_tr} | {entry.verb_tr} | {entry.lex_density}")
+        print(f"{entry.text_num} | {entry.grade_lvl} | {entry.stride_len} | {entry.stride_index} | {entry.chunk} | {entry.noun_tr} | {entry.verb_tr} | {entry.lex_density} | {entry.lex_foreign}")
         
 def run_prep_dataset(file):
     stride_n(file)

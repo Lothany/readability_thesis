@@ -1,6 +1,6 @@
 import json
 from pathlib import Path
-from preprocess import open_file
+from normalize import open_file
 
 class DatasetEntry:
     def __init__(self, chunk, stride_len, stride_index, text_num, grade_lvl):
@@ -56,16 +56,11 @@ def stride_n(file_path):
         n_gram = [words[i:i + n] for i in range(0, len(words) - n + 1)]
 
         features(n_gram, n, text_num, grade_lvl)
-    # return n_gram, n, text_num, grade_lvl
 
 def features(n_gram, n, text_num, grade_lvl):
     for stride_index, chunk in enumerate(n_gram):
         entry = DatasetEntry(chunk, n, stride_index, text_num, grade_lvl)
         print(f"{entry.text_num} | {entry.grade_lvl} | {entry.stride_len} | {entry.stride_index} | {entry.chunk} | {entry.noun_tr}")
         
-def main():
-    text = "txt/cleaned/g0/420.txt"
-    stride_n(text)
-        
-    
-main()
+def run_prep_dataset(file):
+    stride_n(file)

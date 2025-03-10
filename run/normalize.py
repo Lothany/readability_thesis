@@ -12,12 +12,17 @@ def open_file(file_path):
 def make_file(text, file_path, txt_type):
     grade = os.path.basename(os.path.dirname(file_path))
     file_name = os.path.basename(file_path)
-    target_directory = os.path.join("txt", txt_type, grade, file_name)
     
-    with open(target_directory, "w", encoding = "utf-8") as new_file:
+    target_directory = os.path.join("txt", txt_type, grade)
+    
+    os.makedirs(target_directory, exist_ok=True)
+    
+    full_file_path = os.path.join(target_directory, file_name)
+    
+    with open(full_file_path, "w", encoding="utf-8") as new_file:
         new_file.write(text)
     
-    return target_directory    
+    return full_file_path
 
 def punctuation(file_path):
     text = open_file(file_path)
@@ -81,7 +86,6 @@ def lowercase(text, file_path):
             processed_words.append(word)
 
     normalized_text =  " ".join(processed_words)
-    print(normalized_text)
     new_path = make_file(normalized_text, file_path,"normalized")
     
 
@@ -100,11 +104,11 @@ def lexeme(tag):
         return "other"
 
 def run_normalize(file):
-    print("Normalizing: ", file, "\n")
+    print("Normalizing: ", file)
     
     text = punctuation(file)
     tagged = tag(text)    
     normalized_path = lowercase(tagged, file)
-    print(f"Normalized text exported in: {normalized_path}")
+    print(f"Normalized text exported in: {normalized_path} \n")
     
     return normalized_path

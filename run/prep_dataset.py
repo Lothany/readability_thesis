@@ -93,11 +93,44 @@ def stride_n(file_path):
         n_gram = [words[i:i + n] for i in range(0, len(words) - n + 1)]
 
         features(n_gram, n, text_num, grade_lvl)
+        
+def stride_sentence(file_path):    
+    file = Path(file_path)
+    text_num = int(file.stem)
+    grade_lvl = int(file.parent.name[1:])
+    
+    text = open_file(file_path)
+    all_words = text.split()
+    
+    sentence = []
+    stride_index = 0
+    
+    for word in all_words:
+        if word == "$":
+            if sentence:
+                n = len(sentence)
+                sentence_features(sentence, n, stride_index, text_num, grade_lvl)
+                # print(f"{stride_index}: {sentence}")
+                stride_index = stride_index + 1
+                sentence = []
+        elif word != "#":
+            sentence.append(word)
+
+    # If the last sentence is not followed by "$", process it
+    if sentence:
+        n = len(sentence)
+        features(sentence, n, text_num, grade_lvl)
+    
 
 def features(n_gram, n, text_num, grade_lvl):
     for stride_index, chunk in enumerate(n_gram):
         entry = DatasetEntry(chunk, n, stride_index, text_num, grade_lvl)
         print(f"{entry.text_num} | {entry.grade_lvl} | {entry.stride_len} | {entry.stride_index} | {entry.chunk} | {entry.noun_tr} | {entry.verb_tr} | {entry.lex_density} | {entry.lex_foreign}")
         
+def sentence_features(sentence, n, stride_index, text_num, grade_lvl):    
+    entry = DatasetEntry(sentence, n, stride_index, text_num, grade_lvl)
+    print(f"{entry.text_num} | {entry.grade_lvl} | {entry.stride_len} | {entry.stride_index} | {entry.chunk} | {entry.noun_tr} | {entry.verb_tr} | {entry.lex_density} | {entry.lex_foreign}")
+        
 def run_prep_dataset(file):
     stride_n(file)
+    stride_sentence(file)

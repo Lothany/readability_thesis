@@ -1,4 +1,5 @@
 import json
+import csv
 from pathlib import Path
 from normalize import open_file
 
@@ -12,15 +13,15 @@ class DatasetEntry:
         self.stride_len = stride_len
         self.stride_index = stride_index
         self.noun_tr, self.verb_tr = self.__lexical_var()
-        # self.type_tr = None
+        self.type_tr = None
         self.lex_density = self.__lexical_density()
         self.lex_foreign = self.__foreign()
         
-        # self.sent_len = None
-        # self.word_len = None
-        # self.word_num = None
-        # self.syll_num = None
-        # self.poly_num = None
+        self.sent_len = None
+        self.word_len = None
+        self.word_num = None
+        self.syll_num = None
+        self.poly_num = None
     
     @staticmethod
     def load_dictionary(self):
@@ -125,12 +126,37 @@ def stride_sentence(file_path):
 def features(n_gram, n, text_num, grade_lvl):
     for stride_index, chunk in enumerate(n_gram):
         entry = DatasetEntry(chunk, n, stride_index, text_num, grade_lvl)
-        print(f"{entry.text_num} | {entry.grade_lvl} | {entry.stride_len} | {entry.stride_index} | {entry.chunk} | {entry.noun_tr} | {entry.verb_tr} | {entry.lex_density} | {entry.lex_foreign}")
+        export_csv(entry)
         
 def sentence_features(sentence, n, stride_index, text_num, grade_lvl):    
     entry = DatasetEntry(sentence, n, stride_index, text_num, grade_lvl)
-    print(f"{entry.text_num} | {entry.grade_lvl} | {entry.stride_len} | {entry.stride_index} | {entry.chunk} | {entry.noun_tr} | {entry.verb_tr} | {entry.lex_density} | {entry.lex_foreign}")
+    export_csv(entry)
+    
         
+
+def export_csv(entry):
+    new_entry = {"text_num": entry.text_num,
+                 "grade_level": entry.grade_lvl,
+                 "stride_len": entry.stride_len,
+                 "stride_index": entry.stride_index,
+                 "noun_tr": entry.noun_tr,
+                 "verb_tr": entry.verb_tr,
+                 "type_tr": entry.type_tr,
+                 "lex_density": entry.lex_density,
+                 "lex_foreign": entry.lex_foreign,
+                 "sent_len": entry.sent_len,
+                 "word_len": entry.word_len,
+                 "word_num": entry.word_num,
+                 "syll_num": entry.syll_num,
+                 "poly_num": entry.poly_num}
+    dataset_path = "tables/dataset.csv"
+    with open(dataset_path, "a", newline="", encoding="utf-8") as dataset:
+        fieldnames = ["text_num","grade_level","stride_len","stride_index","noun_tr","verb_tr","type_tr","lex_density","lex_foreign","sent_len","word_len","word_num","syll_num","poly_num"]
+        writer = csv.DictWriter(dataset, fieldnames=fieldnames)
+        writer.writerow(new_entry)
+        print(f"{entry.text_num} | {entry.grade_lvl} | {entry.stride_len} | {entry.stride_index} | {entry.chunk} | {entry.noun_tr} | {entry.verb_tr} | {entry.lex_density} | {entry.lex_foreign}")
+
 def run_prep_dataset(file):
+    print(f"Collecting data from: {file}")
     stride_n(file)
     stride_sentence(file)

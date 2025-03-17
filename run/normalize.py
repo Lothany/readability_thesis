@@ -1,6 +1,7 @@
 import os
 import re
 import subprocess
+import unicodedata
 
 def open_file(file_path):
     if file_path.endswith(".txt"):
@@ -86,22 +87,22 @@ def lowercase(text, file_path):
             processed_words.append(word)
 
     normalized_text =  " ".join(processed_words)
-    new_path = make_file(normalized_text, file_path,"normalized")
+    normalized_text = remove_accents(normalized_text)
     
-
+    new_path = make_file(normalized_text, file_path,"normalized")
     return new_path
 
-def lexeme(tag):
-    if "NN" in tag:
-        return "noun"
-    elif "VB" in tag:
-        return "verb"
-    elif "JJ" in tag:
-        return "adj"
-    elif "RB" in tag:
-        return "adv"
-    else:
-        return "other"
+def remove_accents(text: str) -> str:
+    result = []
+    for char in text:
+        if char == "ñ" or char == "Ñ":
+            result.append(char)
+        else:
+            # Normalize character and remove diacritics
+            normalized = unicodedata.normalize('NFD', char)
+            stripped = ''.join(c for c in normalized if unicodedata.category(c) != 'Mn')
+            result.append(stripped)
+    return ''.join(result)
 
 def run_normalize(file):
     print("Normalizing: ", file)

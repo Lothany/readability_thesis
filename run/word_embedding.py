@@ -1,7 +1,8 @@
 import os
 import re
 import subprocess
-
+import foreignator
+from pathlib import Path
 
 class LexicalMetadata:
     def __init__(self, word):
@@ -9,9 +10,12 @@ class LexicalMetadata:
         self.is_foreign = None
         self.get_lexical_metadata(word)
 
+    def __repr__(self):
+        return (f"LX:{str(self.lexeme)} IF:{str(self.is_foreign)}")
+    
     def __identify_lexeme(self, word):
-        stanford_dir = "stanford-postagger-full-2020-11-17/"
-        stanford_copy = "stanford-postagger-full-2020-11-17/hold-input.txt"
+        stanford_dir = "../stanford-postagger-full-2020-11-17/"
+        stanford_copy = "../stanford-postagger-full-2020-11-17/hold-input.txt"
         with open(stanford_copy, "w") as file:
             file.write(word)
 
@@ -41,11 +45,31 @@ class LexicalMetadata:
         else:
             self.lexeme = "other"
 
-    # TODO: Add method to identify foreign words
+    def __identify_foreign(self, word):
+        self.is_foreign = foreignator.run(word)
+        # try:
+        #     from langdetect import detect
+        #     import langid
+
+        #     detected_lang = detect(word)
+        #     langid_lang, _ = langid.classify(word)
+
+        #     print(detected_lang)
+        #     print(langid_lang)
+
+        #     if detected_lang in ["tl", "ceb", "ilo", "bcl", "war", "pam", "pag"] or langid_lang in ["tl", "ceb", "ilo"]:
+        #         self.is_foreign = False
+        #         return
+        # except:
+        #     pass
+
+        self.is_foreign = True
 
     def get_lexical_metadata(self, word):
-        if self.__identify_lexeme is None:
+        if self.lexeme is None:
             self.__identify_lexeme(word)
+        if self.is_foreign is None:
+            self.__identify_foreign(word)
 
 class TraditionalMetadata:
     def __init__(self, word):
@@ -53,6 +77,9 @@ class TraditionalMetadata:
         self.syllable_count = None
         self.is_polysyllabic = None
         self.get_traditional_metadata(word)
+
+    def __repr__(self):
+        return (f"CC:{str(self.character_count)} SC:{str(self.syllable_count)} IP:{str(self.is_polysyllabic)}")
 
     def __count_characters(self, word):
         self.character_count = len(word)
@@ -65,43 +92,50 @@ class TraditionalMetadata:
             f'({consonant_clusters}|{diphthongs}|{consonant_vowel})')
         matches = pattern.findall(word.lower())
         self.syllable_count = len(matches)
-        self.is_polysyllabic = self.syllable_count > 1
+        self.is_polysyllabic = self.syllable_count > 3
 
     def get_traditional_metadata(self, word):
-        if self.__count_characters is None:
+        if self.character_count is None:
             self.__count_characters(word)
-        if self.__count_syllables is None:
+        if self.syllable_count is None:
             self.__count_syllables(word)
-
 
 class WordEmbedding:
     def __init__(self, file_path_or_text: str) -> None:
-        self.embeddings = self.__embed(file_path_or_text)
+        self.embeddings =  {}
+        self.input = file_path_or_text
+        self.input = self.__embed()
 
-    def __eq__(self, other):
-        if not isinstance(other, WordEmbedding):
-            return False
-        return self.word == other.word
+    # def __eq__(self, other):
+    #     if not isinstance(other, WordEmbedding):
+    #         return False
+    #     return self.word == other.word
 
     def __repr__(self):
-        return (str(self.word))
+        return (str(self.embeddings))
 
     def __embed_helper(self, word):
         word_traditional_metadata = TraditionalMetadata(word)
+        word_lexical_metadata = LexicalMetadata(word)
         if word not in self.embeddings:
-            self.embeddings[word] = {"traditional": word_traditional_metadata}
+            self.embeddings[word] = {"traditional": word_traditional_metadata, "lexical": word_lexical_metadata}
         else:
-            self.embeddings[word]["traditional"] = word_traditional_metadata
-            # Add tradtional
+            self.embeddings[word] = {"traditional": word_traditional_metadata, "lexical": word_lexical_metadata}
 
-    def __embed(self, file_path_or_text):
-        if os.path.exists(file_path_or_text):
-            with open(file_path_or_text, "r", encoding="utf-8") as file:
+    def __embed_sanitize_text(self, text):
+        sanitized = re.sub(
+            r"[^\w\s-]", " ", text)
+        return " ".join(sanitized.split()).lower()
+    
+    def __embed(self):
+        if Path(self.input).exists():
+            with open(self.input, "r", encoding="utf-8") as file:
                 for line in file:
-                    words = [token.split('|')[0] for token in line.split()]
+                    sanitized_line = self.__embed_sanitize_text(line)
+                    words = [token.split('|')[0] for token in sanitized_line.split()]
                     for word in words:
                         self.__embed_helper(word)
         else:
-            words = str(file_path_or_text).split(" ")
+            words = str(self.input).split(" ")
             for word in words:
                 self.__embed_helper(word)

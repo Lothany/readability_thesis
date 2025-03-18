@@ -3,3 +3,4 @@ encode_utf.ipynb
 pos_tagger.ipynb
 .DS_Store
 run/__pycache__/
+/tables/

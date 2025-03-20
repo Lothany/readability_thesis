@@ -1,4 +1,5 @@
 import json
+import os
 import csv
 from pathlib import Path
 from normalize import open_file
@@ -159,9 +160,15 @@ def export_csv(entry):
                  "syll_num": entry.syll_num,
                  "poly_num": entry.poly_num}
     dataset_path = "tables/dataset.csv"
+    
+    file_exists = os.path.exists(dataset_path)
     with open(dataset_path, "a", newline="", encoding="utf-8") as dataset:
         fieldnames = ["text_num","grade_level","stride_len","stride_index","noun_tr","verb_tr","type_tr","lex_density","lex_foreign","sent_len","word_len","word_num","syll_num","poly_num"]
         writer = csv.DictWriter(dataset, fieldnames=fieldnames)
+        
+        if not file_exists:
+            writer.writeheader()
+        
         writer.writerow(new_entry)
         print(f"{entry.text_num} | {entry.grade_lvl} | {entry.stride_len} | {entry.stride_index} | {entry.chunk} | {entry.noun_tr} | {entry.verb_tr} | {entry.lex_density} | {entry.lex_foreign}")
 

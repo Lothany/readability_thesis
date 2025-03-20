@@ -13,7 +13,7 @@ class DatasetEntry:
         self.stride_len = stride_len
         self.stride_index = stride_index
         self.noun_tr, self.verb_tr = self.__lexical_var()
-        self.type_tr = None
+        self.type_tr = self.__type_token_ratio()
         self.lex_density = self.__lexical_density()
         self.lex_foreign = self.__foreign()
         
@@ -79,6 +79,15 @@ class DatasetEntry:
         foreign_density = float(f"{foreign_density:.4g}")
         
         return foreign_density
+    
+    def __type_token_ratio(self):
+        unique_words = set(self.chunk)
+        
+        type_tr = len(unique_words) / self.stride_len
+        type_tr = float(f"{type_tr:.4g}")
+        
+        return type_tr
+        
             
 def stride_n(file_path):    
     file = Path(file_path)

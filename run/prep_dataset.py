@@ -5,7 +5,7 @@ from pathlib import Path
 from normalize import open_file
 
 class DatasetEntry:
-    def __init__(self, chunk, stride_len, stride_index, text_num, grade_lvl, syll_num):
+    def __init__(self, chunk, stride_len, stride_index, text_num, grade_lvl):
         self.dictionary = self.load_dictionary(self)
         self.text_num = text_num
         self.grade_lvl = grade_lvl
@@ -181,7 +181,7 @@ def stride_sentence(file_path):
 
 def features(n_gram, n, text_num, grade_lvl):
     for stride_index, chunk in enumerate(n_gram):
-        entry = DatasetEntry(chunk, n, stride_index, text_num, grade_lvl, None)
+        entry = DatasetEntry(chunk, n, stride_index, text_num, grade_lvl)
         export_csv(entry)
         
 def sentence_features(sentence, n, stride_index, text_num, grade_lvl):    

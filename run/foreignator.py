@@ -1,13 +1,13 @@
 # import subprocess
-# import sqlite3
+import sqlite3
 
-# def create_connection(db_file):
-#     conn = None
-#     try:
-#         conn = sqlite3.connect(db_file)
-#     except sqlite3.Error as e:
-#         print(e)
-#     return conn
+def create_connection(db_file):
+    conn = None
+    try:
+        conn = sqlite3.connect(db_file)
+    except sqlite3.Error as e:
+        print(e)
+    return conn
 
 # def create_table_filipino(conn):
 #     try:
@@ -55,27 +55,31 @@
 #     for row in rows:
 #         print(row)
 
-# def word_exists(conn, word, table):
-#     sql_query = f"SELECT 1 FROM {table} WHERE word = ? LIMIT 1"
-#     cursor = conn.cursor()
-#     cursor.execute(sql_query, (word,))
-#     return cursor.fetchone() is not None
+def word_exists(conn, word):
+    sql_query = f"SELECT 1 FROM 'entries' WHERE word = ? LIMIT 1"
+    cursor = conn.cursor()
+    cursor.execute(sql_query, (word,))
+    return cursor.fetchone() is not None
 
 
 # def stem_filipino(words):
 #     """Call Haskell script to stem Filipino words"""
     
-import dictdatabase as DDB
+# import dictdatabase as DDB
 
-DDB.config.storage_directory = "./known_words"
-DDB.config.use_compression = False
-DDB.config.indent = None
-DDB.config.use_orjson = True
+# DDB.config.storage_directory = "./known_words"
+# DDB.config.use_compression = False
+# DDB.config.indent = None
+# DDB.config.use_orjson = True
 
-def run(word:str):
-    # database = "filipino_known_words.db"
-    # conn = create_connection(database)
-    if DDB.at("known_words").exists():
+def identify(word:str):
+    database = "../english_dictionary.db"
+    conn = create_connection(database)
+    if word_exists(conn, f"{word}"):
+        return True
+    else:
+        return False
+    # if DDB.at("known_words").exists():
         
         # create_table_filipino(conn)
         # create_table_foreign(conn)
@@ -94,17 +98,17 @@ def run(word:str):
         #         print("Error:", e)
         #         return None
         #     return False
-        if DDB.at("known_words", key=word).exists():
-            return False
-        else:
-            inp = input(f"Is \"{word}\" foreign? type 'y' for yes or hit enter ")
-            if inp == "y":
-                # insert_data(conn, f"{word}", "overseas")
-                # conn.close()
-                return True
-            else:
-                # insert_data(conn, f"{word}", "filipino")
-                # conn.close()
-                return False
-    else:
-        print("Error! Cannot create the database connection.")
+        # if DDB.at("known_words", key=word).exists():
+        #     return False
+        # else:
+        #     inp = input(f"Is \"{word}\" foreign? type 'y' for yes or hit enter ")
+        #     if inp == "y":
+        #         # insert_data(conn, f"{word}", "overseas")
+        #         # conn.close()
+        #         return True
+        #     else:
+        #         # insert_data(conn, f"{word}", "filipino")
+        #         # conn.close()
+        #         return False
+    # else:
+    #     print("Error! Cannot create the database connection.")

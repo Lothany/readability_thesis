@@ -46,7 +46,10 @@ class LexicalMetadata:
             self.lexeme = "other"
 
     def __identify_foreign(self, word):
-        self.is_foreign = foreignator.run(word)
+        if self.lexeme == "other":
+            self.is_foreign = False
+        else:
+            self.is_foreign = foreignator.identify(word)
         # try:
         #     from langdetect import detect
         #     import langid

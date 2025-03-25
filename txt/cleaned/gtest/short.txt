@@ -1,1 +1,0 @@
-ako|PRS si|DTP Ivy|NNP si|DTP Judith|NNP ang|DTC aking|PRSP_CCP ina|NNC $ si|DTP Gilbert|NNP ang|DTC aking|PRSP_CCP ama|NNC $ sina|DTPP John|NNP at|CCA Duchess|NNP ang|DTC aking|PRSP_CCP mga|DTCP kapatid|NNC $

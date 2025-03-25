@@ -1,5 +1,6 @@
 this_env/
 encode_utf.ipynb
 pos_tagger.ipynb
-stanford-postagger-full-2020-11-17/hold-input.txt
+.DS_Store
+run/__pycache__/
 tables/

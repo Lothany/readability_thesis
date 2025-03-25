@@ -1,12 +1,10 @@
-from preprocess import test
-import re
+from normalize import run_normalize
+from prep_dataset import run_prep_dataset
 
 if __name__ == "__main__":
-    # test()
-    word = "Hello"
-    consonant_vowel = r'([b-df-hjklmnp-rtvwz][aeiou])'
-    diphthongs = r'(ai|ei|oi|ui|au|ou)'
-    consonant_clusters = r'(ng|br|tr|st)'
-    pattern = re.compile(f'({consonant_clusters}|{diphthongs}|{consonant_vowel})')
-    matches = pattern.findall(word.lower())
-    print(len(matches))
+    file = "txt/utf/g0/555.txt"
+    
+    normalized_path = run_normalize(file)
+    # Insert dictionary embeeding function here
+    run_prep_dataset(normalized_path)
+    

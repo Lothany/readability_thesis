@@ -1,4 +1,5 @@
-﻿text_num,grade_level,stride_len,stride_index,noun_tr,verb_tr,type_tr,lex_density,lex_foreign,sent_len,word_len,word_num,syll_num,poly_num555,0,2,0,0.0,0.0,1.0,0.0,0.0,,2.5,,1.5,0
+text_num,grade_level,stride_len,stride_index,noun_tr,verb_tr,type_tr,lex_density,lex_foreign,sent_len,word_len,word_num,syll_num,poly_num
+555,0,2,0,0.0,0.0,1.0,0.0,0.0,,2.5,,1.5,0
 555,0,2,1,0.5,0.0,1.0,0.5,0.5,,2.5,,1.5,0
 555,0,2,2,0.5,0.0,1.0,0.5,0.5,,3.5,,2.0,1
 555,0,2,3,0.5,0.0,1.0,0.5,0.5,,4.0,,1.5,1

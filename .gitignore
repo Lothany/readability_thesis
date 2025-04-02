@@ -3,4 +3,6 @@ encode_utf.ipynb
 pos_tagger.ipynb
 .DS_Store
 run/__pycache__/
-tables/
+tables/dataset.csv
+tables/dictionary.json
+stanford-postagger-full-2020-11-17/hold-input.txt

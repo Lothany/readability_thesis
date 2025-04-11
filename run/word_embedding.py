@@ -50,25 +50,12 @@ class LexicalMetadata:
             self.is_foreign = False
         else:
             self.is_foreign = foreignator.identify(word)
-        # try:
-        #     from langdetect import detect
-        #     import langid
-
-        #     detected_lang = detect(word)
-        #     langid_lang, _ = langid.classify(word)
-
-        #     print(detected_lang)
-        #     print(langid_lang)
-
-        #     if detected_lang in ["tl", "ceb", "ilo", "bcl", "war", "pam", "pag"] or langid_lang in ["tl", "ceb", "ilo"]:
-        #         self.is_foreign = False
-        #         return
-        # except:
-        #     pass
+            # self.is_foreign = True
 
         self.is_foreign = True
 
     def get_lexical_metadata(self, word):
+        print(f"Getting the Lexical Metadata of {word}")
         if self.lexeme is None:
             self.__identify_lexeme(word)
         if self.is_foreign is None:
@@ -98,6 +85,7 @@ class TraditionalMetadata:
         self.is_polysyllabic = self.syllable_count > 3
 
     def get_traditional_metadata(self, word):
+        print(f"Getting the Traditional Metadata of {word}")
         if self.character_count is None:
             self.__count_characters(word)
         if self.syllable_count is None:
@@ -142,3 +130,9 @@ class WordEmbedding:
             words = str(self.input).split(" ")
             for word in words:
                 self.__embed_helper(word)
+
+    def toJSON(self):
+        import json
+
+        with open('word_embeddings.json', 'w', encoding='utf-8') as f:
+            json.dump(self.embeddings, f, ensure_ascii=False, indent=4)

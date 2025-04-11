@@ -6,3 +6,5 @@ run/__pycache__
 run/thesis_venv/
 filipino_known_words.db
 run/*.db
+run/__pycache__
+run/foreignator_sqlite.py

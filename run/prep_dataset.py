@@ -17,12 +17,12 @@ class DatasetEntry:
         self.type_tr = self.__type_token_ratio()
         self.lex_density = self.__lexical_density()
         self.lex_foreign = self.__foreign()
-        
-        self.sent_len = None
-        self.word_len = None
+
+        self.sent_len = None 
+        self.word_len = self.__average_word_len()
         self.word_num = None
-        self.syll_num = None
-        self.poly_num = None
+        self.syll_num = self.__average_syll()
+        self.poly_num = self.__polysyllabic_count()
     
     @staticmethod
     def load_dictionary(self):
@@ -88,8 +88,54 @@ class DatasetEntry:
         type_tr = float(f"{type_tr:.4g}")
         
         return type_tr
+    
+    def __average_syll(self):
+        total_syllables = 0
+        word_count = 0
         
+        for word in self.chunk:
+            if word in self.dictionary:
+                syllables = self.dictionary[word]["trad_syll"]
+                total_syllables += syllables
+                word_count += 1
+            else:
+                print(f"Warning: '{word}' not found in dictionary. Skipping.")
+        
+        # Avoid division by zero if no words were found in dictionary
+        if word_count == 0:
+            return 0.0
             
+        avg_syllables = total_syllables / word_count
+        return float(f"{avg_syllables:.4g}")
+        
+    def __average_word_len(self):
+        """Calculate the average word length (in characters) in the stride."""
+        total_chars = 0
+        word_count = len(self.chunk)
+        
+        if word_count == 0:
+            return 0.0
+            
+        for word in self.chunk:
+            total_chars += len(word)
+            
+        avg_word_len = total_chars / word_count
+        return float(f"{avg_word_len:.4g}")
+        
+    def __polysyllabic_count(self):
+        """Count the number of words with 3 or more syllables in the stride."""
+        poly_count = 0
+        
+        for word in self.chunk:
+            if word in self.dictionary:
+                syllables = self.dictionary[word]["trad_poly"]
+                if syllables:
+                    poly_count += 1
+            else:
+                print(f"Warning: '{word}' not found in dictionary. Skipping word for polysyllabic count.")
+        
+        return poly_count
+
 def stride_n(file_path):    
     file = Path(file_path)
     text_num = int(file.stem)
@@ -170,7 +216,7 @@ def export_csv(entry):
             writer.writeheader()
         
         writer.writerow(new_entry)
-        print(f"{entry.text_num} | {entry.grade_lvl} | {entry.stride_len} | {entry.stride_index} | {entry.chunk} | {entry.noun_tr} | {entry.verb_tr} | {entry.lex_density} | {entry.lex_foreign}")
+        print(f"{entry.text_num} | {entry.grade_lvl} | {entry.stride_len} | {entry.stride_index} | {entry.chunk} | {entry.noun_tr} | {entry.verb_tr} | {entry.lex_density} | {entry.lex_foreign} | Traditional - WL: {entry.word_len}, SC: {entry.syll_num}, PC: {entry.poly_num}")
 
 def run_prep_dataset(file):
     print(f"Collecting data from: {file}")

@@ -15,7 +15,7 @@ def find_python_command():
     return None
 
 python_cmd = find_python_command()
-script = os.path.join("run", "test.py")
+script = os.path.join("run", "main.py")
 cmd = ""
 
 if platform.system() == "Windows":

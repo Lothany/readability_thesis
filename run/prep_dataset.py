@@ -35,7 +35,7 @@ class DatasetEntry:
         verb_count = 0
         for word in self.chunk:
             if word in self.dictionary:
-                lexeme = self.dictionary[word]["lexical"]["lexeme"]
+                lexeme = self.dictionary[word]["lex_pos"]
                 if lexeme == "noun":
                     noun_count = noun_count + 1
                 elif lexeme == "verb":
@@ -55,7 +55,7 @@ class DatasetEntry:
         lexeme_count = 0
         for word in self.chunk:
             if word in self.dictionary:
-                lexeme = self.dictionary[word]["lexical"]["lexeme"]
+                lexeme = self.dictionary[word]["lex_pos"]
                 if lexeme != "other":
                     lexeme_count = lexeme_count + 1
             else:
@@ -70,7 +70,7 @@ class DatasetEntry:
         foreign_count = 0
         for word in self.chunk:
             if word in self.dictionary:
-                foreign = self.dictionary[word]["lexical"]["is_foreign"]
+                foreign = self.dictionary[word]["lex_foreign"]
                 if foreign:
                     foreign_count = foreign_count + 1
             else:
@@ -95,7 +95,7 @@ class DatasetEntry:
         
         for word in self.chunk:
             if word in self.dictionary:
-                syllables = self.dictionary[word]["traditional"]["syllable_count"]
+                syllables = self.dictionary[word]["trad_syll"]
                 total_syllables += syllables
                 word_count += 1
             else:
@@ -128,7 +128,7 @@ class DatasetEntry:
         
         for word in self.chunk:
             if word in self.dictionary:
-                syllables = self.dictionary[word]["traditional"]["is_polysyllabic"]
+                syllables = self.dictionary[word]["trad_poly"]
                 if syllables:
                     poly_count += 1
             else:
@@ -144,7 +144,7 @@ def stride_n(file_path):
     text = open_file(file_path)
     all_words = text.split()
     
-    n_values = {2, 3, 5}
+    n_values = {1, 2, 3, 5}
     for n in n_values:
         words = [word for word in all_words if word not in {"$", "#"}]
         n_gram = [words[i:i + n] for i in range(0, len(words) - n + 1)]

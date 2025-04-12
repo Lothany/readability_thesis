@@ -1,211 +1,135 @@
 {
     "ako": {
-        "traditional": {
-            "character_count": 3,
-            "syllable_count": 2,
-            "is_polysyllabic": false
-        },
-        "lexical": {
-            "lexeme": "other",
-            "is_foreign": false
-        }
+        "lex_pos": "other",
+        "lex_foreign": false,
+        "trad_char": 3,
+        "trad_syll": 2,
+        "trad_poly": false
     },
     "si": {
-        "traditional": {
-            "character_count": 2,
-            "syllable_count": 1,
-            "is_polysyllabic": false
-        },
-        "lexical": {
-            "lexeme": "other",
-            "is_foreign": false
-        }
+        "lex_pos": "other",
+        "lex_foreign": false,
+        "trad_char": 2,
+        "trad_syll": 1,
+        "trad_poly": false
     },
     "Ivy": {
-        "traditional": {
-            "character_count": 4,
-            "syllable_count": 2,
-            "is_polysyllabic": false
-        },
-        "lexical": {
-            "lexeme": "noun",
-            "is_foreign": true
-        }
+        "lex_pos": "noun",
+        "lex_foreign": true,
+        "trad_char": 4,
+        "trad_syll": 2,
+        "trad_poly": false
     },
     "Judith": {
-        "traditional": {
-            "character_count": 6,
-            "syllable_count": 3,
-            "is_polysyllabic": true
-        },
-        "lexical": {
-            "lexeme": "noun",
-            "is_foreign": false
-        }
+        "lex_pos": "noun",
+        "lex_foreign": false,
+        "trad_char": 6,
+        "trad_syll": 3,
+        "trad_poly": true
     },
     "ang": {
-        "traditional": {
-            "character_count": 3,
-            "syllable_count": 1,
-            "is_polysyllabic": false
-        },
-        "lexical": {
-            "lexeme": "other",
-            "is_foreign": false
-        }
+        "lex_pos": "other",
+        "lex_foreign": false,
+        "trad_char": 3,
+        "trad_syll": 1,
+        "trad_poly": false
     },
     "aking": {
-        "traditional": {
-            "character_count": 5,
-            "syllable_count": 2,
-            "is_polysyllabic": true
-        },
-        "lexical": {
-            "lexeme": "other",
-            "is_foreign": false
-        }
+        "lex_pos": "other",
+        "lex_foreign": false,
+        "trad_char": 5,
+        "trad_syll": 2,
+        "trad_poly": true
     },
     "ina": {
-        "traditional": {
-            "character_count": 3,
-            "syllable_count": 1,
-            "is_polysyllabic": false
-        },
-        "lexical": {
-            "lexeme": "noun",
-            "is_foreign": false
-        }
+        "lex_pos": "noun",
+        "lex_foreign": false,
+        "trad_char": 3,
+        "trad_syll": 1,
+        "trad_poly": false
     },
     "Gilbert": {
-        "traditional": {
-            "character_count": 7,
-            "syllable_count": 3,
-            "is_polysyllabic": false
-        },
-        "lexical": {
-            "lexeme": "noun",
-            "is_foreign": true
-        }
+        "lex_pos": "noun",
+        "lex_foreign": true,
+        "trad_char": 7,
+        "trad_syll": 3,
+        "trad_poly": false
     },
     "ama": {
-        "traditional": {
-            "character_count": 3,
-            "syllable_count": 1,
-            "is_polysyllabic": false
-        },
-        "lexical": {
-            "lexeme": "noun",
-            "is_foreign": false
-        }
+        "lex_pos": "noun",
+        "lex_foreign": false,
+        "trad_char": 3,
+        "trad_syll": 1,
+        "trad_poly": false
     },
     "sina": {
-        "traditional": {
-            "character_count": 4,
-            "syllable_count": 2,
-            "is_polysyllabic": true
-        },
-        "lexical": {
-            "lexeme": "other",
-            "is_foreign": false
-        }
+        "lex_pos": "other",
+        "lex_foreign": false,
+        "trad_char": 4,
+        "trad_syll": 2,
+        "trad_poly": true
     },
     "John": {
-        "traditional": {
-            "character_count": 4,
-            "syllable_count": 1,
-            "is_polysyllabic": false
-        },
-        "lexical": {
-            "lexeme": "noun",
-            "is_foreign": true
-        }
+        "lex_pos": "noun",
+        "lex_foreign": true,
+        "trad_char": 4,
+        "trad_syll": 1,
+        "trad_poly": false
     },
     "at": {
-        "traditional": {
-            "character_count": 2,
-            "syllable_count": 1,
-            "is_polysyllabic": false
-        },
-        "lexical": {
-            "lexeme": "other",
-            "is_foreign": false
-        }
+        "lex_pos": "other",
+        "lex_foreign": false,
+        "trad_char": 2,
+        "trad_syll": 1,
+        "trad_poly": false
     },
     "Duchess": {
-        "traditional": {
-            "character_count": 7,
-            "syllable_count": 3,
-            "is_polysyllabic": true
-        },
-        "lexical": {
-            "lexeme": "noun",
-            "is_foreign": true
-        }
+        "lex_pos": "noun",
+        "lex_foreign": true,
+        "trad_char": 7,
+        "trad_syll": 3,
+        "trad_poly": true
     },
     "mga": {
-        "traditional": {
-            "character_count": 3,
-            "syllable_count": 1,
-            "is_polysyllabic": false
-        },
-        "lexical": {
-            "lexeme": "other",
-            "is_foreign": false
-        }
+        "lex_pos": "other",
+        "lex_foreign": false,
+        "trad_char": 3,
+        "trad_syll": 1,
+        "trad_poly": false
     },
     "kapatid": {
-        "traditional": {
-            "character_count": 6,
-            "syllable_count": 2,
-            "is_polysyllabic": true
-        },
-        "lexical": {
-            "lexeme": "noun",
-            "is_foreign": false
-        }
+        "lex_pos": "noun",
+        "lex_foreign": false,
+        "trad_char": 6,
+        "trad_syll": 2,
+        "trad_poly": true
     },
     "pumunta": {
-        "traditional": {
-            "character_count": 7,
-            "syllable_count": 3,
-            "is_polysyllabic": false
-        },
-        "lexical": {
-            "lexeme": "verb",
-            "is_foreign": false
-        }
+        "lex_pos": "verb",
+        "lex_foreign": false,
+        "trad_char": 7,
+        "trad_syll": 3,
+        "trad_poly": false
     },
     "kami": {
-        "traditional": {
-            "character_count": 4,
-            "syllable_count": 2,
-            "is_polysyllabic": false
-        },
-        "lexical": {
-            "lexeme": "other",
-            "is_foreign": false
-        }
+        "lex_pos": "other",
+        "lex_foreign": false,
+        "trad_char": 4,
+        "trad_syll": 2,
+        "trad_poly": false
     },
     "sa": {
-        "traditional": {
-            "character_count": 2,
-            "syllable_count": 1,
-            "is_polysyllabic": false
-        },
-        "lexical": {
-            "lexeme": "other",
-            "is_foreign": false
-        }
+        "lex_pos": "other",
+        "lex_foreign": false,
+        "trad_char": 2,
+        "trad_syll": 1,
+        "trad_poly": false
     },
     "simbahan": {
-        "traditional": {
-            "character_count": 8,
-            "syllable_count": 3,
-            "is_polysyllabic": true
-        },
-        "lexical": {
-            "lexeme": "noun",
-            "is_foreign": false
-        }
+        "lex_pos": "noun",
+        "lex_foreign": false,
+        "trad_char": 8,
+        "trad_syll": 3,
+        "trad_poly": true
     }
 }

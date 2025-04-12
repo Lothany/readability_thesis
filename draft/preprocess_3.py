@@ -94,7 +94,7 @@ def tag(file_path):
     
 
     with open(tagged_path, "w") as output_file_path:
-        subprocess.run(cmd, stdout=output_file_path, stderr=subprocess.PIPE, text=True, cwd=stanford_dir)
+        subprocess.run(cmd, stdout=output_file_path, stderr=subprocess.PIP0E, text=True, cwd=stanford_dir)
     
     return tagged_path
 

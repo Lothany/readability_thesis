@@ -27,7 +27,7 @@ class DatasetEntry:
     
     @staticmethod
     def load_dictionary(self):
-        dictionary_json = "tables/dictionary.json"
+        dictionary_json = "tables/word_embeddings.json"
         with open(dictionary_json, "r", encoding="utf-8") as file:
             return json.load(file)
             

@@ -1,1 +1,1 @@
-ako|RBF si|DTP Ivy|NNP # sina|FW John|NNP at|CCA Duchess|NNP # ang|DTC aking|PRSP_CCP mga|DTCP kapatid|NNC $ pumunta|VBAF kami|PRP # sa|CCT church|FW $ ako|PRS si|DTP Duchess|NNP $
+wow|FW $ ang|DTC gwapo|NNC talaga|RBT ni|DTP kuya|NNP Mark|NNP $

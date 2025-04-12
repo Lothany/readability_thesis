@@ -144,7 +144,7 @@ def stride_n(file_path):
     text = open_file(file_path)
     all_words = text.split()
     
-    n_values = {1, 2, 3, 5}
+    n_values = {2, 3, 5}
     for n in n_values:
         words = [word for word in all_words if word not in {"$", "#"}]
         n_gram = [words[i:i + n] for i in range(0, len(words) - n + 1)]

@@ -5,7 +5,7 @@ from pathlib import Path
 from normalize import open_file
 
 class DatasetEntry:
-    def __init__(self, chunk, stride_len, stride_index, text_num, grade_lvl):
+    def __init__(self, chunk, stride_len, stride_index, text_num, grade_lvl,sent_len):
         self.dictionary = self.load_dictionary(self)
         self.text_num = text_num
         self.grade_lvl = grade_lvl
@@ -18,7 +18,7 @@ class DatasetEntry:
         self.lex_density = self.__lexical_density()
         self.lex_foreign = self.__foreign()
 
-        self.sent_len = None 
+        self.sent_len = sent_len 
         self.word_len = self.__average_word_len()
         self.word_num = None
         self.syll_num = self.__average_syll()
@@ -136,6 +136,30 @@ class DatasetEntry:
         
         return poly_count
 
+def sentence_length(all_words):    
+    total_sentences = 0
+    total_words = 0
+    sentence = []
+
+    for word in all_words:
+        if word == "$":
+            if sentence:
+                total_sentences += 1
+                total_words += len(sentence)
+                sentence = []
+        elif word != "#":
+            sentence.append(word)
+
+    # If the last sentence is not followed by "$", process it
+    if sentence:
+        total_sentences += 1
+        total_words += len(sentence)
+
+    # Calculate average sentence length
+    avg_sentence_length = total_words / total_sentences if total_sentences > 0 else 0
+    return avg_sentence_length  
+
+
 def stride_n(file_path):    
     file = Path(file_path)
     text_num = int(file.stem)
@@ -143,13 +167,14 @@ def stride_n(file_path):
     
     text = open_file(file_path)
     all_words = text.split()
+    sent_len = sentence_length(all_words)
     
-    n_values = {1, 2, 3, 5}
+    n_values = {2, 3, 5}
     for n in n_values:
         words = [word for word in all_words if word not in {"$", "#"}]
         n_gram = [words[i:i + n] for i in range(0, len(words) - n + 1)]
 
-        features(n_gram, n, text_num, grade_lvl)
+        features(n_gram, n, text_num, grade_lvl, sent_len)
         
 def stride_sentence(file_path):    
     file = Path(file_path)
@@ -158,6 +183,7 @@ def stride_sentence(file_path):
     
     text = open_file(file_path)
     all_words = text.split()
+    sent_len = sentence_length(all_words)
     
     sentence = []
     stride_index = 0
@@ -166,7 +192,7 @@ def stride_sentence(file_path):
         if word == "$":
             if sentence:
                 n = len(sentence)
-                sentence_features(sentence, n, stride_index, text_num, grade_lvl)
+                sentence_features(sentence, n, stride_index, text_num, grade_lvl, sent_len)
                 # print(f"{stride_index}: {sentence}")
                 stride_index = stride_index + 1
                 sentence = []
@@ -179,13 +205,13 @@ def stride_sentence(file_path):
         features(sentence, n, text_num, grade_lvl)
     
 
-def features(n_gram, n, text_num, grade_lvl):
+def features(n_gram, n, text_num, grade_lvl, sent_len):
     for stride_index, chunk in enumerate(n_gram):
-        entry = DatasetEntry(chunk, n, stride_index, text_num, grade_lvl)
+        entry = DatasetEntry(chunk, n, stride_index, text_num, grade_lvl, sent_len)
         export_csv(entry)
         
-def sentence_features(sentence, n, stride_index, text_num, grade_lvl):    
-    entry = DatasetEntry(sentence, n, stride_index, text_num, grade_lvl)
+def sentence_features(sentence, n, stride_index, text_num, grade_lvl, sent_len):    
+    entry = DatasetEntry(sentence, n, stride_index, text_num, grade_lvl, sent_len)
     export_csv(entry)
     
         
@@ -216,7 +242,7 @@ def export_csv(entry):
             writer.writeheader()
         
         writer.writerow(new_entry)
-        print(f"{entry.text_num} | {entry.grade_lvl} | {entry.stride_len} | {entry.stride_index} | {entry.chunk} | {entry.noun_tr} | {entry.verb_tr} | {entry.lex_density} | {entry.lex_foreign} | Traditional - WL: {entry.word_len}, SC: {entry.syll_num}, PC: {entry.poly_num}")
+        print(f"{entry.text_num} | {entry.grade_lvl} | {entry.stride_len} | {entry.stride_index} | {entry.chunk} | {entry.noun_tr} | {entry.verb_tr} | {entry.lex_density} | {entry.lex_foreign} | Traditional - SL: {entry.sent_len}, WL: {entry.word_len}, SC: {entry.syll_num}, PC: {entry.poly_num}")
 
 def run_prep_dataset(file):
     print(f"Collecting data from: {file}")

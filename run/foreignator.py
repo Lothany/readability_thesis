@@ -18,6 +18,11 @@ def is_likely_foreign(word):
     rare_letters = set("qvxzc")
     return any(char in rare_letters for char in word.lower())
 
+def looks_foreign(word):
+    prefixes = ('wr', 'th')
+    suffixes = ('er', 'le')
+    return word.startswith(prefixes) or word.endswith(suffixes)
+
 def looks_filipino(word):
     prefixes = ('mag', 'nag', 'ma', 'ka', 'pag', 'napaka', 'pina', 'ipinag', 'kumaka', 'ikina')
     suffixes = ('an', 'in', 'ng', 'han')
@@ -33,6 +38,8 @@ def heuristic_score(word):
     score = 0
     if is_likely_foreign(word):
         score += 2
+    if looks_foreign(word):
+        score += 1
     if looks_filipino(word):
         score -= 1
     if has_reduplication(word):
@@ -40,6 +47,7 @@ def heuristic_score(word):
     return score
 
 def classify_word(word, known_filipino, known_foreign, session_filipino, session_foreign, identify_only = False):
+    # return True
     word = word.lower()
     if word in known_filipino or word in session_filipino:
         return False
@@ -67,7 +75,7 @@ def classify_word(word, known_filipino, known_foreign, session_filipino, session
                 session_filipino.add(word)
                 return False
         else:
-            print(f"--- Unable to classify if the {word} is foreign")
+            print(f"\n\t--- Unable to classify if the \"{word}\" is foreign")
             return False
 
 def process_file(file_path, known_filipino, known_foreign, session_filipino, session_foreign):
@@ -100,7 +108,6 @@ def identify(word:str):
 
     session_filipino = set()
     session_foreign = set()
-    print(f"-- Identifying the word {word} if it's foreign")
     return classify_word(word, filipino_words, foreign_words, session_filipino, session_foreign, True)
 
 def mass_identify(filepath:str):

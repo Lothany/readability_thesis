@@ -3,7 +3,7 @@ encode_utf.ipynb
 pos_tagger.ipynb
 stanford-postagger-full-2020-11-17/hold-input.txt
 run/__pycache__
-run/thesis_venv/
+thesis_venv/
 filipino_known_words.db
 run/*.db
 run/__pycache__

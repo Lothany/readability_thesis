@@ -260,5 +260,5 @@ def export_csv(entry):
 
 def run_prep_dataset(file):
     print(f"Collecting data from: {file}\n")
-    # stride_n(file)
+    stride_n(file)
     stride_sentence(file)

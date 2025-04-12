@@ -7,7 +7,7 @@ if __name__ == "__main__":
     
     normalized_path = run_normalize(file)
     
-    wb = WordEmbedding("Ako si Ivy. Kapatid ko sina Duchess, John at Elize. Pumunta kami sa church.")
+    wb = WordEmbedding(normalized_path)
     wb.toJSON()
     
     run_prep_dataset(normalized_path)

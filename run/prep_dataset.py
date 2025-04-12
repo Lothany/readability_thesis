@@ -27,7 +27,7 @@ class DatasetEntry:
     
     @staticmethod
     def load_dictionary(self):
-        dictionary_json = "tables/dictionary.json"
+        dictionary_json = "tables/word_embeddings.json"
         with open(dictionary_json, "r", encoding="utf-8") as file:
             return json.load(file)
             
@@ -287,10 +287,10 @@ def export_csv(entry):
             writer.writeheader()
         
         writer.writerow(new_entry)
-        # print(f"{entry.text_num} | {entry.grade_lvl} | {entry.stride_len} | {entry.stride_index} | {entry.chunk} | {entry.noun_tr} | {entry.verb_tr} | {entry.lex_density} | {entry.lex_foreign} | Traditional - WL: {entry.word_len}, SC: {entry.syll_num}, PC: {entry.poly_num}")
-        print(f"{entry.chunk}")
+        print(f"{entry.text_num} | {entry.grade_lvl} | {entry.stride_len} | {entry.stride_index} | {entry.chunk} | NTR: {entry.noun_tr} | VTR: {entry.verb_tr} | LD: {entry.lex_density} | FW: {entry.lex_foreign} | WL: {entry.word_len}, SC: {entry.syll_num}, PC: {entry.poly_num}")
+        # print(f"{entry.chunk}")
 
 def run_prep_dataset(file):
     print(f"Collecting data from: {file}")
-    # stride_n(file)
+    stride_n(file)
     stride_sentence(file)

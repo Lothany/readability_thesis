@@ -35,7 +35,7 @@ class DatasetEntry:
         verb_count = 0
         for word in self.chunk:
             if word in self.dictionary:
-                lexeme = self.dictionary[word]["lex_pos"]
+                lexeme = self.dictionary[word]["lexical"]["lexeme"]
                 if lexeme == "noun":
                     noun_count = noun_count + 1
                 elif lexeme == "verb":
@@ -55,7 +55,7 @@ class DatasetEntry:
         lexeme_count = 0
         for word in self.chunk:
             if word in self.dictionary:
-                lexeme = self.dictionary[word]["lex_pos"]
+                lexeme = self.dictionary[word]["lexical"]["lexeme"]
                 if lexeme != "other":
                     lexeme_count = lexeme_count + 1
             else:
@@ -70,7 +70,7 @@ class DatasetEntry:
         foreign_count = 0
         for word in self.chunk:
             if word in self.dictionary:
-                foreign = self.dictionary[word]["lex_foreign"]
+                foreign = self.dictionary[word]["lexical"]["is_foreign"]
                 if foreign:
                     foreign_count = foreign_count + 1
             else:
@@ -95,7 +95,7 @@ class DatasetEntry:
         
         for word in self.chunk:
             if word in self.dictionary:
-                syllables = self.dictionary[word]["trad_syll"]
+                syllables = self.dictionary[word]["traditional"]["syllable_count"]
                 total_syllables += syllables
                 word_count += 1
             else:
@@ -128,7 +128,7 @@ class DatasetEntry:
         
         for word in self.chunk:
             if word in self.dictionary:
-                syllables = self.dictionary[word]["trad_poly"]
+                syllables = self.dictionary[word]["traditional"]["is_polysyllabic"]
                 if syllables:
                     poly_count += 1
             else:

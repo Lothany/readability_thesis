@@ -7,3 +7,4 @@ filipino_known_words.db
 run/*.db
 __pycache__
 run/foreignator_sqlite.py
+tables/*.json

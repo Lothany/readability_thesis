@@ -1,51 +1,9 @@
 {
-    "ako": {
+    "wow": {
         "lex_pos": "other",
         "lex_foreign": false,
         "trad_char": 3,
         "trad_syll": 1,
-        "trad_poly": false
-    },
-    "si": {
-        "lex_pos": "other",
-        "lex_foreign": false,
-        "trad_char": 2,
-        "trad_syll": 0,
-        "trad_poly": false
-    },
-    "Ivy": {
-        "lex_pos": "noun",
-        "lex_foreign": true,
-        "trad_char": 3,
-        "trad_syll": 0,
-        "trad_poly": false
-    },
-    "sina": {
-        "lex_pos": "other",
-        "lex_foreign": false,
-        "trad_char": 4,
-        "trad_syll": 1,
-        "trad_poly": false
-    },
-    "John": {
-        "lex_pos": "noun",
-        "lex_foreign": false,
-        "trad_char": 4,
-        "trad_syll": 1,
-        "trad_poly": false
-    },
-    "at": {
-        "lex_pos": "other",
-        "lex_foreign": false,
-        "trad_char": 2,
-        "trad_syll": 0,
-        "trad_poly": false
-    },
-    "Duchess": {
-        "lex_pos": "noun",
-        "lex_foreign": true,
-        "trad_char": 7,
-        "trad_syll": 2,
         "trad_poly": false
     },
     "ang": {
@@ -55,52 +13,38 @@
         "trad_syll": 1,
         "trad_poly": false
     },
-    "aking": {
-        "lex_pos": "other",
+    "gwapo": {
+        "lex_pos": "noun",
         "lex_foreign": false,
         "trad_char": 5,
         "trad_syll": 2,
         "trad_poly": false
     },
-    "mga": {
-        "lex_pos": "other",
+    "talaga": {
+        "lex_pos": "adv",
         "lex_foreign": false,
-        "trad_char": 3,
-        "trad_syll": 1,
-        "trad_poly": false
-    },
-    "kapatid": {
-        "lex_pos": "noun",
-        "lex_foreign": false,
-        "trad_char": 7,
+        "trad_char": 6,
         "trad_syll": 3,
         "trad_poly": false
     },
-    "pumunta": {
-        "lex_pos": "verb",
-        "lex_foreign": false,
-        "trad_char": 7,
-        "trad_syll": 3,
-        "trad_poly": false
-    },
-    "kami": {
-        "lex_pos": "other",
-        "lex_foreign": false,
-        "trad_char": 4,
-        "trad_syll": 2,
-        "trad_poly": false
-    },
-    "sa": {
+    "ni": {
         "lex_pos": "other",
         "lex_foreign": false,
         "trad_char": 2,
-        "trad_syll": 0,
+        "trad_syll": 1,
         "trad_poly": false
     },
-    "church": {
-        "lex_pos": "other",
-        "lex_foreign": true,
-        "trad_char": 6,
+    "kuya": {
+        "lex_pos": "noun",
+        "lex_foreign": false,
+        "trad_char": 4,
+        "trad_syll": 1,
+        "trad_poly": false
+    },
+    "Mark": {
+        "lex_pos": "noun",
+        "lex_foreign": false,
+        "trad_char": 4,
         "trad_syll": 1,
         "trad_poly": false
     }

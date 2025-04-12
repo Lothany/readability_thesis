@@ -6,9 +6,9 @@ run/__pycache__/
 tables/dataset.csv
 tables/dictionary.json
 stanford-postagger-full-2020-11-17/hold-input.txt
-run/__pycache__
-run/thesis_venv/
+thesis_venv/
 filipino_known_words.db
 run/*.db
-run/__pycache__
+__pycache__
 run/foreignator_sqlite.py
+tables/*.json

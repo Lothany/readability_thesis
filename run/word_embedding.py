@@ -3,6 +3,7 @@ import re
 import subprocess
 import foreignator
 from pathlib import Path
+from concurrent.futures import ThreadPoolExecutor
 
 class LexicalMetadata:
     def __init__(self, word):
@@ -60,6 +61,12 @@ class LexicalMetadata:
             self.__identify_lexeme(word)
         if self.is_foreign is None:
             self.__identify_foreign(word)
+    
+    def to_dict(self):
+        return {
+            "lex_pos": self.lexeme,
+            "lex_foreign": self.is_foreign
+        }
 
 class TraditionalMetadata:
     def __init__(self, word):
@@ -90,6 +97,13 @@ class TraditionalMetadata:
             self.__count_characters(word)
         if self.syllable_count is None:
             self.__count_syllables(word)
+    
+    def to_dict(self):
+        return {
+            "trad_char": self.character_count,
+            "trad_syll": self.syllable_count,
+            "trad_poly": self.is_polysyllabic
+        }
 
 class WordEmbedding:
     def __init__(self, file_path_or_text: str) -> None:
@@ -131,8 +145,20 @@ class WordEmbedding:
             for word in words:
                 self.__embed_helper(word)
 
-    def toJSON(self):
+    def toJSON(self, filepath='tables/word_embeddings.json'):
         import json
 
-        with open('word_embeddings.json', 'w', encoding='utf-8') as f:
-            json.dump(self.embeddings, f, ensure_ascii=False, indent=4)
+        def serialize_word(word_metadata):
+            word, metadata = word_metadata
+            return word, {
+                **metadata["lexical"].to_dict(),
+                **metadata["traditional"].to_dict()
+            }
+
+        with ThreadPoolExecutor() as executor:
+            results = executor.map(serialize_word, self.embeddings.items())
+
+        serializable_data = dict(results)
+
+        with open(filepath, 'w', encoding='utf-8') as f:
+            json.dump(serializable_data, f, ensure_ascii=False, indent=4)

@@ -1,7 +1,8 @@
 from word_embedding import WordEmbedding, LexicalMetadata, TraditionalMetadata
 
 # wb = WordEmbedding("../txt/normalized/g1/19.txt")
-wb = WordEmbedding("The great white fox jump over the lazy Vince")
+wb = WordEmbedding("Vince great white fox jump over the lazy Vince")
+# print(wb)
 wb.toJSON()
 
 # import foreignator

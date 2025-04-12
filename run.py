@@ -2,6 +2,19 @@ import os
 import subprocess
 import platform
 
+
+def find_python_command():
+    for cmd in ['python', 'python3', 'py']:
+        try:
+            result = subprocess.run(
+                [cmd, '--version'], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+            if result.returncode == 0:
+                return cmd
+        except FileNotFoundError:
+            continue
+    return None
+
+python_cmd = find_python_command()
 script = os.path.join("run", "test.py")
 cmd = ""
 

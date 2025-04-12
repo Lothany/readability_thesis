@@ -168,114 +168,52 @@ def stride_n(file_path):
         n_gram = [filtered_content[i:i + n] for i in range(0, len(filtered_content) - n + 1)]
         features(n_gram, n, text_num, grade_lvl)
         
-# def stride_sentence(file_path):    
-#     content, text_num, grade_lvl = clean_tags(file_path)
-    
-#     # print(content)
-    
-#     on_fragment = True
-#     on_sentence = False
-    
-#     sentence = []
-#     fragment = []
-    
-#     stride_index = 0
-    
-#     for word in content:
-#         if word == "#":  # End of a sentence fragment
-#             if fragment and on_fragment and not on_sentence:
-#                 n = len(fragment)
-#                 sentence_features(fragment, n, stride_index, text_num, grade_lvl)
-#                 stride_index += 1
-#                 fragment = []  # Reset the fragment after processing
-#                 on_fragment = True
-#                 on_sentence = False
-        
-#         elif word == "$":  # End of a full sentence
-#             if fragment and on_fragment:
-#                 n = len(fragment)
-#                 sentence_features(fragment, n, stride_index, text_num, grade_lvl)
-#                 stride_index += 1
-#                 on_fragment = False
-#                 on_sentence = True
-#                 fragment = []
-                
-#             if sentence:
-#                 n = len(sentence)
-#                 sentence_features(sentence, n, stride_index, text_num, grade_lvl)
-#                 stride_index += 1
-#                 sentence = []
-#                 on_fragment = False
-#                 on_sentence = True
-                
-#         else:
-#             sentence.append(word)
-#             fragment.append(word)
-
-
-#     # If the last sentence or fragment is not followed by "$", process it
-#     if sentence:
-#         n = len(sentence)
-#         sentence_features(sentence, n, stride_index, text_num, grade_lvl)
-    
 def stride_sentence(file_path):    
     content, text_num, grade_lvl = clean_tags(file_path)
-
-    chunks = []
-    current_fragment = []
-    current_sentence = []
-
+  
+    # Chunk by sentences
+    sentence = []
     stride_index = 0
-
+    for word in content:
+        if word == "$": 
+            if sentence:
+                n = len(sentence)
+                sentence_features(sentence, n, stride_index, text_num, grade_lvl)
+                stride_index += 1
+                sentence = []
+        elif word != "#":
+            sentence.append(word)
+    
+    # Chunk by fragments
+    fragment = []
+    prev_period = False
+    stride_index = 0
     for word in content:
         if word == "#":
-            if current_fragment:
-                # Process the fragment (no "#")
-                n = len(current_fragment)
-                sentence_features(current_fragment, n, stride_index, text_num, grade_lvl)
+            if fragment:
+                n = len(fragment)
+                sentence_features(fragment, n, stride_index, text_num, grade_lvl)
+                prev_period = False
                 stride_index += 1
-                chunks.append(current_fragment[:])
-
-                # Add to sentence context
-                current_sentence.extend(current_fragment)
-                current_fragment = []
-
+                fragment = []
         elif word == "$":
-            if current_fragment:
-                # Final fragment before sentence end
-                n = len(current_fragment)
-                sentence_features(current_fragment, n, stride_index, text_num, grade_lvl)
-                stride_index += 1
-                chunks.append(current_fragment[:])
-                current_sentence.extend(current_fragment)
-                current_fragment = []
-
-            if current_sentence:
-                # Process full sentence
-                n = len(current_sentence)
-                sentence_features(current_sentence, n, stride_index, text_num, grade_lvl)
-                stride_index += 1
-                chunks.append(current_sentence[:])
-                current_sentence = []
-
+            if fragment:
+                if not prev_period:
+                    n = len(fragment)
+                    sentence_features(fragment, n, stride_index, text_num, grade_lvl)
+                    prev_period = True
+                    stride_index += 1
+                    fragment = []
+                else:
+                    fragment = []
         else:
-            current_fragment.append(word)
-
-    # Catch any leftover content
-    if current_fragment:
-        n = len(current_fragment)
-        sentence_features(current_fragment, n, stride_index, text_num, grade_lvl)
-        chunks.append(current_fragment)
-
-    if current_sentence:
-        n = len(current_sentence)
-        sentence_features(current_sentence, n, stride_index, text_num, grade_lvl)
-        chunks.append(current_sentence)
-
-    # return chunks  # optional: return for testing
+            fragment.append(word)
 
 
-
+    # If the last sentence or fragment is not followed by "$", process it
+    if sentence:
+        n = len(sentence)
+        sentence_features(sentence, n, stride_index, text_num, grade_lvl)
     
 
 def features(n_gram, n, text_num, grade_lvl):
@@ -314,13 +252,13 @@ def export_csv(entry):
         if not file_exists:
             writer.writeheader()
         
-        # writer.writerow(new_entry)
+        writer.writerow(new_entry)
         print(f"{entry.text_num} | {entry.grade_lvl} | {entry.stride_len} | {entry.stride_index} | {entry.chunk} | NTR: {entry.noun_tr} | VTR: {entry.verb_tr} | LD: {entry.lex_density} | FD: {entry.lex_foreign} | WL: {entry.word_len}, SC: {entry.syll_num}, PC: {entry.poly_num}")
         # print(f"{entry.stride_len} {entry.chunk}")
-        # print(f"NTR: {entry.noun_tr} | VTR: {entry.verb_tr} | LD: {entry.lex_density} | FD: {entry.lex_foreign} | WL: {entry.word_len}, SC: {entry.syll_num}, PC: {entry.poly_num}")
+        # # print(f"NTR: {entry.noun_tr} | VTR: {entry.verb_tr} | LD: {entry.lex_density} | FD: {entry.lex_foreign} | WL: {entry.word_len}, SC: {entry.syll_num}, PC: {entry.poly_num}")
         # print(f"{entry.chunk}")
 
 def run_prep_dataset(file):
     print(f"Collecting data from: {file}\n")
-    stride_n(file)
+    # stride_n(file)
     stride_sentence(file)

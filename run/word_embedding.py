@@ -14,8 +14,8 @@ class LexicalMetadata:
         return (f"LX:{str(self.lexeme)} IF:{str(self.is_foreign)}")
     
     def __identify_lexeme(self, word):
-        stanford_dir = "../stanford-postagger-full-2020-11-17/"
-        stanford_copy = "../stanford-postagger-full-2020-11-17/hold-input.txt"
+        stanford_dir = "stanford-postagger-full-2020-11-17/"
+        stanford_copy = "stanford-postagger-full-2020-11-17/hold-input.txt"
         with open(stanford_copy, "w") as file:
             file.write(word)
 

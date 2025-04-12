@@ -53,7 +53,6 @@ class LexicalMetadata:
             self.is_foreign = foreignator.identify(word)
             # self.is_foreign = True
 
-        self.is_foreign = True
 
     def get_lexical_metadata(self, word):
         print(f"Getting the Lexical Metadata of {word}")

@@ -33,17 +33,18 @@ def clean_tag(file_path):
         if match:
             text, tag = match.groups()
             if tag == "NNP":
-                processed_words.append(f"{text}|{tag}")
+                processed_words.append(f"{text}")
             
             # Remove tags for end of sentence/fragment markers
             elif text in ("$", "#"):
                 processed_words.append(text)
             else:
-                processed_words.append(f"{text.lower()}|{tag}")
+                processed_words.append(f"{text.lower()}")
         else:
             processed_words.append(word)
 
     cleaned_text =  " ".join(processed_words)
+    print(cleaned_text)
     new_path = make_file(cleaned_text, file_path,"cleaned")
     
 
@@ -57,7 +58,7 @@ def normalize(file_path):
     text = text.replace("“", "").replace("”", "").replace(",", "")
     
     # Add # symbol for end of sentence fragment
-    text = text.replace("…","#")
+    text = text.replace("…"," #")
     
     # Add $ symbol for end of full sentence
     text = text.replace("..", " $")
@@ -102,7 +103,7 @@ def hash_word(word: str) -> str:
 
 
 # Making LEXICAL Dictionary ------------------------------------------------------------
-from word_embedding import WordEmbedding
+# from word_embedding import WordEmbedding
 import csv
 
 def lexeme(tag):
@@ -138,7 +139,7 @@ def tag_word(word):
     output = result.stdout
     tag = output.split("|", 1)[1].strip()  # Get part after "|" and remove extra spaces
     lex_tag = lexeme(tag)
-    return lex_tag
+    return tag
     
     
 def lex_dict(embedding):
@@ -163,15 +164,9 @@ def lex_dict(embedding):
     print("Hashed")
 
     
-    # (oks) for each word in table - get hash value
-    # (oks) open csv file as dictionary
-    # check if hash exists in dictionary
-        # takes a long time! will have to make a list of all hashes in the csv file
-    # if not exist - add value to dictionary and get lex details: POS, if_foreign
+
     
 
-
- 
 def test():
     file = "txt/utf/gtest/short.txt"
     print("Preprocessing: ", file, "\n")
@@ -179,13 +174,17 @@ def test():
     normalized = normalize(file)
     tagged = tag(normalized)    
     cleaned = clean_tag(tagged)
-    embedding = WordEmbedding(cleaned)
-    print(embedding)
+    print(f"Path: {cleaned}")
+    # embedding = embed(cleaned)
+    
     # lex_dict(embedding)
     
     # print(f"\nFinal file: ", cleaned)
-    
 
-def test2():
-    word = "ako"
-    print("Hash of the word:", hash_word(word))
+def main():
+    word = "basketball"
+    print(f"word: {tag_word(word)}")
+    
+main()
+    
+    

@@ -1,60 +1,40 @@
-import os
 import re
-import subprocess
 import foreignator
 from pathlib import Path
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 class LexicalMetadata:
-    def __init__(self, word):
+    def __init__(self, token):
         self.lexeme = None
         self.is_foreign = None
-        self.get_lexical_metadata(word)
+        self.get_lexical_metadata(token)
 
     def __repr__(self):
         return (f"LX:{str(self.lexeme)} IF:{str(self.is_foreign)}")
     
-    def __identify_lexeme(self, word):
-        stanford_dir = "stanford-postagger-full-2020-11-17/"
-        stanford_copy = "stanford-postagger-full-2020-11-17/hold-input.txt"
-        with open(stanford_copy, "w") as file:
-            file.write(word)
-
-        # Execute shell command to run filipino tagger
-        cmd = [
-            "java", "-mx300m",
-            "-classpath", "stanford-postagger.jar",
-            "edu.stanford.nlp.tagger.maxent.MaxentTagger",
-            "-model", "models/filipino-left5words-owlqn2-distsim-pref6-inf2.tagger",
-            "-textFile", "hold-input.txt"
-        ]
-
-        # Save output to temporary text file in run/
-        result = subprocess.run(cmd, stdout=subprocess.PIPE,
-                                stderr=subprocess.PIPE, text=True, cwd=stanford_dir)
-        output = result.stdout
-        # Get part after "|" and remove extra spaces
-        tag = output.split("|", 1)[1].strip()
-        if "NN" in tag:
+    def __identify_lexeme(self, tag):
+        if tag.startswith("NN"):
             self.lexeme = "noun"
-        elif "VB" in tag:
+        elif tag.startswith("VB"):
             self.lexeme = "verb"
-        elif "JJ" in tag:
+        elif tag.startswith("JJ"):
             self.lexeme = "adj"
-        elif "RB" in tag:
+        elif tag.startswith("RB"):
             self.lexeme = "adv"
         else:
             self.lexeme = "other"
 
     def __identify_foreign(self, word):
         self.is_foreign = foreignator.identify(word)
+        self.is_foreign = foreignator.identify(word)
             # self.is_foreign = True
 
-    def get_lexical_metadata(self, word):
+    def get_lexical_metadata(self, token):
+        print(f"Getting the Lexical Metadata of \"{token[0]}\"")
         if self.lexeme is None:
-            self.__identify_lexeme(word)
+            self.__identify_lexeme(token[1])
         if self.is_foreign is None:
-            self.__identify_foreign(word)
+            self.__identify_foreign(token[0])
         print(f"\t{word} === {self}")
 
     def to_dict(self):
@@ -105,6 +85,30 @@ class WordEmbedding:
     def __init__(self, file_path_or_text, max_workers=8, batch_size=20):
         self.embeddings = {}
         self.input = file_path_or_text
+        self.input = self.__embed()
+
+    # def __eq__(self, other):
+    #     if not isinstance(other, WordEmbedding):
+    #         return False
+    #     return self.word == other.word
+
+    def __repr__(self):
+        return (str(self.embeddings))
+
+    def __embed_helper(self, tokens):
+        word_traditional_metadata = TraditionalMetadata(tokens[0])
+        word_lexical_metadata = LexicalMetadata(tokens)
+        if tokens[0] not in self.embeddings:
+            self.embeddings[tokens[0]] = {"traditional": word_traditional_metadata, "lexical": word_lexical_metadata}
+        else:
+            self.embeddings[tokens[0]] = {"traditional": word_traditional_metadata, "lexical": word_lexical_metadata}
+
+    # def __embed_sanitize_text(self, text):
+    #     sanitized = re.sub(
+    #         r"[^\w\s-]", " ", text)
+    #     return " ".join(sanitized.split()).lower()
+    
+    def __embed(self):
         self.max_workers = max_workers
         self.batch_size = batch_size
         self.words = self.__extract_words()
@@ -116,9 +120,20 @@ class WordEmbedding:
 
     def __extract_words(self):
         if Path(self.input).exists():
-            with open(self.input, "r", encoding="utf-8") as f:
-                text = self.__sanitize(f.read())
+            with open(self.input, "r", encoding="utf-8") as file:
+                for line in file:
+                    words = line.split(" ")
+                    for word in words:
+                        if word in ["$", "#"]:
+                            pass
+                        else:
+                            tokens = word.split("|")
+                            self.__embed_helper(tokens)
         else:
+            words = str(self.input).split(" ")
+            for word in words:
+                tokens = word.split("|")
+                self.__embed_helper(tokens)
             text = self.__sanitize(str(self.input))
         return list(dict.fromkeys(text.split()))  # dedup & preserve order
 

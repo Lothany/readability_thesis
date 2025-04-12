@@ -1,5 +1,6 @@
 import json
 import os
+import re
 import csv
 from pathlib import Path
 from normalize import open_file
@@ -136,7 +137,7 @@ class DatasetEntry:
         
         return poly_count
 
-def stride_n(file_path):    
+def clean_tags(file_path):
     file = Path(file_path)
     text_num = int(file.stem)
     grade_lvl = int(file.parent.name[1:])
@@ -144,39 +145,109 @@ def stride_n(file_path):
     text = open_file(file_path)
     all_words = text.split()
     
-    n_values = {1, 2, 3, 5}
+    # Extract words without tags
+    content = []
+    for word in all_words:
+        match = re.match(r"(.+)\|(.+)", word)
+        if match:
+            parsed_word, _ = match.groups()  # Extract the word before "|"
+            content.append(parsed_word)
+        elif word in {"$", "#"}:  # Retain special markers if not tagged
+            content.append(word)
+    
+    return content, text_num, grade_lvl
+    
+def stride_n(file_path):    
+    content, text_num, grade_lvl = clean_tags(file_path)
+    
+    n_values = {1, 2, 3}
     for n in n_values:
-        words = [word for word in all_words if word not in {"$", "#"}]
-        n_gram = [words[i:i + n] for i in range(0, len(words) - n + 1)]
-
+        n_gram = [content[i:i + n] for i in range(0, len(content) - n + 1)]
         features(n_gram, n, text_num, grade_lvl)
         
 def stride_sentence(file_path):    
-    file = Path(file_path)
-    text_num = int(file.stem)
-    grade_lvl = int(file.parent.name[1:])
+    content, text_num, grade_lvl = clean_tags(file_path)
     
-    text = open_file(file_path)
-    all_words = text.split()
+    # print(content)
+    
+    on_fragment = True
+    on_sentence = False
     
     sentence = []
+    fragment = []
+    
     stride_index = 0
     
-    for word in all_words:
-        if word == "$":
+    for word in content:
+        if word == "#":  # End of a sentence fragment
+            if fragment and on_fragment and not on_sentence:
+                n = len(fragment)
+                sentence_features(fragment, n, stride_index, text_num, grade_lvl)
+                stride_index += 1
+                fragment = []  # Reset the fragment after processing
+                on_fragment = True
+                on_sentence = False
+        
+        elif word == "$":  # End of a full sentence
+            if fragment and on_fragment:
+                n = len(fragment)
+                sentence_features(fragment, n, stride_index, text_num, grade_lvl)
+                stride_index += 1
+                on_fragment = False
+                on_sentence = True
+                fragment = []
+                
             if sentence:
                 n = len(sentence)
                 sentence_features(sentence, n, stride_index, text_num, grade_lvl)
-                # print(f"{stride_index}: {sentence}")
-                stride_index = stride_index + 1
+                stride_index += 1
                 sentence = []
-        elif word != "#":
+                on_fragment = False
+                on_sentence = True
+                
+        else:
             sentence.append(word)
+            fragment.append(word)
 
-    # If the last sentence is not followed by "$", process it
+
+    # If the last sentence or fragment is not followed by "$", process it
     if sentence:
         n = len(sentence)
-        features(sentence, n, text_num, grade_lvl)
+        sentence_features(sentence, n, stride_index, text_num, grade_lvl)
+    
+# def stride_sentence(file_path):    
+#     content, text_num, grade_lvl = clean_tags(file_path)
+    
+#     sentence = []
+#     fragment = []
+#     stride_index = 0
+    
+#     for word in content:
+#         if word == "#":  # End of a sentence fragment
+#             if fragment:
+#                 n = len(fragment)
+#                 sentence_features(fragment, n, stride_index, text_num, grade_lvl)
+#                 stride_index += 1
+#                 fragment = []  # Reset the fragment after processing
+#         elif word == "$":  # End of a full sentence
+#             if fragment:
+#                 n = len(fragment)
+#                 sentence_features(fragment, n, stride_index, text_num, grade_lvl)
+#                 stride_index += 1
+#                 fragment = []  # Reset the fragment after processing
+#             if sentence:
+#                 n = len(sentence)
+#                 sentence_features(sentence, n, stride_index, text_num, grade_lvl)
+#                 stride_index += 1
+#                 sentence = []  # Reset the sentence after processing
+#         else:
+#             sentence.append(word)
+#             fragment.append(word)
+
+#     # If the last sentence or fragment is not followed by "$", process it
+#     if sentence:
+#         n = len(sentence)
+#         sentence_features(sentence, n, stride_index, text_num, grade_lvl)
     
 
 def features(n_gram, n, text_num, grade_lvl):
@@ -216,9 +287,10 @@ def export_csv(entry):
             writer.writeheader()
         
         writer.writerow(new_entry)
-        print(f"{entry.text_num} | {entry.grade_lvl} | {entry.stride_len} | {entry.stride_index} | {entry.chunk} | {entry.noun_tr} | {entry.verb_tr} | {entry.lex_density} | {entry.lex_foreign} | Traditional - WL: {entry.word_len}, SC: {entry.syll_num}, PC: {entry.poly_num}")
+        # print(f"{entry.text_num} | {entry.grade_lvl} | {entry.stride_len} | {entry.stride_index} | {entry.chunk} | {entry.noun_tr} | {entry.verb_tr} | {entry.lex_density} | {entry.lex_foreign} | Traditional - WL: {entry.word_len}, SC: {entry.syll_num}, PC: {entry.poly_num}")
+        print(f"{entry.chunk}")
 
 def run_prep_dataset(file):
     print(f"Collecting data from: {file}")
-    stride_n(file)
+    # stride_n(file)
     stride_sentence(file)

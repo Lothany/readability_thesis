@@ -125,9 +125,9 @@
         "trad_syll": 1,
         "trad_poly": false
     },
-    "simbahan": {
-        "lex_pos": "noun",
-        "lex_foreign": false,
+    "church": {
+        "lex_pos": "other",
+        "lex_foreign": true,
         "trad_char": 8,
         "trad_syll": 3,
         "trad_poly": true

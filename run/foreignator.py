@@ -13,7 +13,6 @@ def save_wordset(wordset, pkl_path):
     with open(pkl_path, 'wb') as f:
         pickle.dump(wordset, f)
 
-
 def is_likely_foreign(word):
     rare_letters = set("qvxzc")
     return any(char in rare_letters for char in word.lower())

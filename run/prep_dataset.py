@@ -2,8 +2,10 @@ import json
 import os
 import re
 import csv
+import random
 from pathlib import Path
 from normalize import open_file
+from sklearn.model_selection import train_test_split
 
 class DatasetEntry:
     def __init__(self, chunk, stride_len, stride_index, text_num, grade_lvl):
@@ -232,6 +234,7 @@ def export_csv(entry):
                  "grade_level": entry.grade_lvl,
                  "stride_len": entry.stride_len,
                  "stride_index": entry.stride_index,
+                 "n_gram": " ".join(entry.chunk),
                  "noun_tr": entry.noun_tr,
                  "verb_tr": entry.verb_tr,
                  "type_tr": entry.type_tr,
@@ -246,19 +249,40 @@ def export_csv(entry):
     
     file_exists = os.path.exists(dataset_path)
     with open(dataset_path, "a", newline="", encoding="utf-8") as dataset:
-        fieldnames = ["text_num","grade_level","stride_len","stride_index","noun_tr","verb_tr","type_tr","lex_density","lex_foreign","sent_len","word_len","word_num","syll_num","poly_num"]
+        fieldnames = ["text_num","grade_level","stride_len","stride_index", "n_gram", "noun_tr","verb_tr","type_tr","lex_density","lex_foreign","sent_len","word_len","word_num","syll_num","poly_num"]
         writer = csv.DictWriter(dataset, fieldnames=fieldnames)
         
         if not file_exists:
             writer.writeheader()
         
         writer.writerow(new_entry)
-        print(f"{entry.text_num} | {entry.grade_lvl} | {entry.stride_len} | {entry.stride_index} | {entry.chunk} | NTR: {entry.noun_tr} | VTR: {entry.verb_tr} | LD: {entry.lex_density} | FD: {entry.lex_foreign} | WL: {entry.word_len}, SC: {entry.syll_num}, PC: {entry.poly_num}")
+        # print(f"{entry.text_num} | {entry.grade_lvl} | {entry.stride_len} | {entry.stride_index} | {entry.chunk} | NTR: {entry.noun_tr} | VTR: {entry.verb_tr} | LD: {entry.lex_density} | FD: {entry.lex_foreign} | WL: {entry.word_len}, SC: {entry.syll_num}, PC: {entry.poly_num}")
         # print(f"{entry.stride_len} {entry.chunk}")
         # # print(f"NTR: {entry.noun_tr} | VTR: {entry.verb_tr} | LD: {entry.lex_density} | FD: {entry.lex_foreign} | WL: {entry.word_len}, SC: {entry.syll_num}, PC: {entry.poly_num}")
-        # print(f"{entry.chunk}")
+
+def split_documents(base_dir, test_size=0.2, random_seed=42):
+    all_files = []
+    for root, _, files in os.walk(base_dir):
+        for file in files:
+            if file.endswith(".txt"):
+                all_files.append(os.path.join(root, file))
+            elif file.endswith(".pdf"):
+                print("PDF file detected. Please convert to TXT.")
+                # Insert OCR pipeline to handle PDF files
+                pass
+            elif file.endswith(".docx"):
+                print("DOCX file detected. Please convert to TXT.")
+                # Insert pipeline to handle doc files
+                pass
+            else:
+                print(f"Unsupported file type: {file}. Skipping.")
+    
+    random.seed(random_seed)
+    random.shuffle(all_files)
+    train_files, test_files = train_test_split(all_files, test_size=test_size, random_state=random_seed)
+    
+    return train_files, test_files
 
 def run_prep_dataset(file):
-    print(f"Collecting data from: {file}\n")
     stride_n(file)
     stride_sentence(file)

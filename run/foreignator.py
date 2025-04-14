@@ -48,16 +48,16 @@ def classify_word(word, known_filipino, known_foreign, session_filipino, session
 
     score = heuristic_score(word)
     if score >= 2:
-        print(f"🤖 '{word}' classified as Foreign (score {score})")
+        # print(f"🤖 '{word}' classified as Foreign (score {score})")
         session_foreign.add(word)
         return True
     elif score <= -1:
-        print(f"🤖 '{word}' classified as Filipino (score {score})")
+        # print(f"🤖 '{word}' classified as Filipino (score {score})")
         session_filipino.add(word)
         return False
     else:
         if not identify_only:
-            print(f"❓ Heuristic uncertain for word: '{word}' (score {score})")
+            # print(f"❓ Heuristic uncertain for word: '{word}' (score {score})")
             user_input = input(
                 "Press Enter if Filipino, type 'y' if Foreign: ").strip().lower()
             if user_input == 'y':
@@ -67,7 +67,7 @@ def classify_word(word, known_filipino, known_foreign, session_filipino, session
                 session_filipino.add(word)
                 return False
         else:
-            print(f"--- Unable to classify if the {word} is foreign")
+            # print(f"--- Unable to classify if the {word} is foreign")
             return False
 
 def process_file(file_path, known_filipino, known_foreign, session_filipino, session_foreign):
@@ -100,7 +100,7 @@ def identify(word:str):
 
     session_filipino = set()
     session_foreign = set()
-    print(f"-- Identifying the word {word} if it's foreign")
+    # print(f"-- Identifying the word {word} if it's foreign")
     return classify_word(word, filipino_words, foreign_words, session_filipino, session_foreign, True)
 
 def mass_identify(filepath:str):

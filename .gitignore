@@ -3,7 +3,7 @@ pos_tagger.ipynb
 .DS_Store
 
 stanford-postagger-full-2020-11-17/hold-input.txt
-thesis_venv/
+this_venv/
 
 filipino_known_words.db
 run/*.db

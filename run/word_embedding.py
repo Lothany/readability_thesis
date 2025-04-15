@@ -85,7 +85,7 @@ class WordEmbedding:
     #     self.input = file_path_or_text
     #     self.input = self.__embed()
     
-    def __init__(self, file_path_or_text, max_workers=4):
+    def __init__(self, file_path_or_text, max_workers=12):
         self.embeddings = {}
         self._cache = set()
         self._lock = Lock()

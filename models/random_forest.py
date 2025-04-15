@@ -2,6 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import sklearn
+import numpy as np
 
 from sklearn.preprocessing import LabelEncoder
 from sklearn.impute import KNNImputer
@@ -18,15 +19,19 @@ warnings.filterwarnings('ignore')
 
 # Load dataset and extract variables
 df= pd.read_csv('tables/dataset.csv')
+df = df[df['grade_level'] != 0]
+
+# To Do: Load testing dataset
+
 print(df)
 
-X = df.drop(columns=['grade_level']).values
+X = df.drop(columns=['grade_level', 'text_num', 'stride_index', 'n_gram', 'word_len']).values
 y = df['grade_level'].values
 
-# print("Independent Variables (X):")
-# print(X)
-# print("\nDependent Variable (y):")
-# print(y)
+print("Independent Variables (X):")
+print(X)
+print("\nDependent Variable (y):")
+print(y)
 
 # Generating random forest
 label_encoder = LabelEncoder()
@@ -36,7 +41,6 @@ x = pd.concat([pd.DataFrame(x_numerical), x_categorical], axis=1).values
 
 regressor = RandomForestRegressor(n_estimators=10, random_state=0, oob_score=True)
 regressor.fit(x, y)
-
 
 # Computing scores
 oob_score = regressor.oob_score_

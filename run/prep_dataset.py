@@ -43,8 +43,8 @@ class DatasetEntry:
                     noun_count = noun_count + 1
                 elif lexeme == "verb":
                     verb_count = verb_count + 1
-            else:
-                print(f"Warning: '{word}' not found in dictionary. Skipping.")
+            # else:
+            #     print(f"Warning: '{word}' not found in dictionary. Skipping.")
 
         noun_tr = noun_count / self.stride_len
         noun_tr = float(f"{noun_tr:.4g}")
@@ -61,8 +61,8 @@ class DatasetEntry:
                 lexeme = self.dictionary[word]["lex_pos"]
                 if lexeme != "other":
                     lexeme_count = lexeme_count + 1
-            else:
-                print(f"Warning: '{word}' not found in dictionary. Skipping.")
+            # else:
+            #     print(f"Warning: '{word}' not found in dictionary. Skipping.")
         
         lex_density = lexeme_count / self.stride_len
         lex_density = float(f"{lex_density:.4g}")
@@ -76,8 +76,8 @@ class DatasetEntry:
                 foreign = self.dictionary[word]["lex_foreign"]
                 if foreign:
                     foreign_count = foreign_count + 1
-            else:
-                print(f"Warning: '{word}' not found in dictionary. Skipping.")
+            # else:
+            #     print(f"Warning: '{word}' not found in dictionary. Skipping.")
         
         foreign_density = foreign_count / self.stride_len
         foreign_density = float(f"{foreign_density:.4g}")
@@ -101,8 +101,8 @@ class DatasetEntry:
                 syllables = self.dictionary[word]["trad_syll"]
                 total_syllables += syllables
                 word_count += 1
-            else:
-                print(f"Warning: '{word}' not found in dictionary. Skipping.")
+            # else:
+            #     print(f"Warning: '{word}' not found in dictionary. Skipping.")
         
         # Avoid division by zero if no words were found in dictionary
         if word_count == 0:
@@ -134,8 +134,8 @@ class DatasetEntry:
                 syllables = self.dictionary[word]["trad_poly"]
                 if syllables:
                     poly_count += 1
-            else:
-                print(f"Warning: '{word}' not found in dictionary. Skipping word for polysyllabic count.")
+            # else:
+            #     print(f"Warning: '{word}' not found in dictionary. Skipping word for polysyllabic count.")
         
         return poly_count
 

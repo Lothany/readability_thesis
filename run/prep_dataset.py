@@ -112,7 +112,6 @@ class DatasetEntry:
         return float(f"{avg_syllables:.4g}")
         
     def __average_word_len(self):
-        """Calculate the average word length (in characters) in the stride."""
         total_chars = 0
         word_count = len(self.chunk)
         
@@ -126,7 +125,6 @@ class DatasetEntry:
         return float(f"{avg_word_len:.4g}")
         
     def __polysyllabic_count(self):
-        """Count the number of words with 3 or more syllables in the stride."""
         poly_count = 0
         
         for word in self.chunk:
@@ -152,13 +150,11 @@ def sentence_length(all_words):
                 sentence = []
         elif word != "#":
             sentence.append(word)
-
-    # If the last sentence is not followed by "$", process it
+            
     if sentence:
         total_sentences += 1
         total_words += len(sentence)
 
-    # Calculate average sentence length
     avg_sentence_length = total_words / total_sentences if total_sentences > 0 else 0
     return avg_sentence_length  
 
@@ -182,10 +178,10 @@ def clean_tags(file_path):
         elif word in {"$", "#"}:  # Retain special markers if not tagged
             content.append(word)
     
-    return content, text_num, grade_lvl
+    return content, text_num, grade_lvl, sent_len
     
 def stride_n(file_path):    
-    content, text_num, grade_lvl = clean_tags(file_path)
+    content, text_num, grade_lvl, sent_len = clean_tags(file_path)
     
     # Remove # and $ symbols from the content
     filtered_content = [word for word in content if word not in {"#", "$"}]
@@ -196,7 +192,7 @@ def stride_n(file_path):
         features(n_gram, n, text_num, grade_lvl, sent_len)
         
 def stride_sentence(file_path):    
-    content, text_num, grade_lvl = clean_tags(file_path)
+    content, text_num, grade_lvl, sent_len = clean_tags(file_path)
   
     # Chunk by sentences
     sentence = []
@@ -205,7 +201,7 @@ def stride_sentence(file_path):
         if word == "$": 
             if sentence:
                 n = len(sentence)
-                sentence_features(sentence, n, stride_index, text_num, grade_lvl)
+                sentence_features(sentence, n, stride_index, text_num, grade_lvl, sent_len)
                 stride_index += 1
                 sentence = []
         elif word != "#":
@@ -219,7 +215,7 @@ def stride_sentence(file_path):
         if word == "#":
             if fragment:
                 n = len(fragment)
-                sentence_features(fragment, n, stride_index, text_num, grade_lvl)
+                sentence_features(fragment, n, stride_index, text_num, grade_lvl, sent_len)
                 prev_period = False
                 stride_index += 1
                 fragment = []
@@ -227,7 +223,7 @@ def stride_sentence(file_path):
             if fragment:
                 if not prev_period:
                     n = len(fragment)
-                    sentence_features(fragment, n, stride_index, text_num, grade_lvl)
+                    sentence_features(fragment, n, stride_index, text_num, grade_lvl, sent_len)
                     prev_period = True
                     stride_index += 1
                     fragment = []
@@ -240,7 +236,7 @@ def stride_sentence(file_path):
     # If the last sentence or fragment is not followed by "$", process it
     if sentence:
         n = len(sentence)
-        sentence_features(sentence, n, stride_index, text_num, grade_lvl)
+        sentence_features(sentence, n, stride_index, text_num, grade_lvl, sent_len)
     
 
 def features(n_gram, n, text_num, grade_lvl, sent_len):
@@ -252,7 +248,6 @@ def sentence_features(sentence, n, stride_index, text_num, grade_lvl, sent_len):
     entry = DatasetEntry(sentence, n, stride_index, text_num, grade_lvl, sent_len)
     export_csv(entry)
     
-        
 
 def export_csv(entry):
     new_entry = {"text_num": entry.text_num,
@@ -281,7 +276,7 @@ def export_csv(entry):
             writer.writeheader()
         
         writer.writerow(new_entry)
-        # print(f"{entry.text_num} | {entry.grade_lvl} | {entry.stride_len} | {entry.stride_index} | {entry.chunk} | NTR: {entry.noun_tr} | VTR: {entry.verb_tr} | LD: {entry.lex_density} | FD: {entry.lex_foreign} | WL: {entry.word_len}, SC: {entry.syll_num}, PC: {entry.poly_num}")
+        # print(f"{entry.text_num} | {entry.grade_lvl} | {entry.stride_len} | {entry.stride_index} | {entry.chunk} | NTR: {entry.noun_tr} | VTR: {entry.verb_tr} | LD: {entry.lex_density} | FD: {entry.lex_foreign} | SL: {entry.sent_len} | WL: {entry.word_len}, SC: {entry.syll_num}, PC: {entry.poly_num}")
         # print(f"{entry.stride_len} {entry.chunk}")
         # # print(f"NTR: {entry.noun_tr} | VTR: {entry.verb_tr} | LD: {entry.lex_density} | FD: {entry.lex_foreign} | WL: {entry.word_len}, SC: {entry.syll_num}, PC: {entry.poly_num}")
 

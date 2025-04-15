@@ -6,7 +6,7 @@ import os
 from tqdm import tqdm
 
 if __name__ == "__main__":   
-    base_dir = "txt/utf" 
+    base_dir = "txt/utf/g0" 
     
     # Split documents into training and testing sets
     train_files, test_files = split_documents(base_dir)

@@ -6,7 +6,7 @@ import os
 from tqdm import tqdm
 
 if __name__ == "__main__":   
-    base_dir = "txt/utf" 
+    base_dir = "txt/utf"
     
     # Split documents into training and testing sets
     train_files, test_files = split_documents(base_dir)
@@ -35,5 +35,17 @@ if __name__ == "__main__":
     print("Stories reserved for testing:")
     for file in test_files:
         print(f" - {file}")
+
+def run_file():
+    file = "txt/test/g0/18.txt"
+    normalized_path = run_normalize(file)
+            
+    # Generate metadata for words in text
+    wb = WordEmbedding(normalized_path)
+    wb.toJSON()
+    
+    # Extract features    
+    run_prep_dataset(normalized_path)
+    
     
     

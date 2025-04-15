@@ -13,10 +13,14 @@ def save_wordset(wordset, pkl_path):
     with open(pkl_path, 'wb') as f:
         pickle.dump(wordset, f)
 
-
 def is_likely_foreign(word):
     rare_letters = set("qvxzc")
     return any(char in rare_letters for char in word.lower())
+
+def looks_foreign(word):
+    prefixes = ('wr', 'th')
+    suffixes = ('er', 'le')
+    return word.startswith(prefixes) or word.endswith(suffixes)
 
 def looks_filipino(word):
     prefixes = ('mag', 'nag', 'ma', 'ka', 'pag', 'napaka', 'pina', 'ipinag', 'kumaka', 'ikina')
@@ -33,6 +37,8 @@ def heuristic_score(word):
     score = 0
     if is_likely_foreign(word):
         score += 2
+    if looks_foreign(word):
+        score += 1
     if looks_filipino(word):
         score -= 1
     if has_reduplication(word):
@@ -40,6 +46,7 @@ def heuristic_score(word):
     return score
 
 def classify_word(word, known_filipino, known_foreign, session_filipino, session_foreign, identify_only = False):
+    # return True
     word = word.lower()
     if word in known_filipino or word in session_filipino:
         return False

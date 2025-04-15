@@ -165,7 +165,7 @@ def stride_n(file_path):
     # Remove # and $ symbols from the content
     filtered_content = [word for word in content if word not in {"#", "$"}]
     
-    n_values = {1, 2, 3}
+    n_values = {100}
     for n in n_values:
         n_gram = [filtered_content[i:i + n] for i in range(0, len(filtered_content) - n + 1)]
         features(n_gram, n, text_num, grade_lvl)

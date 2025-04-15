@@ -272,7 +272,7 @@ def split_documents(base_dir, test_size=0.2, random_seed=42):
                 pass
             elif file.endswith(".docx"):
                 print("DOCX file detected. Please convert to TXT.")
-                # Insert pipeline to handle doc files
+                # Insert pipeline to handle doc  and convert to utf-8
                 pass
             else:
                 print(f"Unsupported file type: {file}. Skipping.")

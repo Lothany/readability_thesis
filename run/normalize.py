@@ -5,7 +5,7 @@ import unicodedata
 
 def open_file(file_path):
     if file_path.endswith(".txt"):
-        with open(file_path, "r", encoding="utf8") as file:
+        with open(file_path, "r", encoding="utf-8", errors="replace") as file:
             content = file.read()
     return content
 
@@ -28,8 +28,8 @@ def make_file(text, file_path, txt_type):
 def punctuation(file_path):
     text = open_file(file_path)
     
-    # Remove quotation marks and commas
-    text = text.replace("“", "").replace("”", "")
+    # Remove unnecessary punctuations
+    text = text.replace("“", "").replace("”", "").replace(":", "")
     
     # Add # symbol for end of sentence fragment
     text = text.replace("…"," #")
@@ -117,16 +117,12 @@ def remove_accents(text: str) -> str:
     return ''.join(result)
 
 def run_normalize(file):
-    print("Normalizing: ", file)
-    
     text = punctuation(file)
     tagged = tag(text)    
     normalized_path = lowercase(tagged, file)
-    print(f"Normalized text exported in: {normalized_path} \n")
     
+    # print(f"Normalized text exported in: {normalized_path} \n")    
     # print(open_file(normalized_path))
     
     return normalized_path
-
-# run_normalize("txt/utf/g0/555.txt")
 

@@ -30,7 +30,7 @@ class LexicalMetadata:
         self.is_foreign = foreignator.identify(word)
 
     def get_lexical_metadata(self, token):
-        print(f"Getting the Lexical Metadata of \"{token}\"")
+        # print(f"Getting the Lexical Metadata of \"{token[0]}\"")
         if self.lexeme is None:
             self.__identify_lexeme(token[1])
         if self.is_foreign is None:
@@ -66,6 +66,7 @@ class TraditionalMetadata:
         self.is_polysyllabic = self.syllable_count > 3
 
     def get_traditional_metadata(self, word):
+        # print(f"Getting the Traditional Metadata of {word}")
         if self.character_count is None:
             self.__count_characters(word)
         if self.syllable_count is None:

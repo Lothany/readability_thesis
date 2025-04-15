@@ -74,7 +74,7 @@ def classify_word(word, known_filipino, known_foreign, session_filipino, session
                 session_filipino.add(word)
                 return False
         else:
-            print(f"\n\t--- Unable to classify if the \"{word}\" is foreign")
+            print(f"\t--- Unable to classify if the \"{word}\" is foreign")
             return False
 
 def process_file(file_path, known_filipino, known_foreign, session_filipino, session_foreign):

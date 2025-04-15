@@ -3,7 +3,7 @@ from prep_dataset import run_prep_dataset
 from word_embedding import WordEmbedding, LexicalMetadata, TraditionalMetadata
 
 if __name__ == "__main__":
-    file = "txt/utf/g0/555.txt"
+    file = "txt/utf/g0/19.txt"
     
     normalized_path = run_normalize(file)
     

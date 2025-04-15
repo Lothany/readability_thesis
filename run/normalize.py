@@ -5,7 +5,7 @@ import unicodedata
 
 def open_file(file_path):
     if file_path.endswith(".txt"):
-        with open(file_path, "r", encoding="utf-8") as file:
+        with open(file_path, "r", encoding="utf8") as file:
             content = file.read()
     return content
 

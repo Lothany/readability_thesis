@@ -1,7 +1,9 @@
 import re
 import foreignator
 from pathlib import Path
+from tqdm import tqdm
 from concurrent.futures import ThreadPoolExecutor, as_completed
+from threading import Lock
 
 class LexicalMetadata:
     def __init__(self, token):
@@ -26,16 +28,13 @@ class LexicalMetadata:
 
     def __identify_foreign(self, word):
         self.is_foreign = foreignator.identify(word)
-        self.is_foreign = foreignator.identify(word)
-            # self.is_foreign = True
 
     def get_lexical_metadata(self, token):
-        print(f"Getting the Lexical Metadata of \"{token[0]}\"")
+        print(f"Getting the Lexical Metadata of \"{token}\"")
         if self.lexeme is None:
             self.__identify_lexeme(token[1])
         if self.is_foreign is None:
             self.__identify_foreign(token[0])
-        print(f"\t{word} === {self}")
 
     def to_dict(self):
         return {
@@ -79,104 +78,85 @@ class TraditionalMetadata:
             "trad_syll": self.syllable_count,
             "trad_poly": self.is_polysyllabic
         }
-
-
 class WordEmbedding:
-    def __init__(self, file_path_or_text, max_workers=8, batch_size=20):
+    # def __init__(self, file_path_or_text):
+    #     self.embeddings = {}
+    #     self.input = file_path_or_text
+    #     self.input = self.__embed()
+    
+    def __init__(self, file_path_or_text, max_workers=4):
         self.embeddings = {}
+        self._cache = set()
+        self._lock = Lock()
         self.input = file_path_or_text
-        self.input = self.__embed()
-
-    # def __eq__(self, other):
-    #     if not isinstance(other, WordEmbedding):
-    #         return False
-    #     return self.word == other.word
+        self.max_workers = max_workers
+        self._embed()
 
     def __repr__(self):
         return (str(self.embeddings))
 
-    def __embed_helper(self, tokens):
-        word_traditional_metadata = TraditionalMetadata(tokens[0])
-        word_lexical_metadata = LexicalMetadata(tokens)
-        if tokens[0] not in self.embeddings:
-            self.embeddings[tokens[0]] = {"traditional": word_traditional_metadata, "lexical": word_lexical_metadata}
-        else:
-            self.embeddings[tokens[0]] = {"traditional": word_traditional_metadata, "lexical": word_lexical_metadata}
+    # def __embed_helper(self, tokens):
+    #     word_traditional_metadata = TraditionalMetadata(tokens[0])
+    #     word_lexical_metadata = LexicalMetadata(tokens)
+    #     if tokens[0] not in self.embeddings:
+    #         self.embeddings[tokens[0]] = {"traditional": word_traditional_metadata, "lexical": word_lexical_metadata}
+    #     else:
+    #         self.embeddings[tokens[0]] = {"traditional": word_traditional_metadata, "lexical": word_lexical_metadata}
 
-    # def __embed_sanitize_text(self, text):
-    #     sanitized = re.sub(
-    #         r"[^\w\s-]", " ", text)
-    #     return " ".join(sanitized.split()).lower()
-    
-    def __embed(self):
-        self.max_workers = max_workers
-        self.batch_size = batch_size
-        self.words = self.__extract_words()
-        self.total = len(self.words)
-        self.__embed_all_words()
+    def _embed_helper(self, tokens):
+        word = tokens[0]
 
-    def __sanitize(self, text):
-        return " ".join(re.sub(r"[^\w\s-]", " ", text).split()).lower()
+        with self._lock:
+            if word in self._cache:
+                return
+            self._cache.add(word)
 
-    def __extract_words(self):
+        traditional = TraditionalMetadata(word)
+        lexical = LexicalMetadata(tokens)
+
+        with self._lock:
+            self.embeddings[word] = {
+                "traditional": traditional,
+                "lexical": lexical
+            }
+
+    def _get_tokens(self):
+        all_tokens = []
         if Path(self.input).exists():
             with open(self.input, "r", encoding="utf-8") as file:
                 for line in file:
-                    words = line.split(" ")
-                    for word in words:
-                        if word in ["$", "#"]:
-                            pass
-                        else:
+                    for word in line.split():
+                        if word not in ["$", "#"]:
                             tokens = word.split("|")
-                            self.__embed_helper(tokens)
+                            if len(tokens) >= 2:
+                                all_tokens.append(tokens)
         else:
-            words = str(self.input).split(" ")
-            for word in words:
-                tokens = word.split("|")
-                self.__embed_helper(tokens)
-            text = self.__sanitize(str(self.input))
-        return list(dict.fromkeys(text.split()))  # dedup & preserve order
+            for word in str(self.input).split():
+                if word not in ["$", "#"]:
+                    tokens = word.split("|")
+                    if len(tokens) >= 2:
+                        all_tokens.append(tokens)
+        return all_tokens
 
-    def __embed_word(self, word):
-        try:
-            return word, {
-                "traditional": TraditionalMetadata(word),
-                "lexical": LexicalMetadata(word)
-            }
-        except Exception as e:
-            print(f"Failed to embed '{word}': {e}")
-            return word, None
+    def _embed(self):
+        tokens_list = self._get_tokens()
+        total = len(tokens_list)
 
-    def __embed_all_words(self):
         with ThreadPoolExecutor(max_workers=self.max_workers) as executor:
-            batches = [self.words[i:i + self.batch_size]
-                       for i in range(0, self.total, self.batch_size)]
-            futures = []
-
-            for batch in batches:
-                for word in batch:
-                    futures.append(executor.submit(self.__embed_word, word))
-
-            for i, future in enumerate(as_completed(futures), 1):
-                word, data = future.result()
-                if data:
-                    self.embeddings[word] = data
-                self.__show_progress(i)
-
-    def __show_progress(self, current):
-        percent = (current / self.total) * 100
-        bar_length = 30
-        filled = int(bar_length * percent // 100)
-        bar = "█" * filled + "-" * (bar_length - filled)
-        print(
-            f"Progress: |{bar}| {percent:5.1f}% ({current}/{self.total})", end=":\t")
+            with tqdm(total=total, desc="🔄 Embedding words", ncols=80) as pbar:
+                futures = [executor.submit(self._embed_helper, tokens)
+                           for tokens in tokens_list]
+                for future in as_completed(futures):
+                    pbar.update(1)
 
     def toJSON(self, filepath='tables/word_embeddings.json'):
         import json
 
         serializable = {
-            word: {**meta["lexical"].to_dict(), **
-                   meta["traditional"].to_dict()}
+            word: {
+                **meta["lexical"].to_dict(), 
+                **meta["traditional"].to_dict()
+                }
             for word, meta in self.embeddings.items()
         }
         with open(filepath, 'w', encoding='utf-8') as f:

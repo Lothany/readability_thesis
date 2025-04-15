@@ -5,7 +5,7 @@ import unicodedata
 
 def open_file(file_path):
     if file_path.endswith(".txt"):
-        with open(file_path, "r", encoding="utf-8", errors="replace") as file:
+        with open(file_path, "r", encoding="utf-8") as file:
             content = file.read()
     return content
 
@@ -28,12 +28,11 @@ def make_file(text, file_path, txt_type):
 def punctuation(file_path):
     text = open_file(file_path)
     
-    # Remove unnecessary punctuations
-    text = text.replace("“", "").replace("”", "").replace(":", "")
+    # Remove quotation marks and commas
+    text = text.replace("“", "").replace("”", "").replace(",", "")
     
     # Add # symbol for end of sentence fragment
     text = text.replace("…"," #")
-    text = text.replace(",", "#")
     
     # Add $ symbol for end of full sentence
     text = text.replace("..", " $")
@@ -49,8 +48,6 @@ def punctuation(file_path):
 def tag(text):   
     stanford_dir = "stanford-postagger-full-2020-11-17/"
     stanford_copy = "stanford-postagger-full-2020-11-17/hold-input.txt"
-    
-    # Write the text to the input file for tagging
     with open(stanford_copy, "w") as file:
         file.write(text)
     
@@ -63,20 +60,11 @@ def tag(text):
         "-textFile", "hold-input.txt"
     ]
     
-    # Run the Stanford POS Tagger
+
     result = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, cwd=stanford_dir)
     tagged_text = result.stdout
     
-    # Retain "$" and "#" symbols without tagging
-    processed_lines = []
-    for word in tagged_text.split():
-        if word in {"$", "#"}:
-            processed_lines.append(word)  # Retain the symbol as is
-        else:
-            processed_lines.append(word)  # Add the tagged word
-    
-    # Join the processed words back into a single string
-    return " ".join(processed_lines)
+    return tagged_text
 
 # Takes tagged file and changes content to lowercase except for proper nouns
 def lowercase(text, file_path):
@@ -88,20 +76,20 @@ def lowercase(text, file_path):
         if match:
             text, tag = match.groups()
             if tag == "NNP":
-                processed_words.append(f"{text}|{tag}")
-            
-            # Retain tags for end of sentence/fragment markers
-            elif text in ("$", "#"):
                 processed_words.append(f"{text}")
+            
+            # Remove tags for end of sentence/fragment markers
+            elif text in ("$", "#"):
+                processed_words.append(text)
             else:
-                processed_words.append(f"{text.lower()}|{tag}")
+                processed_words.append(f"{text.lower()}")
         else:
             processed_words.append(word)
 
-    normalized_text = " ".join(processed_words)
+    normalized_text =  " ".join(processed_words)
     normalized_text = remove_accents(normalized_text)
     
-    new_path = make_file(normalized_text, file_path, "normalized")
+    new_path = make_file(normalized_text, file_path,"normalized")
     return new_path
 
 def remove_accents(text: str) -> str:
@@ -117,12 +105,11 @@ def remove_accents(text: str) -> str:
     return ''.join(result)
 
 def run_normalize(file):
+    print("Normalizing: ", file)
+    
     text = punctuation(file)
     tagged = tag(text)    
     normalized_path = lowercase(tagged, file)
-    
-    # print(f"Normalized text exported in: {normalized_path} \n")    
-    # print(open_file(normalized_path))
+    print(f"Normalized text exported in: {normalized_path} \n")
     
     return normalized_path
-

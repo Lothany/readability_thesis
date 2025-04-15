@@ -1,10 +1,39 @@
 from normalize import run_normalize
-from prep_dataset import run_prep_dataset
+from prep_dataset import run_prep_dataset, split_documents
+from word_embedding import WordEmbedding, LexicalMetadata, TraditionalMetadata
 
-if __name__ == "__main__":
-    file = "txt/utf/g0/555.txt"
+import os
+from tqdm import tqdm
+
+if __name__ == "__main__":   
+    base_dir = "txt/utf" 
     
-    normalized_path = run_normalize(file)
-    # Insert dictionary embeeding function here
-    run_prep_dataset(normalized_path)
+    # Split documents into training and testing sets
+    train_files, test_files = split_documents(base_dir)
+    
+    # Overwrite existing dataset csv file
+    dataset_path = "tables/dataset.csv"
+    if os.path.exists(dataset_path):
+        os.remove(dataset_path)
+    
+    # Preprocess training files
+    with tqdm(train_files, desc="Preprocessing Files", unit="file") as progress_bar:
+        for file in progress_bar:
+            # Log the current file being processed without interfering with the progress bar
+            progress_bar.set_postfix(file=os.path.basename(file))
+        
+            # Normalize the text
+            normalized_path = run_normalize(file)
+            
+            # Generate metadata for words in text
+            wb = WordEmbedding(normalized_path)
+            wb.toJSON()
+            
+            # Extract features    
+            run_prep_dataset(normalized_path)
+    
+    print("Stories reserved for testing:")
+    for file in test_files:
+        print(f" - {file}")
+    
     

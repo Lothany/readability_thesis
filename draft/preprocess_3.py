@@ -94,7 +94,7 @@ def tag(file_path):
     
 
     with open(tagged_path, "w") as output_file_path:
-        subprocess.run(cmd, stdout=output_file_path, stderr=subprocess.PIPE, text=True, cwd=stanford_dir)
+        subprocess.run(cmd, stdout=output_file_path, stderr=subprocess.PIP0E, text=True, cwd=stanford_dir)
     
     return tagged_path
 
@@ -103,7 +103,7 @@ def hash_word(word: str) -> str:
 
 
 # Making LEXICAL Dictionary ------------------------------------------------------------
-from word_embedding import WordEmbedding
+# from word_embedding import WordEmbedding
 import csv
 
 def lexeme(tag):
@@ -139,7 +139,7 @@ def tag_word(word):
     output = result.stdout
     tag = output.split("|", 1)[1].strip()  # Get part after "|" and remove extra spaces
     lex_tag = lexeme(tag)
-    return lex_tag
+    return tag
     
     
 def lex_dict(embedding):
@@ -180,3 +180,11 @@ def test():
     # lex_dict(embedding)
     
     # print(f"\nFinal file: ", cleaned)
+
+def main():
+    word = "basketball"
+    print(f"word: {tag_word(word)}")
+    
+main()
+    
+    

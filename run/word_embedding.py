@@ -63,7 +63,7 @@ class TraditionalMetadata:
             f'({consonant_clusters}|{diphthongs}|{consonant_vowel})')
         matches = pattern.findall(word.lower())
         self.syllable_count = len(matches)
-        self.is_polysyllabic = self.syllable_count > 3
+        self.is_polysyllabic = self.syllable_count > 1
 
     def get_traditional_metadata(self, word):
         # print(f"Getting the Traditional Metadata of {word}")

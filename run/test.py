@@ -12,4 +12,4 @@ def run_file(file):
     # Extract features    
     run_prep_dataset(normalized_path)
     
-run_file("txt/test/g0/18.txt")
+run_file("txt/utf/g4/44.txt")

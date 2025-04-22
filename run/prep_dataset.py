@@ -8,7 +8,7 @@ from normalize import open_file
 from sklearn.model_selection import train_test_split
 
 class DatasetEntry:
-    def __init__(self, chunk, stride_len, stride_index, text_num, grade_lvl):
+    def __init__(self, chunk, stride_len, stride_index, text_num, grade_lvl,sent_len):
         self.dictionary = self.load_dictionary(self)
         self.text_num = text_num
         self.grade_lvl = grade_lvl
@@ -21,7 +21,7 @@ class DatasetEntry:
         self.lex_density = self.__lexical_density()
         self.lex_foreign = self.__foreign()
 
-        self.sent_len = None 
+        self.sent_len = sent_len 
         self.word_len = self.__average_word_len()
         self.word_num = None
         self.syll_num = self.__average_syll()
@@ -43,8 +43,8 @@ class DatasetEntry:
                     noun_count = noun_count + 1
                 elif lexeme == "verb":
                     verb_count = verb_count + 1
-            else:
-                print(f"Warning: '{word}' not found in dictionary. Skipping.")
+            # else:
+            #     print(f"Warning: '{word}' not found in dictionary. Skipping.")
 
         noun_tr = noun_count / self.stride_len
         noun_tr = float(f"{noun_tr:.4g}")
@@ -61,8 +61,8 @@ class DatasetEntry:
                 lexeme = self.dictionary[word]["lex_pos"]
                 if lexeme != "other":
                     lexeme_count = lexeme_count + 1
-            else:
-                print(f"Warning: '{word}' not found in dictionary. Skipping.")
+            # else:
+            #     print(f"Warning: '{word}' not found in dictionary. Skipping.")
         
         lex_density = lexeme_count / self.stride_len
         lex_density = float(f"{lex_density:.4g}")
@@ -76,8 +76,8 @@ class DatasetEntry:
                 foreign = self.dictionary[word]["lex_foreign"]
                 if foreign:
                     foreign_count = foreign_count + 1
-            else:
-                print(f"Warning: '{word}' not found in dictionary. Skipping.")
+            # else:
+            #     print(f"Warning: '{word}' not found in dictionary. Skipping.")
         
         foreign_density = foreign_count / self.stride_len
         foreign_density = float(f"{foreign_density:.4g}")
@@ -101,8 +101,8 @@ class DatasetEntry:
                 syllables = self.dictionary[word]["trad_syll"]
                 total_syllables += syllables
                 word_count += 1
-            else:
-                print(f"Warning: '{word}' not found in dictionary. Skipping.")
+            # else:
+            #     print(f"Warning: '{word}' not found in dictionary. Skipping.")
         
         # Avoid division by zero if no words were found in dictionary
         if word_count == 0:
@@ -112,7 +112,6 @@ class DatasetEntry:
         return float(f"{avg_syllables:.4g}")
         
     def __average_word_len(self):
-        """Calculate the average word length (in characters) in the stride."""
         total_chars = 0
         word_count = len(self.chunk)
         
@@ -126,7 +125,6 @@ class DatasetEntry:
         return float(f"{avg_word_len:.4g}")
         
     def __polysyllabic_count(self):
-        """Count the number of words with 3 or more syllables in the stride."""
         poly_count = 0
         
         for word in self.chunk:
@@ -134,10 +132,32 @@ class DatasetEntry:
                 syllables = self.dictionary[word]["trad_poly"]
                 if syllables:
                     poly_count += 1
-            else:
-                print(f"Warning: '{word}' not found in dictionary. Skipping word for polysyllabic count.")
+            # else:
+            #     print(f"Warning: '{word}' not found in dictionary. Skipping word for polysyllabic count.")
         
         return poly_count
+
+def sentence_length(all_words):    
+    total_sentences = 0
+    total_words = 0
+    sentence = []
+
+    for word in all_words:
+        if word == "$":
+            if sentence:
+                total_sentences += 1
+                total_words += len(sentence)
+                sentence = []
+        elif word != "#":
+            sentence.append(word)
+            
+    if sentence:
+        total_sentences += 1
+        total_words += len(sentence)
+
+    avg_sentence_length = total_words / total_sentences if total_sentences > 0 else 0
+    return avg_sentence_length  
+
 
 def clean_tags(file_path):
     file = Path(file_path)
@@ -146,6 +166,7 @@ def clean_tags(file_path):
     
     text = open_file(file_path)
     all_words = text.split()
+    sent_len = sentence_length(all_words)
     
     # Extract words without tags
     content = []
@@ -156,22 +177,22 @@ def clean_tags(file_path):
             content.append(parsed_word)
         elif word in {"$", "#"}:  # Retain special markers if not tagged
             content.append(word)
-    
-    return content, text_num, grade_lvl
+                
+    return content, text_num, grade_lvl, sent_len
     
 def stride_n(file_path):    
-    content, text_num, grade_lvl = clean_tags(file_path)
+    content, text_num, grade_lvl, sent_len = clean_tags(file_path)
     
     # Remove # and $ symbols from the content
     filtered_content = [word for word in content if word not in {"#", "$"}]
     
-    n_values = {1, 2, 3}
+    n_values = {1, 2, 3, 100}
     for n in n_values:
         n_gram = [filtered_content[i:i + n] for i in range(0, len(filtered_content) - n + 1)]
-        features(n_gram, n, text_num, grade_lvl)
+        features(n_gram, n, text_num, grade_lvl, sent_len)
         
 def stride_sentence(file_path):    
-    content, text_num, grade_lvl = clean_tags(file_path)
+    content, text_num, grade_lvl, sent_len = clean_tags(file_path)
   
     # Chunk by sentences
     sentence = []
@@ -180,7 +201,7 @@ def stride_sentence(file_path):
         if word == "$": 
             if sentence:
                 n = len(sentence)
-                sentence_features(sentence, n, stride_index, text_num, grade_lvl)
+                sentence_features(sentence, n, stride_index, text_num, grade_lvl, sent_len)
                 stride_index += 1
                 sentence = []
         elif word != "#":
@@ -194,7 +215,7 @@ def stride_sentence(file_path):
         if word == "#":
             if fragment:
                 n = len(fragment)
-                sentence_features(fragment, n, stride_index, text_num, grade_lvl)
+                sentence_features(fragment, n, stride_index, text_num, grade_lvl, sent_len)
                 prev_period = False
                 stride_index += 1
                 fragment = []
@@ -202,7 +223,7 @@ def stride_sentence(file_path):
             if fragment:
                 if not prev_period:
                     n = len(fragment)
-                    sentence_features(fragment, n, stride_index, text_num, grade_lvl)
+                    sentence_features(fragment, n, stride_index, text_num, grade_lvl, sent_len)
                     prev_period = True
                     stride_index += 1
                     fragment = []
@@ -215,19 +236,18 @@ def stride_sentence(file_path):
     # If the last sentence or fragment is not followed by "$", process it
     if sentence:
         n = len(sentence)
-        sentence_features(sentence, n, stride_index, text_num, grade_lvl)
+        sentence_features(sentence, n, stride_index, text_num, grade_lvl, sent_len)
     
 
-def features(n_gram, n, text_num, grade_lvl):
+def features(n_gram, n, text_num, grade_lvl, sent_len):
     for stride_index, chunk in enumerate(n_gram):
-        entry = DatasetEntry(chunk, n, stride_index, text_num, grade_lvl)
+        entry = DatasetEntry(chunk, n, stride_index, text_num, grade_lvl, sent_len)
         export_csv(entry)
         
-def sentence_features(sentence, n, stride_index, text_num, grade_lvl):    
-    entry = DatasetEntry(sentence, n, stride_index, text_num, grade_lvl)
+def sentence_features(sentence, n, stride_index, text_num, grade_lvl, sent_len):    
+    entry = DatasetEntry(sentence, n, stride_index, text_num, grade_lvl, sent_len)
     export_csv(entry)
     
-        
 
 def export_csv(entry):
     new_entry = {"text_num": entry.text_num,
@@ -256,7 +276,7 @@ def export_csv(entry):
             writer.writeheader()
         
         writer.writerow(new_entry)
-        # print(f"{entry.text_num} | {entry.grade_lvl} | {entry.stride_len} | {entry.stride_index} | {entry.chunk} | NTR: {entry.noun_tr} | VTR: {entry.verb_tr} | LD: {entry.lex_density} | FD: {entry.lex_foreign} | WL: {entry.word_len}, SC: {entry.syll_num}, PC: {entry.poly_num}")
+        # print(f"{entry.text_num} | {entry.grade_lvl} | {entry.stride_len} | {entry.stride_index} | {entry.chunk} | NTR: {entry.noun_tr} | VTR: {entry.verb_tr} | LD: {entry.lex_density} | FD: {entry.lex_foreign} | SL: {entry.sent_len} | WL: {entry.word_len}, SC: {entry.syll_num}, PC: {entry.poly_num}")
         # print(f"{entry.stride_len} {entry.chunk}")
         # # print(f"NTR: {entry.noun_tr} | VTR: {entry.verb_tr} | LD: {entry.lex_density} | FD: {entry.lex_foreign} | WL: {entry.word_len}, SC: {entry.syll_num}, PC: {entry.poly_num}")
 

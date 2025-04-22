@@ -5,7 +5,7 @@ import unicodedata
 
 def open_file(file_path):
     if file_path.endswith(".txt"):
-        with open(file_path, "r", encoding="utf-8", errors="replace") as file:
+        with open(file_path, "r", encoding="utf-8", errors="ignore") as file:
             content = file.read()
     return content
 
@@ -29,7 +29,8 @@ def punctuation(file_path):
     text = open_file(file_path)
     
     # Remove unnecessary punctuations
-    text = text.replace("“", "").replace("”", "").replace(":", "")
+    text = text.replace("“", "").replace("”", "").replace(":", "").replace(";", "")
+    text = text.replace("'", "").replace("‘", "").replace("’", "")
     
     # Add # symbol for end of sentence fragment
     text = text.replace("…"," #")

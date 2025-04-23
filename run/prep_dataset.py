@@ -180,7 +180,7 @@ def clean_tags(file_path):
                 
     return content, text_num, grade_lvl, sent_len
     
-def stride_n(file_path):    
+def stride_n(file_path, dataset_path):    
     content, text_num, grade_lvl, sent_len = clean_tags(file_path)
     
     # Remove # and $ symbols from the content
@@ -189,9 +189,9 @@ def stride_n(file_path):
     n_values = {1, 2, 3, 100}
     for n in n_values:
         n_gram = [filtered_content[i:i + n] for i in range(0, len(filtered_content) - n + 1)]
-        features(n_gram, n, text_num, grade_lvl, sent_len)
+        features(n_gram, n, text_num, grade_lvl, sent_len, dataset_path)
         
-def stride_sentence(file_path):    
+def stride_sentence(file_path, dataset_path):    
     content, text_num, grade_lvl, sent_len = clean_tags(file_path)
   
     # Chunk by sentences
@@ -201,7 +201,7 @@ def stride_sentence(file_path):
         if word == "$": 
             if sentence:
                 n = len(sentence)
-                sentence_features(sentence, n, stride_index, text_num, grade_lvl, sent_len)
+                sentence_features(sentence, n, stride_index, text_num, grade_lvl, sent_len, dataset_path)
                 stride_index += 1
                 sentence = []
         elif word != "#":
@@ -215,7 +215,7 @@ def stride_sentence(file_path):
         if word == "#":
             if fragment:
                 n = len(fragment)
-                sentence_features(fragment, n, stride_index, text_num, grade_lvl, sent_len)
+                sentence_features(fragment, n, stride_index, text_num, grade_lvl, sent_len, dataset_path)
                 prev_period = False
                 stride_index += 1
                 fragment = []
@@ -223,7 +223,7 @@ def stride_sentence(file_path):
             if fragment:
                 if not prev_period:
                     n = len(fragment)
-                    sentence_features(fragment, n, stride_index, text_num, grade_lvl, sent_len)
+                    sentence_features(fragment, n, stride_index, text_num, grade_lvl, sent_len, dataset_path)
                     prev_period = True
                     stride_index += 1
                     fragment = []
@@ -236,20 +236,20 @@ def stride_sentence(file_path):
     # If the last sentence or fragment is not followed by "$", process it
     if sentence:
         n = len(sentence)
-        sentence_features(sentence, n, stride_index, text_num, grade_lvl, sent_len)
+        sentence_features(sentence, n, stride_index, text_num, grade_lvl, sent_len, dataset_path)
     
 
-def features(n_gram, n, text_num, grade_lvl, sent_len):
+def features(n_gram, n, text_num, grade_lvl, sent_len, dataset_path):
     for stride_index, chunk in enumerate(n_gram):
         entry = DatasetEntry(chunk, n, stride_index, text_num, grade_lvl, sent_len)
-        export_csv(entry)
+        export_csv(entry, dataset_path)
         
-def sentence_features(sentence, n, stride_index, text_num, grade_lvl, sent_len):    
+def sentence_features(sentence, n, stride_index, text_num, grade_lvl, sent_len, dataset_path):    
     entry = DatasetEntry(sentence, n, stride_index, text_num, grade_lvl, sent_len)
-    export_csv(entry)
+    export_csv(entry, dataset_path)
     
 
-def export_csv(entry):
+def export_csv(entry, dataset_path):
     new_entry = {"text_num": entry.text_num,
                  "grade_level": entry.grade_lvl,
                  "stride_len": entry.stride_len,
@@ -265,7 +265,6 @@ def export_csv(entry):
                  "word_num": entry.word_num,
                  "syll_num": entry.syll_num,
                  "poly_num": entry.poly_num}
-    dataset_path = "tables/dataset.csv"
     
     file_exists = os.path.exists(dataset_path)
     with open(dataset_path, "a", newline="", encoding="utf-8") as dataset:
@@ -280,29 +279,89 @@ def export_csv(entry):
         # print(f"{entry.stride_len} {entry.chunk}")
         # # print(f"NTR: {entry.noun_tr} | VTR: {entry.verb_tr} | LD: {entry.lex_density} | FD: {entry.lex_foreign} | WL: {entry.word_len}, SC: {entry.syll_num}, PC: {entry.poly_num}")
 
+# def split_documents(base_dir, test_size=0.2, random_seed=42):
+#     train_files = []
+#     test_files = []
+
+#     # Iterate through each subdirectory in base_dir
+#     for root, _, files in os.walk(base_dir):
+#         if not files:
+#             continue  # Skip empty directories
+
+#         # Get the full paths of all files in the current directory
+#         full_paths = [os.path.join(root, file) for file in files if file.endswith(".txt")]
+
+#         # Split the files into training and testing sets
+#         train, test = train_test_split(full_paths, test_size=test_size, random_state=random_seed)
+
+#         # Append the results to the overall train and test lists
+#         train_files.extend(train)
+#         test_files.extend(test)
+
+#     return train_files, test_files
+
+# def split_documents(base_dir, test_size=0.2, random_seed=42):
+#     all_files = []
+#     for root, _, files in os.walk(base_dir):
+#         for file in files:
+#             if file.endswith(".txt"):
+#                 all_files.append(os.path.join(root, file))
+#             elif file.endswith(".pdf"):
+#                 print("PDF file detected. Please convert to TXT.")
+#                 # Insert OCR pipeline to handle PDF files
+#                 pass
+#             elif file.endswith(".docx"):
+#                 print("DOCX file detected. Please convert to TXT.")
+#                 # Insert pipeline to handle doc  and convert to utf-8
+#                 pass
+#             else:
+#                 print(f"Unsupported file type: {file}. Skipping.")
+    
+#     random.seed(random_seed)
+#     random.shuffle(all_files)
+#     train_files, test_files = train_test_split(all_files, test_size=test_size, random_state=random_seed)
+    
+#     return train_files, test_files
+
 def split_documents(base_dir, test_size=0.2, random_seed=42):
-    all_files = []
-    for root, _, files in os.walk(base_dir):
-        for file in files:
-            if file.endswith(".txt"):
-                all_files.append(os.path.join(root, file))
-            elif file.endswith(".pdf"):
-                print("PDF file detected. Please convert to TXT.")
-                # Insert OCR pipeline to handle PDF files
-                pass
-            elif file.endswith(".docx"):
-                print("DOCX file detected. Please convert to TXT.")
-                # Insert pipeline to handle doc  and convert to utf-8
-                pass
-            else:
-                print(f"Unsupported file type: {file}. Skipping.")
-    
-    random.seed(random_seed)
-    random.shuffle(all_files)
-    train_files, test_files = train_test_split(all_files, test_size=test_size, random_state=random_seed)
-    
+    train_files = []
+    test_files = []
+
+    # Iterate over each immediate subdirectory (grade-level folder)
+    for grade_dir in os.listdir(base_dir):
+        grade_path = os.path.join(base_dir, grade_dir)
+
+        if not os.path.isdir(grade_path):
+            continue  # Skip files in base_dir
+
+        all_files = []
+        for root, _, files in os.walk(grade_path):
+            for file in files:
+                full_path = os.path.join(root, file)
+                if file.endswith(".txt"):
+                    all_files.append(full_path)
+                elif file.endswith(".pdf"):
+                    print(f"{file} in {grade_path} is a PDF. Please convert to TXT.")
+                elif file.endswith(".docx"):
+                    print(f"{file} in {grade_path} is a DOCX. Please convert to TXT.")
+                else:
+                    print(f"Unsupported file type: {file}. Skipping.")
+
+        if all_files:
+            random.seed(random_seed)
+            random.shuffle(all_files)
+            train_split, test_split = train_test_split(
+                all_files, test_size=test_size, random_state=random_seed
+            )
+            train_files.extend(train_split)
+            test_files.extend(test_split)
+        else:
+            print(f"No valid files in {grade_path}")
+
     return train_files, test_files
 
-def run_prep_dataset(file):
-    stride_n(file)
-    stride_sentence(file)
+
+
+def run_prep_dataset(file, dataset_path):
+    stride_n(file, dataset_path)
+    stride_sentence(file, dataset_path)

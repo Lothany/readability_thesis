@@ -40,6 +40,9 @@ def load_dataset(training_source, testing_source, stride_length):
     
     # Filter out rows with from 18.txt and drop empty column word_len
     train_dataset = train_dataset[train_dataset['text_num'] != 18]
+    # train_dataset = train_dataset[train_dataset['grade_level'] != 1]
+    train_dataset = train_dataset[train_dataset['grade_level'] != 2]
+    train_dataset = train_dataset[train_dataset['grade_level'] != 4]
     train_dataset = train_dataset.drop(columns=['word_num'])
 
     # dataset['grade_level'] = dataset['grade_level'].map({'1': 1, '2': 2, '3': 3, '4': 4, '5': 5, '6': 6})
@@ -52,6 +55,10 @@ def load_dataset(training_source, testing_source, stride_length):
     # Load testing dataset
     test_dataset = pd.read_csv(testing_source)
     test_dataset = filter_dataset(test_dataset, stride_length)
+    # test_dataset = test_dataset[test_dataset['grade_level'] != 1]
+    test_dataset = test_dataset[test_dataset['grade_level'] != 2]
+    test_dataset = test_dataset[test_dataset['grade_level'] != 4]
+    
     test_dataset = test_dataset.drop(columns=['word_num'])
 
     # test_dataset['grade_level'] = test_dataset['grade_level'].map({'1': 1, '2': 2, '3': 3, '4': 4, '5': 5, '6': 6})
@@ -153,7 +160,7 @@ def model_accuracy():
 def main():
     # Input desired n-gram length [1, 2, 3, 100]
     # Enter 0 to skip filter and -1 to return sentence fragments
-    stride_length = 3
+    stride_length = 1
     
     if stride_length == 0:
         print("No stride length filter applied.")

@@ -35,13 +35,12 @@ def filter_dataset(dataset, stride_length):
 
 def load_dataset(training_source, testing_source, stride_length):
     train_dataset= pd.read_csv(training_source)
-
+    train_dataset = filter_dataset(train_dataset, stride_length)
+    # train_dataset = undersample_dataset(train_dataset)
+    
     # Filter out rows with from 18.txt and drop empty column word_len
     train_dataset = train_dataset[train_dataset['text_num'] != 18]
     train_dataset = train_dataset.drop(columns=['word_num'])
-
-    # Execute for specific stride length
-    train_dataset = filter_dataset(train_dataset, stride_length)
 
     # dataset['grade_level'] = dataset['grade_level'].map({'1': 1, '2': 2, '3': 3, '4': 4, '5': 5, '6': 6})
     # print(train_dataset)
@@ -52,8 +51,8 @@ def load_dataset(training_source, testing_source, stride_length):
 
     # Load testing dataset
     test_dataset = pd.read_csv(testing_source)
-    test_dataset = test_dataset.drop(columns=['word_num'])
     test_dataset = filter_dataset(test_dataset, stride_length)
+    test_dataset = test_dataset.drop(columns=['word_num'])
 
     # test_dataset['grade_level'] = test_dataset['grade_level'].map({'1': 1, '2': 2, '3': 3, '4': 4, '5': 5, '6': 6})
     # print(test_dataset)
@@ -62,17 +61,49 @@ def load_dataset(training_source, testing_source, stride_length):
     y_test = test_dataset['grade_level']
     
     return X_train, y_train, X_test, y_test
+
+def undersample_dataset(df):
+    # Find the minimum count of entries across all grade levels
+    min_count = df['grade_level'].value_counts().min()
+    
+    # Group by grade level and sample min_count entries from each group
+    undersampled_df = df.groupby('grade_level').apply(lambda x: x.sample(min_count, random_state=42)).reset_index(drop=True)
+    return undersampled_df
     
 # Train the Random Forest Classifier
 def train_model(X_train, y_train, X_test, y_test):
     rf = RandomForestClassifier(n_estimators=0, warm_start=True, random_state=42)
     n_trees = 100
 
-    for i in tqdm(range(1, n_trees + 1), desc="Training Progress"):
+    for i in tqdm(range(1, n_trees + 1), desc="Training"):
         rf.set_params(n_estimators=i)
         rf.fit(X_train, y_train)
     
     return rf
+
+def hyperparameter_tuning(X_train, y_train):
+    param_dist = {'n_estimators': randint(50,500),
+              'max_depth': randint(1,20)}
+
+    # Create a random forest classifier
+    rf = RandomForestClassifier()
+
+    # Use random search to find the best hyperparameters
+    rand_search = RandomizedSearchCV(rf, 
+                                    param_distributions = param_dist, 
+                                    n_iter=5, 
+                                    cv=5)
+
+    # Fit the random search object to the data
+    rand_search.fit(X_train, y_train)
+    
+    # Create a variable for the best model
+    best_rf = rand_search.best_estimator_
+
+    # Print the best hyperparameters
+    print('Best hyperparameters:',  rand_search.best_params_)
+    
+    return best_rf
     
 def evaluate_model(X_train, y_train, X_test, y_test, model):
     y_pred = model.predict(X_test)
@@ -114,13 +145,15 @@ def model_accuracy():
         else:
             print(f"Stride length: {stride}")
         
+        feature_scores = pd.Series(model.feature_importances_, index=X_train.columns).sort_values(ascending=False)
+        print(f"Feature Importance:\n{feature_scores}\n")
         print(f"Accuracy Score: {accuracy}\n")
         
     
 def main():
     # Input desired n-gram length [1, 2, 3, 100]
     # Enter 0 to skip filter and -1 to return sentence fragments
-    stride_length = 100
+    stride_length = 3
     
     if stride_length == 0:
         print("No stride length filter applied.")
@@ -140,4 +173,7 @@ def main():
     # evaluate_model(X_train, y_train, X_test, y_test, model)
     # feature_importance(X_train, y_train, X_test, y_test, model)
     
-model_accuracy()
+    tuned_model = hyperparameter_tuning(X_train, y_train)
+    evaluate_model(X_train, y_train, X_test, y_test, tuned_model)
+    
+main()

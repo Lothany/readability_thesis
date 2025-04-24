@@ -279,51 +279,7 @@ def export_csv(entry, dataset_path):
         # print(f"{entry.stride_len} {entry.chunk}")
         # # print(f"NTR: {entry.noun_tr} | VTR: {entry.verb_tr} | LD: {entry.lex_density} | FD: {entry.lex_foreign} | WL: {entry.word_len}, SC: {entry.syll_num}, PC: {entry.poly_num}")
 
-# def split_documents(base_dir, test_size=0.2, random_seed=42):
-#     train_files = []
-#     test_files = []
-
-#     # Iterate through each subdirectory in base_dir
-#     for root, _, files in os.walk(base_dir):
-#         if not files:
-#             continue  # Skip empty directories
-
-#         # Get the full paths of all files in the current directory
-#         full_paths = [os.path.join(root, file) for file in files if file.endswith(".txt")]
-
-#         # Split the files into training and testing sets
-#         train, test = train_test_split(full_paths, test_size=test_size, random_state=random_seed)
-
-#         # Append the results to the overall train and test lists
-#         train_files.extend(train)
-#         test_files.extend(test)
-
-#     return train_files, test_files
-
-# def split_documents(base_dir, test_size=0.2, random_seed=42):
-#     all_files = []
-#     for root, _, files in os.walk(base_dir):
-#         for file in files:
-#             if file.endswith(".txt"):
-#                 all_files.append(os.path.join(root, file))
-#             elif file.endswith(".pdf"):
-#                 print("PDF file detected. Please convert to TXT.")
-#                 # Insert OCR pipeline to handle PDF files
-#                 pass
-#             elif file.endswith(".docx"):
-#                 print("DOCX file detected. Please convert to TXT.")
-#                 # Insert pipeline to handle doc  and convert to utf-8
-#                 pass
-#             else:
-#                 print(f"Unsupported file type: {file}. Skipping.")
-    
-#     random.seed(random_seed)
-#     random.shuffle(all_files)
-#     train_files, test_files = train_test_split(all_files, test_size=test_size, random_state=random_seed)
-    
-#     return train_files, test_files
-
-def split_documents(base_dir, test_size=0.2, random_seed=42):
+def split_documents(base_dir, test_size=0.0, random_seed=42):
     train_files = []
     test_files = []
 
@@ -360,7 +316,29 @@ def split_documents(base_dir, test_size=0.2, random_seed=42):
 
     return train_files, test_files
 
+def get_documents(base_dir):
+    all_files = []
 
+    # Iterate over each immediate subdirectory (grade-level folder)
+    for grade_dir in os.listdir(base_dir):
+        grade_path = os.path.join(base_dir, grade_dir)
+
+        if not os.path.isdir(grade_path):
+            continue  # Skip files in base_dir
+
+        for root, _, files in os.walk(grade_path):
+            for file in files:
+                full_path = os.path.join(root, file)
+                if file.endswith(".txt"):
+                    all_files.append(full_path)
+                elif file.endswith(".pdf"):
+                    print(f"{file} in {grade_path} is a PDF. Please convert to TXT.")
+                elif file.endswith(".docx"):
+                    print(f"{file} in {grade_path} is a DOCX. Please convert to TXT.")
+                else:
+                    print(f"Unsupported file type: {file}. Skipping.")
+
+    return all_files
 
 def run_prep_dataset(file, dataset_path):
     stride_n(file, dataset_path)

@@ -33,6 +33,20 @@ def filter_dataset(dataset, stride_length):
     
     return filtered_dataset
 
+def load_one(dataset_source, stride_length):
+    df= pd.read_csv(dataset_source)
+    df = filter_dataset(df, stride_length)
+    
+    df = df[df['text_num'] != 18]
+    df = df.drop(columns=['word_num'])
+    
+    X = df.drop(columns=['grade_level', 'text_num', 'stride_len', 'stride_index', 'n_gram'])
+    y = df['grade_level']
+    
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
+    
+    return X_train, y_train, X_test, y_test
+    
 def load_dataset(training_source, testing_source, stride_length):
     train_dataset= pd.read_csv(training_source)
     train_dataset = filter_dataset(train_dataset, stride_length)
@@ -40,9 +54,11 @@ def load_dataset(training_source, testing_source, stride_length):
     
     # Filter out rows with from 18.txt and drop empty column word_len
     train_dataset = train_dataset[train_dataset['text_num'] != 18]
+    
     # train_dataset = train_dataset[train_dataset['grade_level'] != 1]
-    train_dataset = train_dataset[train_dataset['grade_level'] != 2]
-    train_dataset = train_dataset[train_dataset['grade_level'] != 4]
+    # train_dataset = train_dataset[train_dataset['grade_level'] != 2]
+    # train_dataset = train_dataset[train_dataset['grade_level'] != 4]
+    
     train_dataset = train_dataset.drop(columns=['word_num'])
 
     # dataset['grade_level'] = dataset['grade_level'].map({'1': 1, '2': 2, '3': 3, '4': 4, '5': 5, '6': 6})
@@ -55,9 +71,10 @@ def load_dataset(training_source, testing_source, stride_length):
     # Load testing dataset
     test_dataset = pd.read_csv(testing_source)
     test_dataset = filter_dataset(test_dataset, stride_length)
+    
     # test_dataset = test_dataset[test_dataset['grade_level'] != 1]
-    test_dataset = test_dataset[test_dataset['grade_level'] != 2]
-    test_dataset = test_dataset[test_dataset['grade_level'] != 4]
+    # test_dataset = test_dataset[test_dataset['grade_level'] != 2]
+    # test_dataset = test_dataset[test_dataset['grade_level'] != 4]
     
     test_dataset = test_dataset.drop(columns=['word_num'])
 
@@ -79,7 +96,7 @@ def undersample_dataset(df):
     
 # Train the Random Forest Classifier
 def train_model(X_train, y_train, X_test, y_test):
-    rf = RandomForestClassifier(n_estimators=0, warm_start=True, random_state=42)
+    rf = RandomForestClassifier(n_estimators=100, warm_start=True, random_state=42)
     n_trees = 100
 
     for i in tqdm(range(1, n_trees + 1), desc="Training"):
@@ -89,25 +106,22 @@ def train_model(X_train, y_train, X_test, y_test):
     return rf
 
 def hyperparameter_tuning(X_train, y_train):
-    param_dist = {'n_estimators': randint(50,500),
-              'max_depth': randint(1,20)}
+    param_dist = {
+    'n_estimators': randint(50, 1000),
+    'max_depth': randint(1, 50),
+    'min_samples_split': randint(2, 20),
+    'max_features': ['sqrt', 'log2', None]
+    }
 
-    # Create a random forest classifier
     rf = RandomForestClassifier()
-
-    # Use random search to find the best hyperparameters
     rand_search = RandomizedSearchCV(rf, 
                                     param_distributions = param_dist, 
                                     n_iter=5, 
                                     cv=5)
 
-    # Fit the random search object to the data
     rand_search.fit(X_train, y_train)
-    
-    # Create a variable for the best model
     best_rf = rand_search.best_estimator_
 
-    # Print the best hyperparameters
     print('Best hyperparameters:',  rand_search.best_params_)
     
     return best_rf
@@ -119,6 +133,11 @@ def evaluate_model(X_train, y_train, X_test, y_test, model):
     
     cm = confusion_matrix(y_test, y_pred)
     print(f"Confusion matrix:\n {cm}\n")
+    disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=model.classes_)
+    disp.plot(cmap='Blues', values_format='d')  # Customize the colormap and format
+    plt.title("Confusion Matrix")
+    plt.show()
+    
     
     feature_scores = pd.Series(model.feature_importances_, index=X_train.columns).sort_values(ascending=False)
     print(f"Feature Importance:\n{feature_scores}\n")
@@ -141,7 +160,9 @@ def model_accuracy():
     testing_source = 'tables/dataset_testing.csv'
     
     for stride in [-1, 0, 1, 2, 3, 100]:    
-        X_train, y_train, X_test, y_test = load_dataset(training_source, testing_source, stride)
+        # X_train, y_train, X_test, y_test = load_dataset(training_source, testing_source, stride)
+        X_train, y_train, X_test, y_test = load_one(training_source, stride
+                                                    )
         model = train_model(X_train, y_train, X_test, y_test)
         y_pred = model.predict(X_test)
         accuracy = accuracy_score(y_test, y_pred)
@@ -152,8 +173,8 @@ def model_accuracy():
         else:
             print(f"Stride length: {stride}")
         
-        feature_scores = pd.Series(model.feature_importances_, index=X_train.columns).sort_values(ascending=False)
-        print(f"Feature Importance:\n{feature_scores}\n")
+        # feature_scores = pd.Series(model.feature_importances_, index=X_train.columns).sort_values(ascending=False)
+        # print(f"Feature Importance:\n{feature_scores}\n")
         print(f"Accuracy Score: {accuracy}\n")
         
     
@@ -175,11 +196,16 @@ def main():
     training_source = 'tables/dataset.csv'
     testing_source = 'tables/dataset_testing.csv'
     
-    X_train, y_train, X_test, y_test = load_dataset(training_source, testing_source, stride_length)
+    # X_train, y_train, X_test, y_test = load_dataset(training_source, testing_source, stride_length)
+    
+    X_train, y_train, X_test, y_test = load_one(training_source, stride_length)
+    
+    print("\nInitial Model")
     model = train_model(X_train, y_train, X_test, y_test)
-    # evaluate_model(X_train, y_train, X_test, y_test, model)
+    evaluate_model(X_train, y_train, X_test, y_test, model)
     # feature_importance(X_train, y_train, X_test, y_test, model)
     
+    print("\nTuned Model")
     tuned_model = hyperparameter_tuning(X_train, y_train)
     evaluate_model(X_train, y_train, X_test, y_test, tuned_model)
     

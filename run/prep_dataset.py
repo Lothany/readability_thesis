@@ -279,7 +279,7 @@ def export_csv(entry, dataset_path):
         # print(f"{entry.stride_len} {entry.chunk}")
         # # print(f"NTR: {entry.noun_tr} | VTR: {entry.verb_tr} | LD: {entry.lex_density} | FD: {entry.lex_foreign} | WL: {entry.word_len}, SC: {entry.syll_num}, PC: {entry.poly_num}")
 
-def split_documents(base_dir, test_size=0.0, random_seed=42):
+def split_documents(base_dir, test_size=0.2, random_seed=42):
     train_files = []
     test_files = []
 

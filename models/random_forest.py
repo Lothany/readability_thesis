@@ -17,8 +17,9 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 
-# Progress Bar
+# Other
 from tqdm import tqdm
+import pickle
 
 # Filter dataset based on stride length
 def filter_dataset(dataset, stride_length):
@@ -142,11 +143,18 @@ def feature_importance(X_train, model, model_name, root_path):
     plt.ylabel('Features')
     plt.title(f"Feature Importance: {model_name}")
     plt.savefig(f"{root_path}_fi.png", format="png", dpi=300, bbox_inches="tight")
+    plt.clf()
     
 def perormance_details(fig_matrix, fig_feature, file_name, file_format="png"):
     root_path = "models/performance_analysis/"
     fig_matrix.savefig(f"{root_path}{file_name}_cm.{file_format}", format=file_format, dpi=300, bbox_inches="tight")
     fig_feature.savefig(f"{root_path}{file_name}_fi.{file_format}", format=file_format, dpi=300, bbox_inches="tight")
+    plt.clf()
+    
+def save_model(model, root_path, model_name):
+    pkl_path = f"{root_path}{model_name}.pkl"
+    with open(pkl_path, 'wb') as f:
+        pickle.dump(model, f)
     
 def model_accuracy():
     training_source = 'tables/dataset.csv'
@@ -171,7 +179,9 @@ def model_accuracy():
         print(f"Accuracy Score: {accuracy}\n")
         
     
-def create_model(stride, feature, split):
+def create_model(stride, feature, stories):
+    model_id = f"{stories}_{feature}_{stride}"
+    
     if stride == 0:
         print("No stride length filter applied.")
         model_name = f"All N-Grams"
@@ -196,37 +206,45 @@ def create_model(stride, feature, split):
         print("Invalid feature set selected. Please choose 'B', 'T', or 'L'.")
         return
     
-    if split == 1:
-        X_train, y_train, X_test, y_test = load_dataset(stride, feature_set)
-    elif split == 2:
+    if stories == "full":
         X_train, y_train, X_test, y_test = load_one(stride, feature_set)
+    elif stories == "split":
+        X_train, y_train, X_test, y_test = load_dataset(stride, feature_set)
+    else:
+        print("Invalid stories option. Please choose 'full' or 'split'.")
+        return
     
-    print("\nInitial Model")
     model = train_model(X_train, y_train, X_test, y_test)
+    save_model(model, "models/random_forest/", model_id)
     
-    root_path = f"models/performance_analysis/{split}_{feature}_{stride}"
-    y_pred = model.predict(X_test)
-    scores(y_pred, y_test, root_path)
-    feature_importance(X_train, model, model_name, root_path)
-    confusion_matrix_analysis(y_pred, y_test, model, model_name, root_path)
+    # root_path = f"models/rf_records/{model_id}"
+    # y_pred = model.predict(X_test)
+    # scores(y_pred, y_test, root_path)
+    # feature_importance(X_train, model, model_name, root_path)
+    # confusion_matrix_analysis(y_pred, y_test, model, model_name, root_path)
     
+    print("\nTuning Model. This may take a while... ")
+    tuned_model = hyperparameter_tuning(X_train, y_train)
+    save_model(tuned_model, "models/random_forest/tuned_", model_id)
     
-    # evaluate_model(X_train, y_train, X_test, y_test, model)
-    # fig1, fig2 = evaluate_model(X_train, y_train, X_test, y_test, model)
-    
-    # model_name = f"rf_{stride}_{feature}"
-    # perormance_details(fig1, fig2, model_name)
-    # feature_importance(X_train, y_train, X_test, y_test, model)
-    
-    # print("\nTuned Model")
-    # tuned_model = hyperparameter_tuning(X_train, y_train)
-    # evaluate_model(X_train, y_train, X_test, y_test, tuned_model)
+    # root_path = f"models/rf_records/tuned_{model_id}"
+    # y_pred = tuned_model.predict(X_test)
+    # scores(y_pred, y_test, root_path)
+    # feature_importance(X_train, tuned_model, model_name, root_path)
+    # confusion_matrix_analysis(y_pred, y_test, tuned_model, model_name, root_path)
 
-def main():
+def test():
     stride= 100
     feature = "T"
-    split = 2
+    stories = "split"
     
-    create_model(stride, feature, split)
+    create_model(stride, feature, stories)
     
+def main():
+    for stories in ["full", "split"]:
+        for feature in ["B", "T", "L"]:
+            for stride in [-1, 0, 1, 2, 3, 100]:
+                print(f"Creating model for {feature} features, and stride length {stride} using {stories} stories.")
+                create_model(stride, feature, stories)
+
 main()

@@ -33,55 +33,46 @@ def filter_dataset(dataset, stride_length):
     
     return filtered_dataset
 
-def load_one(dataset_source, stride_length):
+def load_one(stride_length, feature_set):
+    dataset_source = 'tables/allbooks_dataset.csv'
+    
     df= pd.read_csv(dataset_source)
     df = filter_dataset(df, stride_length)
     
     df = df[df['text_num'] != 18]
     df = df.drop(columns=['word_num'])
     
-    X = df.drop(columns=['grade_level', 'text_num', 'stride_len', 'stride_index', 'n_gram'])
+    X = df.drop(columns=feature_set)
     y = df['grade_level']
     
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
     
     return X_train, y_train, X_test, y_test
     
-def load_dataset(training_source, testing_source, stride_length):
+
+def load_dataset(stride_length, feature_set):
+    training_source = 'tables/dataset.csv'
+    testing_source = 'tables/dataset_testing.csv'
+    
     train_dataset= pd.read_csv(training_source)
     train_dataset = filter_dataset(train_dataset, stride_length)
     # train_dataset = undersample_dataset(train_dataset)
     
     # Filter out rows with from 18.txt and drop empty column word_len
     train_dataset = train_dataset[train_dataset['text_num'] != 18]
-    
-    # train_dataset = train_dataset[train_dataset['grade_level'] != 1]
-    # train_dataset = train_dataset[train_dataset['grade_level'] != 2]
-    # train_dataset = train_dataset[train_dataset['grade_level'] != 4]
-    
     train_dataset = train_dataset.drop(columns=['word_num'])
 
-    # dataset['grade_level'] = dataset['grade_level'].map({'1': 1, '2': 2, '3': 3, '4': 4, '5': 5, '6': 6})
-    # print(train_dataset)
-
     # Split the dataset into features and target variable
-    X_train = train_dataset.drop(columns=['grade_level', 'text_num', 'stride_len', 'stride_index', 'n_gram'])
+    X_train = train_dataset.drop(columns=feature_set)
     y_train = train_dataset['grade_level']
 
     # Load testing dataset
     test_dataset = pd.read_csv(testing_source)
     test_dataset = filter_dataset(test_dataset, stride_length)
-    
-    # test_dataset = test_dataset[test_dataset['grade_level'] != 1]
-    # test_dataset = test_dataset[test_dataset['grade_level'] != 2]
-    # test_dataset = test_dataset[test_dataset['grade_level'] != 4]
-    
     test_dataset = test_dataset.drop(columns=['word_num'])
 
-    # test_dataset['grade_level'] = test_dataset['grade_level'].map({'1': 1, '2': 2, '3': 3, '4': 4, '5': 5, '6': 6})
-    # print(test_dataset)
 
-    X_test = test_dataset.drop(columns=['grade_level', 'text_num', 'stride_len', 'stride_index', 'n_gram'])
+    X_test = test_dataset.drop(columns=feature_set)
     y_test = test_dataset['grade_level']
     
     return X_train, y_train, X_test, y_test
@@ -131,29 +122,28 @@ def evaluate_model(X_train, y_train, X_test, y_test, model):
     accuracy = accuracy_score(y_test, y_pred)
     print(f"Accuracy: {accuracy}\n")
     
+    print(f"Classification Report:\n{classification_report(y_test, y_pred)}\n")
+    
     cm = confusion_matrix(y_test, y_pred)
     print(f"Confusion matrix:\n {cm}\n")
     disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=model.classes_)
-    disp.plot(cmap='Blues', values_format='d')  # Customize the colormap and format
+    disp.plot(cmap='Blues', values_format='d')
     plt.title("Confusion Matrix")
-    plt.show()
-    
+    fig_matrix = plt.gcf()
     
     feature_scores = pd.Series(model.feature_importances_, index=X_train.columns).sort_values(ascending=False)
-    print(f"Feature Importance:\n{feature_scores}\n")
-    
-    print(f"Classification Report:\n{classification_report(y_test, y_pred)}\n")
-    
-
-def feature_importance(X_train, y_train, X_test, y_test, model):
-    feature_scores = pd.Series(model.feature_importances_, index=X_train.columns).sort_values(ascending=False)
-    
     sns.barplot(x=feature_scores, y=feature_scores.index)
     plt.xlabel('Feature Importance Score')
     plt.ylabel('Features')
     plt.title("Visualizing Important Features")
-
-    plt.show()
+    fig_feature = plt.gcf()
+    
+    return fig_matrix, fig_feature
+    
+def perormance_details(fig_matrix, fig_feature, file_name, file_format="png"):
+    root_path = "models/performance_analysis/"
+    fig_matrix.savefig(f"{root_path}{file_name}_cm.{file_format}", format=file_format, dpi=300, bbox_inches="tight")
+    fig_feature.savefig(f"{root_path}{file_name}_fi.{file_format}", format=file_format, dpi=300, bbox_inches="tight")
     
 def model_accuracy():
     training_source = 'tables/dataset.csv'
@@ -178,35 +168,50 @@ def model_accuracy():
         print(f"Accuracy Score: {accuracy}\n")
         
     
-def main():
-    # Input desired n-gram length [1, 2, 3, 100]
-    # Enter 0 to skip filter and -1 to return sentence fragments
-    stride_length = 1
-    
-    if stride_length == 0:
+def create_model(stride, feature, split):
+    if stride == 0:
         print("No stride length filter applied.")
-    elif stride_length == -1:
+    elif stride == -1:
         print("Returning sentence fragments.")
-    elif stride_length in [1, 2, 3, 100]:
-        print(f"Filtering dataset with stride length: {stride_length}")
+    elif stride in [1, 2, 3, 100]:
+        print(f"Filtering dataset with stride length: {stride}")
     else:
-        print(f"Invalid stride length: {stride_length}")
+        print(f"Invalid stride length: {stride}")
         return
     
-    training_source = 'tables/dataset.csv'
-    testing_source = 'tables/dataset_testing.csv'
+    feature_set = ['grade_level', 'text_num', 'stride_len', 'stride_index', 'n_gram']
+    if feature == "B":
+        feature_set = feature_set
+    elif feature == "T":
+        feature_set += ['noun_tr', 'verb_tr', 'type_tr', 'lex_density', 'lex_foreign']
+    elif feature == "L":
+        feature_set += ['sent_len', 'word_len', 'syll_num', 'poly_num']
+    else:
+        print("Invalid feature set selected. Please choose 'B', 'T', or 'L'.")
+        return
     
-    # X_train, y_train, X_test, y_test = load_dataset(training_source, testing_source, stride_length)
-    
-    X_train, y_train, X_test, y_test = load_one(training_source, stride_length)
+    if split == 1:
+        X_train, y_train, X_test, y_test = load_dataset(stride, feature_set)
+    elif split == 2:
+        X_train, y_train, X_test, y_test = load_one(stride, feature_set)
     
     print("\nInitial Model")
     model = train_model(X_train, y_train, X_test, y_test)
-    evaluate_model(X_train, y_train, X_test, y_test, model)
+    fig1, fig2 = evaluate_model(X_train, y_train, X_test, y_test, model)
+    
+    model_name = f"rf_{stride}_{feature}"
+    perormance_details(fig1, fig2, model_name)
     # feature_importance(X_train, y_train, X_test, y_test, model)
     
-    print("\nTuned Model")
-    tuned_model = hyperparameter_tuning(X_train, y_train)
-    evaluate_model(X_train, y_train, X_test, y_test, tuned_model)
+    # print("\nTuned Model")
+    # tuned_model = hyperparameter_tuning(X_train, y_train)
+    # evaluate_model(X_train, y_train, X_test, y_test, tuned_model)
+
+def main():
+    stride= 100
+    feature = "T"
+    split = 2
+    
+    create_model(stride, feature, split)
     
 main()

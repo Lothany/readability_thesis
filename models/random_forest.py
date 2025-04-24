@@ -252,5 +252,6 @@ def main():
             for feature in features_list:
                 for stride in strides_list:
                     print(f"Creating model for {feature} features, and stride length {stride} using {stories} stories.")
-
+                    create_model(stride, feature, stories)
+                    pbar.update(1)
 main()

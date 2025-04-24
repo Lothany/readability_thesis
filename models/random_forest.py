@@ -241,10 +241,16 @@ def test():
     create_model(stride, feature, stories)
     
 def main():
-    for stories in ["full", "split"]:
-        for feature in ["B", "T", "L"]:
-            for stride in [-1, 0, 1, 2, 3, 100]:
-                print(f"Creating model for {feature} features, and stride length {stride} using {stories} stories.")
-                create_model(stride, feature, stories)
+    stories_list = ["full", "split"]
+    features_list = ["B", "T", "L"]
+    strides_list = [-1, 0, 1, 2, 3, 100]
+    
+    total_iterations = len(stories_list) * len(features_list) * len(strides_list)
+    
+    with tqdm(total=total_iterations, desc="Processing Models", unit="model") as pbar:
+        for stories in stories_list:
+            for feature in features_list:
+                for stride in strides_list:
+                    print(f"Creating model for {feature} features, and stride length {stride} using {stories} stories.")
 
 main()

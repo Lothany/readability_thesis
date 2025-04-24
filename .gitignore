@@ -17,4 +17,4 @@ run/foreignator_sqlite.py
 tables/*
 txt/normalized/*
 
-models/performance_analysis/*
+models/rf_records/*

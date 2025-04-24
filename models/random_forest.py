@@ -117,28 +117,31 @@ def hyperparameter_tuning(X_train, y_train):
     
     return best_rf
     
-def evaluate_model(X_train, y_train, X_test, y_test, model):
-    y_pred = model.predict(X_test)
+def scores(y_pred, y_test, root_path):
     accuracy = accuracy_score(y_test, y_pred)
-    print(f"Accuracy: {accuracy}\n")
+    classification_rep = classification_report(y_test, y_pred)
+
+    output_file = f"{root_path}_scores.txt" 
+    output_text = f"Accuracy: {accuracy}\n\nClassification Report:\n{classification_rep}\n"
+
+    with open(output_file, "w") as f:
+        f.write(output_text)
     
-    print(f"Classification Report:\n{classification_report(y_test, y_pred)}\n")
     
+def confusion_matrix_analysis(y_pred, y_test, model, model_name, root_path):
     cm = confusion_matrix(y_test, y_pred)
-    print(f"Confusion matrix:\n {cm}\n")
     disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=model.classes_)
     disp.plot(cmap='Blues', values_format='d')
-    plt.title("Confusion Matrix")
-    fig_matrix = plt.gcf()
-    
+    plt.title(f"Confusion Matrix: {model_name}")
+    plt.savefig(f"{root_path}_cm.png", format="png", dpi=300, bbox_inches="tight")
+
+def feature_importance(X_train, model, model_name, root_path):
     feature_scores = pd.Series(model.feature_importances_, index=X_train.columns).sort_values(ascending=False)
     sns.barplot(x=feature_scores, y=feature_scores.index)
     plt.xlabel('Feature Importance Score')
     plt.ylabel('Features')
-    plt.title("Visualizing Important Features")
-    fig_feature = plt.gcf()
-    
-    return fig_matrix, fig_feature
+    plt.title(f"Feature Importance: {model_name}")
+    plt.savefig(f"{root_path}_fi.png", format="png", dpi=300, bbox_inches="tight")
     
 def perormance_details(fig_matrix, fig_feature, file_name, file_format="png"):
     root_path = "models/performance_analysis/"
@@ -171,10 +174,13 @@ def model_accuracy():
 def create_model(stride, feature, split):
     if stride == 0:
         print("No stride length filter applied.")
+        model_name = f"All N-Grams"
     elif stride == -1:
         print("Returning sentence fragments.")
+        model_name = f"Sentence Fragments"
     elif stride in [1, 2, 3, 100]:
         print(f"Filtering dataset with stride length: {stride}")
+        model_name = f"N = {stride}"
     else:
         print(f"Invalid stride length: {stride}")
         return
@@ -197,10 +203,19 @@ def create_model(stride, feature, split):
     
     print("\nInitial Model")
     model = train_model(X_train, y_train, X_test, y_test)
-    fig1, fig2 = evaluate_model(X_train, y_train, X_test, y_test, model)
     
-    model_name = f"rf_{stride}_{feature}"
-    perormance_details(fig1, fig2, model_name)
+    root_path = f"models/performance_analysis/{split}_{feature}_{stride}"
+    y_pred = model.predict(X_test)
+    scores(y_pred, y_test, root_path)
+    feature_importance(X_train, model, model_name, root_path)
+    confusion_matrix_analysis(y_pred, y_test, model, model_name, root_path)
+    
+    
+    # evaluate_model(X_train, y_train, X_test, y_test, model)
+    # fig1, fig2 = evaluate_model(X_train, y_train, X_test, y_test, model)
+    
+    # model_name = f"rf_{stride}_{feature}"
+    # perormance_details(fig1, fig2, model_name)
     # feature_importance(X_train, y_train, X_test, y_test, model)
     
     # print("\nTuned Model")

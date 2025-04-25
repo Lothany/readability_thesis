@@ -18,3 +18,4 @@ tables/*
 txt/normalized/*
 
 models/rf_records/*
+models/rf_models/*

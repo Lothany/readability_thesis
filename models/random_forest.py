@@ -118,39 +118,6 @@ def hyperparameter_tuning(X_train, y_train):
     
     return best_rf
     
-def scores(y_pred, y_test, root_path):
-    accuracy = accuracy_score(y_test, y_pred)
-    classification_rep = classification_report(y_test, y_pred)
-
-    output_file = f"{root_path}_scores.txt" 
-    output_text = f"Accuracy: {accuracy}\n\nClassification Report:\n{classification_rep}\n"
-
-    with open(output_file, "w") as f:
-        f.write(output_text)
-    
-    
-def confusion_matrix_analysis(y_pred, y_test, model, model_name, root_path):
-    cm = confusion_matrix(y_test, y_pred)
-    disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=model.classes_)
-    disp.plot(cmap='Blues', values_format='d')
-    plt.title(f"Confusion Matrix: {model_name}")
-    plt.savefig(f"{root_path}_cm.png", format="png", dpi=300, bbox_inches="tight")
-
-def feature_importance(X_train, model, model_name, root_path):
-    feature_scores = pd.Series(model.feature_importances_, index=X_train.columns).sort_values(ascending=False)
-    sns.barplot(x=feature_scores, y=feature_scores.index)
-    plt.xlabel('Feature Importance Score')
-    plt.ylabel('Features')
-    plt.title(f"Feature Importance: {model_name}")
-    plt.savefig(f"{root_path}_fi.png", format="png", dpi=300, bbox_inches="tight")
-    plt.clf()
-    
-def perormance_details(fig_matrix, fig_feature, file_name, file_format="png"):
-    root_path = "models/performance_analysis/"
-    fig_matrix.savefig(f"{root_path}{file_name}_cm.{file_format}", format=file_format, dpi=300, bbox_inches="tight")
-    fig_feature.savefig(f"{root_path}{file_name}_fi.{file_format}", format=file_format, dpi=300, bbox_inches="tight")
-    plt.clf()
-    
 def save_model(model, root_path, model_name):
     pkl_path = f"{root_path}{model_name}.pkl"
     with open(pkl_path, 'wb') as f:
@@ -217,29 +184,11 @@ def create_model(stride, feature, stories):
     model = train_model(X_train, y_train, X_test, y_test)
     save_model(model, "models/random_forest/", model_id)
     
-    # root_path = f"models/rf_records/{model_id}"
-    # y_pred = model.predict(X_test)
-    # scores(y_pred, y_test, root_path)
-    # feature_importance(X_train, model, model_name, root_path)
-    # confusion_matrix_analysis(y_pred, y_test, model, model_name, root_path)
-    
     print("\nTuning Model. This may take a while... ")
     tuned_model = hyperparameter_tuning(X_train, y_train)
     save_model(tuned_model, "models/random_forest/tuned_", model_id)
-    
-    # root_path = f"models/rf_records/tuned_{model_id}"
-    # y_pred = tuned_model.predict(X_test)
-    # scores(y_pred, y_test, root_path)
-    # feature_importance(X_train, tuned_model, model_name, root_path)
-    # confusion_matrix_analysis(y_pred, y_test, tuned_model, model_name, root_path)
 
-def test():
-    stride= 100
-    feature = "T"
-    stories = "split"
-    
-    create_model(stride, feature, stories)
-    
+
 def main():
     stories_list = ["full", "split"]
     features_list = ["B", "T", "L"]
@@ -254,4 +203,5 @@ def main():
                     print(f"Creating model for {feature} features, and stride length {stride} using {stories} stories.")
                     create_model(stride, feature, stories)
                     pbar.update(1)
-main()
+
+# main()

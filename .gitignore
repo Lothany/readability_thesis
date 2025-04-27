@@ -15,3 +15,4 @@ run/__pycache__
 run/foreignator_sqlite.py
 
 tables/*
+tables/*.json

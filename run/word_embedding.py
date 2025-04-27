@@ -57,7 +57,8 @@ class TraditionalMetadata:
 
     def __count_syllables(self, word):
         consonant_vowel = r'([b-df-hjklmnp-rtvwz][aeiou])'
-        diphthongs = r'(ai|ei|oi|ui|au|ou)'
+        # diphthongs = r'(ai|ei|oi|ui|au|ou)' english
+        diphthongs = r'(ay|aw|ey|iw|uy|oy|ts|dy|diy|sy|siy)'
         consonant_clusters = r'(ng|br|tr|st)'
         pattern = re.compile(
             f'({consonant_clusters}|{diphthongs}|{consonant_vowel})')

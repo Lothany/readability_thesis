@@ -57,7 +57,7 @@ def load_dataset(stride_length, feature_set):
     
     train_dataset= pd.read_csv(training_source)
     train_dataset = filter_dataset(train_dataset, stride_length)
-    # train_dataset = undersample_dataset(train_dataset)
+    train_dataset = undersample_dataset(train_dataset)
     
     # Filter out rows with from 18.txt and drop empty column word_len
     train_dataset = train_dataset[train_dataset['text_num'] != 18]
@@ -70,8 +70,9 @@ def load_dataset(stride_length, feature_set):
     # Load testing dataset
     test_dataset = pd.read_csv(testing_source)
     test_dataset = filter_dataset(test_dataset, stride_length)
-    test_dataset = test_dataset.drop(columns=['word_num'])
+    test_dataset = undersample_dataset(test_dataset)
 
+    test_dataset = test_dataset.drop(columns=['word_num'])
 
     X_test = test_dataset.drop(columns=feature_set)
     y_test = test_dataset['grade_level']
@@ -182,11 +183,11 @@ def create_model(stride, feature, stories):
         return
     
     model = train_model(X_train, y_train, X_test, y_test)
-    save_model(model, "models/random_forest/", model_id)
+    save_model("rf", model, "models/random_forest/", model_id)
     
     print("\nTuning Model. This may take a while... ")
     tuned_model = hyperparameter_tuning(X_train, y_train)
-    save_model(tuned_model, "models/random_forest/tuned_", model_id)
+    save_model("rf", tuned_model, "models/random_forest/tuned_", model_id)
 
 
 def main():

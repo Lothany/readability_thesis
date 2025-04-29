@@ -25,7 +25,7 @@ from sklearn.model_selection import GridSearchCV
 from sklearn.linear_model import LogisticRegression
 
 from tqdm import tqdm
-from random_forest import load_one, load_dataset, save_model
+from random_forest import save_model
 from compare_performance import parse_dataset
 
 def model_performance(model, X_test, y_test):

@@ -7,55 +7,52 @@ from sklearn import linear_model
 from sklearn import metrics
 
 
-from sklearn.multiclass import OneVsRestClassifier
+from sklearn.metrics import (
+    accuracy_score,
+    classification_report,
+    precision_score,
+    recall_score,
+    f1_score,
+    roc_auc_score,
+    confusion_matrix,
+    ConfusionMatrixDisplay
+)
+
 from sklearn.preprocessing import StandardScaler
+from sklearn.preprocessing import label_binarize
+from sklearn.multiclass import OneVsRestClassifier
+from sklearn.model_selection import GridSearchCV
+from sklearn.linear_model import LogisticRegression
 
 from tqdm import tqdm
 from random_forest import load_one, load_dataset, save_model
-
-
-
-def parse_dataset(type, stories, feature, stride):
-    model_name =f"{type}"
-    
-    if stride == 0:
-        model_name += f"All N-Grams"
-    elif stride == -1:
-        model_name += f"Sentence Fragments"
-    elif stride in [1, 2, 3, 100]:
-        model_name += f"N = {stride}"
-    else:
-        print(f"Invalid stride length: {stride}")
-        return
-    
-    if feature == "B":
-        feature_set = ['sent_len', 'word_len', 'syll_num', 'poly_num', 'noun_tr', 'verb_tr', 'type_tr', 'lex_density', 'lex_foreign']
-        model_name += " [Trad + Lex]"
-    elif feature == "T":
-        feature_set = ['sent_len', 'word_len', 'syll_num', 'poly_num']
-        model_name += " [Trad]"
-    elif feature == "L":
-        feature_set = ['noun_tr', 'verb_tr', 'type_tr', 'lex_density', 'lex_foreign']
-        model_name += " [Lex]"
-    else:
-        print("Invalid feature set selected. Please choose 'B', 'T', or 'L'.")
-        return
-    
-    if stories == "full":
-        X_train, y_train, X_test, y_test = load_one(stride, feature_set)
-    elif stories == "split":
-        X_train, y_train, X_test, y_test = load_dataset(stride, feature_set)
-    else:
-        print("Invalid stories option. Please choose 'full' or 'split'.")
-        return
-
-    return X_train, y_train, X_test, y_test, model_name
+from compare_performance import parse_dataset
 
 def model_performance(model, X_test, y_test):
-    score = model.score(X_test, y_test)
-    return score
+    # y_pred = model.predict(X_test)    
+    # score = accuracy_score(y_test, y_pred)
+    # return score
     
+    y_pred = model.predict(X_test)
+    y_proba = model.predict_proba(X_test)
 
+    # Binarize true labels for multi-class ROC-AUC
+    class_labels = [1, 2, 3, 4, 5, 6]
+    y_test_bin = label_binarize(y_test, classes=class_labels)
+
+    # Metrics
+    accuracy = accuracy_score(y_test, y_pred)
+    precision = precision_score(y_test, y_pred, average='macro', zero_division=0)
+    recall = recall_score(y_test, y_pred, average='macro', zero_division=0)
+    f1 = f1_score(y_test, y_pred, average='macro', zero_division=0)
+    roc_auc = roc_auc_score(y_test_bin, y_proba, average='macro', multi_class='ovr')
+    
+    print(f"Accuracy: {accuracy:.4f}")
+    print(f"Precision: {precision:.4f}")
+    print(f"Recall: {recall:.4f}")
+    print(f"F1 Score: {f1:.4f}")
+    print(f"ROC AUC: {roc_auc:.4f}")
+    
 def train_model(X_train, y_train):
     # Use OneVsRestClassifier to handle multi-class classification
     lm = OneVsRestClassifier(linear_model.LogisticRegression(solver='liblinear'))
@@ -66,38 +63,65 @@ def train_model(X_train, y_train):
 def create_model(stride, feature, stories):
     model_id = f"lr_{stories}_{feature}_{stride}"
     X_train, y_train, X_test, y_test, model_name = parse_dataset("lr", stories, feature, stride)
-    
-    
-    
+       
     # Train logistic regression model
     model = train_model(X_train, y_train)
     score = model_performance(model, X_test, y_test)
-
-    
     
     print(f"{model_id}: {score}")
 
-# def tune_model(model):
+def tune_model(model, X_train, y_train):
+    # Extract the underlying LogisticRegression model
+    base_model = model.estimator  # Access the base estimator from OneVsRestClassifier
+
+    logreg = LogisticRegression(
+        solver=base_model.solver,  # Use solver from the base LogisticRegression model
+        max_iter=1000
+    )
+    
+    param_grid = {
+        'C': [0.01, 0.1, 1, 10, 100],
+        'penalty': ['l2'],            # Only 'l2' works with 'lbfgs'
+        'solver': ['lbfgs']
+    }
+
+    grid = GridSearchCV(
+        estimator=logreg,
+        param_grid=param_grid,
+        cv=5,
+        scoring='accuracy',           # You can also try 'f1_weighted'
+        n_jobs=-1,
+        verbose=1
+    )
+
+    grid.fit(X_train, y_train)
+    print("Best Params:", grid.best_params_)
+    print("Best CV Score:", grid.best_score_)
     
     
+    # Final model
+    best_model = grid.best_estimator_
+    return best_model
 
 def test():
-    stories = "full"
-    feature = "L"
-    stride = -1
+    stories = "split"
+    feature = "T"
+    stride = 100
     model_id = f"lr_{stories}_{feature}_{stride}"
     
-    # Load the dataset acc to the parameters (stride, feature, stories)
-    # Get X and y for training and testing
     X_train, y_train, X_test, y_test, model_name = parse_dataset("lr", stories, feature, stride)
     
-    # Train logistic regression model
     model = train_model(X_train, y_train)
-    score = model_performance(model, X_test, y_test)
+    print(f"Initial Model Performance: ")
+    model_performance(model, X_test, y_test)
     
     
-
-def test2():
+    tuned_model = tune_model(model, X_train, y_train)
+    print(f"Tuned Model Performance: ")
+    model_performance(tuned_model, X_test, y_test)
+    
+    
+def main():
     stories_list = ["full", "split"]
     stories_list = ["full"]
     features_list = ["B", "T", "L"]

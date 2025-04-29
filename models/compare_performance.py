@@ -1,6 +1,5 @@
 import pandas as pd
 import numpy as np
-import pickle
 import matplotlib.pyplot as plt
 import seaborn as sns
 
@@ -14,9 +13,12 @@ from sklearn.metrics import (
     confusion_matrix,
     ConfusionMatrixDisplay
 )
+from sklearn.preprocessing import StandardScaler
 from sklearn.preprocessing import label_binarize
+
 import os
 import csv
+import pickle
 
 from random_forest import load_one, load_dataset
 
@@ -25,18 +27,15 @@ def load_model(pkl_path):
         model = pickle.load(file)
         return model
 
-def parse_dataset(stories, feature, stride):
-    model_name =""
+def parse_dataset(type, stories, feature, stride):
+    model_name =f"{type}"
     
     if stride == 0:
-        print("No stride length filter applied.")
-        model_name = f"All N-Grams"
+        model_name += f"All N-Grams"
     elif stride == -1:
-        print("Returning sentence fragments.")
-        model_name = f"Sentence Fragments"
+        model_name += f"Sentence Fragments"
     elif stride in [1, 2, 3, 100]:
-        print(f"Filtering dataset with stride length: {stride}")
-        model_name = f"N = {stride}"
+        model_name += f"N = {stride}"
     else:
         print(f"Invalid stride length: {stride}")
         return
@@ -61,8 +60,13 @@ def parse_dataset(stories, feature, stride):
     else:
         print("Invalid stories option. Please choose 'full' or 'split'.")
         return
-
-    return X_test, y_test, model_name
+    
+    # Scale to standardize the column values
+    scaler = StandardScaler()
+    X_train = pd.DataFrame(scaler.fit_transform(X_train),columns=X_train.columns, index=X_train.index)
+    X_test = pd.DataFrame(scaler.transform(X_test), columns=X_test.columns, index=X_test.index)
+    
+    return X_train, y_train, X_test, y_test, model_name
 
 def evaluate_model(model, model_name, X_test, y_test, stories, feature, stride):
     # Predictions & Probabilities

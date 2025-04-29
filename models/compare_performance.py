@@ -27,8 +27,8 @@ def load_model(pkl_path):
         model = pickle.load(file)
         return model
 
-def parse_dataset(type, stories, feature, stride):
-    model_name =f"{type}"
+def parse_dataset(ml, stories, feature, stride):
+    model_name =f"{ml}"
     
     if stride == 0:
         model_name += f"All N-Grams"
@@ -68,7 +68,7 @@ def parse_dataset(type, stories, feature, stride):
     
     return X_train, y_train, X_test, y_test, model_name
 
-def evaluate_model(model, model_name, X_test, y_test, stories, feature, stride):
+def evaluate_model(model, model_name, X_test, y_test, machine, stories, feature, stride):
     # Predictions & Probabilities
     y_pred = model.predict(X_test)
     y_proba = model.predict_proba(X_test)
@@ -84,7 +84,7 @@ def evaluate_model(model, model_name, X_test, y_test, stories, feature, stride):
     f1 = f1_score(y_test, y_pred, average='macro', zero_division=0)
     roc_auc = roc_auc_score(y_test_bin, y_proba, average='macro', multi_class='ovr')
     
-    print(f"{stories} - {feature} - {stride}")  
+    print(f"{machine} | {stories} | {feature} | {stride}")  
     print(f"Accuracy: {accuracy:.4f}")
     print(f"Precision: {precision:.4f}")
     print(f"Recall: {recall:.4f}")
@@ -94,6 +94,7 @@ def evaluate_model(model, model_name, X_test, y_test, stories, feature, stride):
 
     # Save metrics to CSV
     model_details = {
+        "machine": machine,
         "stories": stories,
         "feature": feature,
         "stride": stride,
@@ -104,11 +105,11 @@ def evaluate_model(model, model_name, X_test, y_test, stories, feature, stride):
         "roc_auc": f"{roc_auc:.4f}"
     }
     
-    performance_scores = "models/rf_records/rf_analysis.csv"
-    file_exists = os.path.exists(performance_scores)
+    csv_path = "models/performance_records/models_analysis.csv"
+    file_exists = os.path.exists(csv_path)
     
-    with open(performance_scores, "a", newline="", encoding="utf-8") as dataset:
-        fieldnames = ["stories", "feature", "stride", "accuracy", "precision", "recall", "f1_score", "roc_auc"]
+    with open(csv_path, "a", newline="", encoding="utf-8") as dataset:
+        fieldnames = ["machine", "stories", "feature", "stride", "accuracy", "precision", "recall", "f1_score", "roc_auc"]
         writer = csv.DictWriter(dataset, fieldnames=fieldnames)
         
         if not file_exists:
@@ -116,8 +117,8 @@ def evaluate_model(model, model_name, X_test, y_test, stories, feature, stride):
         
         writer.writerow(model_details)
 
-    model_id = f"{stories}_{feature}_{stride}"
-    plot_path = f"models/rf_records/plots"
+    model_id = f"{machine}_{stories}_{feature}_{stride}"
+    plot_path = f"models/performance_records/plots"
     
     # Confusion Matrix Plot
     cm = confusion_matrix(y_test, y_pred, labels=class_labels)
@@ -146,23 +147,30 @@ def export_details(pkl_path):
     file_name = file_name.replace(".pkl", "")
     parts = file_name.split("_")
 
+    machine = parts[0]
     stories = parts[1]
     feature = parts[2]
     stride = int(parts[3])
     
+    # print(pkl_path)
+    # print(f"stpries: {stories}")
+    # print(f"feature: {feature}")
+    # print(f"stride: {stride}")
+    
     model = load_model(pkl_path)
-    X_test, y_test, model_name = parse_dataset(stories, feature, stride)
-    evaluate_model(model, model_name, X_test, y_test, stories, feature, stride) 
+    _, _, X_test, y_test, model_name = parse_dataset("lr", stories, feature, stride)
+    evaluate_model(model, model_name, X_test, y_test, machine, stories, feature, stride) 
 
 def main():
-    base_path = "models/rf_records/dataset_full/"
+    base_path = "models/lr_models/"
     
     # Walk through all files in the base_path
     for root, dirs, files in os.walk(base_path):
         for file in files:
             if file.endswith(".pkl"):
                 pkl_path = os.path.join(root, file)
-                print(f"Processing file: {pkl_path}")
+                print(f"\nProcessing file: {pkl_path}")
                 export_details(pkl_path)
+                # print(pkl_path)
     
 main()

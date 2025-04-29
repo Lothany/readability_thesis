@@ -54,76 +54,63 @@ def model_performance(model, X_test, y_test):
     print(f"ROC AUC: {roc_auc:.4f}")
     
 def train_model(X_train, y_train):
-    # Use OneVsRestClassifier to handle multi-class classification
-    lm = OneVsRestClassifier(linear_model.LogisticRegression(solver='liblinear'))
-    lm.fit(X_train, y_train)
-    
-    return lm
-
-def create_model(stride, feature, stories):
-    model_id = f"lr_{stories}_{feature}_{stride}"
-    X_train, y_train, X_test, y_test, model_name = parse_dataset("lr", stories, feature, stride)
-       
-    # Train logistic regression model
-    model = train_model(X_train, y_train)
-    score = model_performance(model, X_test, y_test)
-    
-    print(f"{model_id}: {score}")
-
-def tune_model(model, X_train, y_train):
-    # Extract the underlying LogisticRegression model
-    base_model = model.estimator  # Access the base estimator from OneVsRestClassifier
-
-    logreg = LogisticRegression(
-        solver=base_model.solver,  # Use solver from the base LogisticRegression model
+    model = LogisticRegression(
+        solver='lbfgs',
         max_iter=1000
     )
-    
+    model.fit(X_train, y_train)
+    return model
+
+def tune_model(X_train, y_train):
     param_grid = {
         'C': [0.01, 0.1, 1, 10, 100],
-        'penalty': ['l2'],            # Only 'l2' works with 'lbfgs'
+        'penalty': ['l2'],
         'solver': ['lbfgs']
     }
 
     grid = GridSearchCV(
-        estimator=logreg,
+        estimator=LogisticRegression(max_iter=1000),
         param_grid=param_grid,
         cv=5,
-        scoring='accuracy',           # You can also try 'f1_weighted'
+        scoring='accuracy',  # Or 'f1_weighted' if your labels are imbalanced
         n_jobs=-1,
-        verbose=1
+        verbose=0
     )
 
     grid.fit(X_train, y_train)
-    print("Best Params:", grid.best_params_)
-    print("Best CV Score:", grid.best_score_)
-    
-    
-    # Final model
-    best_model = grid.best_estimator_
-    return best_model
+    return grid.best_estimator_
 
 def test():
     stories = "split"
     feature = "T"
     stride = 100
+    # model_id = f"lr_{stories}_{feature}_{stride}"
+    
+    # X_train, y_train, X_test, y_test, model_name = parse_dataset("lr", stories, feature, stride)
+    
+    # model = train_model(X_train, y_train)
+    # print(f"Initial Model Performance: ")
+    # model_performance(model, X_test, y_test)
+    
+    
+    # tuned_model = tune_model(X_train, y_train)
+    # print(f"\nTuned Model Performance: ")
+    # model_performance(tuned_model, X_test, y_test)
+    
+    create_model(stride, feature, stories)
+
+def create_model(stride, feature, stories):
     model_id = f"lr_{stories}_{feature}_{stride}"
-    
-    X_train, y_train, X_test, y_test, model_name = parse_dataset("lr", stories, feature, stride)
-    
-    model = train_model(X_train, y_train)
-    print(f"Initial Model Performance: ")
-    model_performance(model, X_test, y_test)
-    
-    
-    tuned_model = tune_model(model, X_train, y_train)
-    print(f"Tuned Model Performance: ")
-    model_performance(tuned_model, X_test, y_test)
-    
+    X_train, y_train, _, _, _  = parse_dataset("lr", stories, feature, stride)
+       
+    # Train logistic regression model
+    model = tune_model(X_train, y_train)
+    save_model(model, "models/lr_models/", model_id)
+    # score = model_performance(model, X_test, y_test)
     
 def main():
-    stories_list = ["full", "split"]
-    stories_list = ["full"]
+    # stories_list = ["full", "split"]
+    stories_list = ["split"]
     features_list = ["B", "T", "L"]
     strides_list = [-1, 0, 1, 2, 3, 100]
     
@@ -133,8 +120,8 @@ def main():
         for stories in stories_list:
             for feature in features_list:
                 for stride in strides_list:
-                    print(f"\nCreating model for {feature} features, and stride length {stride} using {stories} stories.")
+                    print(f"\nCreating model: {stories}|{feature}|{stride}")
                     create_model(stride, feature, stories)
                     pbar.update(1)
 
-test()
+main()

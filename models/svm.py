@@ -55,23 +55,21 @@ def create_model(stride, feature, stories):
     tuned_model = hyperparameter_tuning(X_train, y_train)
     save_model(tuned_model, "models/svm/tuned_", model_id)
 
-def this_bitch():
-    print("Testing SVM Model Creation")
-    # stories = "split"
-    # feature = "T"
-    # stride = 100
-    # model_id = f"lr_{stories}_{feature}_{stride}"
+def test():
+    stories = "split"
+    feature = "T"
+    stride = 100
+    model_id = f"lr_{stories}_{feature}_{stride}"
     
-    # X_train, y_train, X_test, y_test, model_name = parse_dataset("lr", stories, feature, stride)
+    X_train, y_train, X_test, y_test, model_name = parse_dataset("lr", stories, feature, stride)
     
-    # model = train_model(X_train, y_train)
-    # print(f"Initial Model Performance: ")
-    # model_performance(model, X_test, y_test)
+    model = train_model(X_train, y_train)
+    print(f"Initial Model Performance: ")
+    model_performance(model, X_test, y_test)
     
-    
-    # tuned_model = hyperparameter_tuning(X_train, y_train)
-    # print(f"\nTuned Model Performance: ")
-    # model_performance(tuned_model, X_test, y_test)
+    tuned_model = hyperparameter_tuning(X_train, y_train)
+    print(f"\nTuned Model Performance: ")
+    model_performance(tuned_model, X_test, y_test)
     
     # create_model(stride, feature, stories)
 
@@ -92,4 +90,4 @@ def main():
                     pbar.update(1)
 
 # To run:
-this_bitch()  # Uncommented to allow execution
+test()  # Uncommented to allow execution

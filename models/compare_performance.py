@@ -173,4 +173,4 @@ def main():
                 export_details(pkl_path)
                 # print(pkl_path)
     
-main()
+# main()

@@ -43,7 +43,8 @@ def load_one(stride_length, feature_set):
     df = df[df['text_num'] != 18]
     df = df.drop(columns=['word_num'])
     
-    X = df.drop(columns=feature_set)
+    # X = df.drop(columns=feature_set)
+    X = df[feature_set]
     y = df['grade_level']
     
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
@@ -64,7 +65,8 @@ def load_dataset(stride_length, feature_set):
     train_dataset = train_dataset.drop(columns=['word_num'])
 
     # Split the dataset into features and target variable
-    X_train = train_dataset.drop(columns=feature_set)
+    # X_train = train_dataset.drop(columns=feature_set)
+    X_train = train_dataset[feature_set]
     y_train = train_dataset['grade_level']
 
     # Load testing dataset
@@ -74,7 +76,8 @@ def load_dataset(stride_length, feature_set):
 
     test_dataset = test_dataset.drop(columns=['word_num'])
 
-    X_test = test_dataset.drop(columns=feature_set)
+    # X_test = test_dataset.drop(columns=feature_set)
+    X_test = test_dataset[feature_set]
     y_test = test_dataset['grade_level']
     
     return X_train, y_train, X_test, y_test
@@ -163,16 +166,15 @@ def create_model(stride, feature, stories):
         print(f"Invalid stride length: {stride}")
         return
     
-    feature_set = ['grade_level', 'text_num', 'stride_len', 'stride_index', 'n_gram']
     if feature == "B":
-        feature_set = feature_set
+        feature_set = ['sent_len', 'word_len', 'syll_num', 'poly_num', 'noun_tr', 'verb_tr', 'type_tr', 'lex_density', 'lex_foreign']
+        model_name += " [Trad + Lex]"
     elif feature == "T":
-        feature_set += ['noun_tr', 'verb_tr', 'type_tr', 'lex_density', 'lex_foreign']
+        feature_set = ['sent_len', 'word_len', 'syll_num', 'poly_num']
+        model_name += " [Trad]"
     elif feature == "L":
-        feature_set += ['sent_len', 'word_len', 'syll_num', 'poly_num']
-    else:
-        print("Invalid feature set selected. Please choose 'B', 'T', or 'L'.")
-        return
+        feature_set = ['noun_tr', 'verb_tr', 'type_tr', 'lex_density', 'lex_foreign']
+        model_name += " [Lex]"
     
     if stories == "full":
         X_train, y_train, X_test, y_test = load_one(stride, feature_set)

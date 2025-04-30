@@ -80,8 +80,8 @@ def hyperparameter_tuning(X_train, y_train):
     rand_search = RandomizedSearchCV(
         model,
         param_distributions=param_dist,
-        n_iter=5,
-        cv=5,
+        n_iter=2,
+        cv=2,
         random_state=42
     )
 

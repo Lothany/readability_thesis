@@ -1,10 +1,6 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-from sklearn import datasets
-from sklearn import model_selection
-from sklearn import linear_model
-from sklearn import metrics
 
 
 from sklearn.metrics import (
@@ -18,11 +14,9 @@ from sklearn.metrics import (
     ConfusionMatrixDisplay
 )
 
-from sklearn.preprocessing import StandardScaler
+from sklearn.naive_bayes import GaussianNB, MultinomialNB
 from sklearn.preprocessing import label_binarize
-from sklearn.multiclass import OneVsRestClassifier
 from sklearn.model_selection import GridSearchCV
-from sklearn.linear_model import LogisticRegression
 
 from tqdm import tqdm
 from random_forest import save_model
@@ -52,26 +46,24 @@ def model_performance(model, X_test, y_test):
     print(f"Recall: {recall:.4f}")
     print(f"F1 Score: {f1:.4f}")
     print(f"ROC AUC: {roc_auc:.4f}")
-    
+
 def train_model(X_train, y_train):
-    model = LogisticRegression(
-        solver='lbfgs',
-        max_iter=1000
-    )
+    # Use GaussianNB for continuous data or MultinomialNB for discrete data
+    model = GaussianNB()  # Replace with MultinomialNB() if your data is discrete
     model.fit(X_train, y_train)
     return model
 
 def tune_model(X_train, y_train):
+    # Naive Bayes models typically have fewer hyperparameters to tune.
+    # For GaussianNB, you might tune `var_smoothing`.
     param_grid = {
-        'C': [0.01, 0.1, 1, 10, 100],
-        'penalty': ['l2'],
-        'solver': ['lbfgs']
+        'var_smoothing': np.logspace(-9, 0, 10)  # Example for GaussianNB
     }
 
     grid = GridSearchCV(
-        estimator=LogisticRegression(max_iter=1000),
+        estimator=GaussianNB(),
         param_grid=param_grid,
-        cv=10,
+        cv=5,
         scoring=['accuracy', 'f1_macro'],  # Use multiple scoring metrics
         refit='accuracy',  # Refit the model using the best accuracy
         n_jobs=-1,
@@ -79,26 +71,42 @@ def tune_model(X_train, y_train):
     )
 
     grid.fit(X_train, y_train)
-    
+
+    # Extract cross-validation results
     mean_accuracy = grid.cv_results_['mean_test_accuracy'].max()
     mean_f1_score = grid.cv_results_['mean_test_f1_macro'].max()
 
     print(f"Cross-Validation Accuracy: {mean_accuracy:.4f}")
     print(f"Cross-Validation F1 Score: {mean_f1_score:.4f}")
-    
+
     return grid.best_estimator_
 
 def test():
     stories = "split"
-    feature = "B"
-    stride = -1
+    feature = "T"
+    stride = 100
+    # model_id = f"lr_{stories}_{feature}_{stride}"
     
+    # X_train, y_train, X_test, y_test, model_name = parse_dataset("lr", stories, feature, stride)
+    
+    # model = train_model(X_train, y_train)
+    # print(f"Initial Model Performance: ")
+    # model_performance(model, X_test, y_test)
+    
+    
+    # tuned_model = tune_model(X_train, y_train)
+    # print(f"\nTuned Model Performance: ")
+    # model_performance(tuned_model, X_test, y_test)
+    
+    create_model(stride, feature, stories)
+
+def create_model(stride, feature, stories):
     model_id = f"lr_{stories}_{feature}_{stride}"
-    print(f"Testing Logistic Regression Model: {model_id}")
-    
     X_train, y_train, X_test, y_test, model_name = parse_dataset("lr", stories, feature, stride)
-    
+       
+    # Train logistic regression model
     model = train_model(X_train, y_train)
+    # save_model(model, "models/lr_models/", model_id)
     print(f"Initial Model Performance: ")
     model_performance(model, X_test, y_test)
     
@@ -107,16 +115,6 @@ def test():
     print(f"\nTuned Model Performance: {tuned_model}")
     # model_performance(tuned_model, X_test, y_test)
     
-    # create_model(stride, feature, stories)
-
-def create_model(stride, feature, stories):
-    model_id = f"lr_{stories}_{feature}_{stride}"
-    X_train, y_train, _, _, _  = parse_dataset("lr", stories, feature, stride)
-       
-    # Train logistic regression model
-    model = tune_model(X_train, y_train)
-    save_model(model, "models/lr_models/", model_id)
-    # score = model_performance(model, X_test, y_test)
     
 def main():
     # stories_list = ["full", "split"]

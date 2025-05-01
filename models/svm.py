@@ -23,16 +23,18 @@ def train_model(X_train, y_train):
 
 def hyperparameter_tuning(X_train, y_train):
     param_dist = {
-        'C': [0.1, 1, 10, 100],
-        'kernel': ['linear', 'rbf', 'poly', 'sigmoid'],
-        'gamma': ['scale', 'auto']
+        'C': [0.1, 1, 10],
+        'kernel': ['linear', 'rbf'],
+        # 'C': [0.1, 1, 10],
+        # 'kernel': ['rbf'],
+        'gamma': ['scale']
     }
 
     model = SVC(probability=True)
     rand_search = RandomizedSearchCV(
         model,
         param_distributions=param_dist,
-        n_iter=5,
+        n_iter=2,
         cv=5,
         random_state=42
     )
@@ -56,18 +58,24 @@ def create_model(stride, feature, stories):
     save_model(tuned_model, "models/svm/tuned_", model_id)
 
 def test():
+    print("Testing SVM Model")
     stories = "split"
     feature = "T"
-    stride = 100
+    stride = 0
     model_id = f"lr_{stories}_{feature}_{stride}"
     
     X_train, y_train, X_test, y_test, model_name = parse_dataset("lr", stories, feature, stride)
+    print("Parde dataset loaded.")
     
     model = train_model(X_train, y_train)
+    save_model(model, "models/svm/", model_id)
+    
     print(f"Initial Model Performance: ")
     model_performance(model, X_test, y_test)
     
     tuned_model = hyperparameter_tuning(X_train, y_train)
+    save_model(tuned_model, "models/svm/tuned_", model_id)
+    
     print(f"\nTuned Model Performance: ")
     model_performance(tuned_model, X_test, y_test)
     

@@ -15,6 +15,7 @@ from sklearn.metrics import (
 )
 from sklearn.preprocessing import StandardScaler
 from sklearn.preprocessing import label_binarize
+from sklearn.model_selection import cross_validate
 
 import os
 import csv
@@ -141,6 +142,23 @@ def evaluate_model(model, model_name, X_test, y_test, machine, stories, feature,
         fig.savefig(os.path.join(plot_path, f"{model_id}_feat.png"))
         plt.close(fig)
 
+def cross_validation_scores(model, X, y, cv=5):
+    scoring = {
+        'accuracy': 'accuracy',
+        'precision': 'precision_macro',
+        'recall': 'recall_macro',
+        'f1': 'f1_macro',
+        'roc_auc': 'roc_auc_ovr' if len(np.unique(y)) > 2 else 'roc_auc'
+    }
+
+    results = cross_validate(model, X, y, cv=cv, scoring=scoring, return_train_score=False)
+
+    print("Cross-Validation Results ({}-fold):".format(cv))
+    for metric in scoring.keys():
+        mean_score = results[f'test_{metric}'].mean()
+        print(f"{metric.capitalize()}: {mean_score:.3f}")
+
+    return results
 
 def export_details(pkl_path):    
     file_name = pkl_path.split("/")[-1]
@@ -158,11 +176,13 @@ def export_details(pkl_path):
     # print(f"stride: {stride}")
     
     model = load_model(pkl_path)
-    _, _, X_test, y_test, model_name = parse_dataset("lr", stories, feature, stride)
-    evaluate_model(model, model_name, X_test, y_test, machine, stories, feature, stride) 
+    X_train, y_train, X_test, y_test, model_name = parse_dataset("lr", stories, feature, stride)
+    cross_validation_scores(model, X_train, y_train)
+    
+    # evaluate_model(model, model_name, X_test, y_test, machine, stories, feature, stride) 
 
 def main():
-    base_path = "models/lr_models/"
+    base_path = "models/svm_models/untuned/"
     
     # Walk through all files in the base_path
     for root, dirs, files in os.walk(base_path):
@@ -172,5 +192,5 @@ def main():
                 print(f"\nProcessing file: {pkl_path}")
                 export_details(pkl_path)
                 # print(pkl_path)
-    
+                
 # main()

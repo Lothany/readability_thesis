@@ -21,14 +21,12 @@ import os
 import csv
 import pickle
 
-from random_forest import load_one, load_dataset
-
 def load_model(pkl_path):
     with open(pkl_path, 'rb') as file:
         model = pickle.load(file)
         return model
 
-def parse_dataset(ml, stories, feature, stride):
+def parse_dataset(ml, grade, feature, stride):
     model_name =f"{ml}"
     
     if stride == 0:
@@ -54,13 +52,15 @@ def parse_dataset(ml, stories, feature, stride):
         print("Invalid feature set selected. Please choose 'B', 'T', or 'L'.")
         return
     
-    if stories == "full":
-        X_train, y_train, X_test, y_test = load_one(stride, feature_set)
-    elif stories == "split":
-        X_train, y_train, X_test, y_test = load_dataset(stride, feature_set)
-    else:
-        print("Invalid stories option. Please choose 'full' or 'split'.")
-        return
+    # if stories == "full":
+    #     X_train, y_train, X_test, y_test = load_one(stride, feature_set)
+    # elif stories == "split":
+    #     X_train, y_train, X_test, y_test = load_dataset(stride, feature_set, grade)
+    # else:
+    #     print("Invalid stories option. Please choose 'full' or 'split'.")
+    #     return
+    
+    X_train, y_train, X_test, y_test = load_dataset(stride, feature_set, grade)
     
     # Scale to standardize the column values
     scaler = StandardScaler()
@@ -68,6 +68,106 @@ def parse_dataset(ml, stories, feature, stride):
     X_test = pd.DataFrame(scaler.transform(X_test), columns=X_test.columns, index=X_test.index)
     
     return X_train, y_train, X_test, y_test, model_name
+
+# Filter dataset based on stride length
+def filter_dataset(dataset, stride_length):
+    # Return sentence fragments
+    if stride_length == -1:
+        filtered_dataset = dataset[(dataset['stride_len'] > 3) & (dataset['stride_len'] < 100)]
+    # Do not filter
+    elif stride_length == 0:
+        return dataset
+    else:
+        filtered_dataset = dataset[dataset['stride_len'] == stride_length]
+    
+    return filtered_dataset
+
+# def load_one(stride_length, feature_set):
+#     dataset_source = 'tables/allbooks_dataset.csv'
+    
+#     df= pd.read_csv(dataset_source)
+#     df = filter_dataset(df, stride_length)
+    
+#     df = df[df['text_num'] != 18]
+#     df = df.drop(columns=['word_num'])
+    
+#     # X = df.drop(columns=feature_set)
+#     X = df[feature_set]
+#     y = df['grade_level']
+    
+#     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
+    
+#     return X_train, y_train, X_test, y_test
+    
+
+def load_dataset(stride_length, feature_set, grade):
+    training_source = 'tables/dataset.csv'
+    testing_source = 'tables/dataset_testing.csv'
+    
+    train_dataset= pd.read_csv(training_source)
+    
+    # Filter according to grade and stride
+    train_dataset = filter_dataset(train_dataset, stride_length)
+    train_dataset = train_dataset[train_dataset['grade_level'] == grade]
+    
+    # train_dataset = undersample_dataset(train_dataset)
+    
+    # Filter out rows with from 18.txt and drop empty column word_len
+    train_dataset = train_dataset[train_dataset['text_num'] != 18]
+    train_dataset = train_dataset.drop(columns=['word_num'])
+
+    # Split the dataset into features and target variable
+    X_train = train_dataset[feature_set]
+    y_train = train_dataset['grade_level']
+
+    # Load testing dataset
+    test_dataset = pd.read_csv(testing_source)
+    test_dataset = filter_dataset(test_dataset, stride_length)
+    # test_dataset = test_dataset[test_dataset['grade_level'] == grade]
+        
+    # test_dataset = undersample_dataset(test_dataset)
+
+    test_dataset = test_dataset.drop(columns=['word_num'])
+
+    # X_test = test_dataset.drop(columns=feature_set)
+    X_test = test_dataset[feature_set]
+    y_test = test_dataset['grade_level']
+    
+    return X_train, y_train, X_test, y_test
+
+def undersample_dataset(df):
+    # Find the minimum count of entries across all grade levels
+    min_count = df['grade_level'].value_counts().min()
+    
+    # Group by grade level and sample min_count entries from each group
+    undersampled_df = df.groupby('grade_level').apply(lambda x: x.sample(min_count, random_state=42)).reset_index(drop=True)
+    return undersampled_df
+
+def print_scores(model, X_test, y_test):    
+    y_pred = model.predict(X_test)
+    
+    # Check if the model supports probability predictions
+    if hasattr(model, "predict_proba"):
+        y_proba = model.predict_proba(X_test)
+    else:
+        y_proba = None
+
+    # Binarize true labels for multi-class ROC-AUC
+    class_labels = [1, 2, 3, 4, 5, 6]
+    y_test_bin = label_binarize(y_test, classes=class_labels)
+
+    # Metrics
+    accuracy = accuracy_score(y_test, y_pred)
+    precision = precision_score(y_test, y_pred, average='macro', zero_division=0)
+    recall = recall_score(y_test, y_pred, average='macro', zero_division=0)
+    f1 = f1_score(y_test, y_pred, average='macro', zero_division=0)
+    roc_auc = roc_auc_score(y_test_bin, y_proba, average='macro', multi_class='ovr')
+
+    print(f"Accuracy: {accuracy:.4f}")
+    print(f"Precision: {precision:.4f}")
+    print(f"Recall: {recall:.4f}")
+    print(f"F1 Score: {f1:.4f}")
+    print(f"ROC AUC: {roc_auc:.4f}")
 
 def evaluate_model(model, model_name, X_test, y_test, machine, stories, feature, stride):
     # Predictions & Probabilities
@@ -92,7 +192,6 @@ def evaluate_model(model, model_name, X_test, y_test, machine, stories, feature,
     print(f"F1 Score: {f1:.4f}")
     print(f"ROC AUC: {roc_auc:.4f}")
     
-
     # Save metrics to CSV
     model_details = {
         "machine": machine,
@@ -118,8 +217,12 @@ def evaluate_model(model, model_name, X_test, y_test, machine, stories, feature,
         
         writer.writerow(model_details)
 
+def export_plots(model, model_name, X_test, y_test, machine, stories, feature, stride):
     model_id = f"{machine}_{stories}_{feature}_{stride}"
     plot_path = f"models/performance_records/plots"
+    
+    y_pred = model.predict(X_test)
+    class_labels = [1, 2, 3, 4, 5, 6]
     
     # Confusion Matrix Plot
     cm = confusion_matrix(y_test, y_pred, labels=class_labels)
@@ -142,23 +245,47 @@ def evaluate_model(model, model_name, X_test, y_test, machine, stories, feature,
         fig.savefig(os.path.join(plot_path, f"{model_id}_feat.png"))
         plt.close(fig)
 
-def cross_validation_scores(model, X, y, cv=5):
+def cross_validation_scores(model, X_train, y_train, machine, stories, feature, stride):
     scoring = {
         'accuracy': 'accuracy',
         'precision': 'precision_macro',
         'recall': 'recall_macro',
         'f1': 'f1_macro',
-        'roc_auc': 'roc_auc_ovr' if len(np.unique(y)) > 2 else 'roc_auc'
+        'roc_auc': 'roc_auc_ovr' if len(np.unique(y_train)) > 2 else 'roc_auc'
     }
 
-    results = cross_validate(model, X, y, cv=cv, scoring=scoring, return_train_score=False)
+    # Perform cross-validation
+    results = cross_validate(model, X_train, y_train, cv=5, scoring=scoring, return_train_score=False)
 
-    print("Cross-Validation Results ({}-fold):".format(cv))
+    print("Cross-Validation Results (5-fold):")
+    mean_scores = {}
     for metric in scoring.keys():
         mean_score = results[f'test_{metric}'].mean()
+        mean_scores[metric] = mean_score
         print(f"{metric.capitalize()}: {mean_score:.3f}")
 
-    return results
+    # Prepare data for CSV export
+    csv_path = "models/performance_records/cross_validation.csv"
+    file_exists = os.path.exists(csv_path)
+    
+    with open(csv_path, "a", newline="", encoding="utf-8") as dataset:
+        fieldnames = ["machine", "stories", "feature", "stride", "accuracy", "precision", "recall", "f1", "roc_auc"]
+        writer = csv.DictWriter(dataset, fieldnames=fieldnames)
+        
+        if not file_exists:
+            writer.writeheader()
+        
+        writer.writerow({
+            "machine": machine,
+            "stories": stories,
+            "feature": feature,
+            "stride": stride,
+            "accuracy": f"{mean_scores['accuracy']:.4f}",
+            "precision": f"{mean_scores['precision']:.4f}",
+            "recall": f"{mean_scores['recall']:.4f}",
+            "f1": f"{mean_scores['f1']:.4f}",
+            "roc_auc": f"{mean_scores['roc_auc']:.4f}"
+        })
 
 def export_details(pkl_path):    
     file_name = pkl_path.split("/")[-1]
@@ -176,13 +303,13 @@ def export_details(pkl_path):
     # print(f"stride: {stride}")
     
     model = load_model(pkl_path)
-    X_train, y_train, X_test, y_test, model_name = parse_dataset("lr", stories, feature, stride)
-    cross_validation_scores(model, X_train, y_train)
+    X_train, y_train, X_test, y_test, model_name = parse_dataset(machine, stories, feature, stride)
+    # cross_validation_scores(model, X_train, y_train, machine, stories, feature, stride)
     
-    # evaluate_model(model, model_name, X_test, y_test, machine, stories, feature, stride) 
+    evaluate_model(model, model_name, X_test, y_test, machine, stories, feature, stride) 
 
 def main():
-    base_path = "models/svm_models/untuned/"
+    base_path = "models/svm_models/tuned/"
     
     # Walk through all files in the base_path
     for root, dirs, files in os.walk(base_path):

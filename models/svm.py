@@ -14,6 +14,9 @@ from random_forest import save_model
 from logistic_regression import model_performance
 from compare_performance import parse_dataset
 
+# Modules
+from compare_performance import parse_dataset, print_scores
+
 # --- SVM Specific Training ---
 
 def train_model(X_train, y_train):
@@ -66,35 +69,36 @@ def create_model(stride, feature, stories):
     save_model(tuned_model, "models/svm_models/tuned/", model_id)
 
 def test():
-    print("Testing SVM Model")
-    stories = "split"
-    feature = "T"
-    stride = 100
-    model_id = f"svm_{stories}_{feature}_{stride}"
-    print(f"Testing SVM Model: {model_id}")
+    grade = 3
+    feature = "B"
+    stride =  -1
+    model_id = f"rf_{grade}_{feature}_{stride}"
+    print(f"Model: {model_id}")
     
-    X_train, y_train, X_test, y_test, model_name = parse_dataset("lr", stories, feature, stride)
-    print("Parsed dataset.")
+    X_train, y_train, X_test, y_test, model_name = parse_dataset("svm", grade, feature, stride)
     
     model = train_model(X_train, y_train)
-    save_model(model, "models/svm_models/untuned/", model_id)
+    # save_model(model, "models/svm_models/untuned/", model_id)
     
     print(f"Initial Model Performance: ")
-    model_performance(model, X_test, y_test)
+    print_scores(model, X_test, y_test)
     
     tuned_model = hyperparameter_tuning(X_train, y_train)
-    save_model(tuned_model, "models/svm_models/tuned/", model_id)
+    # save_model(tuned_model, "models/svm_models/tuned/", model_id)
     
     print(f"\nTuned Model Performance: ")
-    model_performance(tuned_model, X_test, y_test)
+    print_scores(tuned_model, X_test, y_test)
     
     # create_model(stride, feature, stories)
 
 def main():
-    # stories_list = ["full", "split"]
     stories_list = ["split"]
-    features_list = ["B", "L"]
-    strides_list = [-1, 0, 1, 2, 3, 100]
+    features_list = ["B"]
+    strides_list = [1, 2, 3, 100]
+    
+    # stories_list = ["full", "split"]    
+    # features_list = ["T","B", "L"]
+    # strides_list = [-1, 0, 1, 2, 3, 100]
     
     total_iterations = len(stories_list) * len(features_list) * len(strides_list)
     
@@ -107,4 +111,4 @@ def main():
                     pbar.update(1)
 
 # To run:
-main()  # Uncommented to allow execution
+# test()  # Uncommented to allow execution

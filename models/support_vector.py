@@ -66,12 +66,13 @@ def create_model(stride, feature, stories):
 def test():
     print("Testing SVM Model")
     stories = "split"
-    feature = "T"
-    stride = 100
+    feature = "B"
+    stride = -1
+    grade = 6
     model_id = f"svm_{stories}_{feature}_{stride}"
     print(f"Testing SVM Model: {model_id}")
     
-    X_train, y_train, X_test, y_test, model_name = parse_dataset("lr", stories, feature, stride)
+    X_train, y_train, X_test, y_test, model_name = parse_dataset("lr", stories, feature, stride, grade)
     
     model = train_model(X_train, y_train)
     # save_model(model, "models/svm_models/untuned/", model_id)

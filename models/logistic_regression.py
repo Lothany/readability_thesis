@@ -73,7 +73,7 @@ def test():
     model_id = f"TESTING_{machine}_{stories}_{feature}_{stride}"
     print(f"Testing Logistic Regression Model: {model_id}")
     
-    X_train, y_train, X_test, y_test, model_name = parse_dataset("lr", stories, feature, stride, grade)
+    X_train, y_train, X_test, y_test, model_name = parse_dataset(machine, stories, feature, stride, grade)
     
     model = train_model(X_train, y_train)
     print(f"Initial Model Performance: ")

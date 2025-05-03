@@ -110,7 +110,7 @@ def load_dataset(stride_length, feature_set, grade):
     
     train_dataset= pd.read_csv(training_source)
     train_dataset = filter_dataset(train_dataset, stride_length)
-    train_dataset = undersample_dataset(train_dataset)
+    train_dataset = undersample_dataset(train_dataset, grade)
     
     train_dataset = train_dataset[train_dataset['text_num'] != 18]
     train_dataset = train_dataset.drop(columns=['word_num'])
@@ -123,7 +123,7 @@ def load_dataset(stride_length, feature_set, grade):
     # Load testing dataset
     test_dataset = pd.read_csv(testing_source)
     test_dataset = filter_dataset(test_dataset, stride_length)
-    test_dataset = undersample_dataset(test_dataset)
+    test_dataset = undersample_dataset(test_dataset, grade)
 
     test_dataset = test_dataset.drop(columns=['word_num'])
 
@@ -134,12 +134,21 @@ def load_dataset(stride_length, feature_set, grade):
     
     return X_train, y_train, X_test, y_test
 
-def undersample_dataset(df):
-    # Find the minimum count of entries across all grade levels
-    min_count = df['grade_level'].value_counts().min()
+def undersample_dataset(df, grade):
+    # Split the dataset into matching and non-matching groups
+    matching_grade = df[df['grade_level'] == grade]
+    non_matching_grade = df[df['grade_level'] != grade]
     
-    # Group by grade level and sample min_count entries from each group
-    undersampled_df = df.groupby('grade_level').apply(lambda x: x.sample(min_count, random_state=42)).reset_index(drop=True)
+    # Find the smaller group size
+    min_count = min(len(matching_grade), len(non_matching_grade))
+    
+    # Sample from both groups to ensure equal size
+    matching_sampled = matching_grade.sample(min_count, random_state=42)
+    non_matching_sampled = non_matching_grade.sample(min_count, random_state=42)
+    
+    # Combine the two groups
+    undersampled_df = pd.concat([matching_sampled, non_matching_sampled]).reset_index(drop=True)
+    
     return undersampled_df
     
 def model_performance(model, X_test, y_test):

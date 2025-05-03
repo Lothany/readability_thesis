@@ -70,13 +70,13 @@ def test():
     model_id = f"rf_{stories}_{feature}_{stride}"
     print(f"Testing Logistic Regression Model: {model_id}")
     
-    X_train, y_train, X_test, y_test, model_name = parse_dataset("lr", stories, feature, stride, grade)
+    X_train, y_train, X_test, y_test, model_name = parse_dataset(machine, stories, feature, stride, grade)
     print(X_train.head())
     
     model = train_model(X_train, y_train)
     print(f"Initial Model Performance: ")
     model_performance(model, X_test, y_test)
-    # show_cm(model, model_name, X_test, y_test, machine, stories, feature, stride)
+    show_cm(model, model_name, X_test, y_test, machine, stories, feature, stride)
     
     
     # tuned_model = tune_model(X_train, y_train)

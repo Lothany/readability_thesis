@@ -18,6 +18,7 @@ from sklearn.preprocessing import label_binarize
 from sklearn.model_selection import cross_validate
 from sklearn.model_selection import train_test_split
 
+
 import os
 import csv
 import pickle
@@ -61,15 +62,14 @@ def parse_dataset(ml, stories, feature, stride, grade):
     if stories == "full":
         X_train, y_train, X_test, y_test = load_one(stride, feature_set, grade)
     elif stories == "split":
-        X_train, y_train, X_test, y_test = load_dataset(stride, feature_set, grade)
+        train_dataset, test_dataset = load_dataset(stride, grade)
     else:
         print("Invalid stories option. Please choose 'full' or 'split'.")
         return
+
+    X_train, y_train, X_test, y_test = split_dataset(train_dataset, test_dataset, feature_set)
+    # X_train, y_train, X_test, y_test = load_folds(stride, feature_set, grade, k, fold_index)
     
-    # Scale to standardize the column values
-    scaler = StandardScaler()
-    X_train = pd.DataFrame(scaler.fit_transform(X_train),columns=X_train.columns, index=X_train.index)
-    X_test = pd.DataFrame(scaler.transform(X_test), columns=X_test.columns, index=X_test.index)
     
     return X_train, y_train, X_test, y_test, model_name
 
@@ -104,7 +104,7 @@ def load_one(stride_length, feature_set, grade):
     return X_train, y_train, X_test, y_test
     
 
-def load_dataset(stride_length, feature_set, grade):
+def load_dataset(stride_length, grade):
     training_source = 'tables/dataset.csv'
     testing_source = 'tables/dataset_testing.csv'
     
@@ -116,9 +116,6 @@ def load_dataset(stride_length, feature_set, grade):
     train_dataset = train_dataset.drop(columns=['word_num'])
 
     train_dataset['target'] = (train_dataset['grade_level'] == grade).astype(int)
-    
-    X_train = train_dataset[feature_set]
-    y_train = train_dataset['target']
 
     # Load testing dataset
     test_dataset = pd.read_csv(testing_source)
@@ -129,10 +126,55 @@ def load_dataset(stride_length, feature_set, grade):
 
     test_dataset['target'] = (test_dataset['grade_level'] == grade).astype(int)
     
+    return train_dataset, test_dataset
+
+def split_dataset(train_dataset, test_dataset, feature_set):
+    X_train = train_dataset[feature_set]
+    y_train = train_dataset['target']
+    
     X_test = test_dataset[feature_set]
     y_test = test_dataset['target']
     
+    scaler = StandardScaler()
+    X_train = pd.DataFrame(scaler.fit_transform(X_train),columns=X_train.columns, index=X_train.index)
+    X_test = pd.DataFrame(scaler.transform(X_test), columns=X_test.columns, index=X_test.index)
+    
     return X_train, y_train, X_test, y_test
+    
+
+def load_folds(stride_length, feature_set, grade, k, fold_index):
+    training_source = 'tables/dataset.csv'
+    testing_source = 'tables/dataset_testing.csv'
+    
+    # Load and filter training data
+    df = pd.read_csv(training_source)
+    df = filter_dataset(df, stride_length)
+    df = df[df['text_num'] != 18]
+    df = df.drop(columns=['word_num'])
+    df['target'] = (df['grade_level'] == grade).astype(int)
+    df = df[df['grade_level'].notna()].reset_index(drop=True)
+
+    # Create stratified K folds on training set
+    skf = StratifiedKFold(n_splits=k, shuffle=True, random_state=42)
+    for i, (train_idx, val_idx) in enumerate(skf.split(df[feature_set], df['target'])):
+        if i == fold_index:
+            train_df = df.iloc[train_idx]
+            break
+
+    X_train = train_df[feature_set]
+    y_train = train_df['target']
+
+    # Load and filter fixed test set
+    test_df = pd.read_csv(testing_source)
+    test_df = filter_dataset(test_df, stride_length)
+    test_df = test_df.drop(columns=['word_num'])
+    test_df['target'] = (test_df['grade_level'] == grade).astype(int)
+
+    X_test = test_df[feature_set]
+    y_test = test_df['target']
+
+    return X_train, y_train, X_test, y_test
+
 
 def undersample_dataset(df, grade):
     # Split the dataset into matching and non-matching groups

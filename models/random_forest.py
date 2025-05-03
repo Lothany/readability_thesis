@@ -4,7 +4,7 @@ from tqdm import tqdm
 import pickle
 
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import accuracy_score, classification_report, confusion_matrix, precision_score, recall_score, ConfusionMatrixDisplay
+from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, roc_auc_score
 from sklearn.model_selection import RandomizedSearchCV, train_test_split
 from scipy.stats import randint
 
@@ -16,6 +16,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 from compare_performance import parse_dataset, model_performance, save_model, show_cm
+from compare_performance import load_folds
     
 # Train the Random Forest Classifier
 def train_model(X_train, y_train):
@@ -60,6 +61,32 @@ def create_model(stride, feature, stories):
     tuned_model = tune_model(X_train, y_train)
     save_model("rf", tuned_model, "models/random_forest/tuned_", model_id)
 
+def custom_tune(stride, feature_set, grade, k=5):
+    print(f"Cross-validating on TRAINING data only — fixed TEST set (Grade {grade})")
+
+    metrics = {'accuracy': [], 'precision': [], 'recall': [], 'f1': [], 'roc_auc': []}
+
+    for fold in range(k):
+        print(f"\nFold {fold + 1}/{k}")
+        X_train, y_train, X_test, y_test = load_folds(stride, feature_set, grade, k, fold)
+
+        model = RandomForestClassifier(class_weight='balanced', random_state=fold)
+        model.fit(X_train, y_train)
+        y_pred = model.predict(X_test)
+        y_proba = model.predict_proba(X_test)[:, 1]
+
+        metrics['accuracy'].append(accuracy_score(y_test, y_pred))
+        metrics['precision'].append(precision_score(y_test, y_pred, zero_division=0))
+        metrics['recall'].append(recall_score(y_test, y_pred, zero_division=0))
+        metrics['f1'].append(f1_score(y_test, y_pred, zero_division=0))
+        metrics['roc_auc'].append(roc_auc_score(y_test, y_proba))
+
+    print("\nAverage metrics across training folds:")
+    for key in metrics:
+        print(f"{key.capitalize()}: {np.mean(metrics[key]):.4f}")
+
+    return metrics
+
 def test():
     stories = "split"
     feature = "B"
@@ -68,7 +95,7 @@ def test():
     machine = "rf"
     
     model_id = f"rf_{stories}_{feature}_{stride}"
-    print(f"Testing Logistic Regression Model: {model_id}")
+    print(f"Testing Random Forest Model: {model_id}")
     
     X_train, y_train, X_test, y_test, model_name = parse_dataset(machine, stories, feature, stride, grade)
     print(X_train.head())

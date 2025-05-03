@@ -21,12 +21,15 @@ import os
 import csv
 import pickle
 
-from random_forest import load_one, load_dataset
-
 def load_model(pkl_path):
     with open(pkl_path, 'rb') as file:
         model = pickle.load(file)
         return model
+
+def save_model(model, root_path, model_name):
+    pkl_path = f"{root_path}{model_name}.pkl"
+    with open(pkl_path, 'wb') as f:
+        pickle.dump(model, f)
 
 def parse_dataset(ml, stories, feature, stride):
     model_name =f"{ml}"
@@ -68,6 +71,99 @@ def parse_dataset(ml, stories, feature, stride):
     X_test = pd.DataFrame(scaler.transform(X_test), columns=X_test.columns, index=X_test.index)
     
     return X_train, y_train, X_test, y_test, model_name
+
+def filter_dataset(dataset, stride_length):
+    # Return sentence fragments
+    if stride_length == -1:
+        filtered_dataset = dataset[(dataset['stride_len'] > 3) & (dataset['stride_len'] < 100)]
+    # Do not filter
+    elif stride_length == 0:
+        return dataset
+    else:
+        filtered_dataset = dataset[dataset['stride_len'] == stride_length]
+    
+    return filtered_dataset
+
+def load_one(stride_length, feature_set):
+    dataset_source = 'tables/allbooks_dataset.csv'
+    
+    df= pd.read_csv(dataset_source)
+    df = filter_dataset(df, stride_length)
+    
+    df = df[df['text_num'] != 18]
+    df = df.drop(columns=['word_num'])
+    
+    # X = df.drop(columns=feature_set)
+    X = df[feature_set]
+    y = df['grade_level']
+    
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
+    
+    return X_train, y_train, X_test, y_test
+    
+
+def load_dataset(stride_length, feature_set):
+    training_source = 'tables/dataset.csv'
+    testing_source = 'tables/dataset_testing.csv'
+    
+    train_dataset= pd.read_csv(training_source)
+    train_dataset = filter_dataset(train_dataset, stride_length)
+    train_dataset = undersample_dataset(train_dataset)
+    
+    # Filter out rows with from 18.txt and drop empty column word_len
+    train_dataset = train_dataset[train_dataset['text_num'] != 18]
+    train_dataset = train_dataset.drop(columns=['word_num'])
+
+    # Split the dataset into features and target variable
+    # X_train = train_dataset.drop(columns=feature_set)
+    X_train = train_dataset[feature_set]
+    y_train = train_dataset['grade_level']
+
+    # Load testing dataset
+    test_dataset = pd.read_csv(testing_source)
+    test_dataset = filter_dataset(test_dataset, stride_length)
+    test_dataset = undersample_dataset(test_dataset)
+
+    test_dataset = test_dataset.drop(columns=['word_num'])
+
+    # X_test = test_dataset.drop(columns=feature_set)
+    X_test = test_dataset[feature_set]
+    y_test = test_dataset['grade_level']
+    
+    return X_train, y_train, X_test, y_test
+
+def undersample_dataset(df):
+    # Find the minimum count of entries across all grade levels
+    min_count = df['grade_level'].value_counts().min()
+    
+    # Group by grade level and sample min_count entries from each group
+    undersampled_df = df.groupby('grade_level').apply(lambda x: x.sample(min_count, random_state=42)).reset_index(drop=True)
+    return undersampled_df
+    
+def model_performance(model, X_test, y_test):
+    # y_pred = model.predict(X_test)    
+    # score = accuracy_score(y_test, y_pred)
+    # return score
+    
+    y_pred = model.predict(X_test)
+    y_proba = model.predict_proba(X_test)
+
+    # Binarize true labels for multi-class ROC-AUC
+    class_labels = [1, 2, 3, 4, 5, 6]
+    y_test_bin = label_binarize(y_test, classes=class_labels)
+
+    # Metrics
+    accuracy = accuracy_score(y_test, y_pred)
+    precision = precision_score(y_test, y_pred, average='macro', zero_division=0)
+    recall = recall_score(y_test, y_pred, average='macro', zero_division=0)
+    f1 = f1_score(y_test, y_pred, average='macro', zero_division=0)
+    roc_auc = roc_auc_score(y_test_bin, y_proba, average='macro', multi_class='ovr')
+    
+    print(f"Accuracy: {accuracy:.4f}")
+    print(f"Precision: {precision:.4f}")
+    print(f"Recall: {recall:.4f}")
+    print(f"F1 Score: {f1:.4f}")
+    print(f"ROC AUC: {roc_auc:.4f}")
 
 def evaluate_model(model, model_name, X_test, y_test, machine, stories, feature, stride):
     # Predictions & Probabilities

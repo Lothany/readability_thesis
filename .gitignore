@@ -20,3 +20,4 @@ txt/normalized/*
 models/performance_records/*
 models/rf_models/*
 models/lr_models/*
+models/svm_models/*

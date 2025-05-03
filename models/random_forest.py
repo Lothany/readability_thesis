@@ -87,7 +87,7 @@ def create_model(stride, feature, stories, grade):
     
     train_dataset, test_dataset, feature_set, model_name = parse_dataset(machine, stories, feature, stride, grade)
     
-    _, _, X_test, y_test = split_dataset(train_dataset, test_dataset, feature_set)
+    X_train, y_train, X_test, y_test = split_dataset(train_dataset, test_dataset, feature_set)
     
     metrics, model = custom_tune(train_dataset, test_dataset, feature_set)
     
@@ -106,7 +106,7 @@ def test():
     grade = 1
     machine = "rf"
     
-    model_id = f"{machine}_{stories}_{feature}_{stride}"
+    model_id = f"{machine}_{grade}_{feature}_{stride}"
     # print(f"Testing Random Forest Model: {model_id}")
     
     train_dataset, test_dataset, feature_set, model_name = parse_dataset(machine, stories, feature, stride, grade)
@@ -124,7 +124,7 @@ def main():
     strides_list = [-1, 0, 1, 2, 3, 100]
     grade_levels = [1, 2, 3, 4, 5, 6]
     
-    total_iterations = len(stories_list) * len(features_list) * len(strides_list)
+    total_iterations = len(grade_levels) * len(features_list) * len(strides_list)
     
     with tqdm(total=total_iterations, desc="Processing Models", unit="model") as pbar:
         for grade in grade_levels:

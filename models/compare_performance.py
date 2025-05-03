@@ -35,7 +35,7 @@ def save_model(model, root_path, model_name):
         pickle.dump(model, f)
 
 def parse_dataset(ml, stories, feature, stride, grade):
-    model_name =f"{ml}"
+    model_name =f"{ml} "
     
     if stride == 0:
         model_name += f"All N-Grams"
@@ -208,34 +208,29 @@ def model_performance(model, X_test, y_test):
     print(f"F1 Score: {f1:.4f}")
     print(f"ROC AUC: {roc_auc:.4f}")
 
-def evaluate_model(model, model_name, X_test, y_test, machine, stories, feature, stride):
+def evaluate_model(model, model_name, X_test, y_test, machine, grade, feature, stride):
     # Predictions & Probabilities
     y_pred = model.predict(X_test)
-    y_proba = model.predict_proba(X_test)
-
-    # Binarize true labels for multi-class ROC-AUC
-    class_labels = [1, 2, 3, 4, 5, 6]
-    y_test_bin = label_binarize(y_test, classes=class_labels)
+    y_proba = model.predict_proba(X_test)[:, 1]  # Use probabilities for the positive class (class 1)
 
     # Metrics
     accuracy = accuracy_score(y_test, y_pred)
     precision = precision_score(y_test, y_pred, average='macro', zero_division=0)
     recall = recall_score(y_test, y_pred, average='macro', zero_division=0)
     f1 = f1_score(y_test, y_pred, average='macro', zero_division=0)
-    roc_auc = roc_auc_score(y_test_bin, y_proba, average='macro', multi_class='ovr')
-    
-    print(f"{machine} | {stories} | {feature} | {stride}")  
+    roc_auc = roc_auc_score(y_test, y_proba)  # Use 1D y_test and probabilities for class 1
+
+    print(f"{machine} | {grade} | {feature} | {stride}")  
     print(f"Accuracy: {accuracy:.4f}")
     print(f"Precision: {precision:.4f}")
     print(f"Recall: {recall:.4f}")
     print(f"F1 Score: {f1:.4f}")
     print(f"ROC AUC: {roc_auc:.4f}")
-    
 
     # Save metrics to CSV
     model_details = {
         "machine": machine,
-        "stories": stories,
+        "grade": grade,
         "feature": feature,
         "stride": stride,
         "accuracy": f"{accuracy:.4f}",
@@ -245,11 +240,11 @@ def evaluate_model(model, model_name, X_test, y_test, machine, stories, feature,
         "roc_auc": f"{roc_auc:.4f}"
     }
     
-    csv_path = "models/performance_records/models_analysis.csv"
+    csv_path = "models/performance_records/average_metrics.csv"
     file_exists = os.path.exists(csv_path)
     
     with open(csv_path, "a", newline="", encoding="utf-8") as dataset:
-        fieldnames = ["machine", "stories", "feature", "stride", "accuracy", "precision", "recall", "f1_score", "roc_auc"]
+        fieldnames = ["machine", "grade", "feature", "stride", "accuracy", "precision", "recall", "f1_score", "roc_auc"]
         writer = csv.DictWriter(dataset, fieldnames=fieldnames)
         
         if not file_exists:
@@ -257,12 +252,12 @@ def evaluate_model(model, model_name, X_test, y_test, machine, stories, feature,
         
         writer.writerow(model_details)
 
-    model_id = f"{machine}_{stories}_{feature}_{stride}"
+    model_id = f"{machine}_{grade}_{feature}_{stride}"
     plot_path = f"models/performance_records/plots"
     
     # Confusion Matrix Plot
-    cm = confusion_matrix(y_test, y_pred, labels=class_labels)
-    disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=class_labels)
+    cm = confusion_matrix(y_test, y_pred, labels=[0, 1])
+    disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=[0, 1])
     fig, ax = plt.subplots(figsize=(8, 6))
     disp.plot(ax=ax, cmap="Blues", xticks_rotation=45)
     plt.title(f"{model_name}")

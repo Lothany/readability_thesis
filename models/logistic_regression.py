@@ -26,11 +26,12 @@ from sklearn.linear_model import LogisticRegression
 
 from tqdm import tqdm
 
-from compare_performance import parse_dataset, model_performance, save_model, show_cm
+from compare_performance import parse_dataset, model_performance, save_model, evaluate_model
+from compare_performance import fold_dataset, split_dataset, export_metrics, export_plot
     
 def train_model(X_train, y_train):
     model = LogisticRegression(
-        solver='lbfgs',
+        solver='saga',
         max_iter=1000
     )
     model.fit(X_train, y_train)
@@ -63,53 +64,43 @@ def tune_model(X_train, y_train):
     
     return grid.best_estimator_
 
+def create_model(stride, feature, stories, grade):
+    machine = "lr"
+    
+    model_id = f"{machine}_{grade}_{feature}_{stride}"
+    print(f"\n\nRandom Forest Model: {model_id}")
+    
+    train_dataset, test_dataset, feature_set, model_name = parse_dataset(machine, stories, feature, stride, grade)
+    
+    X_train, y_train, X_test, y_test = split_dataset(train_dataset, test_dataset, feature_set)
+       
+    # Train logistic regression model
+    model = tune_model(X_train, y_train)
+    save_model(model, "models/lr_models/", model_id)
+    evaluate_model(model, model_name, X_test, y_test, machine, grade, feature, stride)
+    
 def test():
     stories = "split"
     feature = "B"
     stride = -1
-    grade = 6
-    machine = "lr"
+    grade = 1
     
-    model_id = f"TESTING_{machine}_{stories}_{feature}_{stride}"
-    print(f"Testing Logistic Regression Model: {model_id}")
-    
-    X_train, y_train, X_test, y_test, model_name = parse_dataset(machine, stories, feature, stride, grade)
-    
-    model = train_model(X_train, y_train)
-    print(f"Initial Model Performance: ")
-    model_performance(model, X_test, y_test)
-    show_cm(model, model_name, X_test, y_test, machine, stories, feature, stride)
-    
-    
-    tuned_model = tune_model(X_train, y_train)
-    print(f"\nTuned Model Performance: {tuned_model}")
-    # model_performance(tuned_model, X_test, y_test)
-    
-    # create_model(stride, feature, stories)
-
-def create_model(stride, feature, stories):
-    model_id = f"lr_{stories}_{feature}_{stride}"
-    X_train, y_train, X_test, y_test, model_name  = parse_dataset("lr", stories, feature, stride)
-       
-    # Train logistic regression model
-    model = tune_model(X_train, y_train)
-    # save_model(model, "models/lr_models/", model_id)
-    model_performance(model, X_test, y_test)
+    create_model(stride, feature, "split", grade)
     
 def main():
     # stories_list = ["full", "split"]
     stories_list = ["split"]
     features_list = ["B", "T", "L"]
     strides_list = [-1, 0, 1, 2, 3, 100]
+    grade_levels = [1, 2, 3, 4, 5, 6]
     
-    total_iterations = len(stories_list) * len(features_list) * len(strides_list)
+    total_iterations = len(grade_levels) * len(features_list) * len(strides_list)
     
     with tqdm(total=total_iterations, desc="Processing Models", unit="model") as pbar:
-        for stories in stories_list:
+        for grade in grade_levels:
             for feature in features_list:
                 for stride in strides_list:
-                    print(f"\nCreating model: {stories}|{feature}|{stride}")
-                    create_model(stride, feature, stories)
+                    create_model(stride, feature, "split", grade)
                     pbar.update(1)
 
-test()
+main()

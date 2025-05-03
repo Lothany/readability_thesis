@@ -26,7 +26,7 @@ from sklearn.linear_model import LogisticRegression
 
 from tqdm import tqdm
 
-from compare_performance import parse_dataset, model_performance, save_model
+from compare_performance import parse_dataset, model_performance, save_model, show_cm
     
 def train_model(X_train, y_train):
     model = LogisticRegression(
@@ -67,15 +67,18 @@ def test():
     stories = "split"
     feature = "B"
     stride = -1
+    grade = 6
+    machine = "lr"
     
-    model_id = f"lr_{stories}_{feature}_{stride}"
+    model_id = f"TESTING_{machine}_{stories}_{feature}_{stride}"
     print(f"Testing Logistic Regression Model: {model_id}")
     
-    X_train, y_train, X_test, y_test, model_name = parse_dataset("lr", stories, feature, stride)
+    X_train, y_train, X_test, y_test, model_name = parse_dataset("lr", stories, feature, stride, grade)
     
     model = train_model(X_train, y_train)
     print(f"Initial Model Performance: ")
     model_performance(model, X_test, y_test)
+    show_cm(model, model_name, X_test, y_test, machine, stories, feature, stride)
     
     
     tuned_model = tune_model(X_train, y_train)
@@ -86,12 +89,12 @@ def test():
 
 def create_model(stride, feature, stories):
     model_id = f"lr_{stories}_{feature}_{stride}"
-    X_train, y_train, _, _, _  = parse_dataset("lr", stories, feature, stride)
+    X_train, y_train, X_test, y_test, model_name  = parse_dataset("lr", stories, feature, stride)
        
     # Train logistic regression model
     model = tune_model(X_train, y_train)
     # save_model(model, "models/lr_models/", model_id)
-    score = model_performance(model, X_test, y_test)
+    model_performance(model, X_test, y_test)
     
 def main():
     # stories_list = ["full", "split"]

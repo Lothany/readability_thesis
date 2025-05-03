@@ -15,7 +15,7 @@ import graphviz
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-from compare_performance import parse_dataset, model_performance, save_model
+from compare_performance import parse_dataset, model_performance, save_model, show_cm
     
 # Train the Random Forest Classifier
 def train_model(X_train, y_train):
@@ -64,19 +64,23 @@ def test():
     stories = "split"
     feature = "B"
     stride = -1
+    grade = 6
+    machine = "rf"
     
     model_id = f"rf_{stories}_{feature}_{stride}"
     print(f"Testing Logistic Regression Model: {model_id}")
     
-    X_train, y_train, X_test, y_test, model_name = parse_dataset("lr", stories, feature, stride)
+    X_train, y_train, X_test, y_test, model_name = parse_dataset("lr", stories, feature, stride, grade)
+    print(X_train.head())
     
     model = train_model(X_train, y_train)
     print(f"Initial Model Performance: ")
     model_performance(model, X_test, y_test)
+    # show_cm(model, model_name, X_test, y_test, machine, stories, feature, stride)
     
     
-    tuned_model = tune_model(X_train, y_train)
-    print(f"\nTuned Model Performance: {tuned_model}")
+    # tuned_model = tune_model(X_train, y_train)
+    # print(f"\nTuned Model Performance: {tuned_model}")
     # model_performance(tuned_model, X_test, y_test)
     
     # create_model(stride, feature, stories)

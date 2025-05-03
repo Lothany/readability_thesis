@@ -16,6 +16,7 @@ from sklearn.metrics import (
 from sklearn.preprocessing import StandardScaler
 from sklearn.preprocessing import label_binarize
 from sklearn.model_selection import cross_validate
+from sklearn.model_selection import train_test_split
 
 import os
 import csv
@@ -31,7 +32,7 @@ def save_model(model, root_path, model_name):
     with open(pkl_path, 'wb') as f:
         pickle.dump(model, f)
 
-def parse_dataset(ml, stories, feature, stride):
+def parse_dataset(ml, stories, feature, stride, grade):
     model_name =f"{ml}"
     
     if stride == 0:
@@ -58,9 +59,9 @@ def parse_dataset(ml, stories, feature, stride):
         return
     
     if stories == "full":
-        X_train, y_train, X_test, y_test = load_one(stride, feature_set)
+        X_train, y_train, X_test, y_test = load_one(stride, feature_set, grade)
     elif stories == "split":
-        X_train, y_train, X_test, y_test = load_dataset(stride, feature_set)
+        X_train, y_train, X_test, y_test = load_dataset(stride, feature_set, grade)
     else:
         print("Invalid stories option. Please choose 'full' or 'split'.")
         return
@@ -84,7 +85,7 @@ def filter_dataset(dataset, stride_length):
     
     return filtered_dataset
 
-def load_one(stride_length, feature_set):
+def load_one(stride_length, feature_set, grade):
     dataset_source = 'tables/allbooks_dataset.csv'
     
     df= pd.read_csv(dataset_source)
@@ -92,6 +93,7 @@ def load_one(stride_length, feature_set):
     
     df = df[df['text_num'] != 18]
     df = df.drop(columns=['word_num'])
+    df['target'] = (df['grade_level'] == grade).astype(int)
     
     # X = df.drop(columns=feature_set)
     X = df[feature_set]
@@ -102,7 +104,7 @@ def load_one(stride_length, feature_set):
     return X_train, y_train, X_test, y_test
     
 
-def load_dataset(stride_length, feature_set):
+def load_dataset(stride_length, feature_set, grade):
     training_source = 'tables/dataset.csv'
     testing_source = 'tables/dataset_testing.csv'
     
@@ -110,14 +112,13 @@ def load_dataset(stride_length, feature_set):
     train_dataset = filter_dataset(train_dataset, stride_length)
     train_dataset = undersample_dataset(train_dataset)
     
-    # Filter out rows with from 18.txt and drop empty column word_len
     train_dataset = train_dataset[train_dataset['text_num'] != 18]
     train_dataset = train_dataset.drop(columns=['word_num'])
 
-    # Split the dataset into features and target variable
-    # X_train = train_dataset.drop(columns=feature_set)
+    train_dataset['target'] = (train_dataset['grade_level'] == grade).astype(int)
+    
     X_train = train_dataset[feature_set]
-    y_train = train_dataset['grade_level']
+    y_train = train_dataset['target']
 
     # Load testing dataset
     test_dataset = pd.read_csv(testing_source)
@@ -126,9 +127,10 @@ def load_dataset(stride_length, feature_set):
 
     test_dataset = test_dataset.drop(columns=['word_num'])
 
-    # X_test = test_dataset.drop(columns=feature_set)
+    test_dataset['target'] = (test_dataset['grade_level'] == grade).astype(int)
+    
     X_test = test_dataset[feature_set]
-    y_test = test_dataset['grade_level']
+    y_test = test_dataset['target']
     
     return X_train, y_train, X_test, y_test
 
@@ -149,7 +151,7 @@ def model_performance(model, X_test, y_test):
     y_proba = model.predict_proba(X_test)
 
     # Binarize true labels for multi-class ROC-AUC
-    class_labels = [1, 2, 3, 4, 5, 6]
+    class_labels = [0, 1]
     y_test_bin = label_binarize(y_test, classes=class_labels)
 
     # Metrics
@@ -157,7 +159,7 @@ def model_performance(model, X_test, y_test):
     precision = precision_score(y_test, y_pred, average='macro', zero_division=0)
     recall = recall_score(y_test, y_pred, average='macro', zero_division=0)
     f1 = f1_score(y_test, y_pred, average='macro', zero_division=0)
-    roc_auc = roc_auc_score(y_test_bin, y_proba, average='macro', multi_class='ovr')
+    roc_auc = roc_auc_score(y_test, y_proba[:, 1])
     
     print(f"Accuracy: {accuracy:.4f}")
     print(f"Precision: {precision:.4f}")
@@ -218,6 +220,24 @@ def evaluate_model(model, model_name, X_test, y_test, machine, stories, feature,
     plot_path = f"models/performance_records/plots"
     
     # Confusion Matrix Plot
+    cm = confusion_matrix(y_test, y_pred, labels=class_labels)
+    disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=class_labels)
+    fig, ax = plt.subplots(figsize=(8, 6))
+    disp.plot(ax=ax, cmap="Blues", xticks_rotation=45)
+    plt.title(f"{model_name}")
+    fig.tight_layout()
+    fig.savefig(os.path.join(plot_path, f"{model_id}_cm.png"))
+    plt.close(fig)
+
+def show_cm(model, model_name, X_test, y_test, machine, stories, feature, stride):
+    y_pred = model.predict(X_test)
+    y_proba = model.predict_proba(X_test)
+    class_labels = [0, 1]
+    
+    model_id = f"WILL_IT_WORK{machine}_{stories}_{feature}_{stride}"
+    plot_path = f"models/performance_records/plots"
+    
+     # Confusion Matrix Plot
     cm = confusion_matrix(y_test, y_pred, labels=class_labels)
     disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=class_labels)
     fig, ax = plt.subplots(figsize=(8, 6))

@@ -10,9 +10,7 @@ from tqdm import tqdm
 import pickle
 
 from tqdm import tqdm
-from random_forest import save_model
-from logistic_regression import model_performance
-from compare_performance import parse_dataset
+from compare_performance import parse_dataset, model_performance, save_model
 
 # --- SVM Specific Training ---
 
@@ -74,16 +72,15 @@ def test():
     print(f"Testing SVM Model: {model_id}")
     
     X_train, y_train, X_test, y_test, model_name = parse_dataset("lr", stories, feature, stride)
-    print("Parsed dataset.")
     
     model = train_model(X_train, y_train)
-    save_model(model, "models/svm_models/untuned/", model_id)
+    # save_model(model, "models/svm_models/untuned/", model_id)
     
     print(f"Initial Model Performance: ")
     model_performance(model, X_test, y_test)
     
     tuned_model = hyperparameter_tuning(X_train, y_train)
-    save_model(tuned_model, "models/svm_models/tuned/", model_id)
+    # save_model(tuned_model, "models/svm_models/tuned/", model_id)
     
     print(f"\nTuned Model Performance: ")
     model_performance(tuned_model, X_test, y_test)
@@ -107,4 +104,4 @@ def main():
                     pbar.update(1)
 
 # To run:
-main()  # Uncommented to allow execution
+test()

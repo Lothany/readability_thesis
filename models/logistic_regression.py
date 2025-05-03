@@ -25,33 +25,8 @@ from sklearn.model_selection import GridSearchCV
 from sklearn.linear_model import LogisticRegression
 
 from tqdm import tqdm
-from random_forest import save_model
-from compare_performance import parse_dataset
 
-def model_performance(model, X_test, y_test):
-    # y_pred = model.predict(X_test)    
-    # score = accuracy_score(y_test, y_pred)
-    # return score
-    
-    y_pred = model.predict(X_test)
-    y_proba = model.predict_proba(X_test)
-
-    # Binarize true labels for multi-class ROC-AUC
-    class_labels = [1, 2, 3, 4, 5, 6]
-    y_test_bin = label_binarize(y_test, classes=class_labels)
-
-    # Metrics
-    accuracy = accuracy_score(y_test, y_pred)
-    precision = precision_score(y_test, y_pred, average='macro', zero_division=0)
-    recall = recall_score(y_test, y_pred, average='macro', zero_division=0)
-    f1 = f1_score(y_test, y_pred, average='macro', zero_division=0)
-    roc_auc = roc_auc_score(y_test_bin, y_proba, average='macro', multi_class='ovr')
-    
-    print(f"Accuracy: {accuracy:.4f}")
-    print(f"Precision: {precision:.4f}")
-    print(f"Recall: {recall:.4f}")
-    print(f"F1 Score: {f1:.4f}")
-    print(f"ROC AUC: {roc_auc:.4f}")
+from compare_performance import parse_dataset, model_performance, save_model
     
 def train_model(X_train, y_train):
     model = LogisticRegression(
@@ -115,8 +90,8 @@ def create_model(stride, feature, stories):
        
     # Train logistic regression model
     model = tune_model(X_train, y_train)
-    save_model(model, "models/lr_models/", model_id)
-    # score = model_performance(model, X_test, y_test)
+    # save_model(model, "models/lr_models/", model_id)
+    score = model_performance(model, X_test, y_test)
     
 def main():
     # stories_list = ["full", "split"]
@@ -134,4 +109,4 @@ def main():
                     create_model(stride, feature, stories)
                     pbar.update(1)
 
-# test()
+test()

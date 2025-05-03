@@ -15,8 +15,8 @@ import graphviz
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-from compare_performance import parse_dataset, model_performance, save_model, show_cm
-from compare_performance import load_folds
+from compare_performance import parse_dataset, model_performance, save_model
+from compare_performance import fold_dataset, split_dataset, export_metrics, export_plot
     
 # Train the Random Forest Classifier
 def train_model(X_train, y_train):
@@ -48,83 +48,89 @@ def tune_model(X_train, y_train):
 
     print('Best hyperparameters:',  rand_search.best_params_)
     
-    return best_rf
-    
-def create_model(stride, feature, stories):
-    model_id = f"rf_{stories}_{feature}_{stride}"
-    X_train, y_train, _, _, _  = parse_dataset("lr", stories, feature, stride)
-    
-    model = train_model(X_train, y_train)
-    save_model("rf", model, "models/random_forest/", model_id)
-    
-    print("\nTuning Model. This may take a while... ")
-    tuned_model = tune_model(X_train, y_train)
-    save_model("rf", tuned_model, "models/random_forest/tuned_", model_id)
+    return best_rf   
 
-def custom_tune(stride, feature_set, grade, k=5):
-    print(f"Cross-validating on TRAINING data only — fixed TEST set (Grade {grade})")
-
+def custom_tune(train_dataset, test_dataset, feature_set):
+    k = 5
     metrics = {'accuracy': [], 'precision': [], 'recall': [], 'f1': [], 'roc_auc': []}
+    best_model = None
+    best_accuracy = 0  # Track the best accuracy to identify the best model
 
     for fold in range(k):
-        print(f"\nFold {fold + 1}/{k}")
-        X_train, y_train, X_test, y_test = load_folds(stride, feature_set, grade, k, fold)
+        X_train, y_train, X_test, y_test = fold_dataset(train_dataset, test_dataset, feature_set, k, fold)
 
         model = RandomForestClassifier(class_weight='balanced', random_state=fold)
         model.fit(X_train, y_train)
         y_pred = model.predict(X_test)
         y_proba = model.predict_proba(X_test)[:, 1]
 
-        metrics['accuracy'].append(accuracy_score(y_test, y_pred))
+        # Calculate metrics
+        accuracy = accuracy_score(y_test, y_pred)
+        metrics['accuracy'].append(accuracy)
         metrics['precision'].append(precision_score(y_test, y_pred, zero_division=0))
         metrics['recall'].append(recall_score(y_test, y_pred, zero_division=0))
         metrics['f1'].append(f1_score(y_test, y_pred, zero_division=0))
         metrics['roc_auc'].append(roc_auc_score(y_test, y_proba))
 
-    print("\nAverage metrics across training folds:")
-    for key in metrics:
-        print(f"{key.capitalize()}: {np.mean(metrics[key]):.4f}")
+        # Update the best model if this fold has the highest accuracy
+        if accuracy > best_accuracy:
+            best_accuracy = accuracy
+            best_model = model
 
-    return metrics
+    return metrics, best_model
+
+def create_model(stride, feature, stories, grade):
+    machine = "rf"
+    
+    model_id = f"{machine}_{grade}_{feature}_{stride}"
+    print(f"\n\nRandom Forest Model: {model_id}")
+    
+    train_dataset, test_dataset, feature_set, model_name = parse_dataset(machine, stories, feature, stride, grade)
+    
+    _, _, X_test, y_test = split_dataset(train_dataset, test_dataset, feature_set)
+    
+    metrics, model = custom_tune(train_dataset, test_dataset, feature_set)
+    
+    export_metrics(metrics, machine, grade, feature, stride)
+    export_plot(model, model_name, model_id, X_test, y_test)
+    save_model(model, "models/rf_models/", model_id)
+    
+    # print("Average metrics across training folds:")
+    # for key in metrics:
+    #     print(f"{key.capitalize()}: {np.mean(metrics[key]):.4f}")
 
 def test():
     stories = "split"
-    feature = "B"
-    stride = -1
-    grade = 6
+    feature = "L"
+    stride = 1
+    grade = 1
     machine = "rf"
     
-    model_id = f"rf_{stories}_{feature}_{stride}"
-    print(f"Testing Random Forest Model: {model_id}")
+    model_id = f"{machine}_{stories}_{feature}_{stride}"
+    # print(f"Testing Random Forest Model: {model_id}")
     
-    X_train, y_train, X_test, y_test, model_name = parse_dataset(machine, stories, feature, stride, grade)
-    print(X_train.head())
+    train_dataset, test_dataset, feature_set, model_name = parse_dataset(machine, stories, feature, stride, grade)
+    # X_train, y_train, X_test, y_test = split_dataset(train_dataset, test_dataset, feature_set)
     
-    model = train_model(X_train, y_train)
-    print(f"Initial Model Performance: ")
-    model_performance(model, X_test, y_test)
-    show_cm(model, model_name, X_test, y_test, machine, stories, feature, stride)
-    
-    
-    # tuned_model = tune_model(X_train, y_train)
-    # print(f"\nTuned Model Performance: {tuned_model}")
-    # model_performance(tuned_model, X_test, y_test)
-    
-    # create_model(stride, feature, stories)
+    metrics = custom_tune(train_dataset, test_dataset, feature_set)
+    print("Average metrics across training folds:")
+    for key in metrics:
+        print(f"{key.capitalize()}: {np.mean(metrics[key]):.4f}")
 
 def main():
-    stories_list = ["full", "split"]
+    # stories_list = ["full", "split"]
+    stories_list = ["split"]
     features_list = ["B", "T", "L"]
     strides_list = [-1, 0, 1, 2, 3, 100]
+    grade_levels = [1, 2, 3, 4, 5, 6]
     
     total_iterations = len(stories_list) * len(features_list) * len(strides_list)
     
     with tqdm(total=total_iterations, desc="Processing Models", unit="model") as pbar:
-        for stories in stories_list:
+        for grade in grade_levels:
             for feature in features_list:
                 for stride in strides_list:
-                    print(f"Creating model for {feature} features, and stride length {stride} using {stories} stories.")
-                    create_model(stride, feature, stories)
+                    create_model(stride, feature, "split", grade)
                     pbar.update(1)
 
-test()
+main()

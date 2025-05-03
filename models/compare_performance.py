@@ -17,6 +17,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.preprocessing import label_binarize
 from sklearn.model_selection import cross_validate
 from sklearn.model_selection import train_test_split
+from sklearn.model_selection import StratifiedKFold
 
 
 import os
@@ -59,19 +60,21 @@ def parse_dataset(ml, stories, feature, stride, grade):
         print("Invalid feature set selected. Please choose 'B', 'T', or 'L'.")
         return
     
-    if stories == "full":
-        X_train, y_train, X_test, y_test = load_one(stride, feature_set, grade)
-    elif stories == "split":
+    # if stories == "full":
+    #     X_train, y_train, X_test, y_test = load_one(stride, feature_set, grade)
+    # elif stories == "split":
+    #     train_dataset, test_dataset = load_dataset(stride, grade)
+    # else:
+    #     print("Invalid stories option. Please choose 'full' or 'split'.")
+    #     return
+    
+    if stories == "split":
         train_dataset, test_dataset = load_dataset(stride, grade)
     else:
-        print("Invalid stories option. Please choose 'full' or 'split'.")
-        return
-
-    X_train, y_train, X_test, y_test = split_dataset(train_dataset, test_dataset, feature_set)
-    # X_train, y_train, X_test, y_test = load_folds(stride, feature_set, grade, k, fold_index)
+        print("Invalid stories option. Please choose 'split'.")
+        return    
     
-    
-    return X_train, y_train, X_test, y_test, model_name
+    return train_dataset, test_dataset, feature_set, model_name
 
 def filter_dataset(dataset, stride_length):
     # Return sentence fragments
@@ -142,17 +145,8 @@ def split_dataset(train_dataset, test_dataset, feature_set):
     return X_train, y_train, X_test, y_test
     
 
-def load_folds(stride_length, feature_set, grade, k, fold_index):
-    training_source = 'tables/dataset.csv'
-    testing_source = 'tables/dataset_testing.csv'
-    
-    # Load and filter training data
-    df = pd.read_csv(training_source)
-    df = filter_dataset(df, stride_length)
-    df = df[df['text_num'] != 18]
-    df = df.drop(columns=['word_num'])
-    df['target'] = (df['grade_level'] == grade).astype(int)
-    df = df[df['grade_level'].notna()].reset_index(drop=True)
+def fold_dataset(train_dataset, test_dataset, feature_set, k, fold_index):   
+    df = train_dataset
 
     # Create stratified K folds on training set
     skf = StratifiedKFold(n_splits=k, shuffle=True, random_state=42)
@@ -164,11 +158,7 @@ def load_folds(stride_length, feature_set, grade, k, fold_index):
     X_train = train_df[feature_set]
     y_train = train_df['target']
 
-    # Load and filter fixed test set
-    test_df = pd.read_csv(testing_source)
-    test_df = filter_dataset(test_df, stride_length)
-    test_df = test_df.drop(columns=['word_num'])
-    test_df['target'] = (test_df['grade_level'] == grade).astype(int)
+    test_df = test_dataset
 
     X_test = test_df[feature_set]
     y_test = test_df['target']
@@ -280,12 +270,11 @@ def evaluate_model(model, model_name, X_test, y_test, machine, stories, feature,
     fig.savefig(os.path.join(plot_path, f"{model_id}_cm.png"))
     plt.close(fig)
 
-def show_cm(model, model_name, X_test, y_test, machine, stories, feature, stride):
+def export_plot(model, model_name, model_id, X_test, y_test):
     y_pred = model.predict(X_test)
     y_proba = model.predict_proba(X_test)
     class_labels = [0, 1]
     
-    model_id = f"WILL_IT_WORK{machine}_{stories}_{feature}_{stride}"
     plot_path = f"models/performance_records/plots"
     
      # Confusion Matrix Plot
@@ -308,6 +297,41 @@ def show_cm(model, model_name, X_test, y_test, machine, stories, feature, stride
         fig.tight_layout()
         fig.savefig(os.path.join(plot_path, f"{model_id}_feat.png"))
         plt.close(fig)
+
+def export_metrics(metrics, machine, grade, feature, stride):
+    csv_path="models/performance_records/average_metrics.csv"
+    
+    averages = {key: np.mean(values) for key, values in metrics.items()}
+    
+    # Ensure the directory exists
+    os.makedirs(os.path.dirname(csv_path), exist_ok=True)
+    
+    # Check if the file already exists
+    file_exists = os.path.exists(csv_path)
+    
+    # Write metrics to the CSV file
+    with open(csv_path, "a", newline="", encoding="utf-8") as csvfile:
+        fieldnames = ["machine", "grade", "feature", "stride", "accuracy", "precision", "recall", "f1", "roc_auc"]
+        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+        
+        # Write the header only if the file is new
+        if not file_exists:
+            writer.writeheader()
+        
+        # Write the row with model details and average metrics
+        writer.writerow({
+            "machine": machine,
+            "grade": grade,
+            "feature": feature,
+            "stride": stride,
+            "accuracy": f"{averages['accuracy']:.4f}",
+            "precision": f"{averages['precision']:.4f}",
+            "recall": f"{averages['recall']:.4f}",
+            "f1": f"{averages['f1']:.4f}",
+            "roc_auc": f"{averages['roc_auc']:.4f}"
+        })
+    
+    print(f"Average metrics saved to {csv_path}")
 
 def cross_validation_scores(model, X, y, cv=5):
     scoring = {

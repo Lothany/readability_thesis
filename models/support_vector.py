@@ -80,11 +80,11 @@ def test():
     print(f"Initial Model Performance: ")
     model_performance(model, X_test, y_test)
     
-    tuned_model = hyperparameter_tuning(X_train, y_train)
+    # tuned_model = hyperparameter_tuning(X_train, y_train)
     # save_model(tuned_model, "models/svm_models/tuned/", model_id)
     
-    print(f"\nTuned Model Performance: ")
-    model_performance(tuned_model, X_test, y_test)
+    # print(f"\nTuned Model Performance: ")
+    # model_performance(tuned_model, X_test, y_test)
     
     # create_model(stride, feature, stories)
 

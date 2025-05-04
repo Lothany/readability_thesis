@@ -105,12 +105,48 @@ def load_one(stride_length, feature_set, grade):
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
     
     return X_train, y_train, X_test, y_test
+
+# def training_data(ml, stories, feature, stride, grade):
+#     if feature == "B":
+#         feature_set = ['sent_len', 'word_len', 'syll_num', 'poly_num', 'noun_tr', 'verb_tr', 'type_tr', 'lex_density', 'lex_foreign']
+#     elif feature == "T":
+#         feature_set = ['sent_len', 'word_len', 'syll_num', 'poly_num']
+#     elif feature == "L":
+#         feature_set = ['noun_tr', 'verb_tr', 'type_tr', 'lex_density', 'lex_foreign']
+#     else:
+#         print("Invalid feature set selected. Please choose 'B', 'T', or 'L'.")
+#         return
     
+#     dataset_source = 'tables/dataset.csv'
+    
+#     df= pd.read_csv(dataset_source)
+#     df = filter_dataset(df, stride)
+    
+#     df = df[df['text_num'] != 18]
+#     df = df.drop(columns=['word_num'])
+#     df['target'] = (df['grade_level'] == grade).astype(int)
+    
+#     # X = df.drop(columns=feature_set)
+#     X = df[feature_set]
+#     y = df['grade_level']
+    
+#     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
+    
+#     X_train = train_dataset[feature_set]
+#     y_train = train_dataset['target']
+       
+#     scaler = StandardScaler()
+#     X_train = pd.DataFrame(scaler.fit_transform(X_train),columns=X_train.columns, index=X_train.index)
+    
+#     return X_train, y_train
+    
+#     X_train, y_train, X_test, y_test = load_one(stride, feature_set, grade)
+
 
 def load_dataset(stride_length, grade):
     training_source = 'tables/dataset.csv'
     testing_source = 'tables/dataset_testing.csv'
-    
+
     train_dataset= pd.read_csv(training_source)
     train_dataset = filter_dataset(train_dataset, stride_length)
     train_dataset = undersample_dataset(train_dataset, grade)
@@ -119,6 +155,7 @@ def load_dataset(stride_length, grade):
     train_dataset = train_dataset.drop(columns=['word_num'])
 
     train_dataset['target'] = (train_dataset['grade_level'] == grade).astype(int)
+    
 
     # Load testing dataset
     test_dataset = pd.read_csv(testing_source)
@@ -367,8 +404,41 @@ def export_details(pkl_path):
     
     # evaluate_model(model, model_name, X_test, y_test, machine, stories, feature, stride) 
 
+def training_accuracy(pkl_path):
+    file_name = pkl_path.split("/")[-1]
+    file_name = file_name.replace(".pkl", "")
+    parts = file_name.split("_")
+
+    machine = parts[0]
+    grade = int(parts[1])
+    feature = parts[2]
+    stride = int(parts[3])
+    
+    # print(f"Machine: {machine}")
+    # print(f"Grade: {grade}")
+    # print(f"Feature: {feature}")
+    # print(f"Stride: {stride}")
+    
+    train_dataset, test_dataset, feature_set, model_name = parse_dataset(machine, "split", feature, stride, grade)
+    X_train, y_train, X_test, y_test = split_dataset(train_dataset, test_dataset, feature_set)
+    # print(train_dataset.head())
+    
+    model = load_model(pkl_path)
+    y_train_pred = model.predict(X_train)
+    
+    # Calculate training accuracy
+    training_accuracy = accuracy_score(y_train, y_train_pred)
+    # testing_accuracy = accuracy_score(y_test, model.predict(X_test))
+    
+    print(f"Training Accuracy: {training_accuracy:.4f}")
+    # print(f"Testing Accuracy: {testing_accuracy:.4f}")
+
+def test():
+    file = "models/svm_models/svm_1_B_100.pkl"
+    training_accuracy(file)
+    
 def main():
-    base_path = "models/svm_models/untuned/"
+    base_path = "models/lr_models/"
     
     # Walk through all files in the base_path
     for root, dirs, files in os.walk(base_path):
@@ -376,7 +446,7 @@ def main():
             if file.endswith(".pkl"):
                 pkl_path = os.path.join(root, file)
                 print(f"\nProcessing file: {pkl_path}")
-                export_details(pkl_path)
+                training_accuracy(pkl_path)
                 # print(pkl_path)
                 
-# main()
+test()

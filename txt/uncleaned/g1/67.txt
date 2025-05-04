@@ -1,143 +1,22 @@
-fo mya”.
-C C
-F ---
+Sa unang araw ni Lita sa paaralan, hindi pa niya alam kung paano magbilang.
 
-Masaya ang Magbilang
-Nouza Sayasane
-Ounla Santhi
-Lets NP Read
-GO The Asia Foundation
+Kinabukasan, sabi ng kaniyang nanay, "Oras na para pumasok. Hinihintay ka na ng iyong mga kaibigan upang sabay na kayong pumasok sa paaralan."
 
+"Nahihiya po akong pumasok sa paaralan," sabi ni Lita.
 
-Nga o na
-Sa unang araw ni Lita sa paaralan, hindi pa
-niya alam kung paano magbilang.
-1
+"Bakit ka nahihiyang pumasok sa paaralan?" tanong sa kaniya ni Cesar.
+"Nahihiya ako kasi hindi pa ako marunong magbilang," sagot ni Lita.
+"Huwag kang mag-alala, tuturuan ka namin!" sabi agad ni Nene.
 
+Pagkatapos noon, sabay-sabay silang naglakad papunta sa paaralan. Binilang nila ang mga puno sa gilid ng kalsada.
 
-po jo
-Ti BN
-ja pr a
-[o 7 7
-px, 4 PAP AP
-Kinabukasan, sabi ng kaniyang nanay,
-"Oras na para pumasok. Hinihintay ka na ng
-iyong mga kaibigan upang sabay na kayong
-pumasok sa paaralan.”
-2
+"Sabi ko sa iyo eh, madali lamang ang pagbibilang," bulong ni Cesar.
 
+Nagpatuloy silang nagbilang hanggang makarating sila sa paaralan.
 
-W MG |
-a
-r yy 'D #
-"Nahihiya po akong pumasok sa paaralan.”
-sabi ni Lita.
-3
+Niyaya si Lita ng kaniyang mga kaibigan na maglaro ng luksong lubid. Sinabihan nila si Lita na tumalon ng sampung beses.
+"1, 2, 3, 4, 5, 6, 7, 8, 9, 10. Yehey! Natapos mo ang sampung talon," sigaw ng kaniyang mga kaibigan.
 
+Sa oras ng meryenda, nabilang din ni Lita ang anim na baso ng juice.
 
-v [KI
-V' d4
-ro
-pa
-"Bakit ka nahihiyang pumasok sa paaralan?”
-tanong sa kaniya ni Cesar.
-"Nahihiya ako kasi hindi pa ako marunong
-magbilang,” sagot ni Lita.
-sspan style-“color: rgb(0,0,0), font-size: 16px,”
-s"Huwag kang mag-alala, tuturuan ka namin!”
-sabi agad ni Nene.c/span?
-4
-
-
-ma gm
-| yg titig mm. | Gan ng w ny AA aa o
-VO Gp “aaa PO ni
-c 5 Po
-ad -
-
-Naia) a. 6 P pay
-
-Pagkatapos noon, sabay-sabay silang
-naglakad papunta sa paaralan. Binilang nila
-ang mga puno sa gilid ng kalsada.
-
-5
-
-
-"Sabi ko sa iyo eh, madali lamang ang
-pagbibilang,” bulong ni Cesar.
-6
-
-
-F
-av
-Nagpatuloy silang nagbilang hanggang
-makarating sila sa paaralan.
-7
-
-
-Niyaya si Lita ng kaniyang mga kaibigan na
-maglaro ng luksong lubid. Sinabihan nila si
-Lita na tumalon ng sampung beses.
-12345678910
-"Yehey! Natapos mo ang sampung talon,”
-sigaw ng kaniyang mga kaibigan.
-
-8
-
-
-Ag 5 sa Dm W4
-“
-Sa oras ng meryenda, nabilang din ni Lita ang
-anim na baso ng juice.
-9
-
-
-2
-ya
-ia f
-Bago umuwi si Lita ng bahay, sinabi niya, ”
-Masaya pala ang magbilang. Papasok ulit
-ako sa paaralan bukas upang lalo pa akong
-matuto sa pagbibilang.”
-10
-
-
-pAg
-P k a da
-o poi F#
-sA a
-”
-Po -
-# vg PF P ge
-Wa” Nag
-a, W. a P
-NG
-a- M moa
-K J
--
-(o @USAID umereoon TM (O
-#erlmeyuloo Uunnueaidian
-Made possbie by the panasous 1uppor 0 te Amencan Poopis
-11
-
-
-Brought to you by
-The Asia Foundation
-Let's Read is a program of The Asia Foundation that supports early
-reading skills and habits to develop our next generation of critical
-thinkers and creative innovators in Asia and the Pacific.
-To read more books like this and get further information,
-visit: letsreadasia.org
-Original Story
-Masaya ang Magbilang (Learning to Count). Author: Nouza
-Sayasane. Illustrator: Ounla Santhi.
-Published by Learn to Read, @ Learn to Read. Released under
-CC-BY-4.0.
-This work is a modified version of the original story. @ The Asia
-Foundation, 2023. Some rights reserved. Released under
-CC-BY-4.0.
-For full terms of use and attribution,
-http://creativecommons.org/licenses/by/4.0/
-Contributing translators: Reynald Ocampo and MA. LOURDES
-AISPORNA
+Bago umuwi si Lita ng bahay, sinabi niya, "Masaya pala ang magbilang. Papasok ulit ako sa paaralan bukas upang lalo pa akong matuto sa pagbibilang."

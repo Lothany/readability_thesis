@@ -6,6 +6,6 @@ END=75
 
 # Loop through the range
 for i in $(seq $START $END); do
-    echo "Processing g3/$i.pdf"
-    python run/pdf_ocr.py g3/$i.pdf
+    echo "Processing g5/$i.pdf"
+    python run/pdf_ocr.py g5/$i.pdf
 done

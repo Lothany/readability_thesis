@@ -6,7 +6,7 @@ import os  # For path handling
 # Modelling
 from sklearn.svm import SVC
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, roc_auc_score
-from sklearn.model_selection import RandomizedSearchCV, train_test_split
+from sklearn.model_selection import RandomizedSearchCV, GridSearchCV, train_test_split
 from tqdm import tqdm
 import pickle
 
@@ -57,12 +57,12 @@ def hyperparameter_tuning(X_train, y_train):
 
 def custom_tune(train_dataset, test_dataset, feature_set):
     param_dist = {
-        'C': [0.1, 1, 10],  # Added more values for C
-        'kernel': ['rbf', 'linear'],  # Added 'linear' kernel
-        'gamma': ['scale', 'auto']  # Added 'auto' for gamma
+        'C': [0.1, 1, 10],
+        'kernel': ['rbf'],
+        'gamma': ['auto']
     }
     
-    n_iter=5
+    n_iter=3
     k=5
     
     metrics = {'accuracy': [], 'precision': [], 'recall': [], 'f1': [], 'roc_auc': []}
@@ -86,7 +86,8 @@ def custom_tune(train_dataset, test_dataset, feature_set):
         )
         search.fit(X_train, y_train)
         model = search.best_estimator_
-
+        # print('Best hyperparameters:', search.best_params_)
+        
         # Predict and evaluate
         y_pred = model.predict(X_test)
         y_proba = model.predict_proba(X_test)[:, 1] if len(model.classes_) == 2 else None
@@ -110,16 +111,19 @@ def custom_tune(train_dataset, test_dataset, feature_set):
 
     return metrics, best_model
 
-def create_model(stride, feature, stories):
-    model_id = f"svm_{stories}_{feature}_{stride}"
-    X_train, y_train, _, _, _  = parse_dataset("lr", stories, feature, stride)
+def create_model(stride, feature, stories, grade):
+    machine = "svm"
+    model_id = f"{machine}_{grade}_{feature}_{stride}"
+    print(f"\n\nSupport Vector Machine: {model_id}")
     
-    model = train_model(X_train, y_train)
-    save_model(model, "models/svm_models/untuned/", model_id)
+    train_dataset, test_dataset, feature_set, model_name = parse_dataset(machine, stories, feature, stride, grade)
+    X_train, y_train, X_test, y_test = split_dataset(train_dataset, test_dataset, feature_set)
     
-    print("\nTuning Model. This may take a while... ")
-    tuned_model = hyperparameter_tuning(X_train, y_train)
-    save_model(tuned_model, "models/svm_models/tuned/", model_id)
+    metrics, model = custom_tune(train_dataset, test_dataset, feature_set)
+    
+    export_metrics(metrics, machine, grade, feature, stride)
+    export_plot(model, model_name, model_id, X_test, y_test)
+    save_model(model, "models/svm_models/", model_id)
 
 def test():
     print("Testing SVM Model")
@@ -131,43 +135,23 @@ def test():
     model_id = f"{machine}_{grade}_{feature}_{stride}"
     print(f"Testing SVM Model: {model_id}")
     
-    train_dataset, test_dataset, feature_set, model_name = parse_dataset(machine, stories, feature, stride, grade)
-    X_train, y_train, X_test, y_test = split_dataset(train_dataset, test_dataset, feature_set)
-    
-    metrics, model = custom_tune(train_dataset, test_dataset, feature_set)
-    
-    print("Average metrics across training folds:")
-    for key in metrics:
-        print(f"{key.capitalize()}: {np.mean(metrics[key]):.4f}")
-    
-    # save_model(model, "models/svm_models/untuned/", model_id)
-    
-    print(f"Initial Model Performance: ")
-    # model_performance(model, X_test, y_test)
-    
-    # tuned_model = hyperparameter_tuning(X_train, y_train)
-    # save_model(tuned_model, "models/svm_models/tuned/", model_id)
-    
-    # print(f"\nTuned Model Performance: ")
-    # model_performance(tuned_model, X_test, y_test)
-    
-    # create_model(stride, feature, stories)
+    create_model(stride, feature, "split", grade)
 
 def main():
     # stories_list = ["full", "split"]
     stories_list = ["split"]
-    features_list = ["B", "L"]
-    strides_list = [-1, 0, 1, 2, 3, 100]
+    features_list = ["T"]
+    strides_list = [-1, 1, 2, 3, 100]
+    grade_levels = [1, 2, 3, 4, 5, 6]
     
-    total_iterations = len(stories_list) * len(features_list) * len(strides_list)
+    total_iterations = len(grade_levels) * len(features_list) * len(strides_list)
     
     with tqdm(total=total_iterations, desc="Processing Models", unit="model") as pbar:
-        for stories in stories_list:
+        for grade in grade_levels:
             for feature in features_list:
                 for stride in strides_list:
-                    print(f"Creating model for {feature} features, and stride length {stride} using {stories} stories.")
-                    create_model(stride, feature, stories)
+                    create_model(stride, feature, "split", grade)
                     pbar.update(1)
 
 # To run:
-test()
+main()

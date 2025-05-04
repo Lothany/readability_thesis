@@ -1,128 +1,19 @@
-| N |
-Jl
-Ang Higaan Para kay Ate
-Room to Read
-Thidavanh Oudonvilay
-Let's AS Read
-@ The Asia Foundation
-
-
 Isang araw, nagkasakit ang ate ni Pong.
-1
 
+Inutusan ng ina si Pong na ihanda ang higaan ng kaniyang ate.
 
-PP
-3
-W
-Inutusan ng ina si Pong na ihanda ang higaan
-ng kaniyang ate.
-2
+Inilagay ni Pong ang sapin sa kutson ng higaan.
 
+Kumuha si Pong ng unan at inilagay ito sa higaan.
 
-- |
-ff
-AS
-Inilagay ni Pong ang sapin sa kutson ng
-higaan.
-3
+Nagdala rin si Pong ng kumot at inilagay ito sa higaan.
 
-
-TA
-Kumuha si Pong ng unan at inilagay ito sa
-higaan.
-4
-
-
--
-Nagdala rin si Pong ng kumot at inilagay ito
-sa higaan.
-5
-
-
-IS
-O” MA
-o ro
-NOE
 Iniabot ni Pong ang kulambo sa kaniyang ina.
-6
 
+Tinulungan ni Pong ang kaniyang ina sa pag-aayos ng kulambo.
 
-#
-nfa pa
-g4
-Tinulungan ni Pong ang kaniyang ina sa pag-
-aayos ng kulambo.
-7
+Nang maayos na ang kama, pumasok na ang ate ni Pong sa kuwarto.
 
+“Maraming salamat sa pag-aayos ng aking kama.” sabi ng ate ni Pong.
 
-NG
-ni
-Nang maayos na ang kama, pumasok na ang
-ate ni Pong sa kuwarto.
-8
-
-
-p 7
-ag
-
-NG
-
-Nan
-
-
-“Maraming salamat sa pag-aayos ng aking
-kama.” sabi ng ate ni Pong.
-10
-
-
-Pagkatapos, humiga na ang ate ni Pong at
-natulog.
-11
-
-
-A S USAID NG Save the Children TIN
-This storybook received assistance by the
-People of USA through USAID. License:
-Creative Commons Attribution CC BY 4. 0 IGO
-Translation of work: If individuals or legal
-entities translate this work, you must mention
-that translation is not conducted by Room to
-Read or USAID and not considered the official
-translation of Room to Read or USAID. Room
-to Read or USAID will not be responsible for
-the content or mistakes of the translation.
-Amendment of work: If individuals or legal
-entities make amendments to the work, the
-source should be referenced: this work has
-been amended from the original work of
-Room to Read and USAID. The views and
-perspectives in this amended work are the
-sole responsibility of the party making the
-amendments because it has been reviewed by
-12
-
-
-Room to Read and USAID.
-13
-
-
-Brought to you by
-The Asia Foundation
-Let's Read is a program of The Asia Foundation that supports early
-reading skills and habits to develop our next generation of critical
-thinkers and creative innovators in Asia and the Pacific.
-To read more books like this and get further information,
-visit: letsreadasia.org
-Original Story
-Ang Higaan Para kay Ate (Preparing a Bed for My Sister). Author:
-Room to Read. Illustrator: Thidavanh Oudonwilay. Editor:
-Sengmany Souphanthalop, Onchanh Phetchantharath, Pakian
-Luangxaysana.
-Published by Room to Read, O Room to Read. Released under
-CC-BY-4.0.
-This work is a modified version of the original story. @ The Asia
-Foundation, 2023. Some rights reserved. Released under
-CC-BY-4.0.
-For full terms of use and attribution,
-http://creativecommons.org/licenses/by/4.0/
-Contributing translators: Juvy Duenog and Daniella Montes
+Pagkatapos, humiga na ang ate ni Pong at natulog.

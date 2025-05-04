@@ -1,137 +1,29 @@
-7
-Nanay, Ako Ay May Sakit!
-Thanh Tam
-Lets a Read
-QO The Asia Foundation
+Sinubukan ni nanay na suyuin ang maysakit na si Nana.
+"Uminom ka muna ng gatas, Mahal!"
+"Hindi masarap ang lasa! Ayaw ko!"
 
+"Eh dalandan na inumin, gusto mo ba?"
+"Huhu... Ayaw ko rin niyan."
 
-I mga
-4 "a
-Sinubukan ni nanay na suyuin ang maysakit
-na si Nana.
-"Uminom ka muna ng gatas, Mahal!”
-"Hindi masarap ang lasa! Ayaw ko!”
-1
+Bakit napakarami mong pula sa katawan? - Si Nini ay inusisa.
 
+Itong mga pula sa aking katawan ay bigla na lamang lumalabas sa aking buong katawan.
 
-[o1
-2 No wo
-YA po
-“Eh dalandan na inumin,gusto mo ba?”
-“Huhu... Ayaw ko rin niyan.”
-2
+"Maraming ginawang paraan si nanay upang gumaling at mawala ang kanyang pantal."
 
+Hinanap ni Nini ang kanyang pulang pansulat.
+"Narito pala ang kulay pula kong pansulat!"
 
-aga
-z
-NG 3
-f N D
-Bakit napakarami mong pula sa katawan? - Si
-Nini ay inusisa.
-- Itong mga pula sa aking katawan ay bigla na
-lamang lumalabas sa aking buong katawan
-3
+Nilagyan ni Nini ng mga pantal na marka ang kanyang buong mukha.
 
-
-“Maraming ginawang paraan si nanay upang
-gumaling at mawala ang kanyang pantal.”
-4
-
-
-haay | h Ni awa Fafa
-H] | HS Naan
-MoA Mam M-L-
-vo mn n.a 4
-[SR mta rae "Na ng Ma PA
-bga. N “aag mg 1
-ka ig q-z“ ? AA
-po | O, "
-fe | Wi wi
-| Kanan T
-u ri -
-o / YO FE d v A 4
-mang - | ni Na i po
-- a | | 1
-Pa | f pag
-J! | 14 V
-"Ah ”
-!
-
-
-O
-Hinanap ni Nini ang kanyang pulang
-pansulat.
-“Narito pala ang kulay pula kong pansulat!”
-6
-
-
-Ya O
-Aya
-Nilagyan ni Nini ng mga pantal na marka ang
-kanyang buong mukha..
-7
-
-
-NG | gg
 ..Maging ang kanyang braso at binti.
-"Hehe mas marami na akong pantal kaysa
-kay Nanar..
-8
+"Hehe mas marami na akong pantal kaysa kay Nana."
 
+Patakbo siyang pumunta sa kusina at masayang sinabi, "Nanay tingnan mo? May sakit na rin ako tulad ni Nana."
 
-MD 2M
-p "a 1a Von o - NO N
-dq a NG Gi
-Patakbo siyang pumunta sa kusina at
-masayang sinabi, “Nanay tingnan mo?”May
-sakit narin ako tulad ni Nana.”
-9
+"Alam ko na kung paano pagagalingin ang iyong sakit, Nini."
 
+"Nakita mo? Sa isang paligo lang, wala na ang sakit mo."
 
-“Alam ko na kung paano pagagalingin ang
-iyong sakit, Nini”.
-10
-
-
-sada -
-"Nakita mo? Sa isang paligo lang, wala na ang
-sakit mo.”
-11
-
-
-IN
- G
-a )
-| W 4Sa / AA
-
-Niyakap ni Nini ang kanyang ina, sabay sinabi
-na,
-“Nay,”Ikaw ang pinakamagaling na doktor sa
-buong mundo”.
-cI-[if IsupportLineBreakNewLine]-?
-cl-[endif]--
-
-12
-
-
-Brought to you by
-
-The Asia Foundation
-Let's Read is a program of The Asia Foundation that supports early
-reading skills and habits to develop our next generation of critical
-
-thinkers and creative innovators in Asia and the Pacific.
-To read more books like this and get further information,
-visit: letsreadasia.org
-
-Original Story
-Nanay, Ako Ay May Sakit! (Mom, I'm Sick!). Author: Thanh Tam.
-Published by The Asia Foundation - Let's Read, O The Asia
-Foundation - Let's Read. Released under CC-BY-NC-4.0.
-This work is a modified version of the original story. @ The Asia
-Foundation, 2024. Some rights reserved. Released under
-CC-BY-NC-4.0.
-For full terms of use and attribution,
-http://creativecommons.org/licenses/by-nc/4.0/
-Contributing translators: MARILOU PESTANO, belle litana, and
-Melissa Mae Pacon
+Niyakap ni Nini ang kanyang ina, sabay sinabi na,
+"Nay, ikaw ang pinakamagaling na doktor sa buong mundo."

@@ -12,6 +12,8 @@ import sys
 import argparse
 from pathlib import Path
 
+os.environ['TESSDATA_PREFIX'] = '/opt/homebrew/share/tessdata/'
+
 # Check for required packages
 try:
     from pdf2image import convert_from_path

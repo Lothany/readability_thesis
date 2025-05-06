@@ -1,1 +1,0 @@
-ako|PRS si|DTP Ivy|NNP # sina|DTPP John|NNP at|CCA Duchess|NNP ang|DTC aking|PRSP_CCP mga|DTCP kapatid|NNC $ pumunta|VBAF kami|PRP sa|CCT simbahan|NNC $

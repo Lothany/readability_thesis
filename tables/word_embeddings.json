@@ -6,14 +6,14 @@
         "trad_syll": 4,
         "trad_poly": true
     },
-    "ang": {
+    "mga": {
         "lex_pos": "other",
         "lex_foreign": false,
         "trad_char": 3,
         "trad_syll": 1,
         "trad_poly": false
     },
-    "mga": {
+    "ang": {
         "lex_pos": "other",
         "lex_foreign": false,
         "trad_char": 3,
@@ -27,19 +27,19 @@
         "trad_syll": 2,
         "trad_poly": true
     },
-    "bubuyog": {
-        "lex_pos": "noun",
-        "lex_foreign": false,
-        "trad_char": 7,
-        "trad_syll": 2,
-        "trad_poly": true
-    },
     "ng": {
         "lex_pos": "other",
         "lex_foreign": false,
         "trad_char": 2,
         "trad_syll": 1,
         "trad_poly": false
+    },
+    "bubuyog": {
+        "lex_pos": "noun",
+        "lex_foreign": false,
+        "trad_char": 7,
+        "trad_syll": 2,
+        "trad_poly": true
     },
     "si": {
         "lex_pos": "other",
@@ -48,25 +48,11 @@
         "trad_syll": 0,
         "trad_poly": false
     },
-    "Sophy": {
-        "lex_pos": "noun",
-        "lex_foreign": false,
-        "trad_char": 5,
-        "trad_syll": 0,
-        "trad_poly": false
-    },
     "na": {
         "lex_pos": "other",
         "lex_foreign": false,
         "trad_char": 2,
         "trad_syll": 1,
-        "trad_poly": false
-    },
-    "at": {
-        "lex_pos": "other",
-        "lex_foreign": false,
-        "trad_char": 2,
-        "trad_syll": 0,
         "trad_poly": false
     },
     "ipinagmamalaki": {
@@ -83,6 +69,34 @@
         "trad_syll": 1,
         "trad_poly": false
     },
+    "Sophy": {
+        "lex_pos": "noun",
+        "lex_foreign": false,
+        "trad_char": 5,
+        "trad_syll": 0,
+        "trad_poly": false
+    },
+    "at": {
+        "lex_pos": "other",
+        "lex_foreign": false,
+        "trad_char": 2,
+        "trad_syll": 0,
+        "trad_poly": false
+    },
+    "malalayong": {
+        "lex_pos": "adj",
+        "lex_foreign": false,
+        "trad_char": 10,
+        "trad_syll": 4,
+        "trad_poly": true
+    },
+    "nakikita": {
+        "lex_pos": "verb",
+        "lex_foreign": false,
+        "trad_char": 8,
+        "trad_syll": 4,
+        "trad_poly": true
+    },
     "bagay": {
         "lex_pos": "noun",
         "lex_foreign": false,
@@ -97,11 +111,11 @@
         "trad_syll": 1,
         "trad_poly": false
     },
-    "malalayong": {
+    "pinakamabilis": {
         "lex_pos": "adj",
         "lex_foreign": false,
-        "trad_char": 10,
-        "trad_syll": 4,
+        "trad_char": 13,
+        "trad_syll": 6,
         "trad_poly": true
     },
     "sa": {
@@ -111,53 +125,11 @@
         "trad_syll": 0,
         "trad_poly": false
     },
-    "siya": {
+    "kanilang": {
         "lex_pos": "other",
-        "lex_foreign": false,
-        "trad_char": 4,
-        "trad_syll": 0,
-        "trad_poly": false
-    },
-    "pinakamabilis": {
-        "lex_pos": "adj",
-        "lex_foreign": false,
-        "trad_char": 13,
-        "trad_syll": 6,
-        "trad_poly": true
-    },
-    "pulutong": {
-        "lex_pos": "noun",
         "lex_foreign": false,
         "trad_char": 8,
         "trad_syll": 4,
-        "trad_poly": true
-    },
-    "unang": {
-        "lex_pos": "adj",
-        "lex_foreign": false,
-        "trad_char": 5,
-        "trad_syll": 2,
-        "trad_poly": true
-    },
-    "lumipad": {
-        "lex_pos": "verb",
-        "lex_foreign": false,
-        "trad_char": 7,
-        "trad_syll": 3,
-        "trad_poly": true
-    },
-    "garapon": {
-        "lex_pos": "noun",
-        "lex_foreign": false,
-        "trad_char": 7,
-        "trad_syll": 3,
-        "trad_poly": true
-    },
-    "kanyang": {
-        "lex_pos": "other",
-        "lex_foreign": false,
-        "trad_char": 7,
-        "trad_syll": 2,
         "trad_poly": true
     },
     "laging": {
@@ -174,6 +146,13 @@
         "trad_syll": 2,
         "trad_poly": true
     },
+    "unang": {
+        "lex_pos": "adj",
+        "lex_foreign": false,
+        "trad_char": 5,
+        "trad_syll": 2,
+        "trad_poly": true
+    },
     "nakapupuno": {
         "lex_pos": "verb",
         "lex_foreign": false,
@@ -181,12 +160,26 @@
         "trad_syll": 5,
         "trad_poly": true
     },
-    "dumating": {
-        "lex_pos": "verb",
+    "pulutong": {
+        "lex_pos": "noun",
         "lex_foreign": false,
         "trad_char": 8,
         "trad_syll": 4,
         "trad_poly": true
+    },
+    "lumipad": {
+        "lex_pos": "verb",
+        "lex_foreign": false,
+        "trad_char": 7,
+        "trad_syll": 3,
+        "trad_poly": true
+    },
+    "siya": {
+        "lex_pos": "other",
+        "lex_foreign": false,
+        "trad_char": 4,
+        "trad_syll": 0,
+        "trad_poly": false
     },
     "hardin": {
         "lex_pos": "noun",
@@ -202,18 +195,25 @@
         "trad_syll": 1,
         "trad_poly": false
     },
+    "kanyang": {
+        "lex_pos": "other",
+        "lex_foreign": false,
+        "trad_char": 7,
+        "trad_syll": 2,
+        "trad_poly": true
+    },
+    "tulad": {
+        "lex_pos": "adj",
+        "lex_foreign": false,
+        "trad_char": 5,
+        "trad_syll": 2,
+        "trad_poly": true
+    },
     "dati": {
         "lex_pos": "adj",
         "lex_foreign": false,
         "trad_char": 4,
         "trad_syll": 2,
-        "trad_poly": true
-    },
-    "Dumapo": {
-        "lex_pos": "noun",
-        "lex_foreign": false,
-        "trad_char": 6,
-        "trad_syll": 3,
         "trad_poly": true
     },
     "malaking": {
@@ -223,14 +223,21 @@
         "trad_syll": 4,
         "trad_poly": true
     },
-    "maghintay": {
-        "lex_pos": "verb",
+    "bulaklak": {
+        "lex_pos": "noun",
         "lex_foreign": false,
-        "trad_char": 9,
+        "trad_char": 8,
         "trad_syll": 3,
         "trad_poly": true
     },
-    "nakikita": {
+    "nauna": {
+        "lex_pos": "verb",
+        "lex_foreign": false,
+        "trad_char": 5,
+        "trad_syll": 2,
+        "trad_poly": true
+    },
+    "dumating": {
         "lex_pos": "verb",
         "lex_foreign": false,
         "trad_char": 8,
@@ -244,53 +251,32 @@
         "trad_syll": 2,
         "trad_poly": true
     },
+    "Dumapo": {
+        "lex_pos": "noun",
+        "lex_foreign": false,
+        "trad_char": 6,
+        "trad_syll": 3,
+        "trad_poly": true
+    },
+    "garapon": {
+        "lex_pos": "noun",
+        "lex_foreign": false,
+        "trad_char": 7,
+        "trad_syll": 3,
+        "trad_poly": true
+    },
+    "mabangong": {
+        "lex_pos": "adj",
+        "lex_foreign": false,
+        "trad_char": 9,
+        "trad_syll": 4,
+        "trad_poly": true
+    },
     "Pumikit": {
         "lex_pos": "noun",
         "lex_foreign": false,
         "trad_char": 7,
         "trad_syll": 3,
-        "trad_poly": true
-    },
-    "umaga": {
-        "lex_pos": "adv",
-        "lex_foreign": false,
-        "trad_char": 5,
-        "trad_syll": 2,
-        "trad_poly": true
-    },
-    "nauna": {
-        "lex_pos": "verb",
-        "lex_foreign": false,
-        "trad_char": 5,
-        "trad_syll": 2,
-        "trad_poly": true
-    },
-    "tulad": {
-        "lex_pos": "adj",
-        "lex_foreign": false,
-        "trad_char": 5,
-        "trad_syll": 2,
-        "trad_poly": true
-    },
-    "paligid": {
-        "lex_pos": "adj",
-        "lex_foreign": false,
-        "trad_char": 7,
-        "trad_syll": 3,
-        "trad_poly": true
-    },
-    "bulaklak": {
-        "lex_pos": "noun",
-        "lex_foreign": false,
-        "trad_char": 8,
-        "trad_syll": 3,
-        "trad_poly": true
-    },
-    "kanilang": {
-        "lex_pos": "other",
-        "lex_foreign": false,
-        "trad_char": 8,
-        "trad_syll": 4,
         "trad_poly": true
     },
     "nabatid": {
@@ -300,10 +286,17 @@
         "trad_syll": 3,
         "trad_poly": true
     },
-    "niyang": {
+    "maghintay": {
+        "lex_pos": "verb",
+        "lex_foreign": false,
+        "trad_char": 9,
+        "trad_syll": 3,
+        "trad_poly": true
+    },
+    "upang": {
         "lex_pos": "other",
         "lex_foreign": false,
-        "trad_char": 6,
+        "trad_char": 5,
         "trad_syll": 2,
         "trad_poly": true
     },
@@ -321,6 +314,13 @@
         "trad_syll": 0,
         "trad_poly": false
     },
+    "umaga": {
+        "lex_pos": "adv",
+        "lex_foreign": false,
+        "trad_char": 5,
+        "trad_syll": 2,
+        "trad_poly": true
+    },
     "ngunit": {
         "lex_pos": "other",
         "lex_foreign": false,
@@ -328,18 +328,18 @@
         "trad_syll": 2,
         "trad_poly": true
     },
-    "lahat": {
-        "lex_pos": "other",
+    "Nasaan": {
+        "lex_pos": "noun",
         "lex_foreign": false,
-        "trad_char": 5,
-        "trad_syll": 2,
-        "trad_poly": true
+        "trad_char": 6,
+        "trad_syll": 1,
+        "trad_poly": false
     },
-    "mabangong": {
-        "lex_pos": "adj",
+    "matagal": {
+        "lex_pos": "adv",
         "lex_foreign": false,
-        "trad_char": 9,
-        "trad_syll": 4,
+        "trad_char": 7,
+        "trad_syll": 3,
         "trad_poly": true
     },
     "akong": {
@@ -349,11 +349,11 @@
         "trad_syll": 2,
         "trad_poly": true
     },
-    "naghihintay": {
-        "lex_pos": "verb",
+    "paligid": {
+        "lex_pos": "adj",
         "lex_foreign": false,
-        "trad_char": 11,
-        "trad_syll": 4,
+        "trad_char": 7,
+        "trad_syll": 3,
         "trad_poly": true
     },
     "''": {
@@ -363,11 +363,11 @@
         "trad_syll": 0,
         "trad_poly": false
     },
-    "nilanghap": {
-        "lex_pos": "verb",
+    "niyang": {
+        "lex_pos": "other",
         "lex_foreign": false,
-        "trad_char": 9,
-        "trad_syll": 4,
+        "trad_char": 6,
+        "trad_syll": 2,
         "trad_poly": true
     },
     "makalipas": {
@@ -377,19 +377,26 @@
         "trad_syll": 4,
         "trad_poly": true
     },
-    "upang": {
-        "lex_pos": "other",
-        "lex_foreign": false,
-        "trad_char": 5,
-        "trad_syll": 2,
-        "trad_poly": true
-    },
     "nag-iisa": {
         "lex_pos": "verb",
         "lex_foreign": false,
         "trad_char": 8,
         "trad_syll": 1,
         "trad_poly": false
+    },
+    "naghihintay": {
+        "lex_pos": "verb",
+        "lex_foreign": false,
+        "trad_char": 11,
+        "trad_syll": 4,
+        "trad_poly": true
+    },
+    "sama-sama": {
+        "lex_pos": "adv",
+        "lex_foreign": false,
+        "trad_char": 9,
+        "trad_syll": 2,
+        "trad_poly": true
     },
     "kuyog": {
         "lex_pos": "noun",
@@ -398,17 +405,10 @@
         "trad_syll": 1,
         "trad_poly": false
     },
-    "daing": {
-        "lex_pos": "noun",
-        "lex_foreign": false,
-        "trad_char": 5,
-        "trad_syll": 2,
-        "trad_poly": true
-    },
-    "silang": {
+    "lahat": {
         "lex_pos": "other",
         "lex_foreign": false,
-        "trad_char": 6,
+        "trad_char": 5,
         "trad_syll": 2,
         "trad_poly": true
     },
@@ -426,163 +426,30 @@
         "trad_syll": 2,
         "trad_poly": true
     },
-    "nektar": {
+    "nilanghap": {
+        "lex_pos": "verb",
+        "lex_foreign": false,
+        "trad_char": 9,
+        "trad_syll": 4,
+        "trad_poly": true
+    },
+    "silang": {
         "lex_pos": "other",
         "lex_foreign": false,
         "trad_char": 6,
         "trad_syll": 2,
         "trad_poly": true
     },
-    "sama-sama": {
-        "lex_pos": "adv",
-        "lex_foreign": false,
-        "trad_char": 9,
-        "trad_syll": 2,
-        "trad_poly": true
-    },
-    "matagal": {
-        "lex_pos": "adv",
-        "lex_foreign": false,
-        "trad_char": 7,
-        "trad_syll": 3,
-        "trad_poly": true
-    },
-    "nagtrabaho": {
-        "lex_pos": "verb",
-        "lex_foreign": false,
-        "trad_char": 10,
-        "trad_syll": 4,
-        "trad_poly": true
-    },
-    "Nasaan": {
+    "daing": {
         "lex_pos": "noun",
         "lex_foreign": false,
-        "trad_char": 6,
-        "trad_syll": 1,
-        "trad_poly": false
-    },
-    "kumuha": {
-        "lex_pos": "verb",
-        "lex_foreign": false,
-        "trad_char": 6,
-        "trad_syll": 3,
-        "trad_poly": true
-    },
-    "hindi": {
-        "lex_pos": "adv",
-        "lex_foreign": false,
         "trad_char": 5,
         "trad_syll": 2,
         "trad_poly": true
-    },
-    "ka": {
-        "lex_pos": "other",
-        "lex_foreign": false,
-        "trad_char": 2,
-        "trad_syll": 1,
-        "trad_poly": false
-    },
-    "sumama": {
-        "lex_pos": "verb",
-        "lex_foreign": false,
-        "trad_char": 6,
-        "trad_syll": 2,
-        "trad_poly": true
-    },
-    "amin": {
-        "lex_pos": "other",
-        "lex_foreign": false,
-        "trad_char": 4,
-        "trad_syll": 1,
-        "trad_poly": false
-    },
-    "nagtanong": {
-        "lex_pos": "verb",
-        "lex_foreign": false,
-        "trad_char": 9,
-        "trad_syll": 4,
-        "trad_poly": true
-    },
-    "makabubuti": {
-        "lex_pos": "verb",
-        "lex_foreign": false,
-        "trad_char": 10,
-        "trad_syll": 5,
-        "trad_poly": true
-    },
-    "mula": {
-        "lex_pos": "adv",
-        "lex_foreign": false,
-        "trad_char": 4,
-        "trad_syll": 2,
-        "trad_poly": true
-    },
-    "kay": {
-        "lex_pos": "other",
-        "lex_foreign": false,
-        "trad_char": 3,
-        "trad_syll": 1,
-        "trad_poly": false
-    },
-    "bakit": {
-        "lex_pos": "other",
-        "lex_foreign": false,
-        "trad_char": 5,
-        "trad_syll": 2,
-        "trad_poly": true
-    },
-    "mas": {
-        "lex_pos": "adj",
-        "lex_foreign": false,
-        "trad_char": 3,
-        "trad_syll": 1,
-        "trad_poly": false
     },
     "Hector": {
         "lex_pos": "noun",
         "lex_foreign": true,
-        "trad_char": 6,
-        "trad_syll": 2,
-        "trad_poly": true
-    },
-    "mabagal": {
-        "lex_pos": "adj",
-        "lex_foreign": false,
-        "trad_char": 7,
-        "trad_syll": 3,
-        "trad_poly": true
-    },
-    "nagngangalang": {
-        "lex_pos": "verb",
-        "lex_foreign": false,
-        "trad_char": 13,
-        "trad_syll": 5,
-        "trad_poly": true
-    },
-    "kayong": {
-        "lex_pos": "other",
-        "lex_foreign": false,
-        "trad_char": 6,
-        "trad_syll": 2,
-        "trad_poly": true
-    },
-    "akin": {
-        "lex_pos": "other",
-        "lex_foreign": false,
-        "trad_char": 4,
-        "trad_syll": 1,
-        "trad_poly": false
-    },
-    "ni": {
-        "lex_pos": "other",
-        "lex_foreign": false,
-        "trad_char": 2,
-        "trad_syll": 1,
-        "trad_poly": false
-    },
-    "tayong": {
-        "lex_pos": "other",
-        "lex_foreign": false,
         "trad_char": 6,
         "trad_syll": 2,
         "trad_poly": true
@@ -594,6 +461,69 @@
         "trad_syll": 3,
         "trad_poly": true
     },
+    "nektar": {
+        "lex_pos": "other",
+        "lex_foreign": false,
+        "trad_char": 6,
+        "trad_syll": 2,
+        "trad_poly": true
+    },
+    "nagtanong": {
+        "lex_pos": "verb",
+        "lex_foreign": false,
+        "trad_char": 9,
+        "trad_syll": 4,
+        "trad_poly": true
+    },
+    "bakit": {
+        "lex_pos": "other",
+        "lex_foreign": false,
+        "trad_char": 5,
+        "trad_syll": 2,
+        "trad_poly": true
+    },
+    "hindi": {
+        "lex_pos": "adv",
+        "lex_foreign": false,
+        "trad_char": 5,
+        "trad_syll": 2,
+        "trad_poly": true
+    },
+    "kumuha": {
+        "lex_pos": "verb",
+        "lex_foreign": false,
+        "trad_char": 6,
+        "trad_syll": 3,
+        "trad_poly": true
+    },
+    "kay": {
+        "lex_pos": "other",
+        "lex_foreign": false,
+        "trad_char": 3,
+        "trad_syll": 1,
+        "trad_poly": false
+    },
+    "mula": {
+        "lex_pos": "adv",
+        "lex_foreign": false,
+        "trad_char": 4,
+        "trad_syll": 2,
+        "trad_poly": true
+    },
+    "nagngangalang": {
+        "lex_pos": "verb",
+        "lex_foreign": false,
+        "trad_char": 13,
+        "trad_syll": 5,
+        "trad_poly": true
+    },
+    "nagtrabaho": {
+        "lex_pos": "verb",
+        "lex_foreign": false,
+        "trad_char": 10,
+        "trad_syll": 4,
+        "trad_poly": true
+    },
     "kung": {
         "lex_pos": "other",
         "lex_foreign": false,
@@ -601,12 +531,40 @@
         "trad_syll": 2,
         "trad_poly": true
     },
-    "mapanganib": {
-        "lex_pos": "adj",
+    "sumama": {
+        "lex_pos": "verb",
+        "lex_foreign": false,
+        "trad_char": 6,
+        "trad_syll": 2,
+        "trad_poly": true
+    },
+    "kayong": {
+        "lex_pos": "other",
+        "lex_foreign": false,
+        "trad_char": 6,
+        "trad_syll": 2,
+        "trad_poly": true
+    },
+    "makabubuti": {
+        "lex_pos": "verb",
         "lex_foreign": false,
         "trad_char": 10,
-        "trad_syll": 4,
+        "trad_syll": 5,
         "trad_poly": true
+    },
+    "para": {
+        "lex_pos": "other",
+        "lex_foreign": false,
+        "trad_char": 4,
+        "trad_syll": 2,
+        "trad_poly": true
+    },
+    "amin": {
+        "lex_pos": "other",
+        "lex_foreign": false,
+        "trad_char": 4,
+        "trad_syll": 1,
+        "trad_poly": false
     },
     "masyado": {
         "lex_pos": "verb",
@@ -615,12 +573,33 @@
         "trad_syll": 2,
         "trad_poly": true
     },
-    "makapapanakit": {
-        "lex_pos": "verb",
+    "akin": {
+        "lex_pos": "other",
         "lex_foreign": false,
-        "trad_char": 13,
-        "trad_syll": 6,
+        "trad_char": 4,
+        "trad_syll": 1,
+        "trad_poly": false
+    },
+    "mabagal": {
+        "lex_pos": "adj",
+        "lex_foreign": false,
+        "trad_char": 7,
+        "trad_syll": 3,
         "trad_poly": true
+    },
+    "ka": {
+        "lex_pos": "other",
+        "lex_foreign": false,
+        "trad_char": 2,
+        "trad_syll": 1,
+        "trad_poly": false
+    },
+    "mas": {
+        "lex_pos": "adj",
+        "lex_foreign": false,
+        "trad_char": 3,
+        "trad_syll": 1,
+        "trad_poly": false
     },
     "sapagkat": {
         "lex_pos": "other",
@@ -628,6 +607,13 @@
         "trad_char": 8,
         "trad_syll": 2,
         "trad_poly": true
+    },
+    "ni": {
+        "lex_pos": "other",
+        "lex_foreign": false,
+        "trad_char": 2,
+        "trad_syll": 1,
+        "trad_poly": false
     },
     "walang": {
         "lex_pos": "verb",
@@ -643,6 +629,20 @@
         "trad_syll": 2,
         "trad_poly": true
     },
+    "tayong": {
+        "lex_pos": "other",
+        "lex_foreign": false,
+        "trad_char": 6,
+        "trad_syll": 2,
+        "trad_poly": true
+    },
+    "ako": {
+        "lex_pos": "other",
+        "lex_foreign": false,
+        "trad_char": 3,
+        "trad_syll": 1,
+        "trad_poly": false
+    },
     "paalala": {
         "lex_pos": "noun",
         "lex_foreign": false,
@@ -657,25 +657,25 @@
         "trad_syll": 2,
         "trad_poly": true
     },
-    "para": {
-        "lex_pos": "other",
+    "pinakamalaking": {
+        "lex_pos": "adj",
         "lex_foreign": false,
-        "trad_char": 4,
-        "trad_syll": 2,
+        "trad_char": 14,
+        "trad_syll": 7,
         "trad_poly": true
     },
-    "mag-iingat": {
+    "may": {
         "lex_pos": "verb",
         "lex_foreign": false,
-        "trad_char": 10,
-        "trad_syll": 2,
-        "trad_poly": true
+        "trad_char": 3,
+        "trad_syll": 1,
+        "trad_poly": false
     },
-    "pagyayabang": {
-        "lex_pos": "noun",
+    "mapanganib": {
+        "lex_pos": "adj",
         "lex_foreign": false,
-        "trad_char": 11,
-        "trad_syll": 3,
+        "trad_char": 10,
+        "trad_syll": 4,
         "trad_poly": true
     },
     "naiwang": {
@@ -692,6 +692,41 @@
         "trad_syll": 1,
         "trad_poly": false
     },
+    "papalayo": {
+        "lex_pos": "adv",
+        "lex_foreign": false,
+        "trad_char": 8,
+        "trad_syll": 3,
+        "trad_poly": true
+    },
+    "makapapanakit": {
+        "lex_pos": "verb",
+        "lex_foreign": false,
+        "trad_char": 13,
+        "trad_syll": 6,
+        "trad_poly": true
+    },
+    "pabalik": {
+        "lex_pos": "verb",
+        "lex_foreign": false,
+        "trad_char": 7,
+        "trad_syll": 3,
+        "trad_poly": true
+    },
+    "masigasig": {
+        "lex_pos": "adj",
+        "lex_foreign": false,
+        "trad_char": 9,
+        "trad_syll": 2,
+        "trad_poly": true
+    },
+    "ay": {
+        "lex_pos": "other",
+        "lex_foreign": false,
+        "trad_char": 2,
+        "trad_syll": 0,
+        "trad_poly": false
+    },
     "habang": {
         "lex_pos": "adv",
         "lex_foreign": false,
@@ -699,17 +734,24 @@
         "trad_syll": 3,
         "trad_poly": true
     },
-    "may": {
+    "mag-iingat": {
         "lex_pos": "verb",
         "lex_foreign": false,
-        "trad_char": 3,
-        "trad_syll": 1,
-        "trad_poly": false
+        "trad_char": 10,
+        "trad_syll": 2,
+        "trad_poly": true
     },
-    "pabalik": {
+    "naging": {
         "lex_pos": "verb",
         "lex_foreign": false,
-        "trad_char": 7,
+        "trad_char": 6,
+        "trad_syll": 3,
+        "trad_poly": true
+    },
+    "pumapansin": {
+        "lex_pos": "verb",
+        "lex_foreign": false,
+        "trad_char": 10,
         "trad_syll": 3,
         "trad_poly": true
     },
@@ -727,52 +769,10 @@
         "trad_syll": 3,
         "trad_poly": true
     },
-    "pinakamalaking": {
-        "lex_pos": "adj",
-        "lex_foreign": false,
-        "trad_char": 14,
-        "trad_syll": 7,
-        "trad_poly": true
-    },
-    "pumapansin": {
+    "napuno": {
         "lex_pos": "verb",
         "lex_foreign": false,
-        "trad_char": 10,
-        "trad_syll": 3,
-        "trad_poly": true
-    },
-    "masigasig": {
-        "lex_pos": "adj",
-        "lex_foreign": false,
-        "trad_char": 9,
-        "trad_syll": 2,
-        "trad_poly": true
-    },
-    "kanya": {
-        "lex_pos": "other",
-        "lex_foreign": false,
-        "trad_char": 5,
-        "trad_syll": 1,
-        "trad_poly": false
-    },
-    "ako": {
-        "lex_pos": "other",
-        "lex_foreign": false,
-        "trad_char": 3,
-        "trad_syll": 1,
-        "trad_poly": false
-    },
-    "ay": {
-        "lex_pos": "other",
-        "lex_foreign": false,
-        "trad_char": 2,
-        "trad_syll": 0,
-        "trad_poly": false
-    },
-    "papalayo": {
-        "lex_pos": "adv",
-        "lex_foreign": false,
-        "trad_char": 8,
+        "trad_char": 6,
         "trad_syll": 3,
         "trad_poly": true
     },
@@ -783,12 +783,19 @@
         "trad_syll": 1,
         "trad_poly": false
     },
-    "naging": {
+    "mayroon": {
         "lex_pos": "verb",
         "lex_foreign": false,
-        "trad_char": 6,
-        "trad_syll": 3,
+        "trad_char": 7,
+        "trad_syll": 2,
         "trad_poly": true
+    },
+    "kanya": {
+        "lex_pos": "other",
+        "lex_foreign": false,
+        "trad_char": 5,
+        "trad_syll": 1,
+        "trad_poly": false
     },
     "ninyo": {
         "lex_pos": "other",
@@ -797,20 +804,6 @@
         "trad_syll": 1,
         "trad_poly": false
     },
-    "pa": {
-        "lex_pos": "adv",
-        "lex_foreign": false,
-        "trad_char": 2,
-        "trad_syll": 1,
-        "trad_poly": false
-    },
-    "napuno": {
-        "lex_pos": "verb",
-        "lex_foreign": false,
-        "trad_char": 6,
-        "trad_syll": 3,
-        "trad_poly": true
-    },
     "natutuwa": {
         "lex_pos": "verb",
         "lex_foreign": false,
@@ -818,17 +811,17 @@
         "trad_syll": 4,
         "trad_poly": true
     },
+    "meryenda": {
+        "lex_pos": "noun",
+        "lex_foreign": false,
+        "trad_char": 8,
+        "trad_syll": 2,
+        "trad_poly": true
+    },
     "aking": {
         "lex_pos": "other",
         "lex_foreign": false,
         "trad_char": 5,
-        "trad_syll": 2,
-        "trad_poly": true
-    },
-    "tignan": {
-        "lex_pos": "verb",
-        "lex_foreign": false,
-        "trad_char": 6,
         "trad_syll": 2,
         "trad_poly": true
     },
@@ -846,11 +839,11 @@
         "trad_syll": 3,
         "trad_poly": true
     },
-    "meryenda": {
-        "lex_pos": "noun",
+    "lalong": {
+        "lex_pos": "adj",
         "lex_foreign": false,
-        "trad_char": 8,
-        "trad_syll": 2,
+        "trad_char": 6,
+        "trad_syll": 3,
         "trad_poly": true
     },
     "lumalim": {
@@ -867,6 +860,20 @@
         "trad_syll": 3,
         "trad_poly": true
     },
+    "nagmamadaling": {
+        "lex_pos": "adv",
+        "lex_foreign": false,
+        "trad_char": 13,
+        "trad_syll": 6,
+        "trad_poly": true
+    },
+    "tignan": {
+        "lex_pos": "verb",
+        "lex_foreign": false,
+        "trad_char": 6,
+        "trad_syll": 2,
+        "trad_poly": true
+    },
     "ingay": {
         "lex_pos": "noun",
         "lex_foreign": false,
@@ -874,18 +881,11 @@
         "trad_syll": 1,
         "trad_poly": false
     },
-    "mayroon": {
-        "lex_pos": "verb",
+    "pagyayabang": {
+        "lex_pos": "noun",
         "lex_foreign": false,
-        "trad_char": 7,
-        "trad_syll": 2,
-        "trad_poly": true
-    },
-    "pero": {
-        "lex_pos": "other",
-        "lex_foreign": false,
-        "trad_char": 4,
-        "trad_syll": 2,
+        "trad_char": 11,
+        "trad_syll": 3,
         "trad_poly": true
     },
     "interes": {
@@ -895,14 +895,14 @@
         "trad_syll": 2,
         "trad_poly": true
     },
-    "tulungan": {
-        "lex_pos": "verb",
+    "pa": {
+        "lex_pos": "adv",
         "lex_foreign": false,
-        "trad_char": 8,
-        "trad_syll": 3,
-        "trad_poly": true
+        "trad_char": 2,
+        "trad_syll": 1,
+        "trad_poly": false
     },
-    "sila": {
+    "kaya": {
         "lex_pos": "other",
         "lex_foreign": false,
         "trad_char": 4,
@@ -916,28 +916,14 @@
         "trad_syll": 3,
         "trad_poly": true
     },
-    "nagpahinga": {
-        "lex_pos": "verb",
+    "pero": {
+        "lex_pos": "other",
         "lex_foreign": false,
-        "trad_char": 10,
-        "trad_syll": 4,
-        "trad_poly": true
-    },
-    "dahon": {
-        "lex_pos": "noun",
-        "lex_foreign": false,
-        "trad_char": 5,
+        "trad_char": 4,
         "trad_syll": 2,
         "trad_poly": true
     },
-    "lalong": {
-        "lex_pos": "adj",
-        "lex_foreign": false,
-        "trad_char": 6,
-        "trad_syll": 3,
-        "trad_poly": true
-    },
-    "kaya": {
+    "sila": {
         "lex_pos": "other",
         "lex_foreign": false,
         "trad_char": 4,
@@ -951,7 +937,91 @@
         "trad_syll": 2,
         "trad_poly": true
     },
+    "nahiga": {
+        "lex_pos": "verb",
+        "lex_foreign": false,
+        "trad_char": 6,
+        "trad_syll": 3,
+        "trad_poly": true
+    },
+    "lalagyan": {
+        "lex_pos": "noun",
+        "lex_foreign": false,
+        "trad_char": 8,
+        "trad_syll": 2,
+        "trad_poly": true
+    },
+    "nagpahinga": {
+        "lex_pos": "verb",
+        "lex_foreign": false,
+        "trad_char": 10,
+        "trad_syll": 4,
+        "trad_poly": true
+    },
+    "kalangitan": {
+        "lex_pos": "noun",
+        "lex_foreign": false,
+        "trad_char": 10,
+        "trad_syll": 4,
+        "trad_poly": true
+    },
+    "tulungan": {
+        "lex_pos": "verb",
+        "lex_foreign": false,
+        "trad_char": 8,
+        "trad_syll": 3,
+        "trad_poly": true
+    },
+    "dahon": {
+        "lex_pos": "noun",
+        "lex_foreign": false,
+        "trad_char": 5,
+        "trad_syll": 2,
+        "trad_poly": true
+    },
+    "tumingin": {
+        "lex_pos": "verb",
+        "lex_foreign": false,
+        "trad_char": 8,
+        "trad_syll": 3,
+        "trad_poly": true
+    },
+    "kulay": {
+        "lex_pos": "noun",
+        "lex_foreign": false,
+        "trad_char": 5,
+        "trad_syll": 2,
+        "trad_poly": true
+    },
+    "lila": {
+        "lex_pos": "noun",
+        "lex_foreign": false,
+        "trad_char": 4,
+        "trad_syll": 2,
+        "trad_poly": true
+    },
+    "nakakita": {
+        "lex_pos": "verb",
+        "lex_foreign": false,
+        "trad_char": 8,
+        "trad_syll": 4,
+        "trad_poly": true
+    },
+    "laki": {
+        "lex_pos": "noun",
+        "lex_foreign": false,
+        "trad_char": 4,
+        "trad_syll": 2,
+        "trad_poly": true
+    },
     "magandang": {
+        "lex_pos": "adj",
+        "lex_foreign": false,
+        "trad_char": 9,
+        "trad_syll": 4,
+        "trad_poly": true
+    },
+    "kakaibang": {
         "lex_pos": "adj",
         "lex_foreign": false,
         "trad_char": 9,
@@ -965,46 +1035,11 @@
         "trad_syll": 2,
         "trad_poly": true
     },
-    "kalangitan": {
-        "lex_pos": "noun",
-        "lex_foreign": false,
-        "trad_char": 10,
-        "trad_syll": 4,
-        "trad_poly": true
-    },
     "Bigla": {
         "lex_pos": "noun",
         "lex_foreign": false,
         "trad_char": 5,
         "trad_syll": 2,
-        "trad_poly": true
-    },
-    "kulay": {
-        "lex_pos": "noun",
-        "lex_foreign": false,
-        "trad_char": 5,
-        "trad_syll": 2,
-        "trad_poly": true
-    },
-    "lalagyan": {
-        "lex_pos": "noun",
-        "lex_foreign": false,
-        "trad_char": 8,
-        "trad_syll": 2,
-        "trad_poly": true
-    },
-    "nagmamadaling": {
-        "lex_pos": "adv",
-        "lex_foreign": false,
-        "trad_char": 13,
-        "trad_syll": 6,
-        "trad_poly": true
-    },
-    "tumingin": {
-        "lex_pos": "verb",
-        "lex_foreign": false,
-        "trad_char": 8,
-        "trad_syll": 3,
         "trad_poly": true
     },
     "taas": {
@@ -1014,11 +1049,11 @@
         "trad_syll": 1,
         "trad_poly": false
     },
-    "nakakita": {
-        "lex_pos": "verb",
+    "nila": {
+        "lex_pos": "other",
         "lex_foreign": false,
-        "trad_char": 8,
-        "trad_syll": 4,
+        "trad_char": 4,
+        "trad_syll": 2,
         "trad_poly": true
     },
     "bulalas": {
@@ -1035,33 +1070,19 @@
         "trad_syll": 2,
         "trad_poly": true
     },
-    "kahit": {
-        "lex_pos": "other",
+    "pagsama-samahin": {
+        "lex_pos": "verb",
         "lex_foreign": false,
-        "trad_char": 5,
-        "trad_syll": 2,
+        "trad_char": 15,
+        "trad_syll": 4,
         "trad_poly": true
     },
-    "yon": {
+    "iyon": {
         "lex_pos": "other",
         "lex_foreign": false,
-        "trad_char": 3,
+        "trad_char": 4,
         "trad_syll": 0,
         "trad_poly": false
-    },
-    "laki": {
-        "lex_pos": "noun",
-        "lex_foreign": false,
-        "trad_char": 4,
-        "trad_syll": 2,
-        "trad_poly": true
-    },
-    "lila": {
-        "lex_pos": "noun",
-        "lex_foreign": false,
-        "trad_char": 4,
-        "trad_syll": 2,
-        "trad_poly": true
     },
     "marami": {
         "lex_pos": "other",
@@ -1070,47 +1091,12 @@
         "trad_syll": 3,
         "trad_poly": true
     },
-    "nilang": {
-        "lex_pos": "other",
-        "lex_foreign": false,
-        "trad_char": 6,
-        "trad_syll": 3,
-        "trad_poly": true
-    },
-    "pagsama-samahin": {
-        "lex_pos": "verb",
-        "lex_foreign": false,
-        "trad_char": 15,
-        "trad_syll": 4,
-        "trad_poly": true
-    },
-    "nila": {
-        "lex_pos": "other",
-        "lex_foreign": false,
-        "trad_char": 4,
-        "trad_syll": 2,
-        "trad_poly": true
-    },
-    "kakaibang": {
-        "lex_pos": "adj",
-        "lex_foreign": false,
-        "trad_char": 9,
-        "trad_syll": 4,
-        "trad_poly": true
-    },
     "pagitan": {
         "lex_pos": "noun",
         "lex_foreign": false,
         "trad_char": 7,
         "trad_syll": 3,
         "trad_poly": true
-    },
-    "minsan": {
-        "lex_pos": "adv",
-        "lex_foreign": false,
-        "trad_char": 6,
-        "trad_syll": 1,
-        "trad_poly": false
     },
     "lumulusot": {
         "lex_pos": "verb",
@@ -1126,19 +1112,19 @@
         "trad_syll": 2,
         "trad_poly": true
     },
+    "sanga": {
+        "lex_pos": "noun",
+        "lex_foreign": false,
+        "trad_char": 5,
+        "trad_syll": 1,
+        "trad_poly": false
+    },
     "nakuha": {
         "lex_pos": "verb",
         "lex_foreign": false,
         "trad_char": 6,
         "trad_syll": 3,
         "trad_poly": true
-    },
-    "uod": {
-        "lex_pos": "noun",
-        "lex_foreign": false,
-        "trad_char": 3,
-        "trad_syll": 0,
-        "trad_poly": false
     },
     "mabilis": {
         "lex_pos": "adj",
@@ -1147,60 +1133,32 @@
         "trad_syll": 3,
         "trad_poly": true
     },
+    "yon": {
+        "lex_pos": "other",
+        "lex_foreign": false,
+        "trad_char": 3,
+        "trad_syll": 0,
+        "trad_poly": false
+    },
+    "nilang": {
+        "lex_pos": "other",
+        "lex_foreign": false,
+        "trad_char": 6,
+        "trad_syll": 3,
+        "trad_poly": true
+    },
+    "minsan": {
+        "lex_pos": "adv",
+        "lex_foreign": false,
+        "trad_char": 6,
+        "trad_syll": 1,
+        "trad_poly": false
+    },
     "makarating": {
         "lex_pos": "verb",
         "lex_foreign": false,
         "trad_char": 10,
         "trad_syll": 5,
-        "trad_poly": true
-    },
-    "pupuntahan": {
-        "lex_pos": "noun",
-        "lex_foreign": false,
-        "trad_char": 10,
-        "trad_syll": 4,
-        "trad_poly": true
-    },
-    "binibigyan": {
-        "lex_pos": "verb",
-        "lex_foreign": false,
-        "trad_char": 10,
-        "trad_syll": 3,
-        "trad_poly": true
-    },
-    "sanga": {
-        "lex_pos": "noun",
-        "lex_foreign": false,
-        "trad_char": 5,
-        "trad_syll": 1,
-        "trad_poly": false
-    },
-    "nahiga": {
-        "lex_pos": "verb",
-        "lex_foreign": false,
-        "trad_char": 6,
-        "trad_syll": 3,
-        "trad_poly": true
-    },
-    "direksyon": {
-        "lex_pos": "noun",
-        "lex_foreign": false,
-        "trad_char": 9,
-        "trad_syll": 2,
-        "trad_poly": true
-    },
-    "iyon": {
-        "lex_pos": "other",
-        "lex_foreign": false,
-        "trad_char": 4,
-        "trad_syll": 0,
-        "trad_poly": false
-    },
-    "kinain": {
-        "lex_pos": "verb",
-        "lex_foreign": false,
-        "trad_char": 6,
-        "trad_syll": 2,
         "trad_poly": true
     },
     "sapat": {
@@ -1210,17 +1168,17 @@
         "trad_syll": 1,
         "trad_poly": false
     },
-    "sapot": {
-        "lex_pos": "adj",
+    "pupuntahan": {
+        "lex_pos": "noun",
         "lex_foreign": false,
-        "trad_char": 5,
-        "trad_syll": 1,
-        "trad_poly": false
+        "trad_char": 10,
+        "trad_syll": 4,
+        "trad_poly": true
     },
-    "nasa": {
-        "lex_pos": "adv",
+    "pansin": {
+        "lex_pos": "noun",
         "lex_foreign": false,
-        "trad_char": 4,
+        "trad_char": 6,
         "trad_syll": 1,
         "trad_poly": false
     },
@@ -1231,13 +1189,6 @@
         "trad_syll": 5,
         "trad_poly": true
     },
-    "hayop": {
-        "lex_pos": "noun",
-        "lex_foreign": false,
-        "trad_char": 5,
-        "trad_syll": 1,
-        "trad_poly": false
-    },
     "makukuhang": {
         "lex_pos": "adj",
         "lex_foreign": false,
@@ -1245,26 +1196,40 @@
         "trad_syll": 5,
         "trad_poly": true
     },
-    "ba": {
-        "lex_pos": "adv",
-        "lex_foreign": false,
-        "trad_char": 2,
-        "trad_syll": 1,
-        "trad_poly": false
-    },
-    "ano": {
-        "lex_pos": "other",
-        "lex_foreign": false,
-        "trad_char": 3,
-        "trad_syll": 1,
-        "trad_poly": false
-    },
-    "paa": {
+    "uod": {
         "lex_pos": "noun",
         "lex_foreign": false,
         "trad_char": 3,
+        "trad_syll": 0,
+        "trad_poly": false
+    },
+    "binibigyan": {
+        "lex_pos": "verb",
+        "lex_foreign": false,
+        "trad_char": 10,
+        "trad_syll": 3,
+        "trad_poly": true
+    },
+    "kahit": {
+        "lex_pos": "other",
+        "lex_foreign": false,
+        "trad_char": 5,
+        "trad_syll": 2,
+        "trad_poly": true
+    },
+    "sapot": {
+        "lex_pos": "adj",
+        "lex_foreign": false,
+        "trad_char": 5,
         "trad_syll": 1,
         "trad_poly": false
+    },
+    "walong": {
+        "lex_pos": "adj",
+        "lex_foreign": false,
+        "trad_char": 6,
+        "trad_syll": 3,
+        "trad_poly": true
     },
     "biglang": {
         "lex_pos": "adv",
@@ -1273,14 +1238,14 @@
         "trad_syll": 3,
         "trad_poly": true
     },
-    "sino": {
-        "lex_pos": "other",
+    "harapan": {
+        "lex_pos": "noun",
         "lex_foreign": false,
-        "trad_char": 4,
-        "trad_syll": 1,
-        "trad_poly": false
+        "trad_char": 7,
+        "trad_syll": 3,
+        "trad_poly": true
     },
-    "yang": {
+    "sino": {
         "lex_pos": "other",
         "lex_foreign": false,
         "trad_char": 4,
@@ -1294,17 +1259,52 @@
         "trad_syll": 3,
         "trad_poly": true
     },
-    "harapan": {
+    "direksyon": {
+        "lex_pos": "noun",
+        "lex_foreign": false,
+        "trad_char": 9,
+        "trad_syll": 2,
+        "trad_poly": true
+    },
+    "gagamba": {
         "lex_pos": "noun",
         "lex_foreign": false,
         "trad_char": 7,
         "trad_syll": 3,
         "trad_poly": true
     },
+    "ano": {
+        "lex_pos": "other",
+        "lex_foreign": false,
+        "trad_char": 3,
+        "trad_syll": 1,
+        "trad_poly": false
+    },
+    "yang": {
+        "lex_pos": "other",
+        "lex_foreign": false,
+        "trad_char": 4,
+        "trad_syll": 1,
+        "trad_poly": false
+    },
+    "nilalalakaran": {
+        "lex_pos": "verb",
+        "lex_foreign": false,
+        "trad_char": 13,
+        "trad_syll": 6,
+        "trad_poly": true
+    },
     "mo": {
         "lex_pos": "other",
         "lex_foreign": false,
         "trad_char": 2,
+        "trad_syll": 1,
+        "trad_poly": false
+    },
+    "paa": {
+        "lex_pos": "noun",
+        "lex_foreign": false,
+        "trad_char": 3,
         "trad_syll": 1,
         "trad_poly": false
     },
@@ -1315,13 +1315,6 @@
         "trad_syll": 1,
         "trad_poly": false
     },
-    "bang": {
-        "lex_pos": "adv",
-        "lex_foreign": false,
-        "trad_char": 4,
-        "trad_syll": 2,
-        "trad_poly": true
-    },
     "dito": {
         "lex_pos": "other",
         "lex_foreign": false,
@@ -1329,18 +1322,32 @@
         "trad_syll": 2,
         "trad_poly": true
     },
-    "nilalalakaran": {
+    "gusto": {
         "lex_pos": "verb",
         "lex_foreign": false,
-        "trad_char": 13,
-        "trad_syll": 6,
+        "trad_char": 5,
+        "trad_syll": 2,
         "trad_poly": true
     },
-    "makipaglaro": {
+    "bang": {
+        "lex_pos": "adv",
+        "lex_foreign": false,
+        "trad_char": 4,
+        "trad_syll": 2,
+        "trad_poly": true
+    },
+    "dala": {
         "lex_pos": "verb",
         "lex_foreign": false,
-        "trad_char": 11,
-        "trad_syll": 5,
+        "trad_char": 4,
+        "trad_syll": 2,
+        "trad_poly": true
+    },
+    "papunta": {
+        "lex_pos": "adv",
+        "lex_foreign": false,
+        "trad_char": 7,
+        "trad_syll": 3,
         "trad_poly": true
     },
     "ito": {
@@ -1350,17 +1357,80 @@
         "trad_syll": 1,
         "trad_poly": false
     },
-    "pagkamangha": {
+    "ba": {
+        "lex_pos": "adv",
+        "lex_foreign": false,
+        "trad_char": 2,
+        "trad_syll": 1,
+        "trad_poly": false
+    },
+    "makipaglaro": {
         "lex_pos": "verb",
         "lex_foreign": false,
         "trad_char": 11,
         "trad_syll": 5,
         "trad_poly": true
     },
-    "gagamba": {
-        "lex_pos": "noun",
+    "nasa": {
+        "lex_pos": "adv",
+        "lex_foreign": false,
+        "trad_char": 4,
+        "trad_syll": 1,
+        "trad_poly": false
+    },
+    "nabitag": {
+        "lex_pos": "verb",
         "lex_foreign": false,
         "trad_char": 7,
+        "trad_syll": 3,
+        "trad_poly": true
+    },
+    "nakaramdam": {
+        "lex_pos": "verb",
+        "lex_foreign": false,
+        "trad_char": 10,
+        "trad_syll": 4,
+        "trad_poly": true
+    },
+    "kinain": {
+        "lex_pos": "verb",
+        "lex_foreign": false,
+        "trad_char": 6,
+        "trad_syll": 2,
+        "trad_poly": true
+    },
+    "pagkabahala": {
+        "lex_pos": "noun",
+        "lex_foreign": false,
+        "trad_char": 11,
+        "trad_syll": 5,
+        "trad_poly": true
+    },
+    "hayop": {
+        "lex_pos": "noun",
+        "lex_foreign": false,
+        "trad_char": 5,
+        "trad_syll": 1,
+        "trad_poly": false
+    },
+    "palayo": {
+        "lex_pos": "adv",
+        "lex_foreign": false,
+        "trad_char": 6,
+        "trad_syll": 2,
+        "trad_poly": true
+    },
+    "kaibigan": {
+        "lex_pos": "noun",
+        "lex_foreign": false,
+        "trad_char": 8,
+        "trad_syll": 3,
+        "trad_poly": true
+    },
+    "bagong": {
+        "lex_pos": "adj",
+        "lex_foreign": false,
+        "trad_char": 6,
         "trad_syll": 3,
         "trad_poly": true
     },
@@ -1371,67 +1441,11 @@
         "trad_syll": 2,
         "trad_poly": true
     },
-    "pansin": {
-        "lex_pos": "noun",
-        "lex_foreign": false,
-        "trad_char": 6,
-        "trad_syll": 1,
-        "trad_poly": false
-    },
-    "gusto": {
+    "pagkamangha": {
         "lex_pos": "verb",
-        "lex_foreign": false,
-        "trad_char": 5,
-        "trad_syll": 2,
-        "trad_poly": true
-    },
-    "nakaramdam": {
-        "lex_pos": "verb",
-        "lex_foreign": false,
-        "trad_char": 10,
-        "trad_syll": 4,
-        "trad_poly": true
-    },
-    "pagkabahala": {
-        "lex_pos": "noun",
         "lex_foreign": false,
         "trad_char": 11,
         "trad_syll": 5,
-        "trad_poly": true
-    },
-    "papunta": {
-        "lex_pos": "adv",
-        "lex_foreign": false,
-        "trad_char": 7,
-        "trad_syll": 3,
-        "trad_poly": true
-    },
-    "sinubukan": {
-        "lex_pos": "verb",
-        "lex_foreign": false,
-        "trad_char": 9,
-        "trad_syll": 3,
-        "trad_poly": true
-    },
-    "napansin": {
-        "lex_pos": "verb",
-        "lex_foreign": false,
-        "trad_char": 8,
-        "trad_syll": 2,
-        "trad_poly": true
-    },
-    "palayo": {
-        "lex_pos": "adv",
-        "lex_foreign": false,
-        "trad_char": 6,
-        "trad_syll": 2,
-        "trad_poly": true
-    },
-    "bagong": {
-        "lex_pos": "adj",
-        "lex_foreign": false,
-        "trad_char": 6,
-        "trad_syll": 3,
         "trad_poly": true
     },
     "isa": {
@@ -1441,17 +1455,17 @@
         "trad_syll": 0,
         "trad_poly": false
     },
-    "kaibigan": {
-        "lex_pos": "noun",
+    "sinubukan": {
+        "lex_pos": "verb",
         "lex_foreign": false,
-        "trad_char": 8,
+        "trad_char": 9,
         "trad_syll": 3,
         "trad_poly": true
     },
-    "nakita": {
+    "nadikit": {
         "lex_pos": "verb",
         "lex_foreign": false,
-        "trad_char": 6,
+        "trad_char": 7,
         "trad_syll": 3,
         "trad_poly": true
     },
@@ -1462,43 +1476,8 @@
         "trad_syll": 2,
         "trad_poly": true
     },
-    "papalapit": {
-        "lex_pos": "noun",
-        "lex_foreign": false,
-        "trad_char": 9,
-        "trad_syll": 4,
-        "trad_poly": true
-    },
-    "kaakit-akit": {
-        "lex_pos": "adj",
-        "lex_foreign": false,
-        "trad_char": 11,
-        "trad_syll": 3,
-        "trad_poly": true
-    },
-    "nagpupumiglas": {
+    "nakita": {
         "lex_pos": "verb",
-        "lex_foreign": false,
-        "trad_char": 13,
-        "trad_syll": 5,
-        "trad_poly": true
-    },
-    "nabitag": {
-        "lex_pos": "verb",
-        "lex_foreign": false,
-        "trad_char": 7,
-        "trad_syll": 3,
-        "trad_poly": true
-    },
-    "nito": {
-        "lex_pos": "other",
-        "lex_foreign": false,
-        "trad_char": 4,
-        "trad_syll": 2,
-        "trad_poly": true
-    },
-    "walong": {
-        "lex_pos": "adj",
         "lex_foreign": false,
         "trad_char": 6,
         "trad_syll": 3,
@@ -1511,8 +1490,43 @@
         "trad_syll": 2,
         "trad_poly": true
     },
-    "nadikit": {
+    "pangil": {
+        "lex_pos": "noun",
+        "lex_foreign": false,
+        "trad_char": 6,
+        "trad_syll": 2,
+        "trad_poly": true
+    },
+    "nito": {
+        "lex_pos": "other",
+        "lex_foreign": false,
+        "trad_char": 4,
+        "trad_syll": 2,
+        "trad_poly": true
+    },
+    "nagpupumiglas": {
         "lex_pos": "verb",
+        "lex_foreign": false,
+        "trad_char": 13,
+        "trad_syll": 5,
+        "trad_poly": true
+    },
+    "kaakit-akit": {
+        "lex_pos": "adj",
+        "lex_foreign": false,
+        "trad_char": 11,
+        "trad_syll": 3,
+        "trad_poly": true
+    },
+    "papalapit": {
+        "lex_pos": "noun",
+        "lex_foreign": false,
+        "trad_char": 9,
+        "trad_syll": 4,
+        "trad_poly": true
+    },
+    "malakas": {
+        "lex_pos": "adj",
         "lex_foreign": false,
         "trad_char": 7,
         "trad_syll": 3,
@@ -1525,101 +1539,10 @@
         "trad_syll": 3,
         "trad_poly": true
     },
-    "agad": {
-        "lex_pos": "adv",
-        "lex_foreign": false,
-        "trad_char": 4,
-        "trad_syll": 1,
-        "trad_poly": false
-    },
-    "pangil": {
-        "lex_pos": "noun",
-        "lex_foreign": false,
-        "trad_char": 6,
-        "trad_syll": 2,
-        "trad_poly": true
-    },
-    "pinaalalahanan": {
-        "lex_pos": "verb",
-        "lex_foreign": false,
-        "trad_char": 14,
-        "trad_syll": 6,
-        "trad_poly": true
-    },
     "sarili": {
         "lex_pos": "noun",
         "lex_foreign": false,
         "trad_char": 6,
-        "trad_syll": 2,
-        "trad_poly": true
-    },
-    "inilalabas": {
-        "lex_pos": "verb",
-        "lex_foreign": false,
-        "trad_char": 10,
-        "trad_syll": 4,
-        "trad_poly": true
-    },
-    "dala": {
-        "lex_pos": "verb",
-        "lex_foreign": false,
-        "trad_char": 4,
-        "trad_syll": 2,
-        "trad_poly": true
-    },
-    "nagpasyang": {
-        "lex_pos": "adv",
-        "lex_foreign": false,
-        "trad_char": 10,
-        "trad_syll": 3,
-        "trad_poly": true
-    },
-    "makaalis": {
-        "lex_pos": "verb",
-        "lex_foreign": false,
-        "trad_char": 8,
-        "trad_syll": 3,
-        "trad_poly": true
-    },
-    "umalis": {
-        "lex_pos": "verb",
-        "lex_foreign": false,
-        "trad_char": 6,
-        "trad_syll": 2,
-        "trad_poly": true
-    },
-    "muntik": {
-        "lex_pos": "adv",
-        "lex_foreign": false,
-        "trad_char": 6,
-        "trad_syll": 2,
-        "trad_poly": true
-    },
-    "sabi": {
-        "lex_pos": "verb",
-        "lex_foreign": false,
-        "trad_char": 4,
-        "trad_syll": 1,
-        "trad_poly": false
-    },
-    "wakas": {
-        "lex_pos": "adv",
-        "lex_foreign": false,
-        "trad_char": 5,
-        "trad_syll": 2,
-        "trad_poly": true
-    },
-    "malakas": {
-        "lex_pos": "adj",
-        "lex_foreign": false,
-        "trad_char": 7,
-        "trad_syll": 3,
-        "trad_poly": true
-    },
-    "nasiyahan": {
-        "lex_pos": "verb",
-        "lex_foreign": false,
-        "trad_char": 9,
         "trad_syll": 2,
         "trad_poly": true
     },
@@ -1630,10 +1553,80 @@
         "trad_syll": 4,
         "trad_poly": true
     },
-    "paglipad": {
-        "lex_pos": "noun",
+    "napansin": {
+        "lex_pos": "verb",
         "lex_foreign": false,
         "trad_char": 8,
+        "trad_syll": 2,
+        "trad_poly": true
+    },
+    "inilalabas": {
+        "lex_pos": "verb",
+        "lex_foreign": false,
+        "trad_char": 10,
+        "trad_syll": 4,
+        "trad_poly": true
+    },
+    "nagpasyang": {
+        "lex_pos": "adv",
+        "lex_foreign": false,
+        "trad_char": 10,
+        "trad_syll": 3,
+        "trad_poly": true
+    },
+    "pinaalalahanan": {
+        "lex_pos": "verb",
+        "lex_foreign": false,
+        "trad_char": 14,
+        "trad_syll": 6,
+        "trad_poly": true
+    },
+    "agad": {
+        "lex_pos": "adv",
+        "lex_foreign": false,
+        "trad_char": 4,
+        "trad_syll": 1,
+        "trad_poly": false
+    },
+    "umalis": {
+        "lex_pos": "verb",
+        "lex_foreign": false,
+        "trad_char": 6,
+        "trad_syll": 2,
+        "trad_poly": true
+    },
+    "siyang": {
+        "lex_pos": "other",
+        "lex_foreign": false,
+        "trad_char": 6,
+        "trad_syll": 1,
+        "trad_poly": false
+    },
+    "mapahamak": {
+        "lex_pos": "verb",
+        "lex_foreign": false,
+        "trad_char": 9,
+        "trad_syll": 4,
+        "trad_poly": true
+    },
+    "wakas": {
+        "lex_pos": "adv",
+        "lex_foreign": false,
+        "trad_char": 5,
+        "trad_syll": 2,
+        "trad_poly": true
+    },
+    "nasiyahan": {
+        "lex_pos": "verb",
+        "lex_foreign": false,
+        "trad_char": 9,
+        "trad_syll": 2,
+        "trad_poly": true
+    },
+    "natakasan": {
+        "lex_pos": "verb",
+        "lex_foreign": false,
+        "trad_char": 9,
         "trad_syll": 3,
         "trad_poly": true
     },
@@ -1651,11 +1644,11 @@
         "trad_syll": 2,
         "trad_poly": true
     },
-    "mataas": {
-        "lex_pos": "adj",
+    "makaalis": {
+        "lex_pos": "verb",
         "lex_foreign": false,
-        "trad_char": 6,
-        "trad_syll": 2,
+        "trad_char": 8,
+        "trad_syll": 3,
         "trad_poly": true
     },
     "lilang": {
@@ -1665,12 +1658,26 @@
         "trad_syll": 3,
         "trad_poly": true
     },
-    "siyang": {
-        "lex_pos": "other",
+    "sabi": {
+        "lex_pos": "verb",
         "lex_foreign": false,
-        "trad_char": 6,
+        "trad_char": 4,
         "trad_syll": 1,
         "trad_poly": false
+    },
+    "paglipad": {
+        "lex_pos": "noun",
+        "lex_foreign": false,
+        "trad_char": 8,
+        "trad_syll": 3,
+        "trad_poly": true
+    },
+    "hangin": {
+        "lex_pos": "noun",
+        "lex_foreign": false,
+        "trad_char": 6,
+        "trad_syll": 2,
+        "trad_poly": true
     },
     "napakaraming": {
         "lex_pos": "adj",
@@ -1686,34 +1693,6 @@
         "trad_syll": 0,
         "trad_poly": false
     },
-    "nakaiwas": {
-        "lex_pos": "adv",
-        "lex_foreign": false,
-        "trad_char": 8,
-        "trad_syll": 3,
-        "trad_poly": true
-    },
-    "O": {
-        "lex_pos": "noun",
-        "lex_foreign": false,
-        "trad_char": 1,
-        "trad_syll": 0,
-        "trad_poly": false
-    },
-    "natakasan": {
-        "lex_pos": "verb",
-        "lex_foreign": false,
-        "trad_char": 9,
-        "trad_syll": 3,
-        "trad_poly": true
-    },
-    "mapahamak": {
-        "lex_pos": "verb",
-        "lex_foreign": false,
-        "trad_char": 9,
-        "trad_syll": 4,
-        "trad_poly": true
-    },
     "madala": {
         "lex_pos": "verb",
         "lex_foreign": false,
@@ -1721,11 +1700,18 @@
         "trad_syll": 3,
         "trad_poly": true
     },
-    "mapait": {
+    "mataas": {
         "lex_pos": "adj",
         "lex_foreign": false,
         "trad_char": 6,
         "trad_syll": 2,
+        "trad_poly": true
+    },
+    "nakaiwas": {
+        "lex_pos": "adv",
+        "lex_foreign": false,
+        "trad_char": 8,
+        "trad_syll": 3,
         "trad_poly": true
     },
     "pinakagitna": {
@@ -1735,6 +1721,20 @@
         "trad_syll": 5,
         "trad_poly": true
     },
+    "malalaman": {
+        "lex_pos": "verb",
+        "lex_foreign": false,
+        "trad_char": 9,
+        "trad_syll": 4,
+        "trad_poly": true
+    },
+    "O": {
+        "lex_pos": "noun",
+        "lex_foreign": false,
+        "trad_char": 1,
+        "trad_syll": 0,
+        "trad_poly": false
+    },
     "siyay": {
         "lex_pos": "noun",
         "lex_foreign": false,
@@ -1742,17 +1742,10 @@
         "trad_syll": 0,
         "trad_poly": false
     },
-    "hilo": {
-        "lex_pos": "adj",
-        "lex_foreign": false,
-        "trad_char": 4,
-        "trad_syll": 2,
-        "trad_poly": true
-    },
-    "nawalan": {
+    "tinikman": {
         "lex_pos": "verb",
         "lex_foreign": false,
-        "trad_char": 7,
+        "trad_char": 8,
         "trad_syll": 3,
         "trad_poly": true
     },
@@ -1763,11 +1756,11 @@
         "trad_syll": 4,
         "trad_poly": true
     },
-    "tinikman": {
-        "lex_pos": "verb",
+    "muntik": {
+        "lex_pos": "adv",
         "lex_foreign": false,
-        "trad_char": 8,
-        "trad_syll": 3,
+        "trad_char": 6,
+        "trad_syll": 2,
         "trad_poly": true
     },
     "pinakamagaling": {
@@ -1777,18 +1770,25 @@
         "trad_syll": 7,
         "trad_poly": true
     },
-    "malalaman": {
-        "lex_pos": "verb",
+    "hilo": {
+        "lex_pos": "adj",
         "lex_foreign": false,
-        "trad_char": 9,
-        "trad_syll": 4,
+        "trad_char": 4,
+        "trad_syll": 2,
         "trad_poly": true
     },
-    "hangin": {
-        "lex_pos": "noun",
+    "samantala": {
+        "lex_pos": "other",
         "lex_foreign": false,
-        "trad_char": 6,
-        "trad_syll": 2,
+        "trad_char": 9,
+        "trad_syll": 3,
+        "trad_poly": true
+    },
+    "nawalan": {
+        "lex_pos": "verb",
+        "lex_foreign": false,
+        "trad_char": 7,
+        "trad_syll": 3,
         "trad_poly": true
     },
     "natapos": {
@@ -1798,11 +1798,11 @@
         "trad_syll": 3,
         "trad_poly": true
     },
-    "bahay-pukyutan": {
-        "lex_pos": "noun",
+    "unti-unting": {
+        "lex_pos": "adv",
         "lex_foreign": false,
-        "trad_char": 14,
-        "trad_syll": 4,
+        "trad_char": 11,
+        "trad_syll": 3,
         "trad_poly": true
     },
     "papalubog": {
@@ -1812,7 +1812,112 @@
         "trad_syll": 4,
         "trad_poly": true
     },
+    "mapait": {
+        "lex_pos": "adj",
+        "lex_foreign": false,
+        "trad_char": 6,
+        "trad_syll": 2,
+        "trad_poly": true
+    },
+    "lakas": {
+        "lex_pos": "noun",
+        "lex_foreign": false,
+        "trad_char": 5,
+        "trad_syll": 2,
+        "trad_poly": true
+    },
     "sumara": {
+        "lex_pos": "verb",
+        "lex_foreign": false,
+        "trad_char": 6,
+        "trad_syll": 2,
+        "trad_poly": true
+    },
+    "bahay-pukyutan": {
+        "lex_pos": "noun",
+        "lex_foreign": false,
+        "trad_char": 14,
+        "trad_syll": 4,
+        "trad_poly": true
+    },
+    "pagtitipon": {
+        "lex_pos": "noun",
+        "lex_foreign": false,
+        "trad_char": 10,
+        "trad_syll": 4,
+        "trad_poly": true
+    },
+    "makakita": {
+        "lex_pos": "verb",
+        "lex_foreign": false,
+        "trad_char": 8,
+        "trad_syll": 4,
+        "trad_poly": true
+    },
+    "inisip": {
+        "lex_pos": "verb",
+        "lex_foreign": false,
+        "trad_char": 6,
+        "trad_syll": 1,
+        "trad_poly": false
+    },
+    "grupo": {
+        "lex_pos": "noun",
+        "lex_foreign": false,
+        "trad_char": 5,
+        "trad_syll": 2,
+        "trad_poly": true
+    },
+    "Umuwi": {
+        "lex_pos": "noun",
+        "lex_foreign": false,
+        "trad_char": 5,
+        "trad_syll": 2,
+        "trad_poly": true
+    },
+    "wala": {
+        "lex_pos": "verb",
+        "lex_foreign": false,
+        "trad_char": 4,
+        "trad_syll": 2,
+        "trad_poly": true
+    },
+    "alitaptap": {
+        "lex_pos": "noun",
+        "lex_foreign": false,
+        "trad_char": 9,
+        "trad_syll": 3,
+        "trad_poly": true
+    },
+    "tumigil": {
+        "lex_pos": "verb",
+        "lex_foreign": false,
+        "trad_char": 7,
+        "trad_syll": 3,
+        "trad_poly": true
+    },
+    "lagi": {
+        "lex_pos": "adv",
+        "lex_foreign": false,
+        "trad_char": 4,
+        "trad_syll": 2,
+        "trad_poly": true
+    },
+    "Nakalalason": {
+        "lex_pos": "noun",
+        "lex_foreign": false,
+        "trad_char": 11,
+        "trad_syll": 4,
+        "trad_poly": true
+    },
+    "sigaw": {
+        "lex_pos": "noun",
+        "lex_foreign": false,
+        "trad_char": 5,
+        "trad_syll": 1,
+        "trad_poly": false
+    },
+    "nauuna": {
         "lex_pos": "verb",
         "lex_foreign": false,
         "trad_char": 6,
@@ -1826,145 +1931,19 @@
         "trad_syll": 1,
         "trad_poly": false
     },
-    "pagtitipon": {
+    "Gising": {
         "lex_pos": "noun",
-        "lex_foreign": false,
-        "trad_char": 10,
-        "trad_syll": 4,
-        "trad_poly": true
-    },
-    "nauuna": {
-        "lex_pos": "verb",
         "lex_foreign": false,
         "trad_char": 6,
         "trad_syll": 2,
         "trad_poly": true
     },
-    "lakas": {
-        "lex_pos": "noun",
-        "lex_foreign": false,
-        "trad_char": 5,
-        "trad_syll": 2,
-        "trad_poly": true
-    },
-    "samantala": {
-        "lex_pos": "other",
+    "nagsasara": {
+        "lex_pos": "verb",
         "lex_foreign": false,
         "trad_char": 9,
-        "trad_syll": 3,
-        "trad_poly": true
-    },
-    "inisip": {
-        "lex_pos": "verb",
-        "lex_foreign": false,
-        "trad_char": 6,
-        "trad_syll": 1,
-        "trad_poly": false
-    },
-    "lagi": {
-        "lex_pos": "adv",
-        "lex_foreign": false,
-        "trad_char": 4,
         "trad_syll": 2,
         "trad_poly": true
-    },
-    "unti-unting": {
-        "lex_pos": "adv",
-        "lex_foreign": false,
-        "trad_char": 11,
-        "trad_syll": 3,
-        "trad_poly": true
-    },
-    "wala": {
-        "lex_pos": "verb",
-        "lex_foreign": false,
-        "trad_char": 4,
-        "trad_syll": 2,
-        "trad_poly": true
-    },
-    "grupo": {
-        "lex_pos": "noun",
-        "lex_foreign": false,
-        "trad_char": 5,
-        "trad_syll": 2,
-        "trad_poly": true
-    },
-    "tumigil": {
-        "lex_pos": "verb",
-        "lex_foreign": false,
-        "trad_char": 7,
-        "trad_syll": 3,
-        "trad_poly": true
-    },
-    "sigaw": {
-        "lex_pos": "noun",
-        "lex_foreign": false,
-        "trad_char": 5,
-        "trad_syll": 1,
-        "trad_poly": false
-    },
-    "Nakalalason": {
-        "lex_pos": "noun",
-        "lex_foreign": false,
-        "trad_char": 11,
-        "trad_syll": 4,
-        "trad_poly": true
-    },
-    "nagdidilim": {
-        "lex_pos": "verb",
-        "lex_foreign": false,
-        "trad_char": 10,
-        "trad_syll": 4,
-        "trad_poly": true
-    },
-    "Kakainin": {
-        "lex_pos": "noun",
-        "lex_foreign": false,
-        "trad_char": 8,
-        "trad_syll": 3,
-        "trad_poly": true
-    },
-    "makakita": {
-        "lex_pos": "verb",
-        "lex_foreign": false,
-        "trad_char": 8,
-        "trad_syll": 4,
-        "trad_poly": true
-    },
-    "nakuhang": {
-        "lex_pos": "verb",
-        "lex_foreign": false,
-        "trad_char": 8,
-        "trad_syll": 4,
-        "trad_poly": true
-    },
-    "bumalik": {
-        "lex_pos": "verb",
-        "lex_foreign": false,
-        "trad_char": 7,
-        "trad_syll": 3,
-        "trad_poly": true
-    },
-    "araw": {
-        "lex_pos": "noun",
-        "lex_foreign": false,
-        "trad_char": 4,
-        "trad_syll": 1,
-        "trad_poly": false
-    },
-    "alitaptap": {
-        "lex_pos": "noun",
-        "lex_foreign": false,
-        "trad_char": 9,
-        "trad_syll": 3,
-        "trad_poly": true
-    },
-    "loob": {
-        "lex_pos": "noun",
-        "lex_foreign": false,
-        "trad_char": 4,
-        "trad_syll": 1,
-        "trad_poly": false
     },
     "talulot": {
         "lex_pos": "noun",
@@ -1980,11 +1959,25 @@
         "trad_syll": 3,
         "trad_poly": true
     },
-    "nagsasara": {
+    "nagdidilim": {
         "lex_pos": "verb",
         "lex_foreign": false,
-        "trad_char": 9,
-        "trad_syll": 2,
+        "trad_char": 10,
+        "trad_syll": 4,
+        "trad_poly": true
+    },
+    "pumupuno": {
+        "lex_pos": "verb",
+        "lex_foreign": false,
+        "trad_char": 8,
+        "trad_syll": 4,
+        "trad_poly": true
+    },
+    "nakuhang": {
+        "lex_pos": "verb",
+        "lex_foreign": false,
+        "trad_char": 8,
+        "trad_syll": 4,
         "trad_poly": true
     },
     "Ugh": {
@@ -1994,20 +1987,6 @@
         "trad_syll": 0,
         "trad_poly": false
     },
-    "makahinga": {
-        "lex_pos": "verb",
-        "lex_foreign": false,
-        "trad_char": 9,
-        "trad_syll": 4,
-        "trad_poly": true
-    },
-    "Gising": {
-        "lex_pos": "noun",
-        "lex_foreign": false,
-        "trad_char": 6,
-        "trad_syll": 2,
-        "trad_poly": true
-    },
     "likido": {
         "lex_pos": "noun",
         "lex_foreign": false,
@@ -2015,24 +1994,59 @@
         "trad_syll": 3,
         "trad_poly": true
     },
-    "lugar": {
+    "araw": {
         "lex_pos": "noun",
         "lex_foreign": false,
-        "trad_char": 5,
-        "trad_syll": 2,
-        "trad_poly": true
+        "trad_char": 4,
+        "trad_syll": 1,
+        "trad_poly": false
     },
-    "dalawang": {
-        "lex_pos": "adj",
+    "makahinga": {
+        "lex_pos": "verb",
         "lex_foreign": false,
-        "trad_char": 8,
+        "trad_char": 9,
         "trad_syll": 4,
         "trad_poly": true
     },
-    "gumalaw": {
+    "loob": {
+        "lex_pos": "noun",
+        "lex_foreign": false,
+        "trad_char": 4,
+        "trad_syll": 1,
+        "trad_poly": false
+    },
+    "Kakainin": {
+        "lex_pos": "noun",
+        "lex_foreign": false,
+        "trad_char": 8,
+        "trad_syll": 3,
+        "trad_poly": true
+    },
+    "bumalik": {
         "lex_pos": "verb",
         "lex_foreign": false,
         "trad_char": 7,
+        "trad_syll": 3,
+        "trad_poly": true
+    },
+    "malagkit": {
+        "lex_pos": "adj",
+        "lex_foreign": false,
+        "trad_char": 8,
+        "trad_syll": 3,
+        "trad_poly": true
+    },
+    "pinilit": {
+        "lex_pos": "verb",
+        "lex_foreign": false,
+        "trad_char": 7,
+        "trad_syll": 3,
+        "trad_poly": true
+    },
+    "kailangan": {
+        "lex_pos": "verb",
+        "lex_foreign": false,
+        "trad_char": 9,
         "trad_syll": 3,
         "trad_poly": true
     },
@@ -2050,34 +2064,6 @@
         "trad_syll": 3,
         "trad_poly": true
     },
-    "nating": {
-        "lex_pos": "other",
-        "lex_foreign": false,
-        "trad_char": 6,
-        "trad_syll": 3,
-        "trad_poly": true
-    },
-    "kailangan": {
-        "lex_pos": "verb",
-        "lex_foreign": false,
-        "trad_char": 9,
-        "trad_syll": 3,
-        "trad_poly": true
-    },
-    "kulisap": {
-        "lex_pos": "noun",
-        "lex_foreign": false,
-        "trad_char": 7,
-        "trad_syll": 2,
-        "trad_poly": true
-    },
-    "pinilit": {
-        "lex_pos": "verb",
-        "lex_foreign": false,
-        "trad_char": 7,
-        "trad_syll": 3,
-        "trad_poly": true
-    },
     "nakatakas": {
         "lex_pos": "verb",
         "lex_foreign": false,
@@ -2085,7 +2071,28 @@
         "trad_syll": 4,
         "trad_poly": true
     },
-    "pagod": {
+    "dalawang": {
+        "lex_pos": "adj",
+        "lex_foreign": false,
+        "trad_char": 8,
+        "trad_syll": 4,
+        "trad_poly": true
+    },
+    "natusok": {
+        "lex_pos": "verb",
+        "lex_foreign": false,
+        "trad_char": 7,
+        "trad_syll": 2,
+        "trad_poly": true
+    },
+    "gumalaw": {
+        "lex_pos": "verb",
+        "lex_foreign": false,
+        "trad_char": 7,
+        "trad_syll": 3,
+        "trad_poly": true
+    },
+    "lugar": {
         "lex_pos": "noun",
         "lex_foreign": false,
         "trad_char": 5,
@@ -2096,48 +2103,6 @@
         "lex_pos": "noun",
         "lex_foreign": false,
         "trad_char": 4,
-        "trad_syll": 2,
-        "trad_poly": true
-    },
-    "nakatulog": {
-        "lex_pos": "verb",
-        "lex_foreign": false,
-        "trad_char": 9,
-        "trad_syll": 4,
-        "trad_poly": true
-    },
-    "gubat": {
-        "lex_pos": "noun",
-        "lex_foreign": false,
-        "trad_char": 5,
-        "trad_syll": 2,
-        "trad_poly": true
-    },
-    "natusok": {
-        "lex_pos": "verb",
-        "lex_foreign": false,
-        "trad_char": 7,
-        "trad_syll": 2,
-        "trad_poly": true
-    },
-    "ahas": {
-        "lex_pos": "noun",
-        "lex_foreign": false,
-        "trad_char": 4,
-        "trad_syll": 1,
-        "trad_poly": false
-    },
-    "lumabas": {
-        "lex_pos": "verb",
-        "lex_foreign": false,
-        "trad_char": 7,
-        "trad_syll": 3,
-        "trad_poly": true
-    },
-    "bumagsak": {
-        "lex_pos": "verb",
-        "lex_foreign": false,
-        "trad_char": 8,
         "trad_syll": 2,
         "trad_poly": true
     },
@@ -2155,13 +2120,6 @@
         "trad_syll": 3,
         "trad_poly": true
     },
-    "pumupuno": {
-        "lex_pos": "verb",
-        "lex_foreign": false,
-        "trad_char": 8,
-        "trad_syll": 4,
-        "trad_poly": true
-    },
     "alupihan": {
         "lex_pos": "noun",
         "lex_foreign": false,
@@ -2169,26 +2127,47 @@
         "trad_syll": 3,
         "trad_poly": true
     },
-    "Umuwi": {
-        "lex_pos": "noun",
+    "bumagsak": {
+        "lex_pos": "verb",
         "lex_foreign": false,
-        "trad_char": 5,
+        "trad_char": 8,
         "trad_syll": 2,
         "trad_poly": true
     },
-    "malagkit": {
-        "lex_pos": "adj",
+    "nakatulog": {
+        "lex_pos": "verb",
         "lex_foreign": false,
-        "trad_char": 8,
+        "trad_char": 9,
+        "trad_syll": 4,
+        "trad_poly": true
+    },
+    "kulisap": {
+        "lex_pos": "noun",
+        "lex_foreign": false,
+        "trad_char": 7,
+        "trad_syll": 2,
+        "trad_poly": true
+    },
+    "lumabas": {
+        "lex_pos": "verb",
+        "lex_foreign": false,
+        "trad_char": 7,
         "trad_syll": 3,
         "trad_poly": true
     },
-    "man": {
-        "lex_pos": "adv",
+    "ahas": {
+        "lex_pos": "noun",
         "lex_foreign": false,
-        "trad_char": 3,
+        "trad_char": 4,
         "trad_syll": 1,
         "trad_poly": false
+    },
+    "nating": {
+        "lex_pos": "other",
+        "lex_foreign": false,
+        "trad_char": 6,
+        "trad_syll": 3,
+        "trad_poly": true
     },
     "nagliliwanag": {
         "lex_pos": "verb",
@@ -2197,35 +2176,7 @@
         "trad_syll": 5,
         "trad_poly": true
     },
-    "ilaw": {
-        "lex_pos": "noun",
-        "lex_foreign": false,
-        "trad_char": 4,
-        "trad_syll": 1,
-        "trad_poly": false
-    },
-    "bago": {
-        "lex_pos": "adv",
-        "lex_foreign": false,
-        "trad_char": 4,
-        "trad_syll": 2,
-        "trad_poly": true
-    },
-    "paano": {
-        "lex_pos": "other",
-        "lex_foreign": false,
-        "trad_char": 5,
-        "trad_syll": 2,
-        "trad_poly": true
-    },
-    "kami": {
-        "lex_pos": "other",
-        "lex_foreign": false,
-        "trad_char": 4,
-        "trad_syll": 2,
-        "trad_poly": true
-    },
-    "kawan": {
+    "gubat": {
         "lex_pos": "noun",
         "lex_foreign": false,
         "trad_char": 5,
@@ -2239,6 +2190,13 @@
         "trad_syll": 4,
         "trad_poly": true
     },
+    "bago": {
+        "lex_pos": "adv",
+        "lex_foreign": false,
+        "trad_char": 4,
+        "trad_syll": 2,
+        "trad_poly": true
+    },
     "matusok": {
         "lex_pos": "verb",
         "lex_foreign": false,
@@ -2246,24 +2204,10 @@
         "trad_syll": 2,
         "trad_poly": true
     },
-    "naming": {
-        "lex_pos": "other",
-        "lex_foreign": false,
-        "trad_char": 6,
-        "trad_syll": 3,
-        "trad_poly": true
-    },
-    "doon": {
-        "lex_pos": "other",
-        "lex_foreign": false,
-        "trad_char": 4,
-        "trad_syll": 1,
-        "trad_poly": false
-    },
-    "Tara": {
+    "pagod": {
         "lex_pos": "noun",
         "lex_foreign": false,
-        "trad_char": 4,
+        "trad_char": 5,
         "trad_syll": 2,
         "trad_poly": true
     },
@@ -2281,6 +2225,13 @@
         "trad_syll": 4,
         "trad_poly": true
     },
+    "kawan": {
+        "lex_pos": "noun",
+        "lex_foreign": false,
+        "trad_char": 5,
+        "trad_syll": 2,
+        "trad_poly": true
+    },
     "ating": {
         "lex_pos": "other",
         "lex_foreign": false,
@@ -2288,8 +2239,92 @@
         "trad_syll": 2,
         "trad_poly": true
     },
+    "paano": {
+        "lex_pos": "other",
+        "lex_foreign": false,
+        "trad_char": 5,
+        "trad_syll": 2,
+        "trad_poly": true
+    },
+    "doon": {
+        "lex_pos": "other",
+        "lex_foreign": false,
+        "trad_char": 4,
+        "trad_syll": 1,
+        "trad_poly": false
+    },
     "sumagot": {
         "lex_pos": "verb",
+        "lex_foreign": false,
+        "trad_char": 7,
+        "trad_syll": 2,
+        "trad_poly": true
+    },
+    "ilaw": {
+        "lex_pos": "noun",
+        "lex_foreign": false,
+        "trad_char": 4,
+        "trad_syll": 1,
+        "trad_poly": false
+    },
+    "man": {
+        "lex_pos": "adv",
+        "lex_foreign": false,
+        "trad_char": 3,
+        "trad_syll": 1,
+        "trad_poly": false
+    },
+    "umuwi": {
+        "lex_pos": "verb",
+        "lex_foreign": false,
+        "trad_char": 5,
+        "trad_syll": 2,
+        "trad_poly": true
+    },
+    "naming": {
+        "lex_pos": "other",
+        "lex_foreign": false,
+        "trad_char": 6,
+        "trad_syll": 3,
+        "trad_poly": true
+    },
+    "hanapin": {
+        "lex_pos": "verb",
+        "lex_foreign": false,
+        "trad_char": 7,
+        "trad_syll": 3,
+        "trad_poly": true
+    },
+    "lumilipad": {
+        "lex_pos": "verb",
+        "lex_foreign": false,
+        "trad_char": 9,
+        "trad_syll": 4,
+        "trad_poly": true
+    },
+    "Tara": {
+        "lex_pos": "noun",
+        "lex_foreign": false,
+        "trad_char": 4,
+        "trad_syll": 2,
+        "trad_poly": true
+    },
+    "malaman": {
+        "lex_pos": "verb",
+        "lex_foreign": false,
+        "trad_char": 7,
+        "trad_syll": 3,
+        "trad_poly": true
+    },
+    "kaming": {
+        "lex_pos": "other",
+        "lex_foreign": false,
+        "trad_char": 6,
+        "trad_syll": 3,
+        "trad_poly": true
+    },
+    "pamilya": {
+        "lex_pos": "noun",
         "lex_foreign": false,
         "trad_char": 7,
         "trad_syll": 2,
@@ -2302,25 +2337,25 @@
         "trad_syll": 3,
         "trad_poly": true
     },
-    "hanapin": {
-        "lex_pos": "verb",
-        "lex_foreign": false,
-        "trad_char": 7,
-        "trad_syll": 3,
-        "trad_poly": true
-    },
-    "umuwi": {
-        "lex_pos": "verb",
+    "dilim": {
+        "lex_pos": "noun",
         "lex_foreign": false,
         "trad_char": 5,
         "trad_syll": 2,
         "trad_poly": true
     },
-    "tumulong": {
+    "nagising": {
         "lex_pos": "verb",
         "lex_foreign": false,
         "trad_char": 8,
-        "trad_syll": 4,
+        "trad_syll": 3,
+        "trad_poly": true
+    },
+    "kami": {
+        "lex_pos": "other",
+        "lex_foreign": false,
+        "trad_char": 4,
+        "trad_syll": 2,
         "trad_poly": true
     },
     "tinawag": {
@@ -2330,53 +2365,11 @@
         "trad_syll": 3,
         "trad_poly": true
     },
-    "tayo": {
-        "lex_pos": "other",
+    "panganib": {
+        "lex_pos": "noun",
         "lex_foreign": false,
-        "trad_char": 4,
-        "trad_syll": 1,
-        "trad_poly": false
-    },
-    "malaman": {
-        "lex_pos": "verb",
-        "lex_foreign": false,
-        "trad_char": 7,
+        "trad_char": 8,
         "trad_syll": 3,
-        "trad_poly": true
-    },
-    "dinaraanan": {
-        "lex_pos": "noun",
-        "lex_foreign": false,
-        "trad_char": 10,
-        "trad_syll": 4,
-        "trad_poly": true
-    },
-    "nagbigay-liwanag": {
-        "lex_pos": "verb",
-        "lex_foreign": false,
-        "trad_char": 16,
-        "trad_syll": 6,
-        "trad_poly": true
-    },
-    "pamilya": {
-        "lex_pos": "noun",
-        "lex_foreign": false,
-        "trad_char": 7,
-        "trad_syll": 2,
-        "trad_poly": true
-    },
-    "lumilipad": {
-        "lex_pos": "verb",
-        "lex_foreign": false,
-        "trad_char": 9,
-        "trad_syll": 4,
-        "trad_poly": true
-    },
-    "dilim": {
-        "lex_pos": "noun",
-        "lex_foreign": false,
-        "trad_char": 5,
-        "trad_syll": 2,
         "trad_poly": true
     },
     "makaliligtas": {
@@ -2386,24 +2379,24 @@
         "trad_syll": 5,
         "trad_poly": true
     },
+    "tayo": {
+        "lex_pos": "other",
+        "lex_foreign": false,
+        "trad_char": 4,
+        "trad_syll": 1,
+        "trad_poly": false
+    },
+    "nagbigay-liwanag": {
+        "lex_pos": "verb",
+        "lex_foreign": false,
+        "trad_char": 16,
+        "trad_syll": 6,
+        "trad_poly": true
+    },
     "umagang": {
         "lex_pos": "adv",
         "lex_foreign": false,
         "trad_char": 7,
-        "trad_syll": 3,
-        "trad_poly": true
-    },
-    "tulong": {
-        "lex_pos": "noun",
-        "lex_foreign": false,
-        "trad_char": 6,
-        "trad_syll": 3,
-        "trad_poly": true
-    },
-    "kaming": {
-        "lex_pos": "other",
-        "lex_foreign": false,
-        "trad_char": 6,
         "trad_syll": 3,
         "trad_poly": true
     },
@@ -2414,11 +2407,53 @@
         "trad_syll": 3,
         "trad_poly": true
     },
+    "Patawarin": {
+        "lex_pos": "noun",
+        "lex_foreign": false,
+        "trad_char": 9,
+        "trad_syll": 4,
+        "trad_poly": true
+    },
+    "tulong": {
+        "lex_pos": "noun",
+        "lex_foreign": false,
+        "trad_char": 6,
+        "trad_syll": 3,
+        "trad_poly": true
+    },
     "pag-iwan": {
         "lex_pos": "noun",
         "lex_foreign": false,
         "trad_char": 8,
         "trad_syll": 2,
+        "trad_poly": true
+    },
+    "dinaraanan": {
+        "lex_pos": "noun",
+        "lex_foreign": false,
+        "trad_char": 10,
+        "trad_syll": 4,
+        "trad_poly": true
+    },
+    "oo": {
+        "lex_pos": "adv",
+        "lex_foreign": false,
+        "trad_char": 2,
+        "trad_syll": 0,
+        "trad_poly": false
+    },
+    "kapag": {
+        "lex_pos": "other",
+        "lex_foreign": false,
+        "trad_char": 5,
+        "trad_syll": 2,
+        "trad_poly": true
+    },
+    "kanila": {
+        "lex_pos": "other",
+        "lex_foreign": false,
+        "trad_char": 6,
+        "trad_syll": 3,
         "trad_poly": true
     },
     "inyo": {
@@ -2442,32 +2477,11 @@
         "trad_syll": 5,
         "trad_poly": true
     },
-    "oo": {
-        "lex_pos": "adv",
-        "lex_foreign": false,
-        "trad_char": 2,
-        "trad_syll": 0,
-        "trad_poly": false
-    },
-    "nagising": {
+    "tumulong": {
         "lex_pos": "verb",
         "lex_foreign": false,
         "trad_char": 8,
-        "trad_syll": 3,
-        "trad_poly": true
-    },
-    "kanila": {
-        "lex_pos": "other",
-        "lex_foreign": false,
-        "trad_char": 6,
-        "trad_syll": 3,
-        "trad_poly": true
-    },
-    "panganib": {
-        "lex_pos": "noun",
-        "lex_foreign": false,
-        "trad_char": 8,
-        "trad_syll": 3,
+        "trad_syll": 4,
         "trad_poly": true
     },
     "kasamahang": {
@@ -2477,19 +2491,12 @@
         "trad_syll": 4,
         "trad_poly": true
     },
-    "kapag": {
-        "lex_pos": "other",
-        "lex_foreign": false,
-        "trad_char": 5,
-        "trad_syll": 2,
-        "trad_poly": true
-    },
-    "Patawarin": {
+    "sagot": {
         "lex_pos": "noun",
         "lex_foreign": false,
-        "trad_char": 9,
-        "trad_syll": 4,
-        "trad_poly": true
+        "trad_char": 5,
+        "trad_syll": 1,
+        "trad_poly": false
     },
     "palaging": {
         "lex_pos": "adv",
@@ -2497,12 +2504,5 @@
         "trad_char": 8,
         "trad_syll": 4,
         "trad_poly": true
-    },
-    "sagot": {
-        "lex_pos": "noun",
-        "lex_foreign": false,
-        "trad_char": 5,
-        "trad_syll": 1,
-        "trad_poly": false
     }
 }

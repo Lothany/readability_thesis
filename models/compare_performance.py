@@ -161,7 +161,7 @@ def load_dataset(stride_length, grade):
     # Load testing dataset
     test_dataset = pd.read_csv(testing_source)
     test_dataset = filter_dataset(test_dataset, stride_length)
-    test_dataset = undersample_dataset(test_dataset, grade)
+    # test_dataset = undersample_dataset(test_dataset, grade)
 
     test_dataset = test_dataset.drop(columns=['word_num'])
 

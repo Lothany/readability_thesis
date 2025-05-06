@@ -39,7 +39,7 @@ def train_model(X_train, y_train):
 
 def tune_model(X_train, y_train):
     param_grid = {
-        'C': [0.01, 0.1, 1, 10, 100],
+        'C': [0.01, 0.1, 1, 10],
         'penalty': ['l2'],
         'solver': ['lbfgs']
     }
@@ -68,7 +68,7 @@ def create_model(stride, feature, stories, grade):
     machine = "lr"
     
     model_id = f"{machine}_{grade}_{feature}_{stride}"
-    print(f"\n\nRandom Forest Model: {model_id}")
+    print(f"\n\Logistic Regression Model: {model_id}")
     
     train_dataset, test_dataset, feature_set, model_name = parse_dataset(machine, stories, feature, stride, grade)
     

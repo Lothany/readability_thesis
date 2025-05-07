@@ -140,7 +140,7 @@ def test():
 def main():
     # stories_list = ["full", "split"]
     stories_list = ["split"]
-    features_list = ["T"]
+    features_list = ["B"]
     strides_list = [-1, 1, 2, 3, 100]
     grade_levels = [1, 2, 3, 4, 5, 6]
     

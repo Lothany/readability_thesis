@@ -140,9 +140,9 @@ def test():
 def main():
     # stories_list = ["full", "split"]
     stories_list = ["split"]
-    features_list = ["T"]
+    features_list = ["T", "L", "B"]
     strides_list = [-1, 1, 2, 3, 100]
-    grade_levels = [1, 2, 3, 4, 5, 6]
+    grade_levels = [3, 4, 5, 6]
     
     total_iterations = len(grade_levels) * len(features_list) * len(strides_list)
     

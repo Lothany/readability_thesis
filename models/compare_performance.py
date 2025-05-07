@@ -473,4 +473,4 @@ def main():
                 pkl_path = os.path.join(root, file)
                 print(f"\nProcessing file: {pkl_path}")
                 training_accuracy(pkl_path)
-                # print(pkl_path)
+                print(pkl_path)

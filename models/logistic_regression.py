@@ -83,9 +83,15 @@ def test():
     stories = "split"
     feature = "B"
     stride = -1
+    machine = "lr"
     grade = 1
     
-    create_model(stride, feature, "split", grade)
+    # create_model(stride, feature, "split", grade)
+    train_dataset, test_dataset, feature_set, model_name = parse_dataset(machine, stories, feature, stride, grade)
+    X_train, y_train, X_test, y_test = split_dataset(train_dataset, test_dataset, feature_set)
+    
+    # print(train_dataset.head())
+    print(X_train.head())   
     
 def main():
     # stories_list = ["full", "split"]
@@ -103,4 +109,4 @@ def main():
                     create_model(stride, feature, "split", grade)
                     pbar.update(1)
 
-main()
+test()

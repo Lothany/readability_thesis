@@ -15,7 +15,12 @@ class Features:
         self.word_num = None
         self.syll_num = self.__average_syll()
         self.poly_num = self.__polysyllabic_count()
-            
+    
+    def __repr__(self):
+        traditional_feature_set = f"\n\tsent_len: {self.sent_len} \n\tword_len: {self.word_len} \n\tsyll_num: {self.syll_num} \n\tpoly_num: {self.poly_num}"
+        lexical_feature_set = f"\n\tnoun_tr: {self.noun_tr} \n\tverb_tr: {self.verb_tr} \n\ttype_tr: {self.type_tr} \n\tlex_density: {self.lex_density} \n\tlex_foreign: {self.lex_foreign}"
+        return f"\nchunk {self.stride_index}: {self.chunk} with {self.stride_len} words = {traditional_feature_set} {lexical_feature_set}\n"
+
     def __lexical_var(self):
         noun_count = 0
         verb_count = 0
@@ -110,11 +115,13 @@ class Features:
         
         return poly_count
     
+    def get_features(self):
+        return [self.sent_len, self.word_len, self.syll_num, self.poly_num, self.noun_tr, self.verb_tr, self.type_tr, self.lex_density, self.lex_foreign]
 
 def sentence_features(sentence, stride_index, sent_len, embeddings):
     n = len(sentence)
     entry = Features(sentence, n, stride_index, sent_len, embeddings)
-    print(f"{sentence}, {entry}")
+    return entry
 
 def get_fragments(content, sent_len, embeddings):
     chunks = []
@@ -135,16 +142,14 @@ def get_fragments(content, sent_len, embeddings):
     for word in content:
         if word == "#":
             if fragment:
-                sentence_features(fragment, stride_index, sent_len, embeddings)
-                chunks.append(fragment)
+                chunks.append(sentence_features(fragment, stride_index, sent_len, embeddings))
                 prev_period = False
                 stride_index += 1
                 fragment = []
         elif word == "$":
             if fragment:
                 if not prev_period:
-                    chunks.append(fragment)
-                    sentence_features(fragment, stride_index, sent_len, embeddings)
+                    chunks.append(sentence_features(fragment, stride_index, sent_len, embeddings))
                     prev_period = True
                     stride_index += 1
                     fragment = []
@@ -154,5 +159,6 @@ def get_fragments(content, sent_len, embeddings):
             fragment.append(word)
 
     if sentence:
-        chunks.append(sentence)
-        sentence_features(fragment, stride_index, sent_len, embeddings)
+        chunks.append(sentence_features(fragment, stride_index, sent_len, embeddings))
+
+    return chunks

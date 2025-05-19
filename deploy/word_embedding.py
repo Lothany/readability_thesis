@@ -112,20 +112,20 @@ class WordEmbedding:
 
     def _get_tokens(self):
         all_tokens = []
-        if Path(self.input).exists():
-            with open(self.input, "r", encoding="utf-8") as file:
-                for line in file:
-                    for word in line.split():
-                        if word not in ["$", "#"]:
-                            tokens = word.split("|")
-                            if len(tokens) >= 2:
-                                all_tokens.append(tokens)
-        else:
-            for word in str(self.input).split():
-                if word not in ["$", "#"]:
-                    tokens = word.split("|")
-                    if len(tokens) >= 2:
-                        all_tokens.append(tokens)
+        # if Path(self.input).exists():
+        #     with open(self.input, "r", encoding="utf-8") as file:
+        #         for line in file:
+        #             for word in line.split():
+        #                 if word not in ["$", "#"]:
+        #                     tokens = word.split("|")
+        #                     if len(tokens) >= 2:
+        #                         all_tokens.append(tokens)
+        # else:
+        for word in str(self.input).split():
+            if word not in ["$", "#"]:
+                tokens = word.split("|")
+                if len(tokens) >= 2:
+                    all_tokens.append(tokens)
         return all_tokens
 
     def _embed(self):

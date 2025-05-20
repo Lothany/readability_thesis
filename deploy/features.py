@@ -1,3 +1,4 @@
+import re
 class Features:
     def __init__(self, chunk, stride_len, stride_index, sent_len, embeddings):
         self.dictionary = embeddings
@@ -117,48 +118,54 @@ class Features:
     
     def get_features(self):
         return [self.sent_len, self.word_len, self.syll_num, self.poly_num, self.noun_tr, self.verb_tr, self.type_tr, self.lex_density, self.lex_foreign]
-
+    
+    def get_content(self):
+        return self.chunk
+    
 def sentence_features(sentence, stride_index, sent_len, embeddings):
     n = len(sentence)
     entry = Features(sentence, n, stride_index, sent_len, embeddings)
     return entry
 
+
 def get_fragments(content, sent_len, embeddings):
     chunks = []
-
-    # Chunk by sentences
-    sentence = []
-    for word in content:
-        if word == "$":
-            if sentence:
-                sentence = []
-        elif word != "#":
-            sentence.append(word)
-
-    # Chunk by fragments
     fragment = []
-    prev_period = False
     stride_index = 0
-    for word in content:
-        if word == "#":
+
+    for i, word in enumerate(content):
+        if word in {"#", "$"}:
             if fragment:
-                chunks.append(sentence_features(fragment, stride_index, sent_len, embeddings))
-                prev_period = False
+                chunks.append(sentence_features(
+                    fragment, stride_index, sent_len, embeddings))
                 stride_index += 1
                 fragment = []
-        elif word == "$":
-            if fragment:
-                if not prev_period:
-                    chunks.append(sentence_features(fragment, stride_index, sent_len, embeddings))
-                    prev_period = True
-                    stride_index += 1
-                    fragment = []
-                else:
-                    fragment = []
         else:
             fragment.append(word)
 
-    if sentence:
-        chunks.append(sentence_features(fragment, stride_index, sent_len, embeddings))
+    if fragment:
+        chunks.append(sentence_features(
+            fragment, stride_index, sent_len, embeddings))
 
     return chunks
+
+
+split_pattern = re.compile(
+    r'(?<=[^\.])\.\.(?!\.)|'  # Match '..' not part of '...'
+    r'[.?!]|'                 # Match '.', '?', '!'
+    r'[…,]'                  # Match '…' or ','
+)
+
+def split_into_fragments(text):
+    parts = re.split(f'({split_pattern.pattern})', text)
+
+    fragments = []
+    for i in range(0, len(parts) - 1, 2):
+        frag = f"{parts[i].rstrip()}{parts[i + 1]}"
+        if frag.strip():
+            fragments.append(frag)
+
+    if len(parts) % 2 != 0 and parts[-1].strip():
+        fragments.append(parts[-1].strip())
+
+    return fragments

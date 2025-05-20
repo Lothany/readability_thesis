@@ -11,7 +11,7 @@ pattern = re.compile(
 
 def replace_match(m):
     if m.group('remove'):
-        return ''
+        return '' 
     elif m.group('fragment'):
         return ' #'
     elif m.group('ellipsis'):
@@ -20,8 +20,22 @@ def replace_match(m):
         return ' $'
     return m.group(0)  # fallback (shouldn’t happen)
 
-def modify_punctuation(text):
-    text = pattern.sub(replace_match, text)
+def smart_replace(m):
+    if m.group('remove'):
+        return ''
+    elif m.group('fragment'):
+        return ' ,'
+    elif m.group('ellipsis'):
+        return ' ...'
+    elif m.group('sentence'):
+        return ' .'
+    return m.group(0)  # fallback (shouldn’t happen)
+
+def modify_punctuation(text, isSmart=False):
+    if isSmart:
+        text = pattern.sub(smart_replace, text)
+    else:
+        text = pattern.sub(replace_match, text)
     text = re.sub(r'\s+', ' ', text).strip()
     return text
 
@@ -63,9 +77,11 @@ def remove_accents(text: str) -> str:
     return ''.join(result)
 
 
-def run_normalize(text):
-    modified_punctuation = modify_punctuation(text)
-    tagged = tag(modified_punctuation)
-    normalized_path = lowercase(tagged)
-
-    return normalized_path
+def run_normalize(text, isSmart=False):
+    if isSmart:
+        return modify_punctuation(text, True)
+    else:
+        modified_punctuation = modify_punctuation(text)
+        tagged = tag(modified_punctuation)
+        normalized_path = lowercase(tagged)
+        return normalized_path

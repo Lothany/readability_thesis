@@ -17,7 +17,7 @@ app.add_middleware(
 
 class TextRequest(BaseModel):
     text: str
-    target: str
+    target: int
 
 @app.post("/process")
 async def process_text(request: TextRequest):
